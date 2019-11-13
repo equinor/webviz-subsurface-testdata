@@ -6,6 +6,7 @@ reek_fullmatrix/*/*/share/results/grids/*
 reek_fullmatrix/*/*/share/results/seismic/*
 reek_fullmatrix/*/*/rms
 reek_fullmatrix/*/*/sim2seis
+reek_fullmatrix/*/*/share/results/tables/eclgrid.csv
 *stderr*
 *stdout*
 *.log*

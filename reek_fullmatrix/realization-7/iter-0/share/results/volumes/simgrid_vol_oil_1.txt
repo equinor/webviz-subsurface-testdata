@@ -1,0 +1,17 @@
+Project name			: /project/fmu/tutorial/reek/resmod/ff/2019a/users/hakal/r001/rms/model/reek.rms11.0.1
+Date				: 2019.11.13 14:23:02
+Grid model name			: Simgrid
+
+   Zone      Region index          Bulk                Pore                Hcpv               Stoiip       
+UpperReek  1                       298484642.31         43676871.04         32019006.19         20137739.41
+UpperReek  2                               0.00                0.00                0.00                0.00
+UpperReek  Totals                  298484642.31         43676871.04         32019006.19         20137739.41
+MidReek    1                       228590822.64         37881430.60         29257715.08         18401078.36
+MidReek    2                               0.00                0.00                0.00                0.00
+MidReek    Totals                  228590822.64         37881430.60         29257715.08         18401078.36
+LowerReek  1                       136423880.56         26077364.94         20982988.85         13196848.10
+LowerReek  2                               0.00                0.00                0.00                0.00
+LowerReek  Totals                  136423880.56         26077364.94         20982988.85         13196848.10
+Totals     1                       663499345.50        107635666.58         82259710.12         51735665.87
+Totals     2                               0.00                0.00                0.00                0.00
+Totals     Totals                  663499345.50        107635666.58         82259710.12         51735665.87

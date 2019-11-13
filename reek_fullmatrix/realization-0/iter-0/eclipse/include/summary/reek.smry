@@ -1,0 +1,27 @@
+--
+-- Field Data
+-----------------------------
+-- Production Rates
+-----------------------------
+
+FOPR
+FOPRH
+FGPR
+FGPRH
+
+--  Production
+
+FOPT 
+FOPTH
+FWPT
+FWPTH
+FGPT
+FGPTH
+FOPTF
+FOPTS
+-----------------------------
+-- In place
+-----------------------------
+FWIP
+FOIP
+FGIP

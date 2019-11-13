@@ -1,0 +1,329 @@
+<eclipse>
+<message date="1/1/2000" time="0.00000000000000">
+ CHECKING FOR LICENSES                                                   
+</message>
+<message date="1/1/2000" time="0.00000000000000">
+ CHECKING FOR LICENSES                                                   
+</message>
+<message date="1/1/2000" time="0.00000000000000">
+ THE MEMORY REQUIRED TO PROCESS THE GRID SECTION IS                      
+      17002 KBYTES                                                       
+</message>
+<warning date="1/1/2000" time="0.00000000000000">
+ INCLUDED FILE APPEARS TO BE A GRID FILE                                 
+ GRID FILES MUST BE IMPORTED USING GDFILE OR IMPORT                      
+</warning>
+<warning date="1/1/2000" time="0.00000000000000">
+ FLUX FLAG SET IN RUNSPEC BUT FLUXNUM KEYWORD                            
+ NOT USED -- SAVE SPACE BY SETTING NTFREG = 0                            
+ IN RUNSPEC KEYWORD REGDIMS.                                             
+</warning>
+<message date="1/1/2000" time="0.00000000000000">
+ NEITHER OLDTRAN,OLDTRANR NOR NEWTRAN SPECIFIED                          
+ TRANSMISSIBILITIES TO BE CALCULATED                                     
+ USING  NEWTRAN                                                          
+</message>
+<message date="1/1/2000" time="0.00000000000000">
+        6 NON-NEIGHBOUR CONNECTIONS HAVE BEEN IGNORED                    
+ AS THEIR TRANSMISSIBILITY IS LESS THAN 0.100000E-05                     
+</message>
+<message date="1/1/2000" time="0.00000000000000">
+ 2930 NON-NEIGHBOUR CONNECTIONS PRESENT                                  
+</message>
+<comment date="1/1/2000" time="0.00000000000000">
+ LEFT HANDED GRIDS MAY NOT BE SUPPORTED                                  
+  IN ALL PRE AND POST PROCESSORS                                         
+</comment>
+<comment date="1/1/2000" time="0.00000000000000">
+ THE GRID APPEARS TO BE LEFT HANDED, BUT                                 
+ IS SPECIFIED IN GDORIENT AS RIGHT HANDED.                               
+ ENSURE GDORIENT IS CORRECTLY DEFINED.                                   
+</comment>
+<message date="1/1/2000" time="0.00000000000000">
+ NUMBER OF ACTIVE CELLS IS 35840                                         
+</message>
+<message date="1/1/2000" time="0.00000000000000">
+ THE MEMORY REQUIRED TO PROCESS THE SOLUTION SECTION IS                  
+     631472 KBYTES                                                       
+</message>
+<message date="1/1/2000" time="0.00000000000000">
+    89918 CHARACTER VARIABLES USED                                       
+</message>
+<warning date="1/1/2000" time="0.00000000000000">
+ ALTHOUGH ROCK DATA WAS ASSOCIATED WITH ROCKNUM                          
+ THE NUMBER OF REGIONS WAS NOT EXPLICITLY SET                            
+ USING ARGUMENT 13 OF KEYWORD TABDIMS                                    
+ ROCK WILL BE ASSOCIATED WITH PVTNUM INSTEAD                             
+</warning>
+<warning date="1/1/2000" time="0.00000000000000">
+ THE PROCESSED PVTO DATA FOR TABLE   1                                   
+ HAS UNDERSATURATED BO LINES THAT WILL INTERSECT                         
+ IF EXTRAPOLATED                                                         
+ AT RS VALUES OF     522.8400  SM3/SM3 AND     630.0000  SM3/SM3         
+ AND A PRESSURE OF       745.57   BARSA                                  
+</warning>
+<warning date="1/1/2000" time="0.00000000000000">
+ THE PROCESSED PVTO DATA FOR TABLE   1                                   
+ HAS UNDERSATURATED BO LINES THAT WILL INTERSECT                         
+ IF EXTRAPOLATED                                                         
+ AT RS VALUES OF     522.8400  SM3/SM3 AND     630.0000  SM3/SM3         
+ AND A PRESSURE OF       745.99   BARSA                                  
+</warning>
+<warning date="1/1/2000" time="0.00000000000000">
+ THE MAXIMUM PRESSURE ENTERED IN THE PVT TABLES                          
+ FOR THE OIL PHASE IS    700.100. THIS IS GREATER THAN                   
+ THE MAXIMUM PRESSURE FOR THE GAS PHASE,    700.000                      
+ AND MAY LEAD TO PVT TABLE EXTRAPOLATION                                 
+</warning>
+<message date="1/1/2000" time="0.00000000000000">
+ SAVE FILE HAS BEEN WRITTEN.                                             
+</message>
+<warning date="1/1/2000" time="0.00000000000000">
+ THE FINE GRID BLOCK EQUILIBRATION SHOULD NOT                            
+ USUALLY BE USED WITH THE SWATINIT KEYWORD AS                            
+ THE INTEGRATED SOLUTION WILL NOT IN GENERAL                             
+ HONOUR THE SWATINIT DATA.                                               
+ FOR EQUILIBRATION REGION 1                                              
+</warning>
+<warning date="1/1/2000" time="0.00000000000000">
+ THE FINE GRID BLOCK EQUILIBRATION SHOULD NOT                            
+ USUALLY BE USED WITH THE SWATINIT KEYWORD AS                            
+ THE INTEGRATED SOLUTION WILL NOT IN GENERAL                             
+ HONOUR THE SWATINIT DATA.                                               
+ FOR EQUILIBRATION REGION 2                                              
+</warning>
+<message date="1/1/2000" time="0.00000000000000">
+ DRSDT OR DRSDTR KEYWORDS HAVE NOT BEEN                                  
+ ENTERED, SO THE MAXIMUM GAS RE-SOLUTION                                 
+ RATE IS DEFAULTED TO INFINITY.                                          
+</message>
+<message date="1/1/2000" time="0.00000000000000">
+ RESTART FILE WRITTEN   REPORT     0                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/2/2000" time="31.00000000000000">
+ RESTART FILE WRITTEN   REPORT     1                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/2/2000" time="31.00000000000000">
+ OPENING WELL OP_1     AT TIME     31.00   DAYS                          
+ CONTROLLED BY RESERVOIR FLUID VOLUME RATE                               
+</message>
+<message date="1/2/2000" time="31.00000000000000">
+ OPENING WELL OP_2     AT TIME     31.00   DAYS                          
+ CONTROLLED BY RESERVOIR FLUID VOLUME RATE                               
+</message>
+<message date="1/2/2000" time="31.00000000000000">
+ OPENING WELL OP_3     AT TIME     31.00   DAYS                          
+ CONTROLLED BY RESERVOIR FLUID VOLUME RATE                               
+</message>
+<message date="1/2/2000" time="31.00000000000000">
+ OPENING WELL WI_1     AT TIME     31.00   DAYS                          
+ CONTROLLED BY WATER RATE                                                
+</message>
+<message date="1/3/2000" time="60.00000000000000">
+ RESTART FILE WRITTEN   REPORT     2                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/4/2000" time="91.00000000000000">
+ RESTART FILE WRITTEN   REPORT     3                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/5/2000" time="121.00000000000000">
+ RESTART FILE WRITTEN   REPORT     4                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/6/2000" time="152.00000000000000">
+ RESTART FILE WRITTEN   REPORT     5                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/6/2000" time="152.00000000000000">
+ OPENING WELL WI_2     AT TIME    152.00   DAYS                          
+ CONTROLLED BY WATER RATE                                                
+</message>
+<message date="1/7/2000" time="182.00000000000000">
+ RESTART FILE WRITTEN   REPORT     6                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/8/2000" time="213.00000000000000">
+ RESTART FILE WRITTEN   REPORT     7                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/9/2000" time="244.00000000000000">
+ RESTART FILE WRITTEN   REPORT     8                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/10/2000" time="274.00000000000000">
+ RESTART FILE WRITTEN   REPORT     9                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/11/2000" time="305.00000000000000">
+ RESTART FILE WRITTEN   REPORT    10                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/12/2000" time="335.00000000000000">
+ RESTART FILE WRITTEN   REPORT    11                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/1/2001" time="366.00000000000000">
+ RESTART FILE WRITTEN   REPORT    12                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/1/2001" time="366.00000000000000">
+ OPENING WELL OP_4     AT TIME    366.00   DAYS                          
+ CONTROLLED BY RESERVOIR FLUID VOLUME RATE                               
+</message>
+<message date="1/1/2001" time="366.00000000000000">
+ OPENING WELL OP_5     AT TIME    366.00   DAYS                          
+ CONTROLLED BY RESERVOIR FLUID VOLUME RATE                               
+</message>
+<message date="1/2/2001" time="397.00000000000000">
+ RESTART FILE WRITTEN   REPORT    13                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/3/2001" time="425.00000000000000">
+ RESTART FILE WRITTEN   REPORT    14                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/3/2001" time="425.00000000000000">
+ OPENING WELL WI_3     AT TIME    425.00   DAYS                          
+ CONTROLLED BY WATER RATE                                                
+</message>
+<message date="1/4/2001" time="456.00000000000000">
+ RESTART FILE WRITTEN   REPORT    15                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/5/2001" time="486.00000000000000">
+ RESTART FILE WRITTEN   REPORT    16                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/6/2001" time="517.00000000000000">
+ RESTART FILE WRITTEN   REPORT    17                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/7/2001" time="547.00000000000000">
+ RESTART FILE WRITTEN   REPORT    18                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/8/2001" time="578.00000000000000">
+ RESTART FILE WRITTEN   REPORT    19                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/9/2001" time="609.00000000000000">
+ RESTART FILE WRITTEN   REPORT    20                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/10/2001" time="639.00000000000000">
+ RESTART FILE WRITTEN   REPORT    21                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/11/2001" time="670.00000000000000">
+ RESTART FILE WRITTEN   REPORT    22                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/12/2001" time="700.00000000000000">
+ RESTART FILE WRITTEN   REPORT    23                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/1/2002" time="731.00000000000000">
+ RESTART FILE WRITTEN   REPORT    24                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/2/2002" time="762.00000000000000">
+ RESTART FILE WRITTEN   REPORT    25                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/3/2002" time="790.00000000000000">
+ RESTART FILE WRITTEN   REPORT    26                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/4/2002" time="821.00000000000000">
+ RESTART FILE WRITTEN   REPORT    27                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/5/2002" time="851.00000000000000">
+ RESTART FILE WRITTEN   REPORT    28                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/6/2002" time="882.00000000000000">
+ RESTART FILE WRITTEN   REPORT    29                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/7/2002" time="912.00000000000000">
+ RESTART FILE WRITTEN   REPORT    30                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/8/2002" time="943.00000000000000">
+ RESTART FILE WRITTEN   REPORT    31                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/9/2002" time="974.00000000000000">
+ RESTART FILE WRITTEN   REPORT    32                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/10/2002" time="1004.00000000000000">
+ RESTART FILE WRITTEN   REPORT    33                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/11/2002" time="1035.00000000000000">
+ RESTART FILE WRITTEN   REPORT    34                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/12/2002" time="1065.00000000000000">
+ RESTART FILE WRITTEN   REPORT    35                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/1/2003" time="1096.00000000000000">
+ RESTART FILE WRITTEN   REPORT    36                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+</message>
+<message date="1/1/2003" time="1096.00000000000000">
+ SHUTTING WELL WI_1     AT TIME   1096.00   DAYS                         
+</message>
+<message date="1/1/2003" time="1096.00000000000000">
+ SHUTTING WELL WI_2     AT TIME   1096.00   DAYS                         
+</message>
+<message date="1/1/2003" time="1096.00000000000000">
+ SHUTTING WELL WI_3     AT TIME   1096.00   DAYS                         
+</message>
+<message date="1/1/2003" time="1096.00000000000000">
+ SAVE TYPE RESTART FILE WRITTEN   REPORT    36                           
+</message>
+</eclipse>

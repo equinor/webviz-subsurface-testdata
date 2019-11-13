@@ -1,0 +1,14 @@
+Run name: REEK_FULLMATRIX-35
+
+  BALANCE  AT      0.00  DAYS *Reek synthetic reservoir model                                          * ECLIPSE  VERSION 2017.2     
+  REPORT   0     1 JAN 2000   *  RUN                                                                   * RUN AT 14:24 ON 13 NOV 2019 
+
+          :--------------- OIL    SM3  ---------------:::-- WAT    SM3  --:--------------- GAS    SM3  ---------------
+FIP-REGION:LIQUID:VAPOUR:TOTAL:TOTAL:FREE:DISSOLVED:TOTAL
+FIELD TOTALS REGION NaN    54636956.    0   54636956.    327988877.   0.    10053199892.   10053199892.  
+FIPNUM REPORT REGION 1    18871621.    0   18871621.    48945272.   0.    3472378249.   3472378249.  
+FIPNUM REPORT REGION 2    0.    0   0.    74866011.   0.    0.   0.  
+FIPNUM REPORT REGION 3    21274254.    0   21274254.    44209849.   0.    3914462756.   3914462756.  
+FIPNUM REPORT REGION 4    0.    0   0.    68451329.   0.    0.   0.  
+FIPNUM REPORT REGION 5    14491081.    0   14491081.    40897583.   0.    2666358887.   2666358887.  
+FIPNUM REPORT REGION 6    0.    0   0.    50618833.   0.    0.   0.  

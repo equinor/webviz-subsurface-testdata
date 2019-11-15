@@ -1,4 +1,4 @@
-asamry:
+smry:
   # Mandatory elements per entry: key and observations
   - key: WBP4:OP_1
     comment: "Shut-in pressures converted from well head conditions" # This is a global comment regarding this set of observations

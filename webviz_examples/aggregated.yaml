@@ -7,7 +7,7 @@ pages:
     - Webviz created from configuration file
 
  - title: InplaceVolumesOneByOne
-   content: 
+    content:
     - container: InplaceVolumesOneByOne
       csvfile_vol: ../aggregated_data/volumes.csv
       csvfile_reals: ../aggregated_data/realdata.csv
@@ -18,11 +18,30 @@ pages:
       csvfile_smry: ../aggregated_data/smry.csv
       csvfile_reals: ../aggregated_data/realdata.csv
       initial_vector: FOPT
-      
+
  - title: InplaceVolumes
    content:
     - container: InplaceVolumes
       csvfile: ../aggregated_data/volumes.csv
+
+ - title: ReservoirSimulationTimeSeries
+   content:
+    - container: ReservoirSimulationTimeSeries
+      csvfile: ../aggregated_data/smry.csv
+      obsfile: ../aggregated_data/observations.yml
+      options:
+        vector1: FOPR
+
+ - title: ReservoirSimulationTimeSeries (with options set)
+   content:
+    - container: ReservoirSimulationTimeSeries
+      csvfile: ../aggregated_data/smry.csv
+      options:
+        vector1: FOPT
+        vector2: FGPT
+        vector3: FWPT
+        date: 2003-02-01
+        visualization: statistics_hist
 
  - title: ParameterDistribution
    content:

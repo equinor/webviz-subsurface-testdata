@@ -5,7 +5,7 @@ https://github.com/equinor/webviz-subsurface
 
 If you only want to download the data, you can use this command:
 ```bash
-git clone --depth=1 https://github.com/equinor/webviz-subsurface-testdata
+git clone --depth 1 https://github.com/equinor/webviz-subsurface-testdata
 ```
 That will download the content to a folder called `webviz-subsurface-testdata`.
 

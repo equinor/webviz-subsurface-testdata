@@ -57,3 +57,30 @@ pages:
    content:
     - container: SubsurfaceMap
       jsonfile: ../aggregated_data/subsurface-map.json
+
+
+ - title: FenceViewer
+   content:
+    - container: FenceViewer
+      wellfiles: 
+        - ../observed_data/wells/OP_1.w
+        - ../observed_data/wells/OP_2.w
+        - ../observed_data/wells/OP_3.w
+        - ../observed_data/wells/OP_4.w
+        - ../observed_data/wells/OP_5.w
+        - ../observed_data/wells/OP_6.w
+      surfacefiles:
+        - ../reek_fullmatrix/realization-0/iter-0/share/results/maps/topupperreek--ds_extracted_horizons.gri
+        - ../reek_fullmatrix/realization-0/iter-0/share/results/maps/topmidreek--ds_extracted_horizons.gri
+        - ../reek_fullmatrix/realization-0/iter-0/share/results/maps/toplowerreek--ds_extracted_horizons.gri
+        - ../reek_fullmatrix/realization-0/iter-0/share/results/maps/baselowerreek--ds_extracted_horizons.gri
+      surfacenames: 
+        - Top Upper Reek
+        - Top Middle Reek
+        - Top Lower Reek
+        - Base Lower Reek
+      segyfiles:
+        - ../observed_data/seismic/syntseis_20000101_seismic_depth_stack.segy
+      zonelog: Zonelog
+      zmin: 1500.0
+      zmax: 1800.0

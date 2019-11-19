@@ -1,8 +1,20 @@
-# webviz-subsurface-testdata
-Testdata for use with webviz-subsurface
+# Testdata for `webviz-subsurface`
 
-Description of data:
+This repository contains some open example data to be used by 
+https://github.com/equinor/webviz-subsurface
 
-`reek_fullmatrix`: A raw FMU result run using design matrix 
+If you only want to download the data, you can use this command:
+```bash
+git clone --depth=1 https://github.com/equinor/webviz-subsurface-testdata
+```
+That will download the content to a folder called `webviz-subsurface-testdata`.
 
-`aggregated_data`: Aggregated result files
+## Description of example data
+
+- `reek_fullmatrix`: A raw FMU result run using design matrix.
+- `aggregated_data`: Aggregated result files.
+
+## Corresponding webviz configuration files
+
+In the folder `webviz_examples` there are configuration files for the different
+data sets you can use.

@@ -7,7 +7,7 @@ pages:
     - Webviz created from configuration file
 
  - title: InplaceVolumesOneByOne
-    content:
+   content:
     - container: InplaceVolumesOneByOne
       csvfile_vol: ../aggregated_data/volumes.csv
       csvfile_reals: ../aggregated_data/realdata.csv

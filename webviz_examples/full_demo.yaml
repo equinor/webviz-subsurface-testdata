@@ -35,7 +35,7 @@ pages:
           geogrid: geogrid--oil.csv
           simgrid: simgrid--oil.csv
 
-  - title: Sensitivity study
+  - title: Sensitivity study (inplace)
     content:
       - container: InplaceVolumesOneByOne
         ensembles:
@@ -43,6 +43,13 @@ pages:
         volfiles:
           geogrid: geogrid--oil.csv
           simgrid: simgrid--oil.csv
+
+  - title: Sensitivity study (time series)
+    content:
+      - container: ReservoirSimulationTimeSeriesOneByOne
+        ensembles:
+          - iter-0
+        initial_vector: FOPT
 
   - title: Parameter distribution
     content:
@@ -56,14 +63,14 @@ pages:
         ensembles:
           - iter-0
 
-  - title: How was this made?
+  - title: SEG-Y viewer
     content:
-      - container: Markdown
-        markdown_file: ./content/how_was_this_made.md
-      - container: SyntaxHighlighter
-        filename: ./full_demo.yaml
+      - container: SegyViewer
+        segyfiles:
+          - ../observed_data/seismic/syntseis_20000101_seismic_depth_stack.segy
+          - ../observed_data/seismic/syntseis_20030101_seismic_depth_stack.segy
 
-  - title: WellCrossSection
+  - title: Well cross-section
     content:
       - container: WellCrossSection
         wellfiles:
@@ -88,3 +95,10 @@ pages:
         zonelog: Zonelog
         zmin: 1500.0
         zmax: 1800.0
+
+  - title: How was this made?
+    content:
+      - container: Markdown
+        markdown_file: ./content/how_was_this_made.md
+      - container: SyntaxHighlighter
+        filename: ./full_demo.yaml

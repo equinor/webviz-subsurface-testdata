@@ -4,7 +4,7 @@ container_settings:
   scratch_ensembles:
     iter-0: ../reek_fullmatrix/realization-*/iter-0
 
-pages: 
+pages:
 
   - title: Front page
     content:

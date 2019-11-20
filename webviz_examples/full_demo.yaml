@@ -35,7 +35,7 @@ pages:
           geogrid: geogrid--oil.csv
           simgrid: simgrid--oil.csv
 
-  - title: Sensitivity study (Inplace)
+  - title: Sensitivity study (inplace)
     content:
       - container: InplaceVolumesOneByOne
         ensembles:

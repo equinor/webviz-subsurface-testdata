@@ -2,85 +2,84 @@ title: Reek Webviz Demonstration
 
 pages:
 
- - title: Front page
-   content:
-    - Webviz created from configuration file
+  - title: Front page
+    content:
+      - Webviz created from configuration file
 
- - title: InplaceVolumesOneByOne
-   content:
-    - container: InplaceVolumesOneByOne
-      csvfile_vol: ../aggregated_data/volumes.csv
-      csvfile_reals: ../aggregated_data/realdata.csv
+  - title: InplaceVolumesOneByOne
+    content:
+      - container: InplaceVolumesOneByOne
+        csvfile_vol: ../aggregated_data/volumes.csv
+        csvfile_reals: ../aggregated_data/realdata.csv
 
- - title: ReservoirSimulationTimeSeriesOneByOne
-   content: 
-    - container: ReservoirSimulationTimeSeriesOneByOne
-      csvfile_smry: ../aggregated_data/smry.csv
-      csvfile_reals: ../aggregated_data/realdata.csv
-      initial_vector: FOPT
+  - title: ReservoirSimulationTimeSeriesOneByOne
+    content:
+      - container: ReservoirSimulationTimeSeriesOneByOne
+        csvfile_smry: ../aggregated_data/smry.csv
+        csvfile_reals: ../aggregated_data/realdata.csv
+        initial_vector: FOPT
 
- - title: InplaceVolumes
-   content:
-    - container: InplaceVolumes
-      csvfile: ../aggregated_data/volumes.csv
+  - title: InplaceVolumes
+    content:
+      - container: InplaceVolumes
+        csvfile: ../aggregated_data/volumes.csv
 
- - title: ReservoirSimulationTimeSeries
-   content:
-    - container: ReservoirSimulationTimeSeries
-      csvfile: ../aggregated_data/smry.csv
-      obsfile: ../aggregated_data/observations.yml
-      options:
-        vector1: FOPR
+  - title: ReservoirSimulationTimeSeries
+    content:
+      - container: ReservoirSimulationTimeSeries
+        csvfile: ../aggregated_data/smry.csv
+        obsfile: ../aggregated_data/observations.yml
+        options:
+          vector1: FOPR
 
- - title: ReservoirSimulationTimeSeries (with options set)
-   content:
-    - container: ReservoirSimulationTimeSeries
-      csvfile: ../aggregated_data/smry.csv
-      options:
-        vector1: FOPT
-        vector2: FGPT
-        vector3: FWPT
-        date: 2003-02-01
-        visualization: statistics_hist
+  - title: ReservoirSimulationTimeSeries (with options set)
+    content:
+      - container: ReservoirSimulationTimeSeries
+        csvfile: ../aggregated_data/smry.csv
+        options:
+          vector1: FOPT
+          vector2: FGPT
+          vector3: FWPT
+          date: 2003-02-01
+          visualization: statistics_hist
 
- - title: ParameterDistribution
-   content:
-    - container: ParameterDistribution
-      csvfile: ../aggregated_data/parameters.csv
+  - title: ParameterDistribution
+    content:
+      - container: ParameterDistribution
+        csvfile: ../aggregated_data/parameters.csv
 
- - title: Morris Plot
-   content: 
-    - container: MorrisPlot
-      csv_file: ../aggregated_data/morris.csv
+  - title: Morris Plot
+    content:
+      - container: MorrisPlot
+        csv_file: ../aggregated_data/morris.csv
 
- - title: Grid Viewer
-   content:
-    - container: SubsurfaceMap
-      jsonfile: ../aggregated_data/subsurface-map.json
+  - title: Grid Viewer
+    content:
+      - container: SubsurfaceMap
+        jsonfile: ../aggregated_data/subsurface-map.json
 
-
- - title: WellCrossSection
-   content:
-    - container: WellCrossSection
-      wellfiles: 
-        - ../observed_data/wells/OP_1.w
-        - ../observed_data/wells/OP_2.w
-        - ../observed_data/wells/OP_3.w
-        - ../observed_data/wells/OP_4.w
-        - ../observed_data/wells/OP_5.w
-        - ../observed_data/wells/OP_6.w
-      surfacefiles:
-        - ../reek_fullmatrix/realization-0/iter-0/share/results/maps/topupperreek--ds_extracted_horizons.gri
-        - ../reek_fullmatrix/realization-0/iter-0/share/results/maps/topmidreek--ds_extracted_horizons.gri
-        - ../reek_fullmatrix/realization-0/iter-0/share/results/maps/toplowerreek--ds_extracted_horizons.gri
-        - ../reek_fullmatrix/realization-0/iter-0/share/results/maps/baselowerreek--ds_extracted_horizons.gri
-      surfacenames: 
-        - Top Upper Reek
-        - Top Middle Reek
-        - Top Lower Reek
-        - Base Lower Reek
-      segyfiles:
-        - ../observed_data/seismic/syntseis_20000101_seismic_depth_stack.segy
-      zonelog: Zonelog
-      zmin: 1500.0
-      zmax: 1800.0
+  - title: WellCrossSection
+    content:
+      - container: WellCrossSection
+        wellfiles: 
+          - ../observed_data/wells/OP_1.w
+          - ../observed_data/wells/OP_2.w
+          - ../observed_data/wells/OP_3.w
+          - ../observed_data/wells/OP_4.w
+          - ../observed_data/wells/OP_5.w
+          - ../observed_data/wells/OP_6.w
+        surfacefiles:
+          - ../reek_fullmatrix/realization-0/iter-0/share/results/maps/topupperreek--ds_extracted_horizons.gri
+          - ../reek_fullmatrix/realization-0/iter-0/share/results/maps/topmidreek--ds_extracted_horizons.gri
+          - ../reek_fullmatrix/realization-0/iter-0/share/results/maps/toplowerreek--ds_extracted_horizons.gri
+          - ../reek_fullmatrix/realization-0/iter-0/share/results/maps/baselowerreek--ds_extracted_horizons.gri
+        surfacenames: 
+          - Top Upper Reek
+          - Top Middle Reek
+          - Top Lower Reek
+          - Base Lower Reek
+        segyfiles:
+          - ../observed_data/seismic/syntseis_20000101_seismic_depth_stack.segy
+        zonelog: Zonelog
+        zmin: 1500.0
+        zmax: 1800.0

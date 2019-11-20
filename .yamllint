@@ -9,4 +9,4 @@ ignore: |
 rules:
   document-start: disable
   line-length:
-    max: 140
+    max: 160

@@ -27,7 +27,7 @@ before_install:
   - sed -i "s&\.\./&$PWD/&g" webviz_examples/aggregated.yaml
 
 script:
-  - 'yamllint -d "{extends: default, ignore: global_variables.yml, rules: {document-start: disable, line-length: {max: 140}}}" .'
+  - yamllint .
   - pushd webviz-subsurface
   - pytest tests --forked
   - popd

@@ -1,0 +1,12 @@
+---
+
+extends: default
+
+ignore: |
+  global_variables.yml
+  webviz-subsurface
+
+rules:
+  document-start: disable
+  line-length:
+    max: 140

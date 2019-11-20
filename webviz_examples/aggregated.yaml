@@ -59,9 +59,9 @@ pages:
       jsonfile: ../aggregated_data/subsurface-map.json
 
 
- - title: FenceViewer
+ - title: WellCrossSection
    content:
-    - container: FenceViewer
+    - container: WellCrossSection
       wellfiles: 
         - ../observed_data/wells/OP_1.w
         - ../observed_data/wells/OP_2.w

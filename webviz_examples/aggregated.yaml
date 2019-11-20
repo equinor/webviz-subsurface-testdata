@@ -61,7 +61,7 @@ pages:
   - title: WellCrossSection
     content:
       - container: WellCrossSection
-        wellfiles: 
+        wellfiles:
           - ../observed_data/wells/OP_1.w
           - ../observed_data/wells/OP_2.w
           - ../observed_data/wells/OP_3.w
@@ -73,7 +73,7 @@ pages:
           - ../reek_fullmatrix/realization-0/iter-0/share/results/maps/topmidreek--ds_extracted_horizons.gri
           - ../reek_fullmatrix/realization-0/iter-0/share/results/maps/toplowerreek--ds_extracted_horizons.gri
           - ../reek_fullmatrix/realization-0/iter-0/share/results/maps/baselowerreek--ds_extracted_horizons.gri
-        surfacenames: 
+        surfacenames:
           - Top Upper Reek
           - Top Middle Reek
           - Top Lower Reek

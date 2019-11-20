@@ -1,9 +1,11 @@
+[![Build Status](https://travis-ci.org/equinor/webviz-subsurface-testdata.svg?branch=master)](https://travis-ci.org/equinor/webviz-subsurface-testdata)
+
 # Testdata for `webviz-subsurface`
 
-This repository contains some open example data to be used by 
+This repository contains some open example data to be used by
 https://github.com/equinor/webviz-subsurface
 
-If you only want to download the data, you can use this command:
+If you only want to download the data, you can run
 ```bash
 git clone --depth 1 https://github.com/equinor/webviz-subsurface-testdata
 ```

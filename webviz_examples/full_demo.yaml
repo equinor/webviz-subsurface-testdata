@@ -49,16 +49,13 @@ pages:
       - container: ParameterDistribution
         ensembles:
           - iter-0
-      - container: ParameterCorrelation
-        ensembles:
-          - iter-0
 
   - title: Parameter correlation
     content:
       - container: ParameterCorrelation
         ensembles:
           - iter-0
-    
+
   - title: How was this made?
     content:
       - container: Markdown

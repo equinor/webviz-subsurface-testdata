@@ -58,6 +58,13 @@ pages:
       - container: SubsurfaceMap
         jsonfile: ../aggregated_data/subsurface-map.json
 
+  - title: SegyViewer
+    content:
+      - container: SegyViewer
+        segyfiles:
+          - ../observed_data/seismic/syntseis_20000101_seismic_depth_stack.segy
+          - ../observed_data/seismic/syntseis_20030101_seismic_depth_stack.segy
+
   - title: WellCrossSection
     content:
       - container: WellCrossSection

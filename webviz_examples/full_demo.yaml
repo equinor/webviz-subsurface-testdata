@@ -1,65 +1,67 @@
-title: Reek Webviz Demonstration
+title: Reek Webviz Example
 
 container_settings:
   scratch_ensembles:
     iter-0: ../reek_fullmatrix/realization-*/iter-0
 
-pages:
+pages: 
 
- - title: Front page
-   content:
-    - Webviz created from configuration file
+  - title: Front page
+    content:
+      - container: BannerImage
+        image: ./content/reek_image.jpg
+        title: Reek FMU Webviz example
+      - container: Markdown
+        markdown_file: ./content/front_page.md
 
- - title: InplaceVolumesOneByOne
-   content: 
-    - container: InplaceVolumesOneByOne
-      ensembles: 
-        - iter-0
-      volfiles: 
-        geogrid: geogrid--oil.csv
-        simgrid: simgrid--oil.csv
+  - title: Simulation time series
+    content:
+      - container: ReservoirSimulationTimeSeries
+        ensembles:
+          - iter-0
+        options:
+          vector1: FOPT
+          vector2: FGPT
+          vector3: FWPT
+          date: 2003-02-01
+          visualization: statistics_hist
 
- - title: ReservoirSimulationTimeSeriesOneByOne
-   content: 
-    - container: ReservoirSimulationTimeSeriesOneByOne
-      ensembles: 
-        - iter-0
+  - title: Inplace volumes
+    content:
+      - container: InplaceVolumes
+        ensembles:
+          - iter-0
+        volfiles:
+          geogrid: geogrid--oil.csv
+          simgrid: simgrid--oil.csv
 
- - title: InplaceVolumes
-   content:
-    - container: InplaceVolumes
-      ensembles: 
-        - iter-0
-      volfiles:
-        geogrid: geogrid--oil.csv
-        simgrid: simgrid--oil.csv
+  - title: Sensitivity study
+    content:
+      - container: InplaceVolumesOneByOne
+        ensembles:
+          - iter-0
+        volfiles:
+          geogrid: geogrid--oil.csv
+          simgrid: simgrid--oil.csv
 
- - title: ParameterDistribution
-   content:
-    - container: ParameterDistribution
-      ensembles:
-        - iter-0
+  - title: Parameter distribution
+    content:
+      - container: ParameterDistribution
+        ensembles:
+          - iter-0
+      - container: ParameterCorrelation
+        ensembles:
+          - iter-0
 
- - title: ParameterCorrelation
-   content:
-    - container: ParameterCorrelation
-      ensembles:
-        - iter-0
-
- - title: ReservoirSimulationTimeSeries
-   content:
-    - container: ReservoirSimulationTimeSeries
-      ensembles:
-        - iter-0
-
- - title: ReservoirSimulationTimeSeries (with options set)
-   content:
-    - container: ReservoirSimulationTimeSeries
-      ensembles:
-        - iter-0
-      options:
-        vector1: FOPT
-        vector2: FGPT
-        vector3: FWPT
-        date: 2003-02-01
-        visualization: statistics_hist
+  - title: Parameter correlation
+    content:
+      - container: ParameterCorrelation
+        ensembles:
+          - iter-0
+    
+  - title: How was this made?
+    content:
+      - container: Markdown
+        markdown_file: ./content/how_was_this_made.md
+      - container: SyntaxHighlighter
+        filename: ./full_demo.yaml

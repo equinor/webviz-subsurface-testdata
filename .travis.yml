@@ -1,0 +1,50 @@
+language: python
+dist: bionic
+
+env:
+  global:
+    # If you want the CI to (temporarily) run against your fork of webviz-subsurface,
+    # change the value her from "equinor" to your username.
+    - SUBSURFACE_REPO_OWNER="equinor"
+    # If you want the CI to (temporarily) run against another branch than master,
+    # change the value her from "master" to the relevant branch name.
+    - SUBSURFACE_REPO_BRANCH="master"
+
+addons:
+  chrome: stable
+
+services:
+  - xvfb
+
+python:
+  - "3.6"
+
+before_install:
+  - sudo apt-get -qq update
+  - pip freeze | grep -vw "pip" | xargs pip uninstall -y
+  - pip install --upgrade pip
+
+install:
+  - wget https://chromedriver.storage.googleapis.com/$(wget https://chromedriver.storage.googleapis.com/LATEST_RELEASE -q -O -)/chromedriver_linux64.zip
+  - unzip chromedriver_linux64.zip
+  - export PATH=$PATH:$PWD
+  - pip install yamllint
+  - pip install git+https://github.com/equinor/libecl
+  - pip install git+https://github.com/equinor/fmu-ensemble
+  - git clone --depth 1 --branch $SUBSURFACE_REPO_BRANCH https://github.com/$SUBSURFACE_REPO_OWNER/webviz-subsurface
+  - pushd webviz-subsurface
+  - pip install .[tests]
+  - pip install dash[testing]
+  - sed -i "s&\./webviz-subsurface-testdata/&\.\./&g" tests/integration_tests/test_raw_data_example.py
+  - sed -i "s&\./webviz-subsurface-testdata/&\.\./&g" tests/integration_tests/test_aggregated_data_example.py
+  - popd
+  # Need to find full path to testdata due to https://github.com/equinor/webviz-subsurface/issues/128
+  - sed -i "s&\.\./&$PWD/&g" webviz_examples/full_demo.yaml
+  - sed -i "s&\.\./&$PWD/&g" webviz_examples/raw_data.yaml
+  - sed -i "s&\.\./&$PWD/&g" webviz_examples/aggregated.yaml
+
+script:
+  - yamllint .
+  - pushd webviz-subsurface
+  - pytest tests --forked
+  - popd

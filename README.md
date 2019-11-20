@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/equinor/webviz-subsurface-testdata.svg?branch=master)](https://travis-ci.org/equinor/webviz-subsurface-testdata)
+
 # Testdata for `webviz-subsurface`
 
 This repository contains some open example data to be used by

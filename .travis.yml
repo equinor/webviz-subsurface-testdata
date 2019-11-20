@@ -20,6 +20,7 @@ before_install:
   - git clone --depth 1 --branch $SUBSURFACE_REPO_BRANCH https://github.com/$SUBSURFACE_REPO_OWNER/webviz-subsurface
   - pushd webviz-subsurface
   - pip install .[tests]
+  - pip install dash[testing]
   - popd
   # Need to find full path to testdata due to https://github.com/equinor/webviz-subsurface/issues/128
   - sed -i "s&\.\./&$PWD/&g" webviz_examples/full_demo.yaml

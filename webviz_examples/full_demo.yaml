@@ -6,60 +6,60 @@ container_settings:
 
 pages:
 
- - title: Front page
-   content:
-    - Webviz created from configuration file
+  - title: Front page
+    content:
+      - Webviz created from configuration file
 
- - title: InplaceVolumesOneByOne
-   content: 
-    - container: InplaceVolumesOneByOne
-      ensembles: 
-        - iter-0
-      volfiles: 
-        geogrid: geogrid--oil.csv
-        simgrid: simgrid--oil.csv
+  - title: InplaceVolumesOneByOne
+    content:
+      - container: InplaceVolumesOneByOne
+        ensembles:
+          - iter-0
+        volfiles:
+          geogrid: geogrid--oil.csv
+          simgrid: simgrid--oil.csv
 
- - title: ReservoirSimulationTimeSeriesOneByOne
-   content: 
-    - container: ReservoirSimulationTimeSeriesOneByOne
-      ensembles: 
-        - iter-0
+  - title: ReservoirSimulationTimeSeriesOneByOne
+    content:
+      - container: ReservoirSimulationTimeSeriesOneByOne
+        ensembles:
+          - iter-0
 
- - title: InplaceVolumes
-   content:
-    - container: InplaceVolumes
-      ensembles: 
-        - iter-0
-      volfiles:
-        geogrid: geogrid--oil.csv
-        simgrid: simgrid--oil.csv
+  - title: InplaceVolumes
+    content:
+      - container: InplaceVolumes
+        ensembles:
+          - iter-0
+        volfiles:
+          geogrid: geogrid--oil.csv
+          simgrid: simgrid--oil.csv
 
- - title: ParameterDistribution
-   content:
-    - container: ParameterDistribution
-      ensembles:
-        - iter-0
+  - title: ParameterDistribution
+    content:
+      - container: ParameterDistribution
+        ensembles:
+          - iter-0
 
- - title: ParameterCorrelation
-   content:
-    - container: ParameterCorrelation
-      ensembles:
-        - iter-0
+  - title: ParameterCorrelation
+    content:
+      - container: ParameterCorrelation
+        ensembles:
+          - iter-0
 
- - title: ReservoirSimulationTimeSeries
-   content:
-    - container: ReservoirSimulationTimeSeries
-      ensembles:
-        - iter-0
+  - title: ReservoirSimulationTimeSeries
+    content:
+      - container: ReservoirSimulationTimeSeries
+        ensembles:
+          - iter-0
 
- - title: ReservoirSimulationTimeSeries (with options set)
-   content:
-    - container: ReservoirSimulationTimeSeries
-      ensembles:
-        - iter-0
-      options:
-        vector1: FOPT
-        vector2: FGPT
-        vector3: FWPT
-        date: 2003-02-01
-        visualization: statistics_hist
+  - title: ReservoirSimulationTimeSeries (with options set)
+    content:
+      - container: ReservoirSimulationTimeSeries
+        ensembles:
+          - iter-0
+        options:
+          vector1: FOPT
+          vector2: FGPT
+          vector3: FWPT
+          date: 2003-02-01
+          visualization: statistics_hist

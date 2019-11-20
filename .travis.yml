@@ -8,4 +8,4 @@ before_install:
   - pip install yamllint
 
 script:
-  - yamllint -d "{extends: default, ignore: 'global_variables.yml'}" .
+  - 'yamllint -d "{extends: default, ignore: global_variables.yml, rules: {document-start: disable, line-length: {max: 140}}}" .'

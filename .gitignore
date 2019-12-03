@@ -17,7 +17,7 @@ reek_fullmatrix/*/*/share/results/tables/eclgrid.csv
 *lsf_info.json
 *rms_exec_env.json
 
-#Include selection of large files
+# Include selection of large files
 !reek_fullmatrix/realization-0/iter-0/eclipse/*/*
 !reek_fullmatrix/*/*/eclipse/model/*.UNSMRY
 !reek_fullmatrix/*/*/eclipse/model/*.DATA
@@ -29,3 +29,6 @@ reek_fullmatrix/*/*/share/results/tables/eclgrid.csv
 !reek_fullmatrix/realization-3/iter-0/share/results/maps/*
 !reek_fullmatrix/realization-0/iter-0/share/results/grids/*
 !reek_fullmatrix/realization-0/iter-0/share/results/seismic/*
+
+# Include history match run (manually cleaned as for now)
+!reek_history_match/**

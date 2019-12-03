@@ -44,7 +44,10 @@ pages:
     content:
       - container: InplaceVolumes
         ensembles:
-          - sens_run
+          - iter-0
+          - iter-1
+          - iter-2
+          - iter-3
         volfiles:
           geogrid: geogrid--oil.csv
           simgrid: simgrid--oil.csv

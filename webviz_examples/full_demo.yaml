@@ -18,6 +18,34 @@ pages:
       - container: Markdown
         markdown_file: ./content/front_page.md
 
+  - title: Sensitivity study (inplace)
+    content:
+      - container: InplaceVolumesOneByOne
+        ensembles:
+          - sens_run
+        volfiles:
+          geogrid: geogrid--oil.csv
+          simgrid: simgrid--oil.csv
+
+  - title: Sensitivity study (time series)
+    content:
+      - container: ReservoirSimulationTimeSeriesOneByOne
+        ensembles:
+          - sens_run
+        initial_vector: FOPT
+
+  - title: Inplace volumes
+    content:
+      - container: InplaceVolumes
+        ensembles:
+          - iter-0
+          - iter-1
+          - iter-2
+          - iter-3
+        volfiles:
+          geogrid: geogrid--oil.csv
+          simgrid: simgrid--oil.csv
+
   - title: Simulation time series
     content:
       - container: ReservoirSimulationTimeSeries
@@ -39,34 +67,6 @@ pages:
         map_value: PERMX
         flow_value: FLROIL
         time_step: 2
-
-  - title: Inplace volumes
-    content:
-      - container: InplaceVolumes
-        ensembles:
-          - iter-0
-          - iter-1
-          - iter-2
-          - iter-3
-        volfiles:
-          geogrid: geogrid--oil.csv
-          simgrid: simgrid--oil.csv
-
-  - title: Sensitivity study (inplace)
-    content:
-      - container: InplaceVolumesOneByOne
-        ensembles:
-          - sens_run
-        volfiles:
-          geogrid: geogrid--oil.csv
-          simgrid: simgrid--oil.csv
-
-  - title: Sensitivity study (time series)
-    content:
-      - container: ReservoirSimulationTimeSeriesOneByOne
-        ensembles:
-          - sens_run
-        initial_vector: FOPT
 
   - title: Parameter distribution
     content:

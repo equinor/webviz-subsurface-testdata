@@ -38,10 +38,6 @@ install:
   - sed -i "s&\./webviz-subsurface-testdata/&\.\./&g" tests/integration_tests/test_raw_data_example.py
   - sed -i "s&\./webviz-subsurface-testdata/&\.\./&g" tests/integration_tests/test_aggregated_data_example.py
   - popd
-  # Need to find full path to testdata due to https://github.com/equinor/webviz-subsurface/issues/128
-  - sed -i "s&\.\./&$PWD/&g" webviz_examples/full_demo.yaml
-  - sed -i "s&\.\./&$PWD/&g" webviz_examples/raw_data.yaml
-  - sed -i "s&\.\./&$PWD/&g" webviz_examples/aggregated.yaml
 
 script:
   - yamllint .

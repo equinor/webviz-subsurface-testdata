@@ -1,8 +1,12 @@
 title: Reek Webviz Example
 
-container_settings:
+shared_settings:
   scratch_ensembles:
-    iter-0: ../reek_fullmatrix/realization-*/iter-0
+    sens_run: ../reek_fullmatrix/realization-*/iter-0
+    iter-0: ../reek_history_match/realization-*/iter-0
+    iter-1: ../reek_history_match/realization-*/iter-1
+    iter-2: ../reek_history_match/realization-*/iter-2
+    iter-3: ../reek_history_match/realization-*/iter-3
 
 pages:
 
@@ -14,32 +18,11 @@ pages:
       - container: Markdown
         markdown_file: ./content/front_page.md
 
-  - title: Simulation time series
-    content:
-      - container: ReservoirSimulationTimeSeries
-        ensembles:
-          - iter-0
-        options:
-          vector1: FOPT
-          vector2: FGPT
-          vector3: FWPT
-          date: 2003-02-01
-          visualization: statistics_hist
-
-  - title: Inplace volumes
-    content:
-      - container: InplaceVolumes
-        ensembles:
-          - iter-0
-        volfiles:
-          geogrid: geogrid--oil.csv
-          simgrid: simgrid--oil.csv
-
   - title: Sensitivity study (inplace)
     content:
       - container: InplaceVolumesOneByOne
         ensembles:
-          - iter-0
+          - sens_run
         volfiles:
           geogrid: geogrid--oil.csv
           simgrid: simgrid--oil.csv
@@ -48,20 +31,70 @@ pages:
     content:
       - container: ReservoirSimulationTimeSeriesOneByOne
         ensembles:
-          - iter-0
+          - sens_run
         initial_vector: FOPT
+
+  - title: Inplace volumes
+    content:
+      - container: InplaceVolumes
+        ensembles:
+          - iter-0
+          - iter-1
+          - iter-2
+          - iter-3
+        volfiles:
+          geogrid: geogrid--oil.csv
+          simgrid: simgrid--oil.csv
+
+  - title: Simulation time series
+    content:
+      - container: ReservoirSimulationTimeSeries
+        ensembles:
+          - iter-0
+          - iter-1
+          - iter-2
+          - iter-3
+        obsfile: ../reek_history_match/share/observations/observations.yml
+        options:
+          vector1: WOPR:OP_1
+          visualization: statistics
+
+  - title: Reservoir simulation map
+    content:
+      - In this example, the horizontal permeability is shown together with oil fluid flow for a given date during simulation.
+      - container: SubsurfaceMap
+        ensemble: iter-0
+        map_value: PERMX
+        flow_value: FLROIL
+        time_step: 2
 
   - title: Parameter distribution
     content:
       - container: ParameterDistribution
         ensembles:
           - iter-0
+          - iter-1
+          - iter-2
+          - iter-3
 
   - title: Parameter correlation
     content:
       - container: ParameterCorrelation
         ensembles:
           - iter-0
+          - iter-1
+          - iter-2
+          - iter-3
+
+  - title: History match
+    content:
+      - container: HistoryMatch
+        observation_file: ../reek_history_match/share/observations/observations.yml
+        ensembles:
+          - iter-0
+          - iter-1
+          - iter-2
+          - iter-3
 
   - title: SEG-Y viewer
     content:

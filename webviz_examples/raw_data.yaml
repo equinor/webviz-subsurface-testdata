@@ -1,8 +1,12 @@
 title: Reek Webviz Demonstration
 
-container_settings:
+shared_settings:
   scratch_ensembles:
-    iter-0: ../reek_fullmatrix/realization-*/iter-0
+    sens_run: ../reek_fullmatrix/realization-*/iter-0
+    iter-0: ../reek_history_match/realization-*/iter-0
+    iter-1: ../reek_history_match/realization-*/iter-1
+    iter-2: ../reek_history_match/realization-*/iter-2
+    iter-3: ../reek_history_match/realization-*/iter-3
 
 pages:
 
@@ -14,22 +18,30 @@ pages:
     content:
       - container: InplaceVolumesOneByOne
         ensembles:
-          - iter-0
+          - sens_run
         volfiles:
           geogrid: geogrid--oil.csv
           simgrid: simgrid--oil.csv
+
+  - title: Reservoir simulation map
+    content:
+      - container: SubsurfaceMap
+        ensemble: iter-0
+        map_value: PERMX
+        flow_value: FLROIL
+        time_step: 2
 
   - title: ReservoirSimulationTimeSeriesOneByOne
     content:
       - container: ReservoirSimulationTimeSeriesOneByOne
         ensembles:
-          - iter-0
+          - sens_run
 
   - title: InplaceVolumes
     content:
       - container: InplaceVolumes
         ensembles:
-          - iter-0
+          - sens_run
         volfiles:
           geogrid: geogrid--oil.csv
           simgrid: simgrid--oil.csv
@@ -39,24 +51,46 @@ pages:
       - container: ParameterDistribution
         ensembles:
           - iter-0
+          - iter-1
+          - iter-2
+          - iter-3
 
   - title: ParameterCorrelation
     content:
       - container: ParameterCorrelation
         ensembles:
           - iter-0
+          - iter-1
+          - iter-2
+          - iter-3
+
+  - title: History match
+    content:
+      - container: HistoryMatch
+        observation_file: ../reek_history_match/share/observations/observations.yml
+        ensembles:
+          - iter-0
+          - iter-1
+          - iter-2
+          - iter-3
 
   - title: ReservoirSimulationTimeSeries
     content:
       - container: ReservoirSimulationTimeSeries
         ensembles:
           - iter-0
+          - iter-1
+          - iter-2
+          - iter-3
 
   - title: ReservoirSimulationTimeSeries (with options set)
     content:
       - container: ReservoirSimulationTimeSeries
         ensembles:
           - iter-0
+          - iter-1
+          - iter-2
+          - iter-3
         options:
           vector1: FOPT
           vector2: FGPT

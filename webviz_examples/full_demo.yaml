@@ -33,6 +33,7 @@ pages:
 
   - title: Reservoir simulation map
     content:
+      - In this example, the horizontal permeability is shown together with oil fluid flow for a given date during simulation.
       - container: SubsurfaceMap
         ensemble: iter-0
         map_value: PERMX

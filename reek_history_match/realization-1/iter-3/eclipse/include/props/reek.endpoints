@@ -1,0 +1,31 @@
+COPY
+SWATINIT SWL /
+/
+
+MAXVALUE
+'SWCR' 0.4/
+'SWL' 0.4/
+/
+-- SGU =  1 - SWL  (Max. Sg=1-Swi)
+COPY
+ SWL   SWCR  / 
+ SWL   SGU   /  
+/
+
+-- Next 2 keywords are used to make maximum gas saturation consistent: SGU=1-SWL
+
+MULTIPLY
+-- array  value 
+ 'SGU'    -1.0   /
+/
+
+ADD
+-- array  value  
+ 'SGU'     1.0    /
+/
+
+--Ensure endpoint consistency:
+EQUALS
+ 'SGL' 0.0 /
+ 'SWU' 1.0 /
+/

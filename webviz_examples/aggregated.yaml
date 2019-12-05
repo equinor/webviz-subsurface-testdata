@@ -52,13 +52,13 @@ pages:
     content:
       - container: ParameterResponseCorrelation
         parameter_csv: ../aggregated_data/parameters.csv
-        response_csv : ../aggregated_data/volumes.csv
+        response_csv: ../aggregated_data/volumes.csv
         response_filters:
           ZONE: multi
           REGION: multi
       - container: ParameterResponseCorrelation
         parameter_csv: ../aggregated_data/parameters.csv
-        response_csv : ../aggregated_data/smry.csv 
+        response_csv: ../aggregated_data/smry.csv
         response_filters:
           DATE: single
 

@@ -86,7 +86,7 @@ pages:
           - iter-1
           - iter-2
           - iter-3
-        response_file : share/results/volumes/geogrid--oil.csv
+        response_file: share/results/volumes/geogrid--oil.csv
         response_filters:
           ZONE: multi
           REGION: multi
@@ -98,7 +98,7 @@ pages:
           - iter-1
           - iter-2
           - iter-3
-        response_file : share/results/tables/unsmry--monthly.csv 
+        response_file: share/results/tables/unsmry--monthly.csv
         response_filters:
           DATE: single
 

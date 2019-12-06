@@ -77,8 +77,32 @@ pages:
           - iter-2
           - iter-3
 
-  - title: Parameter correlation
+  - title: Correlation between input parameters and responses
     content:
+      - '# Correlation between input parameters and inplace volumes'
+      - container: ParameterResponseCorrelation
+        ensembles:
+          - iter-0
+          - iter-1
+          - iter-2
+          - iter-3
+        response_file: share/results/volumes/geogrid--oil.csv
+        response_filters:
+          ZONE: multi
+          REGION: multi
+
+      - '# Correlation between input parameters and time series'
+      - container: ParameterResponseCorrelation
+        ensembles:
+          - iter-0
+          - iter-1
+          - iter-2
+          - iter-3
+        response_file: share/results/tables/unsmry--monthly.csv
+        response_filters:
+          DATE: single
+
+      - '# Pairwise correlation between all input parameters'
       - container: ParameterCorrelation
         ensembles:
           - iter-0

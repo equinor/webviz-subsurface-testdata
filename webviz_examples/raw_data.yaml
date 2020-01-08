@@ -16,103 +16,103 @@ pages:
 
   - title: InplaceVolumesOneByOne
     content:
-      - container: InplaceVolumesOneByOne
-        ensembles:
-          - sens_run
-        volfiles:
-          geogrid: geogrid--oil.csv
-          simgrid: simgrid--oil.csv
+      - InplaceVolumesOneByOne:
+          ensembles:
+            - sens_run
+          volfiles:
+            geogrid: geogrid--oil.csv
+            simgrid: simgrid--oil.csv
 
   - title: Reservoir simulation map
     content:
-      - container: SubsurfaceMap
-        ensemble: iter-0
-        map_value: PERMX
-        flow_value: FLROIL
-        time_step: 2
+      - SubsurfaceMap:
+          ensemble: iter-0
+          map_value: PERMX
+          flow_value: FLROIL
+          time_step: 2
 
   - title: ReservoirSimulationTimeSeriesOneByOne
     content:
-      - container: ReservoirSimulationTimeSeriesOneByOne
-        ensembles:
-          - sens_run
+      - ReservoirSimulationTimeSeriesOneByOne:
+          ensembles:
+            - sens_run
 
   - title: InplaceVolumes
     content:
-      - container: InplaceVolumes
-        ensembles:
-          - sens_run
-        volfiles:
-          geogrid: geogrid--oil.csv
-          simgrid: simgrid--oil.csv
+      - InplaceVolumes:
+          ensembles:
+            - sens_run
+          volfiles:
+            geogrid: geogrid--oil.csv
+            simgrid: simgrid--oil.csv
 
   - title: ParameterDistribution
     content:
-      - container: ParameterDistribution
-        ensembles:
-          - iter-0
-          - iter-1
-          - iter-2
-          - iter-3
+      - ParameterDistribution:
+          ensembles:
+            - iter-0
+            - iter-1
+            - iter-2
+            - iter-3
 
   - title: ParameterCorrelation
     content:
-      - container: ParameterCorrelation
-        ensembles:
-          - iter-0
-          - iter-1
-          - iter-2
-          - iter-3
-      - container: ParameterResponseCorrelation
-        ensembles:
-          - iter-0
-          - iter-1
-          - iter-2
-          - iter-3
-        response_file: share/results/volumes/geogrid--oil.csv
-        response_filters:
-          ZONE: multi
-          REGION: multi
-      - container: ParameterResponseCorrelation
-        ensembles:
-          - iter-0
-          - iter-1
-          - iter-2
-          - iter-3
-        response_file: share/results/tables/unsmry--monthly.csv
-        response_filters:
-          DATE: single
+      - ParameterCorrelation:
+          ensembles:
+            - iter-0
+            - iter-1
+            - iter-2
+            - iter-3
+      - ParameterResponseCorrelation:
+          ensembles:
+            - iter-0
+            - iter-1
+            - iter-2
+            - iter-3
+          response_file: share/results/volumes/geogrid--oil.csv
+          response_filters:
+            ZONE: multi
+            REGION: multi
+      - ParameterResponseCorrelation:
+          ensembles:
+            - iter-0
+            - iter-1
+            - iter-2
+            - iter-3
+          response_file: share/results/tables/unsmry--monthly.csv
+          response_filters:
+            DATE: single
 
   - title: History match
     content:
-      - container: HistoryMatch
-        observation_file: ../reek_history_match/share/observations/observations.yml
-        ensembles:
-          - iter-0
-          - iter-1
-          - iter-2
-          - iter-3
+      - HistoryMatch:
+          observation_file: ../reek_history_match/share/observations/observations.yml
+          ensembles:
+            - iter-0
+            - iter-1
+            - iter-2
+            - iter-3
 
   - title: ReservoirSimulationTimeSeries
     content:
-      - container: ReservoirSimulationTimeSeries
-        ensembles:
-          - iter-0
-          - iter-1
-          - iter-2
-          - iter-3
+      - ReservoirSimulationTimeSeries:
+          ensembles:
+            - iter-0
+            - iter-1
+            - iter-2
+            - iter-3
 
   - title: ReservoirSimulationTimeSeries (with options set)
     content:
-      - container: ReservoirSimulationTimeSeries
-        ensembles:
-          - iter-0
-          - iter-1
-          - iter-2
-          - iter-3
-        options:
-          vector1: FOPT
-          vector2: FGPT
-          vector3: FWPT
-          date: 2003-02-01
-          visualization: statistics_hist
+      - ReservoirSimulationTimeSeries:
+          ensembles:
+            - iter-0
+            - iter-1
+            - iter-2
+            - iter-3
+          options:
+            vector1: FOPT
+            vector2: FGPT
+            vector3: FWPT
+            date: 2003-02-01
+            visualization: statistics_hist

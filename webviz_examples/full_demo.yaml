@@ -12,150 +12,150 @@ pages:
 
   - title: Front page
     content:
-      - container: BannerImage
-        image: ./content/reek_image.jpg
-        title: Reek FMU Webviz example
-      - container: Markdown
-        markdown_file: ./content/front_page.md
+      - BannerImage:
+          image: ./content/reek_image.jpg
+          title: Reek FMU Webviz example
+      - Markdown:
+          markdown_file: ./content/front_page.md
 
   - title: Sensitivity study (inplace)
     content:
-      - container: InplaceVolumesOneByOne
-        ensembles:
-          - sens_run
-        volfiles:
-          geogrid: geogrid--oil.csv
-          simgrid: simgrid--oil.csv
+      - InplaceVolumesOneByOne:
+          ensembles:
+            - sens_run
+          volfiles:
+            geogrid: geogrid--oil.csv
+            simgrid: simgrid--oil.csv
 
   - title: Sensitivity study (time series)
     content:
-      - container: ReservoirSimulationTimeSeriesOneByOne
-        ensembles:
-          - sens_run
-        initial_vector: FOPT
+      - ReservoirSimulationTimeSeriesOneByOne:
+          ensembles:
+            - sens_run
+          initial_vector: FOPT
 
   - title: Inplace volumes
     content:
-      - container: InplaceVolumes
-        ensembles:
-          - iter-0
-          - iter-1
-          - iter-2
-          - iter-3
-        volfiles:
-          geogrid: geogrid--oil.csv
-          simgrid: simgrid--oil.csv
+      - InplaceVolumes:
+          ensembles:
+            - iter-0
+            - iter-1
+            - iter-2
+            - iter-3
+          volfiles:
+            geogrid: geogrid--oil.csv
+            simgrid: simgrid--oil.csv
 
   - title: Simulation time series
     content:
-      - container: ReservoirSimulationTimeSeries
-        ensembles:
-          - iter-0
-          - iter-1
-          - iter-2
-          - iter-3
-        obsfile: ../reek_history_match/share/observations/observations.yml
-        options:
-          vector1: WOPR:OP_1
-          visualization: statistics
+      - ReservoirSimulationTimeSeries:
+          ensembles:
+            - iter-0
+            - iter-1
+            - iter-2
+            - iter-3
+          obsfile: ../reek_history_match/share/observations/observations.yml
+          options:
+            vector1: WOPR:OP_1
+            visualization: statistics
 
   - title: Reservoir simulation map
     content:
       - In this example, the horizontal permeability is shown together with oil fluid flow for a given date during simulation.
-      - container: SubsurfaceMap
-        ensemble: iter-0
-        map_value: PERMX
-        flow_value: FLROIL
-        time_step: 2
+      - SubsurfaceMap:
+          ensemble: iter-0
+          map_value: PERMX
+          flow_value: FLROIL
+          time_step: 2
 
   - title: Parameter distribution
     content:
-      - container: ParameterDistribution
-        ensembles:
-          - iter-0
-          - iter-1
-          - iter-2
-          - iter-3
+      - ParameterDistribution:
+          ensembles:
+            - iter-0
+            - iter-1
+            - iter-2
+            - iter-3
 
   - title: Correlation between input parameters and responses
     content:
       - '# Correlation between input parameters and inplace volumes'
-      - container: ParameterResponseCorrelation
-        ensembles:
-          - iter-0
-          - iter-1
-          - iter-2
-          - iter-3
-        response_file: share/results/volumes/geogrid--oil.csv
-        response_filters:
-          ZONE: multi
-          REGION: multi
+      - ParameterResponseCorrelation:
+          ensembles:
+            - iter-0
+            - iter-1
+            - iter-2
+            - iter-3
+          response_file: share/results/volumes/geogrid--oil.csv
+          response_filters:
+            ZONE: multi
+            REGION: multi
 
       - '# Correlation between input parameters and time series'
-      - container: ParameterResponseCorrelation
-        ensembles:
-          - iter-0
-          - iter-1
-          - iter-2
-          - iter-3
-        response_file: share/results/tables/unsmry--monthly.csv
-        response_filters:
-          DATE: single
+      - ParameterResponseCorrelation:
+          ensembles:
+            - iter-0
+            - iter-1
+            - iter-2
+            - iter-3
+          response_file: share/results/tables/unsmry--monthly.csv
+          response_filters:
+            DATE: single
 
       - '# Pairwise correlation between all input parameters'
-      - container: ParameterCorrelation
-        ensembles:
-          - iter-0
-          - iter-1
-          - iter-2
-          - iter-3
+      - ParameterCorrelation:
+          ensembles:
+            - iter-0
+            - iter-1
+            - iter-2
+            - iter-3
 
   - title: History match
     content:
-      - container: HistoryMatch
-        observation_file: ../reek_history_match/share/observations/observations.yml
-        ensembles:
-          - iter-0
-          - iter-1
-          - iter-2
-          - iter-3
+      - HistoryMatch:
+          observation_file: ../reek_history_match/share/observations/observations.yml
+          ensembles:
+            - iter-0
+            - iter-1
+            - iter-2
+            - iter-3
 
   - title: SEG-Y viewer
     content:
-      - container: SegyViewer
-        segyfiles:
-          - ../observed_data/seismic/syntseis_20000101_seismic_depth_stack.segy
-          - ../observed_data/seismic/syntseis_20030101_seismic_depth_stack.segy
+      - SegyViewer:
+          segyfiles:
+            - ../observed_data/seismic/syntseis_20000101_seismic_depth_stack.segy
+            - ../observed_data/seismic/syntseis_20030101_seismic_depth_stack.segy
 
   - title: Well cross-section
     content:
-      - container: WellCrossSection
-        wellfiles:
-          - ../observed_data/wells/OP_1.w
-          - ../observed_data/wells/OP_2.w
-          - ../observed_data/wells/OP_3.w
-          - ../observed_data/wells/OP_4.w
-          - ../observed_data/wells/OP_5.w
-          - ../observed_data/wells/OP_6.w
-        surfacefiles:
-          - ../reek_fullmatrix/realization-0/iter-0/share/results/maps/topupperreek--ds_extracted_horizons.gri
-          - ../reek_fullmatrix/realization-0/iter-0/share/results/maps/topmidreek--ds_extracted_horizons.gri
-          - ../reek_fullmatrix/realization-0/iter-0/share/results/maps/toplowerreek--ds_extracted_horizons.gri
-          - ../reek_fullmatrix/realization-0/iter-0/share/results/maps/baselowerreek--ds_extracted_horizons.gri
-        surfacenames:
-          - Top Upper Reek
-          - Top Middle Reek
-          - Top Lower Reek
-          - Base Lower Reek
-        segyfiles:
-          - ../observed_data/seismic/syntseis_20000101_seismic_depth_stack.segy
-        zonelog: Zonelog
-        zmin: 1500.0
-        zmax: 1800.0
+      - WellCrossSection:
+          wellfiles:
+            - ../observed_data/wells/OP_1.w
+            - ../observed_data/wells/OP_2.w
+            - ../observed_data/wells/OP_3.w
+            - ../observed_data/wells/OP_4.w
+            - ../observed_data/wells/OP_5.w
+            - ../observed_data/wells/OP_6.w
+          surfacefiles:
+            - ../reek_fullmatrix/realization-0/iter-0/share/results/maps/topupperreek--ds_extracted_horizons.gri
+            - ../reek_fullmatrix/realization-0/iter-0/share/results/maps/topmidreek--ds_extracted_horizons.gri
+            - ../reek_fullmatrix/realization-0/iter-0/share/results/maps/toplowerreek--ds_extracted_horizons.gri
+            - ../reek_fullmatrix/realization-0/iter-0/share/results/maps/baselowerreek--ds_extracted_horizons.gri
+          surfacenames:
+            - Top Upper Reek
+            - Top Middle Reek
+            - Top Lower Reek
+            - Base Lower Reek
+          segyfiles:
+            - ../observed_data/seismic/syntseis_20000101_seismic_depth_stack.segy
+          zonelog: Zonelog
+          zmin: 1500.0
+          zmax: 1800.0
 
   - title: How was this made?
     content:
-      - container: Markdown
-        markdown_file: ./content/how_was_this_made.md
-      - container: SyntaxHighlighter
-        filename: ./full_demo.yaml
+      - Markdown:
+          markdown_file: ./content/how_was_this_made.md
+      - SyntaxHighlighter:
+          filename: ./full_demo.yaml

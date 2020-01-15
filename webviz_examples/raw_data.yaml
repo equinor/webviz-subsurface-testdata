@@ -116,3 +116,16 @@ pages:
             vector3: FWPT
             date: 2003-02-01
             visualization: statistics_hist
+
+  - title: SeismicCrossSection
+    content:
+      - SeismicCrossSection:
+          segyfiles:
+            - ../observed_data/seismic/syntseis_20000101_seismic_depth_stack.segy
+            - ../observed_data/seismic/syntseis_20030101_seismic_depth_stack.segy
+          surfacefiles:
+            - ../reek_fullmatrix/realization-0/iter-0/share/results/maps/topupperreek--ds_extracted_horizons.gri
+            - ../reek_fullmatrix/realization-0/iter-0/share/results/maps/baselowerreek--ds_extracted_horizons.gri
+          surfacenames:
+            - Top Upper Reek
+            - Base Lower Reek

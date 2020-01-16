@@ -117,9 +117,9 @@ pages:
             date: 2003-02-01
             visualization: statistics_hist
 
-  - title: SeismicCrossSection
+  - title: SurfaceWithSeismicCrossSection
     content:
-      - SeismicCrossSection:
+      - SurfaceWithSeismicCrossSection:
           segyfiles:
             - ../observed_data/seismic/syntseis_20000101_seismic_depth_stack.segy
             - ../observed_data/seismic/syntseis_20030101_seismic_depth_stack.segy

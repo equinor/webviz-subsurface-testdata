@@ -129,7 +129,7 @@ pages:
 
   - title: Seismic CrossSection
     content:
-      - SeismicCrossSection:
+      - SurfaceWithSeismicCrossSection:
           segyfiles:
             - ../observed_data/seismic/syntseis_20000101_seismic_depth_stack.segy
             - ../observed_data/seismic/syntseis_20030101_seismic_depth_stack.segy

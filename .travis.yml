@@ -5,10 +5,10 @@ env:
   global:
     # If you want the CI to (temporarily) run against your fork of webviz-subsurface,
     # change the value her from "equinor" to your username.
-    - SUBSURFACE_REPO_OWNER="hanskallekleiv"
+    - SUBSURFACE_REPO_OWNER="equinor"
     # If you want the CI to (temporarily) run against another branch than master,
     # change the value her from "master" to the relevant branch name.
-    - SUBSURFACE_REPO_BRANCH="gridfence"
+    - SUBSURFACE_REPO_BRANCH="master"
 
 addons:
   chrome: stable

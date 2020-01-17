@@ -129,3 +129,24 @@ pages:
           surfacenames:
             - Top Upper Reek
             - Base Lower Reek
+
+  - title: Well cross-section (FMU)
+    content:
+      - WellCrossSectionFMU:
+          ensembles:
+            - iter-0
+            - iter-3
+          wellfolder: ../observed_data/wells
+          surfacefiles:
+            - topupperreek--ds_extracted_horizons.gri
+            - topmidreek--ds_extracted_horizons.gri
+            - toplowerreek--ds_extracted_horizons.gri
+            - baselowerreek--ds_extracted_horizons.gri
+          surfacenames:
+            - Top Upper Reek
+            - Top Middle Reek
+            - Top Lower Reek
+            - Base Lower Reek
+          zonelog: Zonelog
+          zmin: 1500.0
+          zmax: 1800.0

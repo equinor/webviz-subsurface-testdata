@@ -130,6 +130,25 @@ pages:
             - Top Upper Reek
             - Base Lower Reek
 
+  - title: SurfaceWithGridCrossSection
+    content:
+      - SurfaceWithGridCrossSection:
+          gridfile: ../reek_history_match/realization-0/iter-0/share/results/grids/geogrid.roff
+          gridparameterfiles:
+            - ../reek_history_match/realization-0/iter-0/share/results/grids/geogrid--poro.roff
+            - ../reek_history_match/realization-0/iter-0/share/results/grids/geogrid--perm.roff
+            - ../reek_history_match/realization-0/iter-0/share/results/grids/geogrid--facies.roff
+          surfacefiles:
+            - ../reek_history_match/realization-0/iter-0/share/results/maps/topupperreek--ds_extracted_horizons.gri
+            - ../reek_history_match/realization-0/iter-0/share/results/maps/topmidreek--ds_extracted_horizons.gri
+            - ../reek_history_match/realization-0/iter-0/share/results/maps/toplowerreek--ds_extracted_horizons.gri
+            - ../reek_history_match/realization-0/iter-0/share/results/maps/baselowerreek--ds_extracted_horizons.gri
+          surfacenames:
+            - Top Upper Reek
+            - Top Middle Reek
+            - Top Lower Reek
+            - Base Lower Reek
+
   - title: Well cross-section (FMU)
     content:
       - WellCrossSectionFMU:
@@ -142,11 +161,6 @@ pages:
             - topmidreek--ds_extracted_horizons.gri
             - toplowerreek--ds_extracted_horizons.gri
             - baselowerreek--ds_extracted_horizons.gri
-          surfacenames:
-            - Top Upper Reek
-            - Top Middle Reek
-            - Top Lower Reek
-            - Base Lower Reek
           zonelog: Zonelog
           zmin: 1500.0
           zmax: 1800.0

@@ -127,7 +127,7 @@ pages:
             - ../observed_data/seismic/syntseis_20000101_seismic_depth_stack.segy
             - ../observed_data/seismic/syntseis_20030101_seismic_depth_stack.segy
 
-  - title: Surface and seismic cross-section
+  - title: Surface with seismic cross-section
     content:
       - SurfaceWithSeismicCrossSection:
           segyfiles:
@@ -138,6 +138,26 @@ pages:
             - ../reek_fullmatrix/realization-0/iter-0/share/results/maps/topmidreek--ds_extracted_horizons.gri
             - ../reek_fullmatrix/realization-0/iter-0/share/results/maps/toplowerreek--ds_extracted_horizons.gri
             - ../reek_fullmatrix/realization-0/iter-0/share/results/maps/baselowerreek--ds_extracted_horizons.gri
+          surfacenames:
+            - Top Upper Reek
+            - Top Middle Reek
+            - Top Lower Reek
+            - Base Lower Reek
+
+
+  - title: Surface with grid cross-section
+    content:
+      - SurfaceWithGridCrossSection:
+          gridfile: ../reek_history_match/realization-0/iter-0/share/results/grids/geogrid.roff
+          gridparameterfiles:
+            - ../reek_history_match/realization-0/iter-0/share/results/grids/geogrid--poro.roff
+            - ../reek_history_match/realization-0/iter-0/share/results/grids/geogrid--perm.roff
+            - ../reek_history_match/realization-0/iter-0/share/results/grids/geogrid--facies.roff
+          surfacefiles:
+            - ../reek_history_match/realization-0/iter-0/share/results/maps/topupperreek--ds_extracted_horizons.gri
+            - ../reek_history_match/realization-0/iter-0/share/results/maps/topmidreek--ds_extracted_horizons.gri
+            - ../reek_history_match/realization-0/iter-0/share/results/maps/toplowerreek--ds_extracted_horizons.gri
+            - ../reek_history_match/realization-0/iter-0/share/results/maps/baselowerreek--ds_extracted_horizons.gri
           surfacenames:
             - Top Upper Reek
             - Top Middle Reek

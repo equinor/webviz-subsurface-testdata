@@ -144,7 +144,6 @@ pages:
             - Top Lower Reek
             - Base Lower Reek
 
-
   - title: Surface with grid cross-section
     content:
       - SurfaceWithGridCrossSection:
@@ -183,7 +182,10 @@ pages:
             - Base Lower Reek
           zonelog: Zonelog
           zmin: 1500.0
-          zmax: 1800.0
+          zmax: 1700.0
+          marginal_logs:
+            - Poro
+            - Perm
           nextend: 20
 
   - title: How was this made?

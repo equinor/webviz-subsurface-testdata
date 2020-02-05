@@ -1,4 +1,6 @@
-title: Reek Webviz Example
+# This is an example configuration file, demonstrating subsurface webviz plugins.
+
+title: FMU (Fast Model Update) Webviz Example
 
 shared_settings:
   scratch_ensembles:
@@ -194,3 +196,4 @@ pages:
           markdown_file: ./content/how_was_this_made.md
       - SyntaxHighlighter:
           filename: ./full_demo.yaml
+          dark_theme: yes

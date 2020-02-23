@@ -117,6 +117,20 @@ pages:
             date: 2003-02-01
             visualization: statistics_hist
 
+  - title: SurfaceViewerFMU
+    content:
+      - SurfaceViewerFMU:
+          ensembles:
+            - iter-0
+            - iter-3
+          wellfolder:
+            ../observed_data/wells
+          attribute_settings:
+            stoiip:
+              min: 0
+              max: 2
+              color: inferno
+
   - title: SurfaceWithSeismicCrossSection
     content:
       - SurfaceWithSeismicCrossSection:

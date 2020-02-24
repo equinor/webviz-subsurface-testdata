@@ -1,0 +1,15 @@
+Reservoir volumes extracted from eclipse prt file:
+eclipse/model/R001_REEK-79.PRT
+---------  ---------------  ---------------  ---------------  ---------------  --------------- 
+ REGION      TOTAL PORE       PORE VOLUME      PORE VOLUME     PORE VOLUME       PORE VOLUME   
+              VOLUME          CONTAINING       CONTAINING      CONTAINING        CONTAINING    
+                                 OIL             WATER            GAS            HYDRO-CARBON  
+---------  ---------------  ---------------  ---------------  ---------------  --------------- 
+   FIELD        372121065.        83149284.       288971781.               0.        83149284. 
+       1         76222501.        32746870.        43475631.               0.        32746870. 
+       2         66425325.               0.        66425325.               0.               0. 
+       3         70259267.        29316849.        40942419.               0.        29316849. 
+       4         58172236.               0.        58172236.               0.               0. 
+       5         57699476.        21085566.        36613910.               0.        21085566. 
+       6         43342260.               0.        43342260.               0.               0. 
+           

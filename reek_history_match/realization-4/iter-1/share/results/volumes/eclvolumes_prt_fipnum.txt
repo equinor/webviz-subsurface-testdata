@@ -1,14 +1,14 @@
-Run name: 5_R001_REEK-4
+Run name: R001_REEK-4
 
   BALANCE  AT      0.00  DAYS *Reek synthetic reservoir model                                          * ECLIPSE  VERSION 2017.2     
-  REPORT   0     1 JAN 2000   *  RUN                                                                   * RUN AT 14:13 ON 29 NOV 2019 
+  REPORT   0     1 JAN 2000   *  RUN                                                                   * RUN AT 16:20 ON 19 FEB 2020 
 
           :--------------- OIL    SM3  ---------------:::-- WAT    SM3  --:--------------- GAS    SM3  ---------------
 FIP-REGION:LIQUID:VAPOUR:TOTAL:TOTAL:FREE:DISSOLVED:TOTAL
-FIELD TOTALS REGION NaN    48877970.    0   48877970.    339498200.   0.    8993546412.   8993546412.  
-FIPNUM REPORT REGION 1    18008010.    0   18008010.    41928638.   0.    3313473889.   3313473889.  
-FIPNUM REPORT REGION 2    0.    0   0.    63159087.   0.    0.   0.  
-FIPNUM REPORT REGION 3    17418759.    0   17418759.    57655361.   0.    3205051673.   3205051673.  
-FIPNUM REPORT REGION 4    0.    0   0.    79901828.   0.    0.   0.  
-FIPNUM REPORT REGION 5    13451200.    0   13451200.    43910153.   0.    2475020851.   2475020851.  
-FIPNUM REPORT REGION 6    0.    0   0.    52943134.   0.    0.   0.  
+FIELD TOTALS REGION NaN    57782688.    0   57782688.    312896922.   0.    10632014653.   10632014653.  
+FIPNUM REPORT REGION 1    20651177.    0   20651177.    41664939.   0.    3799816616.   3799816616.  
+FIPNUM REPORT REGION 2    0.    0   0.    60305540.   0.    0.   0.  
+FIPNUM REPORT REGION 3    21968461.    0   21968461.    49222302.   0.    4042196802.   4042196802.  
+FIPNUM REPORT REGION 4    0.    0   0.    66350407.   0.    0.   0.  
+FIPNUM REPORT REGION 5    15163050.    0   15163050.    41503711.   0.    2790001235.   2790001235.  
+FIPNUM REPORT REGION 6    0.    0   0.    53850023.   0.    0.   0.  

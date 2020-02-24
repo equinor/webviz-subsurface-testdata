@@ -1,0 +1,17 @@
+Project name			: /private/asny/Desktop/reek/resmod/ff/2019a/r001/rms/model/reek.rms11.0.1
+Date				: 2020.02.19 15:43:41
+Grid model name			: Geogrid
+
+   Zone      Region index          Bulk                Pore                Hcpv               Stoiip       
+UpperReek  1                       280285308.79         44354110.15         32260553.84         20289656.17
+UpperReek  2                               0.00                0.00                0.00                0.00
+UpperReek  Totals                  280285308.79         44354110.15         32260553.84         20289656.17
+MidReek    1                       225541480.17         35984022.93         25864212.40         16266799.98
+MidReek    2                               0.00                0.00                0.00                0.00
+MidReek    Totals                  225541480.17         35984022.93         25864212.40         16266799.98
+LowerReek  1                       117823992.71         20207945.81         14531068.74          9139036.79
+LowerReek  2                               0.00                0.00                0.00                0.00
+LowerReek  Totals                  117823992.71         20207945.81         14531068.74          9139036.79
+Totals     1                       623650781.67        100546078.89         72655834.98         45695492.94
+Totals     2                               0.00                0.00                0.00                0.00
+Totals     Totals                  623650781.67        100546078.89         72655834.98         45695492.94

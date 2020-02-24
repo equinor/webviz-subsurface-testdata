@@ -1,0 +1,2601 @@
+<eclipse>
+<message date="1/1/2000" time="0.00000000000000">
+ CHECKING FOR LICENSES                                                   
+</message>
+<message date="1/1/2000" time="0.00000000000000">
+ CHECKING FOR LICENSES                                                   
+</message>
+<message date="1/1/2000" time="0.00000000000000">
+ THE MEMORY REQUIRED TO PROCESS THE GRID SECTION IS                      
+      17002 KBYTES                                                       
+</message>
+<warning date="1/1/2000" time="0.00000000000000">
+ INCLUDED FILE APPEARS TO BE A GRID FILE                                 
+ GRID FILES MUST BE IMPORTED USING GDFILE OR IMPORT                      
+</warning>
+<warning date="1/1/2000" time="0.00000000000000">
+ FLUX FLAG SET IN RUNSPEC BUT FLUXNUM KEYWORD                            
+ NOT USED -- SAVE SPACE BY SETTING NTFREG = 0                            
+ IN RUNSPEC KEYWORD REGDIMS.                                             
+</warning>
+<message date="1/1/2000" time="0.00000000000000">
+ NEITHER OLDTRAN,OLDTRANR NOR NEWTRAN SPECIFIED                          
+ TRANSMISSIBILITIES TO BE CALCULATED                                     
+ USING  NEWTRAN                                                          
+</message>
+<message date="1/1/2000" time="0.00000000000000">
+        9 NON-NEIGHBOUR CONNECTIONS HAVE BEEN IGNORED                    
+ AS THEIR TRANSMISSIBILITY IS LESS THAN 0.100000E-05                     
+</message>
+<message date="1/1/2000" time="0.00000000000000">
+ 3154 NON-NEIGHBOUR CONNECTIONS PRESENT                                  
+</message>
+<comment date="1/1/2000" time="0.00000000000000">
+ LEFT HANDED GRIDS MAY NOT BE SUPPORTED                                  
+  IN ALL PRE AND POST PROCESSORS                                         
+</comment>
+<comment date="1/1/2000" time="0.00000000000000">
+ THE GRID APPEARS TO BE LEFT HANDED, BUT                                 
+ IS SPECIFIED IN GDORIENT AS RIGHT HANDED.                               
+ ENSURE GDORIENT IS CORRECTLY DEFINED.                                   
+</comment>
+<message date="1/1/2000" time="0.00000000000000">
+ NUMBER OF ACTIVE CELLS IS 35780                                         
+</message>
+<message date="1/1/2000" time="0.00000000000000">
+ THE MEMORY REQUIRED TO PROCESS THE SOLUTION SECTION IS                  
+     631480 KBYTES                                                       
+</message>
+<message date="1/1/2000" time="0.00000000000000">
+    89918 CHARACTER VARIABLES USED                                       
+</message>
+<warning date="1/1/2000" time="0.00000000000000">
+ ALTHOUGH ROCK DATA WAS ASSOCIATED WITH ROCKNUM                          
+ THE NUMBER OF REGIONS WAS NOT EXPLICITLY SET                            
+ USING ARGUMENT 13 OF KEYWORD TABDIMS                                    
+ ROCK WILL BE ASSOCIATED WITH PVTNUM INSTEAD                             
+</warning>
+<warning date="1/1/2000" time="0.00000000000000">
+ THE PROCESSED PVTO DATA FOR TABLE   1                                   
+ HAS UNDERSATURATED BO LINES THAT WILL INTERSECT                         
+ IF EXTRAPOLATED                                                         
+ AT RS VALUES OF     522.8400  SM3/SM3 AND     630.0000  SM3/SM3         
+ AND A PRESSURE OF       745.57   BARSA                                  
+</warning>
+<warning date="1/1/2000" time="0.00000000000000">
+ THE PROCESSED PVTO DATA FOR TABLE   1                                   
+ HAS UNDERSATURATED BO LINES THAT WILL INTERSECT                         
+ IF EXTRAPOLATED                                                         
+ AT RS VALUES OF     522.8400  SM3/SM3 AND     630.0000  SM3/SM3         
+ AND A PRESSURE OF       745.99   BARSA                                  
+</warning>
+<warning date="1/1/2000" time="0.00000000000000">
+ THE MAXIMUM PRESSURE ENTERED IN THE PVT TABLES                          
+ FOR THE OIL PHASE IS    700.100. THIS IS GREATER THAN                   
+ THE MAXIMUM PRESSURE FOR THE GAS PHASE,    700.000                      
+ AND MAY LEAD TO PVT TABLE EXTRAPOLATION                                 
+</warning>
+<message date="1/1/2000" time="0.00000000000000">
+ SAVE FILE HAS BEEN WRITTEN.                                             
+</message>
+<warning date="1/1/2000" time="0.00000000000000">
+ THE FINE GRID BLOCK EQUILIBRATION SHOULD NOT                            
+ USUALLY BE USED WITH THE SWATINIT KEYWORD AS                            
+ THE INTEGRATED SOLUTION WILL NOT IN GENERAL                             
+ HONOUR THE SWATINIT DATA.                                               
+ FOR EQUILIBRATION REGION 1                                              
+</warning>
+<warning date="1/1/2000" time="0.00000000000000">
+ THE FINE GRID BLOCK EQUILIBRATION SHOULD NOT                            
+ USUALLY BE USED WITH THE SWATINIT KEYWORD AS                            
+ THE INTEGRATED SOLUTION WILL NOT IN GENERAL                             
+ HONOUR THE SWATINIT DATA.                                               
+ FOR EQUILIBRATION REGION 2                                              
+</warning>
+<message date="1/1/2000" time="0.00000000000000">
+ DRSDT OR DRSDTR KEYWORDS HAVE NOT BEEN                                  
+ ENTERED, SO THE MAXIMUM GAS RE-SOLUTION                                 
+ RATE IS DEFAULTED TO INFINITY.                                          
+</message>
+<message date="1/1/2000" time="0.00000000000000">
+ RESTART FILE WRITTEN   REPORT     0                                     
+ RESTART INCLUDES FLUIDS IN PLACE                                        
+</message>
+<message date="1/2/2000" time="31.00000000000000">
+ OPENING WELL OP_1     AT TIME     31.00   DAYS                          
+ CONTROLLED BY RESERVOIR FLUID VOLUME RATE                               
+</message>
+<message date="1/2/2000" time="31.00000000000000">
+ OPENING WELL OP_2     AT TIME     31.00   DAYS                          
+ CONTROLLED BY RESERVOIR FLUID VOLUME RATE                               
+</message>
+<message date="1/2/2000" time="31.00000000000000">
+ OPENING WELL OP_3     AT TIME     31.00   DAYS                          
+ CONTROLLED BY RESERVOIR FLUID VOLUME RATE                               
+</message>
+<message date="1/2/2000" time="31.00000000000000">
+ OPENING WELL WI_1     AT TIME     31.00   DAYS                          
+ CONTROLLED BY WATER RATE                                                
+</message>
+<problem date="1/2/2000" time="31.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         2.64991E+03                                               
+   WATER       3.20317E-02                                               
+   GAS         4.87583E+05                                               
+  MSW PRES     1.31564E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="1/2/2000" time="31.00000000000000">
+ POTENTIAL IN WELL OP_2     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.44783E+03                                               
+   WATER       1.91093E-01                                               
+   GAS         2.66399E+05                                               
+  MSW PRES     1.77823E-02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="2/2/2000" time="32.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         5.21666E+02                                               
+   WATER       1.89142E-02                                               
+   GAS         9.59865E+04                                               
+  MSW PRES     1.98059E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="3/2/2000" time="33.44713951894267">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.25375E+04                                               
+   WATER       9.86359E-02                                               
+   GAS         2.30690E+06                                               
+  MSW PRES     8.83825E+00                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="7/2/2000" time="37.78855807577069">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.71205E+02                                               
+   WATER       6.20956E-03                                               
+   GAS         3.15016E+04                                               
+  MSW PRES     1.91124E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="12/2/2000" time="42.09869714911474">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.24596E+04                                               
+   WATER       8.55908E-02                                               
+   GAS         2.29256E+06                                               
+  MSW PRES     8.86919E+00                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="17/2/2000" time="47.09869714911474">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.48047E+02                                               
+   WATER       5.36637E-03                                               
+   GAS         2.72406E+04                                               
+  MSW PRES     1.88946E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="22/2/2000" time="52.09869714911474">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.15953E+04                                               
+   WATER       8.79245E-02                                               
+   GAS         2.13353E+06                                               
+  MSW PRES     1.85262E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="26/2/2000" time="56.04934857455737">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.46696E+02                                               
+   WATER       5.37580E-03                                               
+   GAS         2.69921E+04                                               
+  MSW PRES     1.68756E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="1/3/2000" time="60.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.49276E+03                                               
+   WATER       4.50085E-02                                               
+   GAS         8.26667E+05                                               
+  MSW PRES     1.07572E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="2/3/2000" time="61.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         8.55909E+03                                               
+   WATER       7.02107E-02                                               
+   GAS         1.57487E+06                                               
+  MSW PRES     5.48777E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="5/3/2000" time="64.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.49387E+02                                               
+   WATER       5.41169E-03                                               
+   GAS         2.74872E+04                                               
+  MSW PRES     1.85941E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="10/3/2000" time="69.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.22406E+04                                               
+   WATER       8.54316E-02                                               
+   GAS         2.25227E+06                                               
+  MSW PRES     8.92584E+00                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="15/3/2000" time="74.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.50327E+02                                               
+   WATER       5.44221E-03                                               
+   GAS         2.76602E+04                                               
+  MSW PRES     1.84416E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="20/3/2000" time="79.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.21695E+04                                               
+   WATER       8.53819E-02                                               
+   GAS         2.23920E+06                                               
+  MSW PRES     8.94318E+00                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="25/3/2000" time="84.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         8.43946E+03                                               
+   WATER       7.83547E-02                                               
+   GAS         1.55286E+06                                               
+  MSW PRES     5.38633E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="28/3/2000" time="87.50000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         8.42202E+03                                               
+   WATER       7.95445E-02                                               
+   GAS         1.54965E+06                                               
+  MSW PRES     5.37412E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="1/4/2000" time="91.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         8.84041E+03                                               
+   WATER       8.72020E-02                                               
+   GAS         1.62664E+06                                               
+  MSW PRES     4.99786E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="2/4/2000" time="92.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         8.40043E+03                                               
+   WATER       8.11516E-02                                               
+   GAS         1.54568E+06                                               
+  MSW PRES     5.37506E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="5/4/2000" time="95.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.52315E+02                                               
+   WATER       5.50859E-03                                               
+   GAS         2.80259E+04                                               
+  MSW PRES     1.81422E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="10/4/2000" time="100.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.20276E+04                                               
+   WATER       8.52788E-02                                               
+   GAS         2.21307E+06                                               
+  MSW PRES     8.98259E+00                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="15/4/2000" time="105.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.53294E+02                                               
+   WATER       5.54148E-03                                               
+   GAS         2.82060E+04                                               
+  MSW PRES     1.80099E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="20/4/2000" time="110.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.19640E+04                                               
+   WATER       8.52326E-02                                               
+   GAS         2.20138E+06                                               
+  MSW PRES     9.00254E+00                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="25/4/2000" time="115.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         8.29516E+03                                               
+   WATER       8.83699E-02                                               
+   GAS         1.52631E+06                                               
+  MSW PRES     5.30198E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="28/4/2000" time="118.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         8.28207E+03                                               
+   WATER       8.92752E-02                                               
+   GAS         1.52390E+06                                               
+  MSW PRES     5.29251E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="1/5/2000" time="121.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         8.69549E+03                                               
+   WATER       9.70154E-02                                               
+   GAS         1.59997E+06                                               
+  MSW PRES     4.91665E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="2/5/2000" time="122.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         8.26473E+03                                               
+   WATER       9.04681E-02                                               
+   GAS         1.52071E+06                                               
+  MSW PRES     5.28003E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="5/5/2000" time="125.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.55231E+02                                               
+   WATER       5.60760E-03                                               
+   GAS         2.85624E+04                                               
+  MSW PRES     1.77531E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="10/5/2000" time="130.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.18414E+04                                               
+   WATER       8.51431E-02                                               
+   GAS         2.17882E+06                                               
+  MSW PRES     9.04520E+00                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="15/5/2000" time="135.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.56181E+02                                               
+   WATER       5.64123E-03                                               
+   GAS         2.87373E+04                                               
+  MSW PRES     1.76298E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="20/5/2000" time="140.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.17813E+04                                               
+   WATER       8.50997E-02                                               
+   GAS         2.16776E+06                                               
+  MSW PRES     9.06786E+00                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="25/5/2000" time="145.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         8.16743E+03                                               
+   WATER       9.69299E-02                                               
+   GAS         1.50281E+06                                               
+  MSW PRES     5.19463E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="28/5/2000" time="148.50000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         8.15267E+03                                               
+   WATER       9.78966E-02                                               
+   GAS         1.50009E+06                                               
+  MSW PRES     5.18434E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<message date="1/6/2000" time="152.00000000000000">
+ OPENING WELL WI_2     AT TIME    152.00   DAYS                          
+ CONTROLLED BY WATER RATE                                                
+</message>
+<problem date="1/6/2000" time="152.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         8.56062E+03                                               
+   WATER       1.06086E-01                                               
+   GAS         1.57515E+06                                               
+  MSW PRES     4.84307E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="2/6/2000" time="153.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.44776E+03                                               
+   WATER       5.47297E-02                                               
+   GAS         6.34388E+05                                               
+  MSW PRES     1.13289E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="2/6/2000" time="153.84647417075237">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         8.56959E+03                                               
+   WATER       1.05666E-01                                               
+   GAS         1.57680E+06                                               
+  MSW PRES     4.80569E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="4/6/2000" time="155.02541912790113">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.61186E+02                                               
+   WATER       1.66144E-02                                               
+   GAS         8.48581E+04                                               
+  MSW PRES     1.79391E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="5/6/2000" time="156.78850260367628">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         9.58943E+02                                               
+   WATER       1.62486E-02                                               
+   GAS         1.76446E+05                                               
+  MSW PRES     1.37988E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="8/6/2000" time="159.80739851835915">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.23858E+02                                               
+   WATER       4.50686E-03                                               
+   GAS         2.27898E+04                                               
+  MSW PRES     1.56906E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="13/6/2000" time="164.80739851835915">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.09743E+04                                               
+   WATER       1.34481E-01                                               
+   GAS         2.01928E+06                                               
+  MSW PRES     1.80038E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="18/6/2000" time="169.80739851835915">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.25172E+02                                               
+   WATER       4.54642E-03                                               
+   GAS         2.30317E+04                                               
+  MSW PRES     1.56570E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="23/6/2000" time="174.80739851835915">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.03003E+03                                               
+   WATER       5.27802E-02                                               
+   GAS         7.41526E+05                                               
+  MSW PRES     1.00302E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="27/6/2000" time="178.40369925917958">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         8.12588E+03                                               
+   WATER       1.03547E-01                                               
+   GAS         1.49516E+06                                               
+  MSW PRES     5.16657E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="1/7/2000" time="182.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         8.52840E+03                                               
+   WATER       1.12079E-01                                               
+   GAS         1.56923E+06                                               
+  MSW PRES     4.83501E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="2/7/2000" time="183.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.31975E+03                                               
+   WATER       4.57940E-02                                               
+   GAS         6.10833E+05                                               
+  MSW PRES     1.09050E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="5/7/2000" time="186.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.27322E+02                                               
+   WATER       4.61183E-03                                               
+   GAS         2.34273E+04                                               
+  MSW PRES     1.56053E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="10/7/2000" time="191.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.09277E+04                                               
+   WATER       1.41384E-01                                               
+   GAS         2.01070E+06                                               
+  MSW PRES     1.79729E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="15/7/2000" time="196.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.28691E+02                                               
+   WATER       4.65368E-03                                               
+   GAS         2.36791E+04                                               
+  MSW PRES     1.55785E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="20/7/2000" time="201.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.09121E+04                                               
+   WATER       1.43908E-01                                               
+   GAS         2.00782E+06                                               
+  MSW PRES     1.79630E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="25/7/2000" time="206.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         8.09294E+03                                               
+   WATER       1.08759E-01                                               
+   GAS         1.48910E+06                                               
+  MSW PRES     5.14967E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="28/7/2000" time="209.50000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         8.08870E+03                                               
+   WATER       1.09406E-01                                               
+   GAS         1.48832E+06                                               
+  MSW PRES     5.14714E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="1/8/2000" time="213.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         8.48868E+03                                               
+   WATER       1.18146E-01                                               
+   GAS         1.56192E+06                                               
+  MSW PRES     4.82280E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="2/8/2000" time="214.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.30276E+03                                               
+   WATER       4.81025E-02                                               
+   GAS         6.07708E+05                                               
+  MSW PRES     1.08534E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="5/8/2000" time="217.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.31591E+02                                               
+   WATER       4.74342E-03                                               
+   GAS         2.42127E+04                                               
+  MSW PRES     1.55242E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="10/8/2000" time="222.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.08820E+04                                               
+   WATER       1.49044E-01                                               
+   GAS         2.00229E+06                                               
+  MSW PRES     1.79443E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="15/8/2000" time="227.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.33007E+02                                               
+   WATER       4.78753E-03                                               
+   GAS         2.44733E+04                                               
+  MSW PRES     1.55022E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="20/8/2000" time="232.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.08689E+04                                               
+   WATER       1.51416E-01                                               
+   GAS         1.99987E+06                                               
+  MSW PRES     1.79364E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="25/8/2000" time="237.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.94953E+02                                               
+   WATER       7.00400E-03                                               
+   GAS         3.58713E+04                                               
+  MSW PRES     1.57033E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="28/8/2000" time="240.50000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.10944E+04                                               
+   WATER       1.56451E-01                                               
+   GAS         2.04136E+06                                               
+  MSW PRES     1.51913E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="1/9/2000" time="244.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         8.45480E+03                                               
+   WATER       1.23856E-01                                               
+   GAS         1.55568E+06                                               
+  MSW PRES     4.81446E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="2/9/2000" time="245.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.28817E+03                                               
+   WATER       5.02740E-02                                               
+   GAS         6.05023E+05                                               
+  MSW PRES     1.08121E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="5/9/2000" time="248.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.36012E+02                                               
+   WATER       4.88198E-03                                               
+   GAS         2.50262E+04                                               
+  MSW PRES     1.54583E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="10/9/2000" time="253.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.08437E+04                                               
+   WATER       1.56256E-01                                               
+   GAS         1.99524E+06                                               
+  MSW PRES     1.79217E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="15/9/2000" time="258.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.37474E+02                                               
+   WATER       4.92817E-03                                               
+   GAS         2.52953E+04                                               
+  MSW PRES     1.54405E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="20/9/2000" time="263.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.08327E+04                                               
+   WATER       1.58496E-01                                               
+   GAS         1.99322E+06                                               
+  MSW PRES     1.79154E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="25/9/2000" time="268.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.27882E+03                                               
+   WATER       5.18046E-02                                               
+   GAS         6.03303E+05                                               
+  MSW PRES     1.07876E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="28/9/2000" time="271.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.27759E+03                                               
+   WATER       5.20010E-02                                               
+   GAS         6.03076E+05                                               
+  MSW PRES     1.07844E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="1/10/2000" time="274.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.39691E+03                                               
+   WATER       6.15233E-02                                               
+   GAS         6.25032E+05                                               
+  MSW PRES     1.10917E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="2/10/2000" time="275.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.27608E+03                                               
+   WATER       5.22599E-02                                               
+   GAS         6.02798E+05                                               
+  MSW PRES     1.07806E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="5/10/2000" time="278.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.40432E+02                                               
+   WATER       5.02223E-03                                               
+   GAS         2.58395E+04                                               
+  MSW PRES     1.54068E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="10/10/2000" time="283.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.08127E+04                                               
+   WATER       1.62857E-01                                               
+   GAS         1.98954E+06                                               
+  MSW PRES     1.79044E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="15/10/2000" time="288.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         8.02267E+03                                               
+   WATER       1.22500E-01                                               
+   GAS         1.47617E+06                                               
+  MSW PRES     5.07811E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="20/10/2000" time="293.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         8.01916E+03                                               
+   WATER       1.23284E-01                                               
+   GAS         1.47553E+06                                               
+  MSW PRES     5.07621E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="25/10/2000" time="298.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.27455E+03                                               
+   WATER       5.32997E-02                                               
+   GAS         6.02518E+05                                               
+  MSW PRES     1.07206E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="28/10/2000" time="301.50000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.27334E+03                                               
+   WATER       5.35178E-02                                               
+   GAS         6.02295E+05                                               
+  MSW PRES     1.07175E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="1/11/2000" time="305.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.38187E+03                                               
+   WATER       6.34930E-02                                               
+   GAS         6.22264E+05                                               
+  MSW PRES     1.10874E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="2/11/2000" time="306.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.26528E+03                                               
+   WATER       5.42053E-02                                               
+   GAS         6.00811E+05                                               
+  MSW PRES     1.07553E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="5/11/2000" time="309.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         8.00858E+03                                               
+   WATER       1.25753E-01                                               
+   GAS         1.47358E+06                                               
+  MSW PRES     5.07059E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="10/11/2000" time="314.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         8.00559E+03                                               
+   WATER       1.26508E-01                                               
+   GAS         1.47303E+06                                               
+  MSW PRES     5.06907E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="15/11/2000" time="319.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         8.00261E+03                                               
+   WATER       1.27259E-01                                               
+   GAS         1.47248E+06                                               
+  MSW PRES     5.06755E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="20/11/2000" time="324.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.99962E+03                                               
+   WATER       1.28005E-01                                               
+   GAS         1.47193E+06                                               
+  MSW PRES     5.06602E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="25/11/2000" time="329.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.25822E+03                                               
+   WATER       5.55849E-02                                               
+   GAS         5.99513E+05                                               
+  MSW PRES     1.07405E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="28/11/2000" time="332.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.25730E+03                                               
+   WATER       5.57619E-02                                               
+   GAS         5.99342E+05                                               
+  MSW PRES     1.07386E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="1/12/2000" time="335.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.36861E+03                                               
+   WATER       6.53036E-02                                               
+   GAS         6.19824E+05                                               
+  MSW PRES     1.10897E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="2/12/2000" time="336.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.25615E+03                                               
+   WATER       5.59957E-02                                               
+   GAS         5.99131E+05                                               
+  MSW PRES     1.07364E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="5/12/2000" time="339.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.99121E+03                                               
+   WATER       1.30207E-01                                               
+   GAS         1.47038E+06                                               
+  MSW PRES     5.06185E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="10/12/2000" time="344.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.98865E+03                                               
+   WATER       1.30928E-01                                               
+   GAS         1.46991E+06                                               
+  MSW PRES     5.06063E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="15/12/2000" time="349.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.98608E+03                                               
+   WATER       1.31644E-01                                               
+   GAS         1.46944E+06                                               
+  MSW PRES     5.05941E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="20/12/2000" time="354.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.98351E+03                                               
+   WATER       1.32356E-01                                               
+   GAS         1.46897E+06                                               
+  MSW PRES     5.05818E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="25/12/2000" time="359.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.25696E+03                                               
+   WATER       5.69140E-02                                               
+   GAS         5.99280E+05                                               
+  MSW PRES     1.06816E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="28/12/2000" time="362.50000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.25603E+03                                               
+   WATER       5.71118E-02                                               
+   GAS         5.99109E+05                                               
+  MSW PRES     1.06797E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<message date="1/1/2001" time="366.00000000000000">
+ RESTART FILE WRITTEN   REPORT    12                                     
+ RESTART INCLUDES FLUIDS IN PLACE                                        
+</message>
+<message date="1/1/2001" time="366.00000000000000">
+ OPENING WELL OP_4     AT TIME    366.00   DAYS                          
+ CONTROLLED BY RESERVOIR FLUID VOLUME RATE                               
+</message>
+<message date="1/1/2001" time="366.00000000000000">
+ OPENING WELL OP_5     AT TIME    366.00   DAYS                          
+ CONTROLLED BY RESERVOIR FLUID VOLUME RATE                               
+</message>
+<problem date="1/1/2001" time="366.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.25577E+03                                               
+   WATER       3.54199E-02                                               
+   GAS         2.31061E+05                                               
+  MSW PRES     1.38208E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="1/1/2001" time="366.00000000000000">
+ POTENTIAL IN WELL OP_5     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.23055E+03                                               
+   WATER       3.51964E-01                                               
+   GAS         5.94420E+05                                               
+  MSW PRES     7.47457E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="2/1/2001" time="367.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.33018E+02                                               
+   WATER       1.22412E-02                                               
+   GAS         7.96753E+04                                               
+  MSW PRES     1.41139E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="5/1/2001" time="370.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.96611E+03                                               
+   WATER       1.34249E-01                                               
+   GAS         1.46576E+06                                               
+  MSW PRES     5.04776E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="10/1/2001" time="375.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.94503E+03                                               
+   WATER       1.34960E-01                                               
+   GAS         1.46189E+06                                               
+  MSW PRES     5.03344E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="15/1/2001" time="380.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.92562E+03                                               
+   WATER       1.35639E-01                                               
+   GAS         1.45831E+06                                               
+  MSW PRES     5.02035E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="20/1/2001" time="385.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.90729E+03                                               
+   WATER       1.36295E-01                                               
+   GAS         1.45494E+06                                               
+  MSW PRES     5.00807E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="25/1/2001" time="390.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.21888E+03                                               
+   WATER       5.84021E-02                                               
+   GAS         5.92274E+05                                               
+  MSW PRES     1.05397E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="28/1/2001" time="393.50000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.21355E+03                                               
+   WATER       5.85690E-02                                               
+   GAS         5.91293E+05                                               
+  MSW PRES     1.05196E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="1/2/2001" time="397.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         8.27209E+03                                               
+   WATER       1.47239E-01                                               
+   GAS         1.52206E+06                                               
+  MSW PRES     4.76321E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="2/2/2001" time="398.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.23753E+02                                               
+   WATER       1.22624E-02                                               
+   GAS         7.79706E+04                                               
+  MSW PRES     1.39006E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="5/2/2001" time="401.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.89205E+03                                               
+   WATER       1.37602E-01                                               
+   GAS         1.45214E+06                                               
+  MSW PRES     4.99828E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="10/2/2001" time="406.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.88792E+03                                               
+   WATER       1.37957E-01                                               
+   GAS         1.45138E+06                                               
+  MSW PRES     4.99569E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="15/2/2001" time="411.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.88281E+03                                               
+   WATER       1.38323E-01                                               
+   GAS         1.45044E+06                                               
+  MSW PRES     4.99241E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="20/2/2001" time="416.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.87650E+03                                               
+   WATER       1.38757E-01                                               
+   GAS         1.44928E+06                                               
+  MSW PRES     4.99768E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="24/2/2001" time="420.50000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.87106E+03                                               
+   WATER       1.39094E-01                                               
+   GAS         1.44828E+06                                               
+  MSW PRES     4.99416E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<message date="1/3/2001" time="425.00000000000000">
+ OPENING WELL WI_3     AT TIME    425.00   DAYS                          
+ CONTROLLED BY WATER RATE                                                
+</message>
+<problem date="1/3/2001" time="425.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         8.25156E+03                                               
+   WATER       1.49246E-01                                               
+   GAS         1.51829E+06                                               
+  MSW PRES     4.75395E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="2/3/2001" time="426.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.21368E+02                                               
+   WATER       1.23212E-02                                               
+   GAS         7.75317E+04                                               
+  MSW PRES     1.38582E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="5/3/2001" time="429.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.87501E+03                                               
+   WATER       1.39459E-01                                               
+   GAS         1.44900E+06                                               
+  MSW PRES     4.98766E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="10/3/2001" time="434.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.87707E+03                                               
+   WATER       1.39711E-01                                               
+   GAS         1.44938E+06                                               
+  MSW PRES     4.98920E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="15/3/2001" time="439.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.87977E+03                                               
+   WATER       1.39954E-01                                               
+   GAS         1.44988E+06                                               
+  MSW PRES     4.99116E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="20/3/2001" time="444.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.88283E+03                                               
+   WATER       1.40191E-01                                               
+   GAS         1.45044E+06                                               
+  MSW PRES     4.99337E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="25/3/2001" time="449.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.21400E+03                                               
+   WATER       5.98534E-02                                               
+   GAS         5.91376E+05                                               
+  MSW PRES     1.05297E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="28/3/2001" time="452.50000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.21497E+03                                               
+   WATER       5.99214E-02                                               
+   GAS         5.91554E+05                                               
+  MSW PRES     1.05340E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="1/4/2001" time="456.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         8.26549E+03                                               
+   WATER       1.50869E-01                                               
+   GAS         1.52085E+06                                               
+  MSW PRES     4.76634E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="2/4/2001" time="457.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.22065E+02                                               
+   WATER       1.24204E-02                                               
+   GAS         7.76599E+04                                               
+  MSW PRES     1.38995E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="5/4/2001" time="460.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.89260E+03                                               
+   WATER       1.40944E-01                                               
+   GAS         1.45224E+06                                               
+  MSW PRES     5.00047E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="10/4/2001" time="465.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.89526E+03                                               
+   WATER       1.41182E-01                                               
+   GAS         1.45273E+06                                               
+  MSW PRES     5.00243E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="15/4/2001" time="470.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.89775E+03                                               
+   WATER       1.41421E-01                                               
+   GAS         1.45319E+06                                               
+  MSW PRES     5.00427E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="20/4/2001" time="475.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.90011E+03                                               
+   WATER       1.41661E-01                                               
+   GAS         1.45362E+06                                               
+  MSW PRES     5.00604E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="25/4/2001" time="480.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.22536E+02                                               
+   WATER       1.24924E-02                                               
+   GAS         7.77467E+04                                               
+  MSW PRES     1.39307E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="28/4/2001" time="483.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.22581E+02                                               
+   WATER       1.25015E-02                                               
+   GAS         7.77549E+04                                               
+  MSW PRES     1.39344E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="1/5/2001" time="486.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.08503E+03                                               
+   WATER       8.15207E-02                                               
+   GAS         7.51646E+05                                               
+  MSW PRES     9.92472E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="2/5/2001" time="487.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.22552E+02                                               
+   WATER       1.25126E-02                                               
+   GAS         7.77495E+04                                               
+  MSW PRES     1.39369E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="5/5/2001" time="490.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.90534E+03                                               
+   WATER       1.42407E-01                                               
+   GAS         1.45458E+06                                               
+  MSW PRES     5.01009E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="10/5/2001" time="495.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.90693E+03                                               
+   WATER       1.42658E-01                                               
+   GAS         1.45488E+06                                               
+  MSW PRES     5.01135E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="15/5/2001" time="500.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.90844E+03                                               
+   WATER       1.42909E-01                                               
+   GAS         1.45515E+06                                               
+  MSW PRES     5.01255E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="20/5/2001" time="505.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.90989E+03                                               
+   WATER       1.43159E-01                                               
+   GAS         1.45542E+06                                               
+  MSW PRES     5.01371E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="25/5/2001" time="510.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.22434E+03                                               
+   WATER       6.10845E-02                                               
+   GAS         5.93279E+05                                               
+  MSW PRES     1.05801E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="28/5/2001" time="513.50000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.22472E+03                                               
+   WATER       6.11562E-02                                               
+   GAS         5.93348E+05                                               
+  MSW PRES     1.05822E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="1/6/2001" time="517.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         8.28947E+03                                               
+   WATER       1.54021E-01                                               
+   GAS         1.52526E+06                                               
+  MSW PRES     4.78979E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="2/6/2001" time="518.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.22511E+02                                               
+   WATER       1.26002E-02                                               
+   GAS         7.77420E+04                                               
+  MSW PRES     1.39635E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="5/6/2001" time="521.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.91400E+03                                               
+   WATER       1.43969E-01                                               
+   GAS         1.45618E+06                                               
+  MSW PRES     5.01710E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="10/6/2001" time="526.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.91537E+03                                               
+   WATER       1.44220E-01                                               
+   GAS         1.45643E+06                                               
+  MSW PRES     5.01822E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="15/6/2001" time="531.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.91667E+03                                               
+   WATER       1.44471E-01                                               
+   GAS         1.45667E+06                                               
+  MSW PRES     5.01929E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="20/6/2001" time="536.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.91792E+03                                               
+   WATER       1.44722E-01                                               
+   GAS         1.45690E+06                                               
+  MSW PRES     5.02034E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="25/6/2001" time="541.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.22400E+02                                               
+   WATER       1.26635E-02                                               
+   GAS         7.77216E+04                                               
+  MSW PRES     1.39823E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="28/6/2001" time="544.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.22379E+02                                               
+   WATER       1.26716E-02                                               
+   GAS         7.77178E+04                                               
+  MSW PRES     1.39846E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="1/7/2001" time="547.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.09124E+03                                               
+   WATER       8.31175E-02                                               
+   GAS         7.52787E+05                                               
+  MSW PRES     9.97018E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="2/7/2001" time="548.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.22346E+02                                               
+   WATER       1.26824E-02                                               
+   GAS         7.77116E+04                                               
+  MSW PRES     1.39876E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="5/7/2001" time="551.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.92195E+03                                               
+   WATER       1.45473E-01                                               
+   GAS         1.45764E+06                                               
+  MSW PRES     5.02367E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="10/7/2001" time="556.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.92346E+03                                               
+   WATER       1.45720E-01                                               
+   GAS         1.45792E+06                                               
+  MSW PRES     5.02490E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="15/7/2001" time="561.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.92490E+03                                               
+   WATER       1.45966E-01                                               
+   GAS         1.45818E+06                                               
+  MSW PRES     5.02608E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="20/7/2001" time="566.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.92629E+03                                               
+   WATER       1.46213E-01                                               
+   GAS         1.45844E+06                                               
+  MSW PRES     5.02723E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="25/7/2001" time="571.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.23051E+03                                               
+   WATER       6.23323E-02                                               
+   GAS         5.94414E+05                                               
+  MSW PRES     1.06156E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="28/7/2001" time="574.50000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.23087E+03                                               
+   WATER       6.24027E-02                                               
+   GAS         5.94479E+05                                               
+  MSW PRES     1.06177E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="1/8/2001" time="578.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.32218E+03                                               
+   WATER       7.23447E-02                                               
+   GAS         6.11282E+05                                               
+  MSW PRES     1.10905E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="2/8/2001" time="579.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.22194E+02                                               
+   WATER       1.27663E-02                                               
+   GAS         7.76836E+04                                               
+  MSW PRES     1.40145E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="5/8/2001" time="582.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.93043E+03                                               
+   WATER       1.47002E-01                                               
+   GAS         1.45920E+06                                               
+  MSW PRES     5.03071E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="10/8/2001" time="587.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.93172E+03                                               
+   WATER       1.47247E-01                                               
+   GAS         1.45944E+06                                               
+  MSW PRES     5.03179E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="15/8/2001" time="592.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.93298E+03                                               
+   WATER       1.47491E-01                                               
+   GAS         1.45967E+06                                               
+  MSW PRES     5.03286E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="20/8/2001" time="597.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.93422E+03                                               
+   WATER       1.47735E-01                                               
+   GAS         1.45990E+06                                               
+  MSW PRES     5.03391E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="25/8/2001" time="602.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.23340E+03                                               
+   WATER       6.29532E-02                                               
+   GAS         5.94946E+05                                               
+  MSW PRES     1.06330E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="28/8/2001" time="605.50000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.23372E+03                                               
+   WATER       6.30227E-02                                               
+   GAS         5.95004E+05                                               
+  MSW PRES     1.06350E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="1/9/2001" time="609.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.32362E+03                                               
+   WATER       7.29815E-02                                               
+   GAS         6.11547E+05                                               
+  MSW PRES     1.11197E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="2/9/2001" time="610.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.21982E+02                                               
+   WATER       1.28474E-02                                               
+   GAS         7.76448E+04                                               
+  MSW PRES     1.40407E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="5/9/2001" time="613.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.93883E+03                                               
+   WATER       1.48497E-01                                               
+   GAS         1.46075E+06                                               
+  MSW PRES     5.03772E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="10/9/2001" time="618.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.94011E+03                                               
+   WATER       1.48734E-01                                               
+   GAS         1.46098E+06                                               
+  MSW PRES     5.03880E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="15/9/2001" time="623.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.94135E+03                                               
+   WATER       1.48971E-01                                               
+   GAS         1.46121E+06                                               
+  MSW PRES     5.03985E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="20/9/2001" time="628.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.94256E+03                                               
+   WATER       1.49208E-01                                               
+   GAS         1.46143E+06                                               
+  MSW PRES     5.04088E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="25/9/2001" time="633.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.21794E+02                                               
+   WATER       1.29054E-02                                               
+   GAS         7.76100E+04                                               
+  MSW PRES     1.40591E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="28/9/2001" time="636.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.21765E+02                                               
+   WATER       1.29129E-02                                               
+   GAS         7.76048E+04                                               
+  MSW PRES     1.40615E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="1/10/2001" time="639.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.08322E+03                                               
+   WATER       8.51899E-02                                               
+   GAS         7.51312E+05                                               
+  MSW PRES     1.00694E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="2/10/2001" time="640.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.21847E+02                                               
+   WATER       1.29242E-02                                               
+   GAS         7.76198E+04                                               
+  MSW PRES     1.40677E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="5/10/2001" time="643.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.94780E+03                                               
+   WATER       1.49883E-01                                               
+   GAS         1.46240E+06                                               
+  MSW PRES     5.04508E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="10/10/2001" time="648.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.94921E+03                                               
+   WATER       1.50109E-01                                               
+   GAS         1.46265E+06                                               
+  MSW PRES     5.04624E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="15/10/2001" time="653.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.95055E+03                                               
+   WATER       1.50335E-01                                               
+   GAS         1.46290E+06                                               
+  MSW PRES     5.04735E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="20/10/2001" time="658.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.95186E+03                                               
+   WATER       1.50561E-01                                               
+   GAS         1.46314E+06                                               
+  MSW PRES     5.04845E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="25/10/2001" time="663.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.24010E+03                                               
+   WATER       6.41048E-02                                               
+   GAS         5.96178E+05                                               
+  MSW PRES     1.06712E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="28/10/2001" time="666.50000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.24043E+03                                               
+   WATER       6.41699E-02                                               
+   GAS         5.96240E+05                                               
+  MSW PRES     1.06732E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="1/11/2001" time="670.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.32732E+03                                               
+   WATER       7.41657E-02                                               
+   GAS         6.12227E+05                                               
+  MSW PRES     1.11799E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="2/11/2001" time="671.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.21770E+02                                               
+   WATER       1.30013E-02                                               
+   GAS         7.76057E+04                                               
+  MSW PRES     1.40957E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="5/11/2001" time="674.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.95688E+03                                               
+   WATER       1.51267E-01                                               
+   GAS         1.46407E+06                                               
+  MSW PRES     5.05252E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="10/11/2001" time="679.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.95815E+03                                               
+   WATER       1.51491E-01                                               
+   GAS         1.46430E+06                                               
+  MSW PRES     5.05358E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="15/11/2001" time="684.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.95938E+03                                               
+   WATER       1.51716E-01                                               
+   GAS         1.46453E+06                                               
+  MSW PRES     5.05462E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="20/11/2001" time="689.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.96059E+03                                               
+   WATER       1.51943E-01                                               
+   GAS         1.46475E+06                                               
+  MSW PRES     5.05563E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="25/11/2001" time="694.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.21670E+02                                               
+   WATER       1.30575E-02                                               
+   GAS         7.75872E+04                                               
+  MSW PRES     1.41137E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="28/11/2001" time="697.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.21653E+02                                               
+   WATER       1.30649E-02                                               
+   GAS         7.75841E+04                                               
+  MSW PRES     1.41159E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="1/12/2001" time="700.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         2.42212E+03                                               
+   WATER       5.93190E-02                                               
+   GAS         4.45670E+05                                               
+  MSW PRES     1.24056E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="2/12/2001" time="701.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.21699E+02                                               
+   WATER       1.30757E-02                                               
+   GAS         7.75927E+04                                               
+  MSW PRES     1.41206E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="5/12/2001" time="704.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.96481E+03                                               
+   WATER       1.52620E-01                                               
+   GAS         1.46552E+06                                               
+  MSW PRES     5.05910E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="10/12/2001" time="709.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.96588E+03                                               
+   WATER       1.52855E-01                                               
+   GAS         1.46572E+06                                               
+  MSW PRES     5.06002E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="15/12/2001" time="714.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.96691E+03                                               
+   WATER       1.53096E-01                                               
+   GAS         1.46591E+06                                               
+  MSW PRES     5.06092E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="20/12/2001" time="719.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.96793E+03                                               
+   WATER       1.53343E-01                                               
+   GAS         1.46610E+06                                               
+  MSW PRES     5.06181E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="25/12/2001" time="724.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.24611E+03                                               
+   WATER       6.52498E-02                                               
+   GAS         5.97283E+05                                               
+  MSW PRES     1.07058E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="28/12/2001" time="727.50000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.24636E+03                                               
+   WATER       6.53233E-02                                               
+   GAS         5.97330E+05                                               
+  MSW PRES     1.07075E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<message date="1/1/2002" time="731.00000000000000">
+ RESTART FILE WRITTEN   REPORT    24                                     
+ RESTART INCLUDES FLUIDS IN PLACE                                        
+</message>
+<problem date="1/1/2002" time="731.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.33036E+03                                               
+   WATER       7.53564E-02                                               
+   GAS         6.12786E+05                                               
+  MSW PRES     1.12342E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="2/1/2002" time="732.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.21571E+02                                               
+   WATER       1.31571E-02                                               
+   GAS         7.75691E+04                                               
+  MSW PRES     1.41440E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="5/1/2002" time="735.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.97212E+03                                               
+   WATER       1.54160E-01                                               
+   GAS         1.46687E+06                                               
+  MSW PRES     5.06530E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="10/1/2002" time="740.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.97305E+03                                               
+   WATER       1.54442E-01                                               
+   GAS         1.46704E+06                                               
+  MSW PRES     5.06612E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="15/1/2002" time="745.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.97395E+03                                               
+   WATER       1.54740E-01                                               
+   GAS         1.46721E+06                                               
+  MSW PRES     5.06693E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="20/1/2002" time="750.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.97482E+03                                               
+   WATER       1.55059E-01                                               
+   GAS         1.46737E+06                                               
+  MSW PRES     5.06773E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="25/1/2002" time="755.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.24862E+03                                               
+   WATER       6.59734E-02                                               
+   GAS         5.97746E+05                                               
+  MSW PRES     1.07212E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="28/1/2002" time="758.50000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.33559E+02                                               
+   WATER       1.27259E-02                                               
+   GAS         7.97749E+04                                               
+  MSW PRES     1.40889E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="1/2/2002" time="762.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         2.42219E+03                                               
+   WATER       6.03394E-02                                               
+   GAS         4.45684E+05                                               
+  MSW PRES     1.24646E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="2/2/2002" time="763.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.21374E+02                                               
+   WATER       1.32590E-02                                               
+   GAS         7.75328E+04                                               
+  MSW PRES     1.41658E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="5/2/2002" time="766.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.97872E+03                                               
+   WATER       1.56210E-01                                               
+   GAS         1.46809E+06                                               
+  MSW PRES     5.07110E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="10/2/2002" time="771.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.97955E+03                                               
+   WATER       1.56644E-01                                               
+   GAS         1.46824E+06                                               
+  MSW PRES     5.07189E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="15/2/2002" time="776.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.98034E+03                                               
+   WATER       1.57121E-01                                               
+   GAS         1.46838E+06                                               
+  MSW PRES     5.07266E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="20/2/2002" time="781.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.26177E+03                                               
+   WATER       6.64034E-02                                               
+   GAS         6.00165E+05                                               
+  MSW PRES     1.06674E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="24/2/2002" time="785.50000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.26201E+03                                               
+   WATER       6.66132E-02                                               
+   GAS         6.00210E+05                                               
+  MSW PRES     1.06692E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="1/3/2002" time="790.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.81440E+03                                               
+   WATER       8.56002E-02                                               
+   GAS         7.01849E+05                                               
+  MSW PRES     1.06294E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="2/3/2002" time="791.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.21083E+02                                               
+   WATER       1.34028E-02                                               
+   GAS         7.74793E+04                                               
+  MSW PRES     1.41853E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="5/3/2002" time="794.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.98414E+03                                               
+   WATER       1.59246E-01                                               
+   GAS         1.46908E+06                                               
+  MSW PRES     5.07622E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="10/3/2002" time="799.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.98484E+03                                               
+   WATER       1.60003E-01                                               
+   GAS         1.46921E+06                                               
+  MSW PRES     5.07699E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="15/3/2002" time="804.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.98548E+03                                               
+   WATER       1.60854E-01                                               
+   GAS         1.46933E+06                                               
+  MSW PRES     5.07776E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="20/3/2002" time="809.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.98609E+03                                               
+   WATER       1.61811E-01                                               
+   GAS         1.46944E+06                                               
+  MSW PRES     5.07854E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="25/3/2002" time="814.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.33072E+02                                               
+   WATER       1.31009E-02                                               
+   GAS         7.96852E+04                                               
+  MSW PRES     1.41262E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="28/3/2002" time="817.50000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.32978E+02                                               
+   WATER       1.31422E-02                                               
+   GAS         7.96680E+04                                               
+  MSW PRES     1.41283E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="1/4/2002" time="821.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         2.42034E+03                                               
+   WATER       6.27292E-02                                               
+   GAS         4.45343E+05                                               
+  MSW PRES     1.25253E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="2/4/2002" time="822.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.20425E+02                                               
+   WATER       1.36946E-02                                               
+   GAS         7.73582E+04                                               
+  MSW PRES     1.42089E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="5/4/2002" time="825.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.98983E+03                                               
+   WATER       1.65608E-01                                               
+   GAS         1.47013E+06                                               
+  MSW PRES     5.08251E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="10/4/2002" time="830.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.99045E+03                                               
+   WATER       1.67142E-01                                               
+   GAS         1.47024E+06                                               
+  MSW PRES     5.08348E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="15/4/2002" time="835.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.99099E+03                                               
+   WATER       1.68878E-01                                               
+   GAS         1.47034E+06                                               
+  MSW PRES     5.08446E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="20/4/2002" time="840.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         7.99146E+03                                               
+   WATER       1.70839E-01                                               
+   GAS         1.47043E+06                                               
+  MSW PRES     5.08548E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="25/4/2002" time="845.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.19190E+02                                               
+   WATER       1.40876E-02                                               
+   GAS         7.71309E+04                                               
+  MSW PRES     1.42283E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="28/4/2002" time="848.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.71266E+02                                               
+   WATER       1.37841E-02                                               
+   GAS         6.83130E+04                                               
+  MSW PRES     1.58226E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="1/5/2002" time="851.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.11568E+03                                               
+   WATER       9.79943E-02                                               
+   GAS         7.57285E+05                                               
+  MSW PRES     1.02054E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="2/5/2002" time="852.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.18710E+02                                               
+   WATER       1.42514E-02                                               
+   GAS         7.70426E+04                                               
+  MSW PRES     1.42386E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="5/5/2002" time="855.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.89633E+02                                               
+   WATER       7.15290E-03                                               
+   GAS         3.48925E+04                                               
+  MSW PRES     1.55544E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="10/5/2002" time="860.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.10076E+04                                               
+   WATER       2.48362E-01                                               
+   GAS         2.02541E+06                                               
+  MSW PRES     1.51539E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="15/5/2002" time="865.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         1.92957E+02                                               
+   WATER       7.38844E-03                                               
+   GAS         3.55040E+04                                               
+  MSW PRES     1.55645E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="20/5/2002" time="870.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         9.37563E+02                                               
+   WATER       2.47823E-02                                               
+   GAS         1.72512E+05                                               
+  MSW PRES     1.34619E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="25/5/2002" time="875.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.28564E+02                                               
+   WATER       1.45905E-02                                               
+   GAS         7.88557E+04                                               
+  MSW PRES     1.41926E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="28/5/2002" time="878.50000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.27841E+02                                               
+   WATER       1.47490E-02                                               
+   GAS         7.87227E+04                                               
+  MSW PRES     1.41985E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="1/6/2002" time="882.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.20549E+03                                               
+   WATER       1.13823E-01                                               
+   GAS         7.73810E+05                                               
+  MSW PRES     1.03679E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="2/6/2002" time="883.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.35594E+02                                               
+   WATER       1.70846E-02                                               
+   GAS         8.01492E+04                                               
+  MSW PRES     1.74870E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="5/6/2002" time="886.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         9.35440E+02                                               
+   WATER       2.65837E-02                                               
+   GAS         1.72121E+05                                               
+  MSW PRES     1.34841E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="10/6/2002" time="891.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.26715E+03                                               
+   WATER       8.78794E-02                                               
+   GAS         6.01156E+05                                               
+  MSW PRES     1.07191E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="15/6/2002" time="896.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.26609E+03                                               
+   WATER       9.06935E-02                                               
+   GAS         6.00961E+05                                               
+  MSW PRES     1.07264E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="20/6/2002" time="901.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.26481E+03                                               
+   WATER       9.38054E-02                                               
+   GAS         6.00724E+05                                               
+  MSW PRES     1.07346E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="25/6/2002" time="906.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.86695E+02                                               
+   WATER       2.03104E-02                                               
+   GAS         8.95518E+04                                               
+  MSW PRES     1.75798E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="28/6/2002" time="909.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         2.72928E+03                                               
+   WATER       8.43686E-02                                               
+   GAS         5.02187E+05                                               
+  MSW PRES     1.15591E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="1/7/2002" time="912.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         2.16173E+03                                               
+   WATER       7.85866E-02                                               
+   GAS         3.97758E+05                                               
+  MSW PRES     1.32412E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="2/7/2002" time="913.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         8.40579E+03                                               
+   WATER       2.57010E-01                                               
+   GAS         1.54667E+06                                               
+  MSW PRES     4.66801E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="5/7/2002" time="916.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.25780E+03                                               
+   WATER       1.06156E-01                                               
+   GAS         5.99435E+05                                               
+  MSW PRES     1.07801E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="10/7/2002" time="921.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         4.31094E+02                                               
+   WATER       1.75630E-02                                               
+   GAS         7.93214E+04                                               
+  MSW PRES     1.42043E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="15/7/2002" time="926.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.59047E+02                                               
+   WATER       1.62571E-02                                               
+   GAS         6.60646E+04                                               
+  MSW PRES     1.58526E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="20/7/2002" time="931.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         2.73453E+03                                               
+   WATER       1.05936E-01                                               
+   GAS         5.03153E+05                                               
+  MSW PRES     1.15262E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="25/7/2002" time="936.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         8.38683E+03                                               
+   WATER       3.32739E-01                                               
+   GAS         1.54318E+06                                               
+  MSW PRES     4.74130E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="28/7/2002" time="939.50000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         8.37942E+03                                               
+   WATER       3.47765E-01                                               
+   GAS         1.54181E+06                                               
+  MSW PRES     4.78024E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="1/8/2002" time="943.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         5.08780E+03                                               
+   WATER       2.24469E-01                                               
+   GAS         9.36156E+05                                               
+  MSW PRES     1.06776E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="2/8/2002" time="944.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         3.80984E+03                                               
+   WATER       1.69469E-01                                               
+   GAS         7.01010E+05                                               
+  MSW PRES     1.07260E+02                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<problem date="5/8/2002" time="947.00000000000000">
+ POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS         
+ RESIDUAL ERROR IN FLOWS AND PRESSURE                                    
+   OIL         8.36426E+03                                               
+   WATER       3.91167E-01                                               
+   GAS         1.53902E+06                                               
+  MSW PRES     4.85440E+01                                               
+ TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                             
+ TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                         
+</problem>
+<message date="1/1/2003" time="1096.00000000000000">
+ RESTART FILE WRITTEN   REPORT    36                                     
+ RESTART INCLUDES FLUIDS IN PLACE                                        
+</message>
+<message date="1/1/2003" time="1096.00000000000000">
+ SAVE TYPE RESTART FILE WRITTEN   REPORT    36                           
+</message>
+</eclipse>

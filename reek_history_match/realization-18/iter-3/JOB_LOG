@@ -1,0 +1,77 @@
+17:16:04  Calling: /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/bin/scripts/parameters_4designkw.py 
+17:16:04  Calling: /prog/res/komodo/2019.12.02-py27/root/etc/ERT/Scripts/design_kw.py /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/model/../../fmuconfig/output/global_variables.yml.tmpl /scratch/fmu/asny/reek_history_match/realization-18/iter-3//global_variables.yml
+17:16:06  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/make_directory rms/model
+17:16:06  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/copy_directory /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/model/../../rms/bin /scratch/fmu/asny/reek_history_match/realization-18/iter-3//rms
+17:16:07  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/copy_directory /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/model/../../rms/ipl /scratch/fmu/asny/reek_history_match/realization-18/iter-3//rms
+17:16:07  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/make_directory rms/input
+17:16:08  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/copy_directory /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/model/../../rms/input/config /scratch/fmu/asny/reek_history_match/realization-18/iter-3//rms/input
+17:16:08  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/copy_directory /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/model/../../rms/input/well_modelling /scratch/fmu/asny/reek_history_match/realization-18/iter-3//rms/input
+17:16:09  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/make_directory rms/output/aps
+17:16:09  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/make_directory rms/output/cohiba/surfaces
+17:16:09  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/make_directory rms/output/cohiba/logfiles
+17:16:10  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/make_directory rms/output/pem
+17:16:10  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/make_directory rms/output/regions/data/grid
+17:16:11  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/make_directory rms/output/regions/result
+17:16:11  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/make_directory rms/output/zone
+17:16:12  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/make_directory /scratch/fmu/asny/reek_history_match/realization-18/iter-3//sim2seis
+17:16:12  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/make_directory /scratch/fmu/asny/reek_history_match/realization-18/iter-3//sim2seis/input
+17:16:13  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/make_directory /scratch/fmu/asny/reek_history_match/realization-18/iter-3//sim2seis/input/pem
+17:16:13  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/make_directory /scratch/fmu/asny/reek_history_match/realization-18/iter-3//sim2seis/input/4d_attribute_maps/horizons_depth
+17:16:13  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/make_directory /scratch/fmu/asny/reek_history_match/realization-18/iter-3//sim2seis/output
+17:16:14  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/make_directory /scratch/fmu/asny/reek_history_match/realization-18/iter-3//sim2seis/output/pem
+17:16:14  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/make_directory /scratch/fmu/asny/reek_history_match/realization-18/iter-3//sim2seis/output/seismic_forward
+17:16:15  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/make_directory /scratch/fmu/asny/reek_history_match/realization-18/iter-3//sim2seis/output/4d_attribute_maps
+17:16:15  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/copy_directory /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/model/../../sim2seis/model /scratch/fmu/asny/reek_history_match/realization-18/iter-3//sim2seis/
+17:16:15  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/copy_directory /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/model/../../sim2seis/bin /scratch/fmu/asny/reek_history_match/realization-18/iter-3//sim2seis/
+17:16:16  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/copy_directory /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/model/../../sim2seis/input/seismic_forward /scratch/fmu/asny/reek_history_match/realization-18/iter-3//sim2seis/input
+17:16:16  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/make_directory eclipse/include/grid
+17:16:17  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/make_directory eclipse/include/props
+17:16:17  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/copy_file /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/model/../../eclipse/include/props/reek.endpoints /scratch/fmu/asny/reek_history_match/realization-18/iter-3//eclipse/include/props/reek.endpoints
+17:16:18  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/copy_file /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/model/../../eclipse/include/props/reek.pvt /scratch/fmu/asny/reek_history_match/realization-18/iter-3//eclipse/include/props/reek.pvt
+17:16:18  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/make_directory eclipse/include/regions
+17:16:19  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/make_directory eclipse/include/solution
+17:16:19  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/copy_directory /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/model/../../eclipse/include/summary /scratch/fmu/asny/reek_history_match/realization-18/iter-3//eclipse/include
+17:16:20  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/make_directory eclipse/include/schedule
+17:16:22  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/make_directory share/results/maps
+17:16:22  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/make_directory share/results/grids
+17:16:23  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/make_directory share/results/polygons
+17:16:23  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/make_directory share/results/volumes
+17:16:23  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/make_directory share/results/images
+17:16:24  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/make_directory share/results/tables
+17:16:24  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/make_directory share/results/seismic
+17:16:25  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/symlink ../../share/observations/seismic /scratch/fmu/asny/reek_history_match/realization-18/iter-3//share/observations/seismic
+17:16:25  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/symlink ../../share/observations/maps /scratch/fmu/asny/reek_history_match/realization-18/iter-3//share/observations/maps
+17:16:26  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/symlink ../../share/observations/images /scratch/fmu/asny/reek_history_match/realization-18/iter-3//share/observations/images
+17:16:26  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/make_directory /scratch/fmu/asny/reek_history_match/realization-18/iter-3//fmuconfig/output
+17:16:26  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/move_file global_variables.ipl fmuconfig/output/
+17:16:27  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/move_file global_variables.yml fmuconfig/output/
+17:16:27  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/move_file reek.multflt eclipse/include/grid/
+17:16:28  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/move_file reek.multz eclipse/include/grid/
+17:16:28  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/move_file relperm_config.txt eclipse/include/props/
+17:16:29  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/copy_file /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/model/../input/distributions/random.seeds rms/model/random.seeds
+17:16:29  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/res/script/rms 18 /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/model/../../rms/model/reek.rms11.0.1 MAIN -r rms/model -t RMS_TARGET.INC -i ./ -v 11.0.1 -e ./
+17:18:27  Calling: /prog/res/komodo/2019.12.02-py27/root/etc/ERT/Scripts/carefull_copy.py ./rms/output/aps/g1.grdecl ./g1_field.grdecl
+17:18:27  Calling: /prog/res/komodo/2019.12.02-py27/root/etc/ERT/Scripts/carefull_copy.py ./rms/output/aps/g2.grdecl ./g2_field.grdecl
+17:18:27  Calling: /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/bin/scripts/create_relperm.py /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/model/../input/config/scalreek.xlsx /scratch/fmu/asny/reek_history_match/realization-18/iter-3//eclipse/include/props/relperm_config.txt
+17:18:34  Calling: /prog/res/komodo/2019.12.02-py27/root/etc/ERT/Config/jobs/ressim/Scripts/run_ecl100 eclipse/model/R001_REEK-18 --version=2017.2 --num-cpu=1
+17:20:13  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/symlink /scratch/fmu/asny/reek_history_match/realization-18/iter-3//eclipse/model/R001_REEK-18.EGRID /scratch/fmu/asny/reek_history_match/realization-18/iter-3//eclipse/model/ECLIPSE.EGRID
+17:20:13  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/symlink /scratch/fmu/asny/reek_history_match/realization-18/iter-3//eclipse/model/R001_REEK-18.INIT /scratch/fmu/asny/reek_history_match/realization-18/iter-3//eclipse/model/ECLIPSE.INIT
+17:20:14  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/symlink /scratch/fmu/asny/reek_history_match/realization-18/iter-3//eclipse/model/R001_REEK-18.UNRST /scratch/fmu/asny/reek_history_match/realization-18/iter-3//eclipse/model/ECLIPSE.UNRST
+17:20:15  Calling: /project/res/resscript/prtvol2csv /scratch/fmu/asny/reek_history_match/realization-18/iter-3//eclipse/model/R001_REEK-18.DATA
+17:20:19  Calling: /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/bin/scripts/fm_fmu_postprocess.py 
+17:20:51  Calling: /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/bin/scripts/grid3d_hc_thickness.sh /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/model/../input/config/ecl_hc_thickness.yaml
+17:21:05  Calling: /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/bin/scripts/grid3d_avg_map.sh /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/model/../input/config/ecl_avg_map.yaml eclipse/model/R001_REEK-18
+17:21:56  Calling: /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/bin/scripts/create_date_files.py /scratch/fmu/asny/reek_history_match/realization-18/iter-3//fmuconfig/output/global_variables.ipl ECLIPSE_HIST_DATES ECLIPSE_HIST_DIFFDATES
+17:21:56  Calling: /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/bin/scripts/eclgrid2roff.sh eclipse/model/R001_REEK-18 share/results/grids/eclgrid
+17:22:00  Calling: /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/bin/scripts/eclinit2roff.sh eclipse/model/R001_REEK-18 share/results/grids/eclgrid PORO:PERMX:PERMZ
+17:22:04  Calling: /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/bin/scripts/eclrst2roff2.sh eclipse/model/R001_REEK-18 share/results/grids/eclgrid SOIL:SWAT:SGAS:PRESSURE /scratch/fmu/asny/reek_history_match/realization-18/iter-3//single_dates.txt
+17:22:14  Calling: /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/bin/scripts/ecl_diff_calc2.sh eclipse/model/R001_REEK-18 PRESSURE /scratch/fmu/asny/reek_history_match/realization-18/iter-3//diff_dates.txt /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/model
+17:22:23  Calling: /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/bin/scripts/ecl_diff_calc2.sh eclipse/model/R001_REEK-18 SWAT /scratch/fmu/asny/reek_history_match/realization-18/iter-3//diff_dates.txt /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/model
+17:22:35  Calling: /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/bin/scripts/ecl_diff_calc2.sh eclipse/model/R001_REEK-18 SGAS /scratch/fmu/asny/reek_history_match/realization-18/iter-3//diff_dates.txt /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/model
+17:22:49  Calling: /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/bin/scripts/ecl_diff_calc2.sh eclipse/model/R001_REEK-18 SOIL /scratch/fmu/asny/reek_history_match/realization-18/iter-3//diff_dates.txt /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/model
+17:23:02  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/symlink /scratch/fmu/asny/reek_history_match/realization-18/iter-3//eclipse/model/R001_REEK-18.EGRID /scratch/fmu/asny/reek_history_match/realization-18/iter-3//sim2seis/input/pem/ECLIPSE.EGRID
+17:23:02  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/symlink /scratch/fmu/asny/reek_history_match/realization-18/iter-3//eclipse/model/R001_REEK-18.INIT /scratch/fmu/asny/reek_history_match/realization-18/iter-3//sim2seis/input/pem/ECLIPSE.INIT
+17:23:03  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/symlink /scratch/fmu/asny/reek_history_match/realization-18/iter-3//eclipse/model/R001_REEK-18.UNRST /scratch/fmu/asny/reek_history_match/realization-18/iter-3//sim2seis/input/pem/ECLIPSE.UNRST
+17:23:04  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/res/script/rms 18 /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/model/../../rms/model/reek.rms11.0.1 SIM2SEIS -r rms/model -t RMS_TARGET2.INC -i ./ -v 11.0.1 -e ./
+17:26:50  Calling: /prog/res/komodo/2019.12.02-py27/root/share/ert/forward-models/shell/script/delete_directory sim2seis/output/seismic_forward/
+17:26:51  Calling: /prog/res/komodo/2019.12.02-py27/root/etc/ERT/Scripts/gendata_rft.py eclipse/model/R001_REEK-18 /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/model/../input/observations/rft/ /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/model/../input/observations/rft/well_date_rft.txt /private/asny/Desktop/reek/resmod/ff/2019a/r001/ert/model/../input/observations/rft/layer_zone_table.txt

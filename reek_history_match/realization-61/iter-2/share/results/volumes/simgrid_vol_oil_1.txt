@@ -1,0 +1,17 @@
+Project name			: /private/asny/Desktop/reek/resmod/ff/2019a/r001/rms/model/reek.rms11.0.1
+Date				: 2020.02.19 16:56:10
+Grid model name			: Simgrid
+
+   Zone      Region index          Bulk                Pore                Hcpv               Stoiip       
+UpperReek  1                       282153335.66         45408696.05         34325892.12         21588611.04
+UpperReek  2                               0.00                0.00                0.00                0.00
+UpperReek  Totals                  282153335.66         45408696.05         34325892.12         21588611.04
+MidReek    1                       191868083.45         35185839.44         27665745.11         17399839.40
+MidReek    2                               0.00                0.00                0.00                0.00
+MidReek    Totals                  191868083.45         35185839.44         27665745.11         17399839.40
+LowerReek  1                       124534307.64         25657148.03         21049347.52         13238583.12
+LowerReek  2                               0.00                0.00                0.00                0.00
+LowerReek  Totals                  124534307.64         25657148.03         21049347.52         13238583.12
+Totals     1                       598555726.75        106251683.52         83040984.75         52227033.56
+Totals     2                               0.00                0.00                0.00                0.00
+Totals     Totals                  598555726.75        106251683.52         83040984.75         52227033.56

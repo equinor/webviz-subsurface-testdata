@@ -1,0 +1,28 @@
+<error>
+  <time>17:23:07</time>
+  <job>ECLIPSE100_2017.2</job>
+  <reason>Process exited with status code 1</reason>
+  <stderr>
+Traceback (most recent call last):
+  File "/prog/res/komodo/2019.12.02-py27/root/etc/ERT/Config/jobs/ressim/Scripts/run_ecl100", line 6, in <module>
+    run(config, sys.argv[1:])
+  File "/prog/res/komodo/2019.12.02-py27/root/lib/python2.7/site-packages/res/fm/ecl/script.py", line 22, in run
+    run.runEclipse()
+  File "/prog/res/komodo/2019.12.02-py27/root/lib/python2.7/site-packages/res/fm/ecl/ecl_run.py", line 217, in runEclipse
+    self.assertECLEND( )
+  File "/prog/res/komodo/2019.12.02-py27/root/lib/python2.7/site-packages/res/fm/ecl/ecl_run.py", line 262, in assertECLEND
+    raise Exception("Eclipse simulation failed with:%d errors:\n\n%s" % (result.errors , error_msg))
+Exception: Eclipse simulation failed with:2 errors:
+
+ @--  ERROR  AT TIME       31.0   DAYS    ( 1-FEB-2000):
+ @           SEGMENT   6 IN WELL OP_2     HAS A LENGTH <OR= 0.0              
+
+...
+
+ @--  ERROR  AT TIME       31.0   DAYS    ( 1-FEB-2000):
+ @                                                                           
+ @           RUN STOPPED BECAUSE NUMBER OF   ERRORS                          
+ @           EXCEEDS MAXIMUM PERMITTED VALUE (     0).                       
+</stderr>
+  <stderr_file>/scratch/fmu/asny/reek_history_match/realization-95/iter-3/ECLIPSE.stderr.55</stderr_file>
+</error>

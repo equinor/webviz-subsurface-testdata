@@ -1,0 +1,412 @@
+ ECLIPSE   Version 2017.2. Build Number 30032000. (Arch : Linux X86_64 (64 bit, LINRH6_IL13_OPT))
+
+ Proprietary Notice
+ This application contains the confidential and
+ proprietary trade secrets of Schlumberger and may 
+ not be copied or stored in an information retrieval
+ system, transferred, used, distributed, translated,
+ or retransmitted in any form or by any means, electronic
+ or mechanical, in whole or in part, without the
+ express written permission of the copyright owner.
+
+ ECLIPSE is a mark of Schlumberger. Copyright (c)
+ 1981-2017 Schlumberger. All rights reserved.
+
+     1 READING RUNSPEC 
+     2 READING TITLE   
+     3 READING SAVE    
+     4 READING NOECHO  
+     5 READING DIMENS  
+     6 READING START   
+     7 READING OIL     
+     8 READING GAS     
+     9 READING WATER   
+    10 READING DISGAS  
+    11 READING METRIC  
+    12 READING GRIDOPTS
+    13 READING ENDSCALE
+    14 READING EQLOPTS 
+    15 READING TABDIMS 
+    16 READING EQLDIMS 
+    17 READING REGDIMS 
+    18 READING FAULTDIM
+    19 READING WELLDIMS
+    20 READING WSEGDIMS
+    21 READING VFPPDIMS
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           CHECKING FOR LICENSES                                           
+    22 READING VFPIDIMS
+    23 READING SMRYDIMS
+    24 READING UNIFIN  
+    25 READING UNIFOUT 
+    26 READING NOINSPEC
+    27 READING NORSSPEC
+    28 READING GRID    
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           CHECKING FOR LICENSES                                           
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           THE MEMORY REQUIRED TO PROCESS THE GRID SECTION IS              
+ @                17002 KBYTES                                               
+    30 READING NOECHO  
+    31 READING INIT    
+    32 READING GRIDFILE
+    33 READING MESSAGES
+    34 READING PINCH   
+    35 READING NOECHO  
+    36 READING INCLUDE ../include/grid/reek.grid                                                                                                           
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           INCLUDED FILE APPEARS TO BE A GRID FILE                         
+ @           GRID FILES MUST BE IMPORTED USING GDFILE OR IMPORT              
+    37 READING NOECHO  
+    38 READING MAPUNITS
+    39 READING MAPAXES 
+    40 READING GRIDUNIT
+    41 READING SPECGRID
+    42 READING GDORIENT
+    43 READING COORD   
+    44 READING ZCORN   
+    45 READING ACTNUM  
+    46 READING ECHO    
+               END OF INCLUDE FILE 
+    47 READING INCLUDE ../include/grid/reek.faults                                                                                                         
+    48 READING FAULTS  
+               END OF INCLUDE FILE 
+    49 READING INCLUDE ../include/grid/reek.poro                                                                                                           
+    50 READING PORO    
+               END OF INCLUDE FILE 
+    51 READING INCLUDE ../include/grid/reek.perm                                                                                                           
+    52 READING PERMX   
+    53 READING PERMY   
+    54 READING PERMZ   
+               END OF INCLUDE FILE 
+    55 READING MULTIPLY
+    56 READING INCLUDE ../include/grid/reek.multflt                                                                                                        
+    57 READING MULTFLT 
+               END OF INCLUDE FILE 
+    58 READING INCLUDE ../include/grid/reek.multz                                                                                                          
+    59 READING EQUALS  
+               END OF INCLUDE FILE 
+    60 READING EDIT    
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           FLUX FLAG SET IN RUNSPEC BUT FLUXNUM KEYWORD                    
+ @           NOT USED -- SAVE SPACE BY SETTING NTFREG = 0                    
+ @           IN RUNSPEC KEYWORD REGDIMS.                                     
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           NEITHER OLDTRAN,OLDTRANR NOR NEWTRAN SPECIFIED                  
+ @           TRANSMISSIBILITIES TO BE CALCULATED                             
+ @           USING  NEWTRAN                                                  
+    61 READING PROPS   
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @                  3 NON-NEIGHBOUR CONNECTIONS HAVE BEEN IGNORED            
+ @           AS THEIR TRANSMISSIBILITY IS LESS THAN 0.100000E-05             
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           3228 NON-NEIGHBOUR CONNECTIONS PRESENT                          
+
+ @--COMMENT  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           LEFT HANDED GRIDS MAY NOT BE SUPPORTED                          
+ @            IN ALL PRE AND POST PROCESSORS                                 
+
+ @--COMMENT  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           THE GRID APPEARS TO BE LEFT HANDED, BUT                         
+ @           IS SPECIFIED IN GDORIENT AS RIGHT HANDED.                       
+ @           ENSURE GDORIENT IS CORRECTLY DEFINED.                           
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           NUMBER OF ACTIVE CELLS IS 35832                                 
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           THE MEMORY REQUIRED TO PROCESS THE SOLUTION SECTION IS          
+ @               631565 KBYTES                                               
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @              89918 CHARACTER VARIABLES USED                               
+    62 READING INCLUDE ../include/props/swof.inc                                                                                                           
+    63 READING SWOF    
+               END OF INCLUDE FILE 
+    64 READING INCLUDE ../include/props/sgof.inc                                                                                                           
+    65 READING SGOF    
+               END OF INCLUDE FILE 
+    66 READING INCLUDE ../include/props/reek.swatinit                                                                                                      
+    67 READING SWATINIT
+               END OF INCLUDE FILE 
+    68 READING INCLUDE ../include/props/reek.endpoints                                                                                                     
+    69 READING COPY    
+    70 READING MAXVALUE
+    71 READING COPY    
+    72 READING MULTIPLY
+    73 READING ADD     
+    74 READING EQUALS  
+               END OF INCLUDE FILE 
+    75 READING SCALECRS
+    76 READING INCLUDE ../include/props/reek.pvt                                                                                                           
+    77 READING ROCKOPTS
+    78 READING ROCK    
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           ALTHOUGH ROCK DATA WAS ASSOCIATED WITH ROCKNUM                  
+ @           THE NUMBER OF REGIONS WAS NOT EXPLICITLY SET                    
+ @           USING ARGUMENT 13 OF KEYWORD TABDIMS                            
+ @           ROCK WILL BE ASSOCIATED WITH PVTNUM INSTEAD                     
+    79 READING PVTW    
+    80 READING PVTO    
+    81 READING PVDG    
+    82 READING DENSITY 
+               END OF INCLUDE FILE 
+    83 READING REGIONS 
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           THE PROCESSED PVTO DATA FOR TABLE   1                           
+ @           HAS UNDERSATURATED BO LINES THAT WILL INTERSECT                 
+ @           IF EXTRAPOLATED                                                 
+ @           AT RS VALUES OF     522.8400  SM3/SM3 AND     630.0000  SM3/SM3 
+ @           AND A PRESSURE OF       745.57   BARSA                          
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           THE PROCESSED PVTO DATA FOR TABLE   1                           
+ @           HAS UNDERSATURATED BO LINES THAT WILL INTERSECT                 
+ @           IF EXTRAPOLATED                                                 
+ @           AT RS VALUES OF     522.8400  SM3/SM3 AND     630.0000  SM3/SM3 
+ @           AND A PRESSURE OF       745.99   BARSA                          
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           THE MAXIMUM PRESSURE ENTERED IN THE PVT TABLES                  
+ @           FOR THE OIL PHASE IS    700.100. THIS IS GREATER THAN           
+ @           THE MAXIMUM PRESSURE FOR THE GAS PHASE,    700.000              
+ @           AND MAY LEAD TO PVT TABLE EXTRAPOLATION                         
+    84 READING INCLUDE ../include/regions/reek.eqlnum                                                                                                      
+    85 READING EQLNUM  
+               END OF INCLUDE FILE 
+    86 READING INCLUDE ../include/regions/reek.fipnum                                                                                                      
+    87 READING FIPNUM  
+               END OF INCLUDE FILE 
+    88 READING INCLUDE ../include/regions/reek.satnum                                                                                                      
+    89 READING SATNUM  
+               END OF INCLUDE FILE 
+    90 READING EQUALS  
+    91 READING SOLUTION
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           SAVE FILE HAS BEEN WRITTEN.                                     
+    92 READING INCLUDE ../include/solution/reek.equil                                                                                                      
+    93 READING EQUIL   
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           THE FINE GRID BLOCK EQUILIBRATION SHOULD NOT                    
+ @           USUALLY BE USED WITH THE SWATINIT KEYWORD AS                    
+ @           THE INTEGRATED SOLUTION WILL NOT IN GENERAL                     
+ @           HONOUR THE SWATINIT DATA.                                       
+ @           FOR EQUILIBRATION REGION 1                                      
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           THE FINE GRID BLOCK EQUILIBRATION SHOULD NOT                    
+ @           USUALLY BE USED WITH THE SWATINIT KEYWORD AS                    
+ @           THE INTEGRATED SOLUTION WILL NOT IN GENERAL                     
+ @           HONOUR THE SWATINIT DATA.                                       
+ @           FOR EQUILIBRATION REGION 2                                      
+               END OF INCLUDE FILE 
+    94 READING RSVD    
+    95 READING RPTSOL  
+    96 READING RPTRST  
+    97 READING SUMMARY 
+    98 READING INCLUDE ../include/summary/reek.smry                                                                                                        
+    99 READING FOPR    
+   100 READING FOPRH   
+   101 READING FGPR    
+   102 READING FGPRH   
+   103 READING FWPR    
+   104 READING FWPRH   
+   105 READING FLPR    
+   106 READING FLPRH   
+   107 READING FVPR    
+   108 READING FOPRF   
+   109 READING FOPRS   
+   110 READING FGSR    
+   111 READING FGPRF   
+   112 READING FGPRS   
+   113 READING FOPP    
+   114 READING FWPP    
+   115 READING FGPP    
+   116 READING FMWPR   
+   117 READING FMWIN   
+   118 READING FVIR    
+   119 READING FWIR    
+   120 READING FWIRH   
+   121 READING FGIR    
+   122 READING FGIRH   
+   123 READING FGLIR   
+   124 READING FMCTP   
+   125 READING FVPT    
+   126 READING FOPT    
+   127 READING FOPTH   
+   128 READING FWPT    
+   129 READING FWPTH   
+   130 READING FGPT    
+   131 READING FGPTH   
+   132 READING FWIT    
+   133 READING FWITH   
+   134 READING FGIT    
+   135 READING FGITH   
+   136 READING FOPTF   
+   137 READING FOPTS   
+   138 READING FWIP    
+   139 READING FOIP    
+   140 READING FGIP    
+   141 READING FWCT    
+   142 READING FWCTH   
+   143 READING FGOR    
+   144 READING FGORH   
+   145 READING FGLR    
+   146 READING FWGR    
+   147 READING FPR     
+   148 READING RPR     
+   149 READING ROIP    
+   150 READING ROIPL   
+   151 READING ROIPG   
+   152 READING RGIP    
+   153 READING RGIPL   
+   154 READING RGIPG   
+   155 READING RGPR    
+   156 READING RGPT    
+   157 READING GMWPR   
+   158 READING GGLIR   
+   159 READING GOPR    
+   160 READING GOPRH   
+   161 READING GGPR    
+   162 READING GGPRH   
+   163 READING GWPR    
+   164 READING GWPRH   
+   165 READING GVPR    
+   166 READING GLPR    
+   167 READING GOPRF   
+   168 READING GOPRS   
+   169 READING GGPRF   
+   170 READING GGPRS   
+   171 READING GWCT    
+   172 READING GWCTH   
+   173 READING GGOR    
+   174 READING GGORH   
+   175 READING GWGR    
+   176 READING GGLR    
+   177 READING GOPT    
+   178 READING GOPTH   
+   179 READING GGPT    
+   180 READING GGPTH   
+   181 READING GWPT    
+   182 READING GWPTH   
+   183 READING GVPT    
+   184 READING GLPT    
+   185 READING GOPTF   
+   186 READING GOPTS   
+   187 READING GGPTF   
+   188 READING GGPTS   
+   189 READING GWIR    
+   190 READING GVIR    
+   191 READING GWIRH   
+   192 READING GGIR    
+   193 READING GGIRH   
+   194 READING GOPP    
+   195 READING GGPP    
+   196 READING GWPP    
+   197 READING GMCTP   
+   198 READING WOPR    
+   199 READING WOPRH   
+   200 READING WGPR    
+   201 READING WGPRH   
+   202 READING WWPR    
+   203 READING WWPRH   
+   204 READING WOPT    
+   205 READING WWPT    
+   206 READING WGPT    
+   207 READING WOPTH   
+   208 READING WWPTH   
+   209 READING WGPTH   
+   210 READING WWCT    
+   211 READING WWCTH   
+   212 READING WGOR    
+   213 READING WGORH   
+   214 READING WWIR    
+   215 READING WWIRH   
+   216 READING WGIR    
+   217 READING WGIRH   
+   218 READING WWIT    
+   219 READING WWITH   
+   220 READING WGIT    
+   221 READING WGITH   
+   222 READING WBHP    
+   223 READING WTHP    
+   224 READING WPI     
+   225 READING WVPR    
+   226 READING WBP     
+   227 READING WBP4    
+   228 READING WBP9    
+   229 READING WMCTL   
+   230 READING WLPR    
+   231 READING WGLIR   
+   232 READING WOGLR   
+   233 READING BPR     
+   234 READING TCPU    
+   235 READING TCPUDAY 
+               END OF INCLUDE FILE 
+   236 READING SCHEDULE
+   237 READING TUNING  
+   238 READING INCLUDE ../include/schedule/reek_history.sch                                                                                                
+   239 READING GRUPTREE
+   240 READING DATES   
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           DRSDT OR DRSDTR KEYWORDS HAVE NOT BEEN                          
+ @           ENTERED, SO THE MAXIMUM GAS RE-SOLUTION                         
+ @           RATE IS DEFAULTED TO INFINITY.                                  
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           RESTART FILE WRITTEN   REPORT     0                             
+ @           RESTART INCLUDES FLUIDS IN PLACE                                
+ STEP    1 TIME=      1.00  DAYS (    +1.0  DAYS INIT  3 ITS) (2-JAN-2000)       
+  PAV=   306.3  BARSA  WCT= 0.00 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+ STEP    2 TIME=      3.65  DAYS (    +2.6  DAYS TRNC  2 ITS) (4-JAN-2000)       
+  PAV=   306.3  BARSA  WCT= 0.00 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+ STEP    3 TIME=      8.65  DAYS (    +5.0  DAYS MAXS  2 ITS) (9-JAN-2000)       
+  PAV=   306.3  BARSA  WCT= 0.00 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+ STEP    4 TIME=     13.65  DAYS (    +5.0  DAYS MAXS  3 ITS) (14-JAN-2000)      
+  PAV=   306.3  BARSA  WCT= 0.00 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+ STEP    5 TIME=     18.65  DAYS (    +5.0  DAYS MAXS  2 ITS) (19-JAN-2000)      
+  PAV=   306.3  BARSA  WCT= 0.00 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+ STEP    6 TIME=     23.65  DAYS (    +5.0  DAYS MAXS  2 ITS) (24-JAN-2000)      
+  PAV=   306.3  BARSA  WCT= 0.00 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+ STEP    7 TIME=     27.32  DAYS (    +3.7  DAYS HALF  2 ITS) (28-JAN-2000)      
+  PAV=   306.3  BARSA  WCT= 0.00 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+ STEP    8 TIME=     31.00  DAYS (    +3.7  DAYS REPT  3 ITS) (1-FEB-2000)       
+  PAV=   306.3  BARSA  WCT= 0.00 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+   241 READING WELSPECS
+   242 READING COMPORD 
+   243 READING COMPDAT 
+   244 READING WELSEGS 
+   245 READING WELSEGS 
+
+ @--  ERROR  AT TIME       31.0   DAYS    ( 1-FEB-2000):
+ @           SEGMENT   6 IN WELL OP_2     HAS A LENGTH <OR= 0.0              
+
+ @--  ERROR  AT TIME       31.0   DAYS    ( 1-FEB-2000):
+ @                                                                           
+ @           RUN STOPPED BECAUSE NUMBER OF   ERRORS                          
+ @           EXCEEDS MAXIMUM PERMITTED VALUE (     0).                       
+          630 Mbytes of storage required                         
+  18.0081     KB/active cell                                     
+          789 Mbytes (image size)                                
+
+ Error summary 
+ Comments               2
+ Warnings               8
+ Problems               0
+ Errors                 2
+ Bugs                   0
+ Final cpu       5.13 elapsed       5.71
+ Total number of time steps forced to be accepted          0

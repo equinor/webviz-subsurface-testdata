@@ -1,0 +1,14 @@
+Run name: R001_REEK-68
+
+  BALANCE  AT      0.00  DAYS *Reek synthetic reservoir model                                          * ECLIPSE  VERSION 2017.2     
+  REPORT   0     1 JAN 2000   *  RUN                                                                   * RUN AT 16:56 ON 19 FEB 2020 
+
+          :--------------- OIL    SM3  ---------------:::-- WAT    SM3  --:--------------- GAS    SM3  ---------------
+FIP-REGION:LIQUID:VAPOUR:TOTAL:TOTAL:FREE:DISSOLVED:TOTAL
+FIELD TOTALS REGION NaN    59139599.    0   59139599.    337239502.   0.    10881686296.   10881686296.  
+FIPNUM REPORT REGION 1    21964166.    0   21964166.    51159101.   0.    4041406519.   4041406519.  
+FIPNUM REPORT REGION 2    0.    0   0.    70259377.   0.    0.   0.  
+FIPNUM REPORT REGION 3    21836898.    0   21836898.    53403460.   0.    4017989289.   4017989289.  
+FIPNUM REPORT REGION 4    0.    0   0.    78716210.   0.    0.   0.  
+FIPNUM REPORT REGION 5    15338535.    0   15338535.    37132908.   0.    2822290488.   2822290488.  
+FIPNUM REPORT REGION 6    0.    0   0.    46568445.   0.    0.   0.  

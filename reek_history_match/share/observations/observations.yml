@@ -4,14 +4,16 @@ smry:
     comment: "Shut-in pressures converted from well head conditions"  # This is a global comment regarding this set of observations
     observations:
       # Mandatory elements per entry in ecl_vector observations: value, error, date
-      - {value: 251, error: 4, date: 2001-01-01}
-      - {value: 251, error: 10, date: 2002-01-01}
-      - {value: 251, error: 10, date: 2003-01-01, comment: First measurement after sensor drift correction}
+      - {value: 251, error: 10, date: 2001-01-01}
+      - {value: 261, error: 10, date: 2002-01-01}
+      - {value: 261, error: 10, date: 2003-01-01, comment: First measurement after sensor drift correction}
   - key: WOPR:OP_1
     observations:
       - {value: 4000, error: 500, date: 2001-01-01}
-      - {value: 2000, error: 500, date: 2002-01-01, comment: Multiphase-flow-meter re-calibrated}
-      - {value: 650, error: 100, date: 2003-01-01}
+      - {value: 1971, error: 300, date: 2001-07-01}
+      - {value: 1846, error: 300, date: 2002-01-01, comment: Multiphase-flow-meter re-calibrated}
+      - {value: 1562, error: 250, date: 2002-07-01}
+      - {value: 1352, error: 200, date: 2003-01-01}      
   - key: WGOR:OP_1
     observations:
       - {value: 185, error: 19, date: 2001-01-01}
@@ -19,24 +21,162 @@ smry:
       - {value: 184, error: 18, date: 2003-01-01}
   - key: WWCT:OP_1
     observations:
-      - {value: 0.02, error: 0.1, date: 2001-01-01}
-      - {value: 0.1, error: 0.1, date: 2002-01-01, comment: Multiphase-flow-meter re-calibrated}
-      - {value: 0.4, error: 0.1, date: 2003-01-01}
+      - {value: 0, error: 0.05, date: 2001-01-01}
+      - {value: 0, error: 0.05, date: 2001-07-01}
+      - {value: 0, error: 0.05, date: 2002-01-01, comment: Multiphase-flow-meter re-calibrated}
+      - {value: 0, error: 0.05, date: 2002-07-01}
+      - {value: 0, error: 0.05, date: 2003-01-01}
+  - key: WBP4:OP_2
+    comment: "Shut-in pressures converted from well head conditions"  # This is a global comment regarding this set of observations
+    observations:
+      # Mandatory elements per entry in ecl_vector observations: value, error, date
+      - {value: 265, error: 10, date: 2001-01-01}
+      - {value: 262, error: 10, date: 2002-01-01, comment: First measurement after sensor drift correction}
+      - {value: 261, error: 10, date: 2003-01-01, }
+  - key: WOPR:OP_2
+    observations:
+      - {value: 729, error: 150, date: 2000-07-01}
+      - {value: 352, error: 100, date: 2001-01-01}
+      - {value: 275, error: 100, date: 2001-07-01}
+      - {value: 171, error: 50, date: 2002-01-01, comment: Multiphase-flow-meter re-calibrated}
+      - {value: 136, error: 50, date: 2003-01-01}      
+  - key: WGOR:OP_2
+    observations:
+      - {value: 185, error: 19, date: 2001-01-01}
+      - {value: 184, error: 18, date: 2002-01-01, comment: Multiphase-flow-meter re-calibrated}
+      - {value: 184, error: 18, date: 2003-01-01}
+  - key: WWCT:OP_2
+    observations:
+      - {value: 0.53, error: 0.1, date: 2000-07-01}
+      - {value: 0.78, error: 0.1, date: 2001-01-01}
+      - {value: 0.93, error: 0.05, date: 2001-07-01}
+      - {value: 0.96, error: 0.05, date: 2002-01-01, comment: Multiphase-flow-meter re-calibrated}
+      - {value: 0.97, error: 0.05, date: 2003-01-01}    
+  - key: WBP4:OP_3
+    comment: "Shut-in pressures converted from well head conditions"  # This is a global comment regarding this set of observations
+    observations:
+      # Mandatory elements per entry in ecl_vector observations: value, error, date
+      - {value: 270, error: 10, date: 2001-01-01}
+      - {value: 265, error: 10, date: 2002-01-01, comment: First measurement after sensor drift correction}
+      - {value: 264, error: 10, date: 2003-01-01, }
+  - key: WOPR:OP_3
+    observations:
+      - {value: 3473, error: 500, date: 2000-07-01}
+      - {value: 1970, error: 300, date: 2001-01-01}
+      - {value: 975,  error: 200, date: 2001-07-01}
+      - {value: 846,  error: 200, date: 2002-01-01, comment: Multiphase-flow-meter re-calibrated}
+      - {value: 903,  error: 200, date: 2003-01-01}      
+  - key: WGOR:OP_3
+    observations:
+      - {value: 185, error: 19, date: 2001-01-01}
+      - {value: 184, error: 18, date: 2002-01-01, comment: Multiphase-flow-meter re-calibrated}
+      - {value: 184, error: 18, date: 2003-01-01}
+  - key: WWCT:OP_3
+    observations:
+      - {value: 0.0,  error: 0.05, date: 2000-07-01}
+      - {value: 0.0,  error: 0.05, date: 2001-01-01}
+      - {value: 0.0,  error: 0.05, date: 2001-07-01}
+      - {value: 0.0,  error: 0.05, date: 2002-01-01, comment: Multiphase-flow-meter re-calibrated}
+      - {value: 0.18, error: 0.1,  date: 2003-01-01}    
+  - key: WBP4:OP_4
+    comment: "Shut-in pressures converted from well head conditions"  # This is a global comment regarding this set of observations
+    observations:
+      # Mandatory elements per entry in ecl_vector observations: value, error, date
+      - {value: 255, error: 10, date: 2001-02-01}
+      - {value: 260, error: 10, date: 2002-01-01, comment: First measurement after sensor drift correction}
+      - {value: 264, error: 10, date: 2003-01-01}
+  - key: WOPR:OP_4
+    observations:
+      - {value: 2362, error: 300, date: 2001-04-01}
+      - {value: 2100, error: 300, date: 2001-07-01}
+      - {value: 1536, error: 250, date: 2002-01-01, comment: Multiphase-flow-meter re-calibrated}
+      - {value: 1375, error: 250, date: 2002-07-01}
+      - {value: 1274, error: 250, date: 2003-01-01}      
+  - key: WGOR:OP_4
+    observations:
+      - {value: 184, error: 18, date: 2001-07-01}
+      - {value: 184, error: 18, date: 2002-01-01, comment: Multiphase-flow-meter re-calibrated}
+      - {value: 184, error: 18, date: 2003-01-01}
+  - key: WWCT:OP_4
+    observations:
+      - {value: 0.0,  error: 0.05, date: 2001-04-01}
+      - {value: 0.05, error: 0.05, date: 2001-07-01}
+      - {value: 0.14, error: 0.1,  date: 2002-01-01, comment: Multiphase-flow-meter re-calibrated}
+      - {value: 0.2,  error: 0.1,  date: 2002-07-01}
+      - {value: 0.36, error: 0.1,  date: 2003-01-01}    
+  - key: WBP4:OP_4
+    comment: "Shut-in pressures converted from well head conditions"  # This is a global comment regarding this set of observations
+    observations:
+      # Mandatory elements per entry in ecl_vector observations: value, error, date
+      - {value: 267, error: 10, date: 2001-01-01}
+      - {value: 265, error: 10, date: 2002-01-01, comment: First measurement after sensor drift correction}
+      - {value: 264, error: 10, date: 2003-01-01}
+  - key: WOPR:OP_4
+    observations:
+      - {value: 2362, error: 300, date: 2001-04-01}
+      - {value: 2100, error: 300, date: 2001-07-01}
+      - {value: 1536, error: 250, date: 2002-01-01, comment: Multiphase-flow-meter re-calibrated}
+      - {value: 1375, error: 250, date: 2002-07-01}
+      - {value: 1274, error: 250, date: 2003-01-01}      
+  - key: WGOR:OP_4
+    observations:
+      - {value: 184, error: 18, date: 2001-07-01}
+      - {value: 184, error: 18, date: 2002-01-01, comment: Multiphase-flow-meter re-calibrated}
+      - {value: 184, error: 18, date: 2003-01-01}
+  - key: WWCT:OP_4
+    observations:
+      - {value: 0.0,  error: 0.05, date: 2001-04-01}
+      - {value: 0.05, error: 0.05, date: 2001-07-01}
+      - {value: 0.14, error: 0.1,  date: 2002-01-01, comment: Multiphase-flow-meter re-calibrated}
+      - {value: 0.2,  error: 0.1,  date: 2002-07-01}
+      - {value: 0.26, error: 0.1,  date: 2003-01-01}
+  - key: WBP4:OP_5
+    comment: "Shut-in pressures converted from well head conditions"  # This is a global comment regarding this set of observations
+    observations:
+      # Mandatory elements per entry in ecl_vector observations: value, error, date
+      - {value: 262, error: 10, date: 2001-02-01}
+      - {value: 265, error: 10, date: 2002-01-01, comment: First measurement after sensor drift correction}
+      - {value: 268, error: 10, date: 2003-01-01}
+  - key: WOPR:OP_5
+    observations:
+      - {value: 1323, error: 250, date: 2001-04-01}
+      - {value: 1441, error: 250, date: 2001-07-01}
+      - {value: 1879, error: 300, date: 2002-01-01, comment: Multiphase-flow-meter re-calibrated}
+      - {value: 2032, error: 300, date: 2002-07-01}
+      - {value: 1387, error: 250, date: 2003-01-01}      
+  - key: WGOR:OP_5
+    observations:
+      - {value: 184, error: 18, date: 2001-07-01}
+      - {value: 184, error: 18, date: 2002-01-01, comment: Multiphase-flow-meter re-calibrated}
+      - {value: 184, error: 18, date: 2003-01-01}
+  - key: WWCT:OP_5
+    observations:
+      - {value: 0.0,  error: 0.05, date: 2001-04-01}
+      - {value: 0.0,  error: 0.05, date: 2001-07-01}
+      - {value: 0.0,  error: 0.05, date: 2002-01-01, comment: Multiphase-flow-meter re-calibrated}
+      - {value: 0.05, error: 0.05, date: 2002-07-01}
+      - {value: 0.34, error: 0.1,  date: 2003-01-01}     
   - key: FOPR
     observations:
-      - {value: 6000, error: 1000, date: 2001-01-01}
-      - {value: 7000, error: 1000, date: 2002-01-01, comment: Good test point. Reek field alone on test separator}
-      - {value: 4000, error: 500, date: 2003-01-01}
+      - {value: 6300, error: 1000, date: 2001-01-01}
+      - {value: 6250, error: 750, date: 2002-01-01, comment: Good test point. Reek field alone on test separator}
+      - {value: 5050, error: 1000, date: 2003-01-01}
   - key: FGOR
     observations:
-      - {value: 185, error: 5, date: 2001-01-01}
-      - {value: 178, error: 10, date: 2002-01-01}
-      - {value: 180, error: 15, date: 2003-01-01}
+      - {value: 185, error: 10, date: 2001-01-01}
+      - {value: 184, error: 10, date: 2002-01-01}
+      - {value: 184, error: 15, date: 2003-01-01}
   - key: FWCT
     observations:
-      - {value: 0.15, error: 0.05, date: 2001-01-01}
-      - {value: 0.48, error: 0.05, date: 2002-01-01}
-      - {value: 0.72, error: 0.07, date: 2003-01-01}
+      - {value: 0.15, error: 0.08, date: 2001-01-01}
+      - {value: 0.42, error: 0.1, date: 2002-01-01}
+      - {value: 0.55, error: 0.13, date: 2003-01-01}   
+  - key: FOPT
+    observations:
+      - {value: 2700000, error: 300000, date: 2001-01-01}
+      - {value: 5200000, error: 500000, date: 2002-01-01}
+      - {value: 7400000, error: 700000, date: 2003-01-01}
+      
 rft:
   - well: OP_1
     date: 2001-09-10

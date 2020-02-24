@@ -1,0 +1,2831 @@
+ ECLIPSE   Version 2017.2. Build Number 30032000. (Arch : Linux X86_64 (64 bit, LINRH6_IL13_OPT))
+
+ Proprietary Notice
+ This application contains the confidential and
+ proprietary trade secrets of Schlumberger and may 
+ not be copied or stored in an information retrieval
+ system, transferred, used, distributed, translated,
+ or retransmitted in any form or by any means, electronic
+ or mechanical, in whole or in part, without the
+ express written permission of the copyright owner.
+
+ ECLIPSE is a mark of Schlumberger. Copyright (c)
+ 1981-2017 Schlumberger. All rights reserved.
+
+     1 READING RUNSPEC 
+     2 READING TITLE   
+     3 READING SAVE    
+     4 READING NOECHO  
+     5 READING DIMENS  
+     6 READING START   
+     7 READING OIL     
+     8 READING GAS     
+     9 READING WATER   
+    10 READING DISGAS  
+    11 READING METRIC  
+    12 READING GRIDOPTS
+    13 READING ENDSCALE
+    14 READING EQLOPTS 
+    15 READING TABDIMS 
+    16 READING EQLDIMS 
+    17 READING REGDIMS 
+    18 READING FAULTDIM
+    19 READING WELLDIMS
+    20 READING WSEGDIMS
+    21 READING VFPPDIMS
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           CHECKING FOR LICENSES                                           
+    22 READING VFPIDIMS
+    23 READING SMRYDIMS
+    24 READING UNIFIN  
+    25 READING UNIFOUT 
+    26 READING NOINSPEC
+    27 READING NORSSPEC
+    28 READING GRID    
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           CHECKING FOR LICENSES                                           
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           THE MEMORY REQUIRED TO PROCESS THE GRID SECTION IS              
+ @                17002 KBYTES                                               
+    30 READING NOECHO  
+    31 READING INIT    
+    32 READING GRIDFILE
+    33 READING MESSAGES
+    34 READING PINCH   
+    35 READING NOECHO  
+    36 READING INCLUDE ../include/grid/reek.grid                                                                                                           
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           INCLUDED FILE APPEARS TO BE A GRID FILE                         
+ @           GRID FILES MUST BE IMPORTED USING GDFILE OR IMPORT              
+    37 READING NOECHO  
+    38 READING MAPUNITS
+    39 READING MAPAXES 
+    40 READING GRIDUNIT
+    41 READING SPECGRID
+    42 READING GDORIENT
+    43 READING COORD   
+    44 READING ZCORN   
+    45 READING ACTNUM  
+    46 READING ECHO    
+               END OF INCLUDE FILE 
+    47 READING INCLUDE ../include/grid/reek.faults                                                                                                         
+    48 READING FAULTS  
+               END OF INCLUDE FILE 
+    49 READING INCLUDE ../include/grid/reek.poro                                                                                                           
+    50 READING PORO    
+               END OF INCLUDE FILE 
+    51 READING INCLUDE ../include/grid/reek.perm                                                                                                           
+    52 READING PERMX   
+    53 READING PERMY   
+    54 READING PERMZ   
+               END OF INCLUDE FILE 
+    55 READING MULTIPLY
+    56 READING INCLUDE ../include/grid/reek.multflt                                                                                                        
+    57 READING MULTFLT 
+               END OF INCLUDE FILE 
+    58 READING INCLUDE ../include/grid/reek.multz                                                                                                          
+    59 READING EQUALS  
+               END OF INCLUDE FILE 
+    60 READING EDIT    
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           FLUX FLAG SET IN RUNSPEC BUT FLUXNUM KEYWORD                    
+ @           NOT USED -- SAVE SPACE BY SETTING NTFREG = 0                    
+ @           IN RUNSPEC KEYWORD REGDIMS.                                     
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           NEITHER OLDTRAN,OLDTRANR NOR NEWTRAN SPECIFIED                  
+ @           TRANSMISSIBILITIES TO BE CALCULATED                             
+ @           USING  NEWTRAN                                                  
+    61 READING PROPS   
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @                  6 NON-NEIGHBOUR CONNECTIONS HAVE BEEN IGNORED            
+ @           AS THEIR TRANSMISSIBILITY IS LESS THAN 0.100000E-05             
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           3072 NON-NEIGHBOUR CONNECTIONS PRESENT                          
+
+ @--COMMENT  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           LEFT HANDED GRIDS MAY NOT BE SUPPORTED                          
+ @            IN ALL PRE AND POST PROCESSORS                                 
+
+ @--COMMENT  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           THE GRID APPEARS TO BE LEFT HANDED, BUT                         
+ @           IS SPECIFIED IN GDORIENT AS RIGHT HANDED.                       
+ @           ENSURE GDORIENT IS CORRECTLY DEFINED.                           
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           NUMBER OF ACTIVE CELLS IS 35839                                 
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           THE MEMORY REQUIRED TO PROCESS THE SOLUTION SECTION IS          
+ @               631520 KBYTES                                               
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @              89918 CHARACTER VARIABLES USED                               
+    62 READING INCLUDE ../include/props/swof.inc                                                                                                           
+    63 READING SWOF    
+               END OF INCLUDE FILE 
+    64 READING INCLUDE ../include/props/sgof.inc                                                                                                           
+    65 READING SGOF    
+               END OF INCLUDE FILE 
+    66 READING INCLUDE ../include/props/reek.swatinit                                                                                                      
+    67 READING SWATINIT
+               END OF INCLUDE FILE 
+    68 READING INCLUDE ../include/props/reek.endpoints                                                                                                     
+    69 READING COPY    
+    70 READING MAXVALUE
+    71 READING COPY    
+    72 READING MULTIPLY
+    73 READING ADD     
+    74 READING EQUALS  
+               END OF INCLUDE FILE 
+    75 READING SCALECRS
+    76 READING INCLUDE ../include/props/reek.pvt                                                                                                           
+    77 READING ROCKOPTS
+    78 READING ROCK    
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           ALTHOUGH ROCK DATA WAS ASSOCIATED WITH ROCKNUM                  
+ @           THE NUMBER OF REGIONS WAS NOT EXPLICITLY SET                    
+ @           USING ARGUMENT 13 OF KEYWORD TABDIMS                            
+ @           ROCK WILL BE ASSOCIATED WITH PVTNUM INSTEAD                     
+    79 READING PVTW    
+    80 READING PVTO    
+    81 READING PVDG    
+    82 READING DENSITY 
+               END OF INCLUDE FILE 
+    83 READING REGIONS 
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           THE PROCESSED PVTO DATA FOR TABLE   1                           
+ @           HAS UNDERSATURATED BO LINES THAT WILL INTERSECT                 
+ @           IF EXTRAPOLATED                                                 
+ @           AT RS VALUES OF     522.8400  SM3/SM3 AND     630.0000  SM3/SM3 
+ @           AND A PRESSURE OF       745.57   BARSA                          
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           THE PROCESSED PVTO DATA FOR TABLE   1                           
+ @           HAS UNDERSATURATED BO LINES THAT WILL INTERSECT                 
+ @           IF EXTRAPOLATED                                                 
+ @           AT RS VALUES OF     522.8400  SM3/SM3 AND     630.0000  SM3/SM3 
+ @           AND A PRESSURE OF       745.99   BARSA                          
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           THE MAXIMUM PRESSURE ENTERED IN THE PVT TABLES                  
+ @           FOR THE OIL PHASE IS    700.100. THIS IS GREATER THAN           
+ @           THE MAXIMUM PRESSURE FOR THE GAS PHASE,    700.000              
+ @           AND MAY LEAD TO PVT TABLE EXTRAPOLATION                         
+    84 READING INCLUDE ../include/regions/reek.eqlnum                                                                                                      
+    85 READING EQLNUM  
+               END OF INCLUDE FILE 
+    86 READING INCLUDE ../include/regions/reek.fipnum                                                                                                      
+    87 READING FIPNUM  
+               END OF INCLUDE FILE 
+    88 READING INCLUDE ../include/regions/reek.satnum                                                                                                      
+    89 READING SATNUM  
+               END OF INCLUDE FILE 
+    90 READING EQUALS  
+    91 READING SOLUTION
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           SAVE FILE HAS BEEN WRITTEN.                                     
+    92 READING INCLUDE ../include/solution/reek.equil                                                                                                      
+    93 READING EQUIL   
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           THE FINE GRID BLOCK EQUILIBRATION SHOULD NOT                    
+ @           USUALLY BE USED WITH THE SWATINIT KEYWORD AS                    
+ @           THE INTEGRATED SOLUTION WILL NOT IN GENERAL                     
+ @           HONOUR THE SWATINIT DATA.                                       
+ @           FOR EQUILIBRATION REGION 1                                      
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           THE FINE GRID BLOCK EQUILIBRATION SHOULD NOT                    
+ @           USUALLY BE USED WITH THE SWATINIT KEYWORD AS                    
+ @           THE INTEGRATED SOLUTION WILL NOT IN GENERAL                     
+ @           HONOUR THE SWATINIT DATA.                                       
+ @           FOR EQUILIBRATION REGION 2                                      
+               END OF INCLUDE FILE 
+    94 READING RSVD    
+    95 READING RPTSOL  
+    96 READING RPTRST  
+    97 READING SUMMARY 
+    98 READING INCLUDE ../include/summary/reek.smry                                                                                                        
+    99 READING FOPR    
+   100 READING FOPRH   
+   101 READING FGPR    
+   102 READING FGPRH   
+   103 READING FWPR    
+   104 READING FWPRH   
+   105 READING FLPR    
+   106 READING FLPRH   
+   107 READING FVPR    
+   108 READING FOPRF   
+   109 READING FOPRS   
+   110 READING FGSR    
+   111 READING FGPRF   
+   112 READING FGPRS   
+   113 READING FOPP    
+   114 READING FWPP    
+   115 READING FGPP    
+   116 READING FMWPR   
+   117 READING FMWIN   
+   118 READING FVIR    
+   119 READING FWIR    
+   120 READING FWIRH   
+   121 READING FGIR    
+   122 READING FGIRH   
+   123 READING FGLIR   
+   124 READING FMCTP   
+   125 READING FVPT    
+   126 READING FOPT    
+   127 READING FOPTH   
+   128 READING FWPT    
+   129 READING FWPTH   
+   130 READING FGPT    
+   131 READING FGPTH   
+   132 READING FWIT    
+   133 READING FWITH   
+   134 READING FGIT    
+   135 READING FGITH   
+   136 READING FOPTF   
+   137 READING FOPTS   
+   138 READING FWIP    
+   139 READING FOIP    
+   140 READING FGIP    
+   141 READING FWCT    
+   142 READING FWCTH   
+   143 READING FGOR    
+   144 READING FGORH   
+   145 READING FGLR    
+   146 READING FWGR    
+   147 READING FPR     
+   148 READING RPR     
+   149 READING ROIP    
+   150 READING ROIPL   
+   151 READING ROIPG   
+   152 READING RGIP    
+   153 READING RGIPL   
+   154 READING RGIPG   
+   155 READING RGPR    
+   156 READING RGPT    
+   157 READING GMWPR   
+   158 READING GGLIR   
+   159 READING GOPR    
+   160 READING GOPRH   
+   161 READING GGPR    
+   162 READING GGPRH   
+   163 READING GWPR    
+   164 READING GWPRH   
+   165 READING GVPR    
+   166 READING GLPR    
+   167 READING GOPRF   
+   168 READING GOPRS   
+   169 READING GGPRF   
+   170 READING GGPRS   
+   171 READING GWCT    
+   172 READING GWCTH   
+   173 READING GGOR    
+   174 READING GGORH   
+   175 READING GWGR    
+   176 READING GGLR    
+   177 READING GOPT    
+   178 READING GOPTH   
+   179 READING GGPT    
+   180 READING GGPTH   
+   181 READING GWPT    
+   182 READING GWPTH   
+   183 READING GVPT    
+   184 READING GLPT    
+   185 READING GOPTF   
+   186 READING GOPTS   
+   187 READING GGPTF   
+   188 READING GGPTS   
+   189 READING GWIR    
+   190 READING GVIR    
+   191 READING GWIRH   
+   192 READING GGIR    
+   193 READING GGIRH   
+   194 READING GOPP    
+   195 READING GGPP    
+   196 READING GWPP    
+   197 READING GMCTP   
+   198 READING WOPR    
+   199 READING WOPRH   
+   200 READING WGPR    
+   201 READING WGPRH   
+   202 READING WWPR    
+   203 READING WWPRH   
+   204 READING WOPT    
+   205 READING WWPT    
+   206 READING WGPT    
+   207 READING WOPTH   
+   208 READING WWPTH   
+   209 READING WGPTH   
+   210 READING WWCT    
+   211 READING WWCTH   
+   212 READING WGOR    
+   213 READING WGORH   
+   214 READING WWIR    
+   215 READING WWIRH   
+   216 READING WGIR    
+   217 READING WGIRH   
+   218 READING WWIT    
+   219 READING WWITH   
+   220 READING WGIT    
+   221 READING WGITH   
+   222 READING WBHP    
+   223 READING WTHP    
+   224 READING WPI     
+   225 READING WVPR    
+   226 READING WBP     
+   227 READING WBP4    
+   228 READING WBP9    
+   229 READING WMCTL   
+   230 READING WLPR    
+   231 READING WGLIR   
+   232 READING WOGLR   
+   233 READING BPR     
+   234 READING TCPU    
+   235 READING TCPUDAY 
+               END OF INCLUDE FILE 
+   236 READING SCHEDULE
+   237 READING TUNING  
+   238 READING INCLUDE ../include/schedule/reek_history.sch                                                                                                
+   239 READING GRUPTREE
+   240 READING DATES   
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           DRSDT OR DRSDTR KEYWORDS HAVE NOT BEEN                          
+ @           ENTERED, SO THE MAXIMUM GAS RE-SOLUTION                         
+ @           RATE IS DEFAULTED TO INFINITY.                                  
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2000):
+ @           RESTART FILE WRITTEN   REPORT     0                             
+ @           RESTART INCLUDES FLUIDS IN PLACE                                
+ STEP    1 TIME=      1.00  DAYS (    +1.0  DAYS INIT  2 ITS) (2-JAN-2000)       
+  PAV=   306.2  BARSA  WCT= 0.00 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+ STEP    2 TIME=      3.74  DAYS (    +2.7  DAYS TRNC  2 ITS) (4-JAN-2000)       
+  PAV=   306.1  BARSA  WCT= 0.00 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+ STEP    3 TIME=      8.74  DAYS (    +5.0  DAYS MAXS  2 ITS) (9-JAN-2000)       
+  PAV=   306.1  BARSA  WCT= 0.00 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+ STEP    4 TIME=     13.74  DAYS (    +5.0  DAYS MAXS  2 ITS) (14-JAN-2000)      
+  PAV=   306.1  BARSA  WCT= 0.00 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+ STEP    5 TIME=     18.74  DAYS (    +5.0  DAYS MAXS  2 ITS) (19-JAN-2000)      
+  PAV=   306.1  BARSA  WCT= 0.00 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+ STEP    6 TIME=     23.74  DAYS (    +5.0  DAYS MAXS  2 ITS) (24-JAN-2000)      
+  PAV=   306.1  BARSA  WCT= 0.00 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+ STEP    7 TIME=     27.37  DAYS (    +3.6  DAYS HALF  2 ITS) (28-JAN-2000)      
+  PAV=   306.1  BARSA  WCT= 0.00 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+ STEP    8 TIME=     31.00  DAYS (    +3.6  DAYS REPT  2 ITS) (1-FEB-2000)       
+  PAV=   306.1  BARSA  WCT= 0.00 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+   241 READING WELSPECS
+   242 READING COMPORD 
+   243 READING COMPDAT 
+   244 READING WELSEGS 
+   245 READING WELSEGS 
+   246 READING WELSEGS 
+   247 READING WELSEGS 
+   248 READING COMPSEGS
+   249 READING COMPSEGS
+   250 READING COMPSEGS
+   251 READING COMPSEGS
+   252 READING WCONHIST
+
+ @--MESSAGE  AT TIME       31.0   DAYS    ( 1-FEB-2000):
+ @           OPENING WELL OP_1     AT TIME     31.00   DAYS                  
+ @           CONTROLLED BY RESERVOIR FLUID VOLUME RATE                       
+
+ @--MESSAGE  AT TIME       31.0   DAYS    ( 1-FEB-2000):
+ @           OPENING WELL OP_2     AT TIME     31.00   DAYS                  
+ @           CONTROLLED BY RESERVOIR FLUID VOLUME RATE                       
+
+ @--MESSAGE  AT TIME       31.0   DAYS    ( 1-FEB-2000):
+ @           OPENING WELL OP_3     AT TIME     31.00   DAYS                  
+ @           CONTROLLED BY RESERVOIR FLUID VOLUME RATE                       
+   253 READING WCONINJH
+
+ @--MESSAGE  AT TIME       31.0   DAYS    ( 1-FEB-2000):
+ @           OPENING WELL WI_1     AT TIME     31.00   DAYS                  
+ @           CONTROLLED BY WATER RATE                                        
+   254 READING WRFTPLT 
+   255 READING DATES   
+
+ @--PROBLEM  AT TIME       31.0   DAYS    ( 1-FEB-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         9.65907E+01                                       
+ @             WATER       1.29321E-02                                       
+ @             GAS         1.77727E+04                                       
+ @            MSW PRES     1.01433E+02                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP    9 TIME=     32.00  DAYS (    +1.0  DAYS MAXW  4 ITS) (2-FEB-2000)       
+  PAV=   305.6  BARSA  WCT=0.000 GOR=   184.00  SM3/SM3 WGR=   0.0000  SM3/SM3   
+
+ @--PROBLEM  AT TIME       32.0   DAYS    ( 2-FEB-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         2.74685E+03                                       
+ @             WATER       2.46198E-02                                       
+ @             GAS         5.05420E+05                                       
+ @            MSW PRES     6.92192E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   10 TIME=     33.97  DAYS (    +2.0  DAYS TRNC  3 ITS) (3-FEB-2000)       
+  PAV=   304.8  BARSA  WCT=0.000 GOR=   184.00  SM3/SM3 WGR=   0.0000  SM3/SM3   
+
+ @--PROBLEM  AT TIME       34.0   DAYS    ( 3-FEB-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.78191E+03                                       
+ @             WATER       4.78543E-02                                       
+ @             GAS         1.06387E+06                                       
+ @            MSW PRES     2.83304E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   11 TIME=     37.09  DAYS (    +3.1  DAYS TRNC  3 ITS) (7-FEB-2000)       
+  PAV=   303.6  BARSA  WCT=0.000 GOR=   184.00  SM3/SM3 WGR=   0.0000  SM3/SM3   
+
+ @--PROBLEM  AT TIME       37.1   DAYS    ( 7-FEB-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.76384E+03                                       
+ @             WATER       5.05281E-02                                       
+ @             GAS         1.06055E+06                                       
+ @            MSW PRES     2.78766E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   12 TIME=     41.13  DAYS (    +4.0  DAYS TRNC  3 ITS) (11-FEB-2000)      
+  PAV=   302.2  BARSA  WCT=0.001 GOR=   184.00  SM3/SM3 WGR=   0.0000  SM3/SM3   
+
+ @--PROBLEM  AT TIME       41.1   DAYS    (11-FEB-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.74189E+03                                       
+ @             WATER       5.35335E-02                                       
+ @             GAS         1.05651E+06                                       
+ @            MSW PRES     2.75112E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   13 TIME=     46.13  DAYS (    +5.0  DAYS MAXS  3 ITS) (16-FEB-2000)      
+  PAV=   300.6  BARSA  WCT=0.002 GOR=   184.00  SM3/SM3 WGR=   0.0000  SM3/SM3   
+
+ @--PROBLEM  AT TIME       46.1   DAYS    (16-FEB-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.71813E+03                                       
+ @             WATER       5.63971E-02                                       
+ @             GAS         1.05214E+06                                       
+ @            MSW PRES     2.73650E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   14 TIME=     51.13  DAYS (    +5.0  DAYS MAXS  3 ITS) (21-FEB-2000)      
+  PAV=   299.2  BARSA  WCT=0.006 GOR=   184.00  SM3/SM3 WGR=   0.0000  SM3/SM3   
+
+ @--PROBLEM  AT TIME       51.1   DAYS    (21-FEB-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.69590E+03                                       
+ @             WATER       5.88458E-02                                       
+ @             GAS         1.04805E+06                                       
+ @            MSW PRES     2.73605E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   15 TIME=     55.56  DAYS (    +4.4  DAYS HALF  3 ITS) (25-FEB-2000)      
+  PAV=   297.9  BARSA  WCT=0.012 GOR=   184.00  SM3/SM3 WGR=   0.0001  SM3/SM3   
+
+ @--PROBLEM  AT TIME       55.6   DAYS    (25-FEB-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.67658E+03                                       
+ @             WATER       6.11241E-02                                       
+ @             GAS         1.04449E+06                                       
+ @            MSW PRES     2.72490E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   16 TIME=     60.00  DAYS (    +4.4  DAYS REPT  3 ITS) (1-MAR-2000)       
+  PAV=   296.7  BARSA  WCT=0.021 GOR=   184.00  SM3/SM3 WGR=   0.0001  SM3/SM3   
+   256 READING WCONHIST
+   257 READING WCONINJH
+   258 READING DATES   
+
+ @--PROBLEM  AT TIME       60.0   DAYS    ( 1-MAR-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.58882E+03                                       
+ @             WATER       6.36941E-02                                       
+ @             GAS         1.02834E+06                                       
+ @            MSW PRES     3.15614E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   17 TIME=     61.00  DAYS (    +1.0  DAYS MAXW  1 ITS) (2-MAR-2000)       
+  PAV=   296.4  BARSA  WCT=0.016 GOR=   184.00  SM3/SM3 WGR=   0.0001  SM3/SM3   
+
+ @--PROBLEM  AT TIME       61.0   DAYS    ( 2-MAR-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.64807E+03                                       
+ @             WATER       6.35245E-02                                       
+ @             GAS         1.03924E+06                                       
+ @            MSW PRES     2.76776E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   18 TIME=     64.00  DAYS (    +3.0  DAYS MAXF  3 ITS) (5-MAR-2000)       
+  PAV=   295.7  BARSA  WCT=0.019 GOR=   184.00  SM3/SM3 WGR=   0.0001  SM3/SM3   
+
+ @--PROBLEM  AT TIME       64.0   DAYS    ( 5-MAR-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.64054E+03                                       
+ @             WATER       6.55936E-02                                       
+ @             GAS         1.03786E+06                                       
+ @            MSW PRES     2.69078E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   19 TIME=     69.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (10-MAR-2000)      
+  PAV=   294.5  BARSA  WCT=0.024 GOR=   184.00  SM3/SM3 WGR=   0.0001  SM3/SM3   
+
+ @--PROBLEM  AT TIME       69.0   DAYS    (10-MAR-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.62163E+03                                       
+ @             WATER       6.78013E-02                                       
+ @             GAS         1.03438E+06                                       
+ @            MSW PRES     2.68025E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   20 TIME=     74.00  DAYS (    +5.0  DAYS MAXS  3 ITS) (15-MAR-2000)      
+  PAV=   293.4  BARSA  WCT=0.030 GOR=   184.00  SM3/SM3 WGR=   0.0002  SM3/SM3   
+
+ @--PROBLEM  AT TIME       74.0   DAYS    (15-MAR-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.60341E+03                                       
+ @             WATER       6.99101E-02                                       
+ @             GAS         1.03103E+06                                       
+ @            MSW PRES     2.67032E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   21 TIME=     79.00  DAYS (    +5.0  DAYS MAXS  3 ITS) (20-MAR-2000)      
+  PAV=   292.2  BARSA  WCT=0.035 GOR=   184.00  SM3/SM3 WGR=   0.0002  SM3/SM3   
+
+ @--PROBLEM  AT TIME       79.0   DAYS    (20-MAR-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.58563E+03                                       
+ @             WATER       7.19445E-02                                       
+ @             GAS         1.02776E+06                                       
+ @            MSW PRES     2.66086E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   22 TIME=     84.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (25-MAR-2000)      
+  PAV=   291.1  BARSA  WCT=0.040 GOR=   184.00  SM3/SM3 WGR=   0.0002  SM3/SM3   
+
+ @--PROBLEM  AT TIME       84.0   DAYS    (25-MAR-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.56421E+03                                       
+ @             WATER       7.34778E-02                                       
+ @             GAS         1.02381E+06                                       
+ @            MSW PRES     2.70199E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   23 TIME=     87.50  DAYS (    +3.5  DAYS HALF  2 ITS) (28-MAR-2000)      
+  PAV=   290.4  BARSA  WCT=0.044 GOR=   184.00  SM3/SM3 WGR=   0.0002  SM3/SM3   
+
+ @--PROBLEM  AT TIME       87.5   DAYS    (28-MAR-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.55176E+03                                       
+ @             WATER       7.48355E-02                                       
+ @             GAS         1.02152E+06                                       
+ @            MSW PRES     2.69668E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   24 TIME=     91.00  DAYS (    +3.5  DAYS REPT  2 ITS) (1-APR-2000)       
+  PAV=   289.6  BARSA  WCT=0.047 GOR=   184.00  SM3/SM3 WGR=   0.0003  SM3/SM3   
+   259 READING WCONHIST
+   260 READING DATES   
+
+ @--PROBLEM  AT TIME       91.0   DAYS    ( 1-APR-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         1.21396E+03                                       
+ @             WATER       2.67858E-02                                       
+ @             GAS         2.23368E+05                                       
+ @            MSW PRES     9.35745E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   25 TIME=     92.00  DAYS (    +1.0  DAYS MAXW  1 ITS) (2-APR-2000)       
+  PAV=   289.4  BARSA  WCT=0.037 GOR=   184.00  SM3/SM3 WGR=   0.0002  SM3/SM3   
+
+ @--PROBLEM  AT TIME       92.0   DAYS    ( 2-APR-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         2.62820E+03                                       
+ @             WATER       3.80319E-02                                       
+ @             GAS         4.83588E+05                                       
+ @            MSW PRES     6.42893E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   26 TIME=     95.00  DAYS (    +3.0  DAYS MAXF  2 ITS) (5-APR-2000)       
+  PAV=   288.8  BARSA  WCT=0.038 GOR=   184.00  SM3/SM3 WGR=   0.0002  SM3/SM3   
+
+ @--PROBLEM  AT TIME       95.0   DAYS    ( 5-APR-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.53123E+03                                       
+ @             WATER       7.80048E-02                                       
+ @             GAS         1.01775E+06                                       
+ @            MSW PRES     2.63311E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   27 TIME=    100.00  DAYS (    +5.0  DAYS MAXS  3 ITS) (10-APR-2000)      
+  PAV=   287.9  BARSA  WCT=0.040 GOR=   184.00  SM3/SM3 WGR=   0.0002  SM3/SM3   
+
+ @--PROBLEM  AT TIME      100.0   DAYS    (10-APR-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.51573E+03                                       
+ @             WATER       7.97452E-02                                       
+ @             GAS         1.01489E+06                                       
+ @            MSW PRES     2.62548E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   28 TIME=    105.00  DAYS (    +5.0  DAYS MAXS  3 ITS) (15-APR-2000)      
+  PAV=   286.9  BARSA  WCT=0.042 GOR=   184.00  SM3/SM3 WGR=   0.0002  SM3/SM3   
+
+ @--PROBLEM  AT TIME      105.0   DAYS    (15-APR-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.50047E+03                                       
+ @             WATER       8.14367E-02                                       
+ @             GAS         1.01209E+06                                       
+ @            MSW PRES     2.61822E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   29 TIME=    110.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (20-APR-2000)      
+  PAV=   285.9  BARSA  WCT=0.044 GOR=   184.00  SM3/SM3 WGR=   0.0002  SM3/SM3   
+
+ @--PROBLEM  AT TIME      110.0   DAYS    (20-APR-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.48535E+03                                       
+ @             WATER       8.30890E-02                                       
+ @             GAS         1.00930E+06                                       
+ @            MSW PRES     2.61126E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   30 TIME=    115.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (25-APR-2000)      
+  PAV=   285.0  BARSA  WCT=0.046 GOR=   184.00  SM3/SM3 WGR=   0.0003  SM3/SM3   
+
+ @--PROBLEM  AT TIME      115.0   DAYS    (25-APR-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.45893E+03                                       
+ @             WATER       8.42058E-02                                       
+ @             GAS         1.00444E+06                                       
+ @            MSW PRES     2.69686E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   31 TIME=    118.00  DAYS (    +3.0  DAYS HALF  3 ITS) (28-APR-2000)      
+  PAV=   284.4  BARSA  WCT=0.047 GOR=   184.00  SM3/SM3 WGR=   0.0003  SM3/SM3   
+
+ @--PROBLEM  AT TIME      118.0   DAYS    (28-APR-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.44956E+03                                       
+ @             WATER       8.51610E-02                                       
+ @             GAS         1.00272E+06                                       
+ @            MSW PRES     2.69466E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   32 TIME=    121.00  DAYS (    +3.0  DAYS REPT  2 ITS) (1-MAY-2000)       
+  PAV=   283.9  BARSA  WCT=0.048 GOR=   184.00  SM3/SM3 WGR=   0.0003  SM3/SM3   
+   261 READING WCONHIST
+   262 READING DATES   
+
+ @--PROBLEM  AT TIME      121.0   DAYS    ( 1-MAY-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         2.72016E+03                                       
+ @             WATER       5.03879E-02                                       
+ @             GAS         5.00509E+05                                       
+ @            MSW PRES     7.23620E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   33 TIME=    122.00  DAYS (    +1.0  DAYS MAXW  1 ITS) (2-MAY-2000)       
+  PAV=   283.7  BARSA  WCT=0.043 GOR=   184.00  SM3/SM3 WGR=   0.0002  SM3/SM3   
+
+ @--PROBLEM  AT TIME      122.0   DAYS    ( 2-MAY-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.43714E+03                                       
+ @             WATER       8.64121E-02                                       
+ @             GAS         1.00043E+06                                       
+ @            MSW PRES     2.69202E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   34 TIME=    125.00  DAYS (    +3.0  DAYS MAXF  3 ITS) (5-MAY-2000)       
+  PAV=   283.1  BARSA  WCT=0.043 GOR=   184.00  SM3/SM3 WGR=   0.0002  SM3/SM3   
+
+ @--PROBLEM  AT TIME      125.0   DAYS    ( 5-MAY-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.44061E+03                                       
+ @             WATER       8.78332E-02                                       
+ @             GAS         1.00107E+06                                       
+ @            MSW PRES     2.59244E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   35 TIME=    130.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (10-MAY-2000)      
+  PAV=   282.3  BARSA  WCT=0.044 GOR=   184.00  SM3/SM3 WGR=   0.0003  SM3/SM3   
+
+ @--PROBLEM  AT TIME      130.0   DAYS    (10-MAY-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.42596E+03                                       
+ @             WATER       8.93408E-02                                       
+ @             GAS         9.98376E+05                                       
+ @            MSW PRES     2.58687E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   36 TIME=    135.00  DAYS (    +5.0  DAYS MAXS  3 ITS) (15-MAY-2000)      
+  PAV=   281.4  BARSA  WCT=0.046 GOR=   184.00  SM3/SM3 WGR=   0.0003  SM3/SM3   
+
+ @--PROBLEM  AT TIME      135.0   DAYS    (15-MAY-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.41133E+03                                       
+ @             WATER       9.08199E-02                                       
+ @             GAS         9.95685E+05                                       
+ @            MSW PRES     2.58164E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   37 TIME=    140.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (20-MAY-2000)      
+  PAV=   280.5  BARSA  WCT=0.047 GOR=   184.00  SM3/SM3 WGR=   0.0003  SM3/SM3   
+
+ @--PROBLEM  AT TIME      140.0   DAYS    (20-MAY-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.39670E+03                                       
+ @             WATER       9.22727E-02                                       
+ @             GAS         9.92993E+05                                       
+ @            MSW PRES     2.57676E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   38 TIME=    145.00  DAYS (    +5.0  DAYS MAXS  3 ITS) (25-MAY-2000)      
+  PAV=   279.6  BARSA  WCT=0.048 GOR=   184.00  SM3/SM3 WGR=   0.0003  SM3/SM3   
+
+ @--PROBLEM  AT TIME      145.0   DAYS    (25-MAY-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.37277E+03                                       
+ @             WATER       9.32977E-02                                       
+ @             GAS         9.88590E+05                                       
+ @            MSW PRES     2.64334E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   39 TIME=    148.50  DAYS (    +3.5  DAYS HALF  3 ITS) (28-MAY-2000)      
+  PAV=   279.0  BARSA  WCT=0.049 GOR=   184.00  SM3/SM3 WGR=   0.0003  SM3/SM3   
+
+ @--PROBLEM  AT TIME      148.5   DAYS    (28-MAY-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.36208E+03                                       
+ @             WATER       9.42812E-02                                       
+ @             GAS         9.86624E+05                                       
+ @            MSW PRES     2.64220E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   40 TIME=    152.00  DAYS (    +3.5  DAYS REPT  3 ITS) (1-JUN-2000)       
+  PAV=   278.3  BARSA  WCT=0.050 GOR=   184.00  SM3/SM3 WGR=   0.0003  SM3/SM3   
+   263 READING WELSPECS
+   264 READING COMPORD 
+   265 READING COMPDAT 
+   266 READING WELSEGS 
+   267 READING COMPSEGS
+   268 READING WCONHIST
+   269 READING WCONINJH
+
+ @--MESSAGE  AT TIME      152.0   DAYS    ( 1-JUN-2000):
+ @           OPENING WELL WI_2     AT TIME    152.00   DAYS                  
+ @           CONTROLLED BY WATER RATE                                        
+   270 READING WRFTPLT 
+   271 READING DATES   
+
+ @--PROBLEM  AT TIME      152.0   DAYS    ( 1-JUN-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         1.74733E+03                                       
+ @             WATER       4.07629E-02                                       
+ @             GAS         3.21508E+05                                       
+ @            MSW PRES     9.21350E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   41 TIME=    153.00  DAYS (    +1.0  DAYS MAXW  3 ITS) (2-JUN-2000)       
+  PAV=   278.3  BARSA  WCT=0.048 GOR=   184.00  SM3/SM3 WGR=   0.0003  SM3/SM3   
+
+ @--PROBLEM  AT TIME      153.0   DAYS    ( 2-JUN-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         1.90184E+03                                       
+ @             WATER       4.42099E-02                                       
+ @             GAS         3.49939E+05                                       
+ @            MSW PRES     8.98800E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   42 TIME=    153.89  DAYS (   +21.3 HOURS TRNC  2 ITS) (2-JUN-2000)       
+  PAV=   278.3  BARSA  WCT=0.049 GOR=   184.00  SM3/SM3 WGR=   0.0003  SM3/SM3   
+
+ @--PROBLEM  AT TIME      153.9   DAYS    ( 2-JUN-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         1.93070E+03                                       
+ @             WATER       4.13242E-02                                       
+ @             GAS         3.55249E+05                                       
+ @            MSW PRES     8.24698E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   43 TIME=    155.07  DAYS (    +1.2  DAYS TRNC  2 ITS) (4-JUN-2000)       
+  PAV=   278.3  BARSA  WCT=0.049 GOR=   184.00  SM3/SM3 WGR=   0.0003  SM3/SM3   
+
+ @--PROBLEM  AT TIME      155.1   DAYS    ( 4-JUN-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.33551E+03                                       
+ @             WATER       9.39807E-02                                       
+ @             GAS         9.81734E+05                                       
+ @            MSW PRES     2.84539E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   44 TIME=    157.06  DAYS (    +2.0  DAYS TRNC  2 ITS) (6-JUN-2000)       
+  PAV=   278.2  BARSA  WCT=0.049 GOR=   184.00  SM3/SM3 WGR=   0.0003  SM3/SM3   
+
+ @--PROBLEM  AT TIME      157.1   DAYS    ( 6-JUN-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.37682E+03                                       
+ @             WATER       9.41059E-02                                       
+ @             GAS         9.89335E+05                                       
+ @            MSW PRES     2.64329E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   45 TIME=    160.63  DAYS (    +3.6  DAYS TRNC  2 ITS) (9-JUN-2000)       
+  PAV=   278.1  BARSA  WCT=0.051 GOR=   184.00  SM3/SM3 WGR=   0.0003  SM3/SM3   
+
+ @--PROBLEM  AT TIME      160.6   DAYS    ( 9-JUN-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.38791E+03                                       
+ @             WATER       9.45933E-02                                       
+ @             GAS         9.91375E+05                                       
+ @            MSW PRES     2.57791E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   46 TIME=    165.63  DAYS (    +5.0  DAYS MAXS  2 ITS) (14-JUN-2000)      
+  PAV=   277.9  BARSA  WCT=0.053 GOR=   184.00  SM3/SM3 WGR=   0.0003  SM3/SM3   
+
+ @--PROBLEM  AT TIME      165.6   DAYS    (14-JUN-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.38441E+03                                       
+ @             WATER       9.52078E-02                                       
+ @             GAS         9.90731E+05                                       
+ @            MSW PRES     2.57776E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   47 TIME=    170.63  DAYS (    +5.0  DAYS MAXS  3 ITS) (19-JUN-2000)      
+  PAV=   277.6  BARSA  WCT=0.055 GOR=   184.00  SM3/SM3 WGR=   0.0003  SM3/SM3   
+
+ @--PROBLEM  AT TIME      170.6   DAYS    (19-JUN-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.38005E+03                                       
+ @             WATER       9.58759E-02                                       
+ @             GAS         9.89929E+05                                       
+ @            MSW PRES     2.57736E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   48 TIME=    175.63  DAYS (    +5.0  DAYS MAXS  3 ITS) (24-JUN-2000)      
+  PAV=   277.3  BARSA  WCT=0.057 GOR=   184.00  SM3/SM3 WGR=   0.0003  SM3/SM3   
+
+ @--PROBLEM  AT TIME      175.6   DAYS    (24-JUN-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.35745E+03                                       
+ @             WATER       9.63119E-02                                       
+ @             GAS         9.85771E+05                                       
+ @            MSW PRES     2.67709E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   49 TIME=    178.82  DAYS (    +3.2  DAYS HALF  2 ITS) (27-JUN-2000)      
+  PAV=   277.1  BARSA  WCT=0.058 GOR=   184.00  SM3/SM3 WGR=   0.0003  SM3/SM3   
+
+ @--PROBLEM  AT TIME      178.8   DAYS    (27-JUN-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.35404E+03                                       
+ @             WATER       9.67534E-02                                       
+ @             GAS         9.85143E+05                                       
+ @            MSW PRES     2.67793E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   50 TIME=    182.00  DAYS (    +3.2  DAYS REPT  2 ITS) (1-JLY-2000)       
+  PAV=   276.9  BARSA  WCT=0.059 GOR=   184.00  SM3/SM3 WGR=   0.0003  SM3/SM3   
+   272 READING WCONHIST
+   273 READING WCONINJH
+   274 READING DATES   
+
+ @--PROBLEM  AT TIME      182.0   DAYS    ( 1-JLY-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         1.79832E+03                                       
+ @             WATER       4.20925E-02                                       
+ @             GAS         3.30890E+05                                       
+ @            MSW PRES     8.93600E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   51 TIME=    183.00  DAYS (    +1.0  DAYS MAXW  1 ITS) (2-JLY-2000)       
+  PAV=   276.9  BARSA  WCT=0.062 GOR=   184.00  SM3/SM3 WGR=   0.0004  SM3/SM3   
+
+ @--PROBLEM  AT TIME      183.0   DAYS    ( 2-JLY-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.34741E+03                                       
+ @             WATER       9.72246E-02                                       
+ @             GAS         9.83924E+05                                       
+ @            MSW PRES     2.69740E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   52 TIME=    186.00  DAYS (    +3.0  DAYS MAXF  2 ITS) (5-JLY-2000)       
+  PAV=   276.8  BARSA  WCT=0.063 GOR=   184.00  SM3/SM3 WGR=   0.0004  SM3/SM3   
+
+ @--PROBLEM  AT TIME      186.0   DAYS    ( 5-JLY-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.36767E+03                                       
+ @             WATER       9.78255E-02                                       
+ @             GAS         9.87651E+05                                       
+ @            MSW PRES     2.57685E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   53 TIME=    191.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (10-JLY-2000)      
+  PAV=   276.6  BARSA  WCT=0.065 GOR=   184.00  SM3/SM3 WGR=   0.0004  SM3/SM3   
+
+ @--PROBLEM  AT TIME      191.0   DAYS    (10-JLY-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.36410E+03                                       
+ @             WATER       9.84177E-02                                       
+ @             GAS         9.86994E+05                                       
+ @            MSW PRES     2.57695E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   54 TIME=    196.00  DAYS (    +5.0  DAYS MAXS  3 ITS) (15-JLY-2000)      
+  PAV=   276.4  BARSA  WCT=0.067 GOR=   184.00  SM3/SM3 WGR=   0.0004  SM3/SM3   
+
+ @--PROBLEM  AT TIME      196.0   DAYS    (15-JLY-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.36034E+03                                       
+ @             WATER       9.90182E-02                                       
+ @             GAS         9.86302E+05                                       
+ @            MSW PRES     2.57705E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   55 TIME=    201.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (20-JLY-2000)      
+  PAV=   276.2  BARSA  WCT=0.068 GOR=   184.00  SM3/SM3 WGR=   0.0004  SM3/SM3   
+
+ @--PROBLEM  AT TIME      201.0   DAYS    (20-JLY-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.35641E+03                                       
+ @             WATER       9.96249E-02                                       
+ @             GAS         9.85579E+05                                       
+ @            MSW PRES     2.57717E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   56 TIME=    206.00  DAYS (    +5.0  DAYS MAXS  3 ITS) (25-JLY-2000)      
+  PAV=   275.9  BARSA  WCT=0.070 GOR=   184.00  SM3/SM3 WGR=   0.0004  SM3/SM3   
+
+ @--PROBLEM  AT TIME      206.0   DAYS    (25-JLY-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.33751E+03                                       
+ @             WATER       1.00013E-01                                       
+ @             GAS         9.82103E+05                                       
+ @            MSW PRES     2.65919E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   57 TIME=    209.50  DAYS (    +3.5  DAYS HALF  3 ITS) (28-JLY-2000)      
+  PAV=   275.8  BARSA  WCT=0.071 GOR=   184.00  SM3/SM3 WGR=   0.0004  SM3/SM3   
+
+ @--PROBLEM  AT TIME      209.5   DAYS    (28-JLY-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.33442E+03                                       
+ @             WATER       1.00436E-01                                       
+ @             GAS         9.81534E+05                                       
+ @            MSW PRES     2.66029E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   58 TIME=    213.00  DAYS (    +3.5  DAYS REPT  3 ITS) (1-AUG-2000)       
+  PAV=   275.6  BARSA  WCT=0.072 GOR=   184.00  SM3/SM3 WGR=   0.0004  SM3/SM3   
+   275 READING WCONHIST
+   276 READING DATES   
+
+ @--PROBLEM  AT TIME      213.0   DAYS    ( 1-AUG-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         1.90459E+03                                       
+ @             WATER       4.54167E-02                                       
+ @             GAS         3.50444E+05                                       
+ @            MSW PRES     8.96940E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   59 TIME=    214.00  DAYS (    +1.0  DAYS MAXW  1 ITS) (2-AUG-2000)       
+  PAV=   275.6  BARSA  WCT=0.074 GOR=   184.00  SM3/SM3 WGR=   0.0004  SM3/SM3   
+
+ @--PROBLEM  AT TIME      214.0   DAYS    ( 2-AUG-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         2.48364E+03                                       
+ @             WATER       4.87610E-02                                       
+ @             GAS         4.56989E+05                                       
+ @            MSW PRES     6.38894E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   60 TIME=    217.00  DAYS (    +3.0  DAYS MAXF  2 ITS) (5-AUG-2000)       
+  PAV=   275.5  BARSA  WCT=0.075 GOR=   184.00  SM3/SM3 WGR=   0.0004  SM3/SM3   
+
+ @--PROBLEM  AT TIME      217.0   DAYS    ( 5-AUG-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.34437E+03                                       
+ @             WATER       1.01497E-01                                       
+ @             GAS         9.83364E+05                                       
+ @            MSW PRES     2.57815E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   61 TIME=    222.00  DAYS (    +5.0  DAYS MAXS  3 ITS) (10-AUG-2000)      
+  PAV=   275.3  BARSA  WCT=0.076 GOR=   184.00  SM3/SM3 WGR=   0.0004  SM3/SM3   
+
+ @--PROBLEM  AT TIME      222.0   DAYS    (10-AUG-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.34098E+03                                       
+ @             WATER       1.02048E-01                                       
+ @             GAS         9.82741E+05                                       
+ @            MSW PRES     2.57868E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   62 TIME=    227.00  DAYS (    +5.0  DAYS MAXS  3 ITS) (15-AUG-2000)      
+  PAV=   275.1  BARSA  WCT=0.078 GOR=   184.00  SM3/SM3 WGR=   0.0005  SM3/SM3   
+
+ @--PROBLEM  AT TIME      227.0   DAYS    (15-AUG-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.33754E+03                                       
+ @             WATER       1.02599E-01                                       
+ @             GAS         9.82106E+05                                       
+ @            MSW PRES     2.57926E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   63 TIME=    232.00  DAYS (    +5.0  DAYS MAXS  3 ITS) (20-AUG-2000)      
+  PAV=   274.9  BARSA  WCT=0.079 GOR=   184.00  SM3/SM3 WGR=   0.0005  SM3/SM3   
+
+ @--PROBLEM  AT TIME      232.0   DAYS    (20-AUG-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.33401E+03                                       
+ @             WATER       1.03150E-01                                       
+ @             GAS         9.81458E+05                                       
+ @            MSW PRES     2.57990E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   64 TIME=    237.00  DAYS (    +5.0  DAYS MAXS  3 ITS) (25-AUG-2000)      
+  PAV=   274.7  BARSA  WCT=0.080 GOR=   184.00  SM3/SM3 WGR=   0.0005  SM3/SM3   
+
+ @--PROBLEM  AT TIME      237.0   DAYS    (25-AUG-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.31373E+03                                       
+ @             WATER       1.03454E-01                                       
+ @             GAS         9.77727E+05                                       
+ @            MSW PRES     2.67085E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   65 TIME=    240.50  DAYS (    +3.5  DAYS HALF  3 ITS) (28-AUG-2000)      
+  PAV=   274.6  BARSA  WCT=0.081 GOR=   184.00  SM3/SM3 WGR=   0.0005  SM3/SM3   
+
+ @--PROBLEM  AT TIME      240.5   DAYS    (28-AUG-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.31098E+03                                       
+ @             WATER       1.03834E-01                                       
+ @             GAS         9.77220E+05                                       
+ @            MSW PRES     2.67244E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   66 TIME=    244.00  DAYS (    +3.5  DAYS REPT  2 ITS) (1-SEP-2000)       
+  PAV=   274.5  BARSA  WCT=0.082 GOR=   184.00  SM3/SM3 WGR=   0.0005  SM3/SM3   
+   277 READING WCONHIST
+   278 READING DATES   
+
+ @--PROBLEM  AT TIME      244.0   DAYS    ( 1-SEP-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         2.09400E+03                                       
+ @             WATER       5.04129E-02                                       
+ @             GAS         3.85295E+05                                       
+ @            MSW PRES     8.89534E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   67 TIME=    245.00  DAYS (    +1.0  DAYS MAXW  1 ITS) (2-SEP-2000)       
+  PAV=   274.4  BARSA  WCT=0.083 GOR=   184.00  SM3/SM3 WGR=   0.0005  SM3/SM3   
+
+ @--PROBLEM  AT TIME      245.0   DAYS    ( 2-SEP-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.29731E+03                                       
+ @             WATER       1.04193E-01                                       
+ @             GAS         9.74705E+05                                       
+ @            MSW PRES     2.72913E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   68 TIME=    248.00  DAYS (    +3.0  DAYS MAXF  2 ITS) (5-SEP-2000)       
+  PAV=   274.4  BARSA  WCT=0.084 GOR=   184.00  SM3/SM3 WGR=   0.0005  SM3/SM3   
+
+ @--PROBLEM  AT TIME      248.0   DAYS    ( 5-SEP-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.32336E+03                                       
+ @             WATER       1.04845E-01                                       
+ @             GAS         9.79498E+05                                       
+ @            MSW PRES     2.58252E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   69 TIME=    253.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (10-SEP-2000)      
+  PAV=   274.2  BARSA  WCT=0.085 GOR=   184.00  SM3/SM3 WGR=   0.0005  SM3/SM3   
+
+ @--PROBLEM  AT TIME      253.0   DAYS    (10-SEP-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.32034E+03                                       
+ @             WATER       1.05345E-01                                       
+ @             GAS         9.78942E+05                                       
+ @            MSW PRES     2.58353E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   70 TIME=    258.00  DAYS (    +5.0  DAYS MAXS  3 ITS) (15-SEP-2000)      
+  PAV=   274.1  BARSA  WCT=0.086 GOR=   184.00  SM3/SM3 WGR=   0.0005  SM3/SM3   
+
+ @--PROBLEM  AT TIME      258.0   DAYS    (15-SEP-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.31731E+03                                       
+ @             WATER       1.05844E-01                                       
+ @             GAS         9.78385E+05                                       
+ @            MSW PRES     2.58461E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   71 TIME=    263.00  DAYS (    +5.0  DAYS MAXS  3 ITS) (20-SEP-2000)      
+  PAV=   273.9  BARSA  WCT=0.087 GOR=   184.00  SM3/SM3 WGR=   0.0005  SM3/SM3   
+
+ @--PROBLEM  AT TIME      263.0   DAYS    (20-SEP-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.31423E+03                                       
+ @             WATER       1.06341E-01                                       
+ @             GAS         9.77819E+05                                       
+ @            MSW PRES     2.58575E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   72 TIME=    268.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (25-SEP-2000)      
+  PAV=   273.7  BARSA  WCT=0.088 GOR=   184.00  SM3/SM3 WGR=   0.0005  SM3/SM3   
+
+ @--PROBLEM  AT TIME      268.0   DAYS    (25-SEP-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.28108E+03                                       
+ @             WATER       1.06438E-01                                       
+ @             GAS         9.71719E+05                                       
+ @            MSW PRES     2.74538E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   73 TIME=    271.00  DAYS (    +3.0  DAYS HALF  3 ITS) (28-SEP-2000)      
+  PAV=   273.6  BARSA  WCT=0.089 GOR=   184.00  SM3/SM3 WGR=   0.0005  SM3/SM3   
+
+ @--PROBLEM  AT TIME      271.0   DAYS    (28-SEP-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.27887E+03                                       
+ @             WATER       1.06728E-01                                       
+ @             GAS         9.71312E+05                                       
+ @            MSW PRES     2.74774E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   74 TIME=    274.00  DAYS (    +3.0  DAYS REPT  2 ITS) (1-OCT-2000)       
+  PAV=   273.5  BARSA  WCT=0.090 GOR=   184.00  SM3/SM3 WGR=   0.0005  SM3/SM3   
+   279 READING WCONHIST
+   280 READING DATES   
+
+ @--PROBLEM  AT TIME      274.0   DAYS    ( 1-OCT-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         2.23307E+03                                       
+ @             WATER       5.43931E-02                                       
+ @             GAS         4.10885E+05                                       
+ @            MSW PRES     8.88028E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   75 TIME=    275.00  DAYS (    +1.0  DAYS MAXW  1 ITS) (2-OCT-2000)       
+  PAV=   273.5  BARSA  WCT=0.090 GOR=   184.00  SM3/SM3 WGR=   0.0005  SM3/SM3   
+
+ @--PROBLEM  AT TIME      275.0   DAYS    ( 2-OCT-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.27618E+03                                       
+ @             WATER       1.07099E-01                                       
+ @             GAS         9.70816E+05                                       
+ @            MSW PRES     2.75086E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   76 TIME=    278.00  DAYS (    +3.0  DAYS MAXF  2 ITS) (5-OCT-2000)       
+  PAV=   273.4  BARSA  WCT=0.091 GOR=   184.00  SM3/SM3 WGR=   0.0005  SM3/SM3   
+
+ @--PROBLEM  AT TIME      278.0   DAYS    ( 5-OCT-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.30555E+03                                       
+ @             WATER       1.07778E-01                                       
+ @             GAS         9.76222E+05                                       
+ @            MSW PRES     2.58964E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   77 TIME=    283.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (10-OCT-2000)      
+  PAV=   273.3  BARSA  WCT=0.092 GOR=   184.00  SM3/SM3 WGR=   0.0006  SM3/SM3   
+
+ @--PROBLEM  AT TIME      283.0   DAYS    (10-OCT-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.30292E+03                                       
+ @             WATER       1.08233E-01                                       
+ @             GAS         9.75737E+05                                       
+ @            MSW PRES     2.59109E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   78 TIME=    288.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (15-OCT-2000)      
+  PAV=   273.2  BARSA  WCT=0.093 GOR=   184.00  SM3/SM3 WGR=   0.0006  SM3/SM3   
+
+ @--PROBLEM  AT TIME      288.0   DAYS    (15-OCT-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.30025E+03                                       
+ @             WATER       1.08687E-01                                       
+ @             GAS         9.75246E+05                                       
+ @            MSW PRES     2.59260E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   79 TIME=    293.00  DAYS (    +5.0  DAYS MAXS  3 ITS) (20-OCT-2000)      
+  PAV=   273.1  BARSA  WCT=0.094 GOR=   184.00  SM3/SM3 WGR=   0.0006  SM3/SM3   
+
+ @--PROBLEM  AT TIME      293.0   DAYS    (20-OCT-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.29754E+03                                       
+ @             WATER       1.09140E-01                                       
+ @             GAS         9.74747E+05                                       
+ @            MSW PRES     2.59418E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   80 TIME=    298.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (25-OCT-2000)      
+  PAV=   272.9  BARSA  WCT=0.095 GOR=   184.00  SM3/SM3 WGR=   0.0006  SM3/SM3   
+
+ @--PROBLEM  AT TIME      298.0   DAYS    (25-OCT-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.27401E+03                                       
+ @             WATER       1.09281E-01                                       
+ @             GAS         9.70417E+05                                       
+ @            MSW PRES     2.70498E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   81 TIME=    301.50  DAYS (    +3.5  DAYS HALF  2 ITS) (28-OCT-2000)      
+  PAV=   272.8  BARSA  WCT=0.095 GOR=   184.00  SM3/SM3 WGR=   0.0006  SM3/SM3   
+
+ @--PROBLEM  AT TIME      301.5   DAYS    (28-OCT-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.27182E+03                                       
+ @             WATER       1.09590E-01                                       
+ @             GAS         9.70015E+05                                       
+ @            MSW PRES     2.70742E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   82 TIME=    305.00  DAYS (    +3.5  DAYS REPT  2 ITS) (1-NOV-2000)       
+  PAV=   272.7  BARSA  WCT=0.096 GOR=   184.00  SM3/SM3 WGR=   0.0006  SM3/SM3   
+   281 READING WCONHIST
+   282 READING DATES   
+
+ @--PROBLEM  AT TIME      305.0   DAYS    ( 1-NOV-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         2.36818E+03                                       
+ @             WATER       5.83334E-02                                       
+ @             GAS         4.35746E+05                                       
+ @            MSW PRES     8.87691E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   83 TIME=    306.00  DAYS (    +1.0  DAYS MAXW  1 ITS) (2-NOV-2000)       
+  PAV=   272.7  BARSA  WCT=0.096 GOR=   184.00  SM3/SM3 WGR=   0.0006  SM3/SM3   
+
+ @--PROBLEM  AT TIME      306.0   DAYS    ( 2-NOV-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         2.41888E+03                                       
+ @             WATER       5.22599E-02                                       
+ @             GAS         4.45074E+05                                       
+ @            MSW PRES     6.52905E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   84 TIME=    309.00  DAYS (    +3.0  DAYS MAXF  2 ITS) (5-NOV-2000)       
+  PAV=   272.6  BARSA  WCT=0.097 GOR=   184.00  SM3/SM3 WGR=   0.0006  SM3/SM3   
+
+ @--PROBLEM  AT TIME      309.0   DAYS    ( 5-NOV-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.28927E+03                                       
+ @             WATER       1.10540E-01                                       
+ @             GAS         9.73226E+05                                       
+ @            MSW PRES     2.59971E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   85 TIME=    314.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (10-NOV-2000)      
+  PAV=   272.5  BARSA  WCT=0.098 GOR=   184.00  SM3/SM3 WGR=   0.0006  SM3/SM3   
+
+ @--PROBLEM  AT TIME      314.0   DAYS    (10-NOV-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.28690E+03                                       
+ @             WATER       1.10958E-01                                       
+ @             GAS         9.72790E+05                                       
+ @            MSW PRES     2.60157E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   86 TIME=    319.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (15-NOV-2000)      
+  PAV=   272.4  BARSA  WCT=0.099 GOR=   184.00  SM3/SM3 WGR=   0.0006  SM3/SM3   
+
+ @--PROBLEM  AT TIME      319.0   DAYS    (15-NOV-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.28451E+03                                       
+ @             WATER       1.11374E-01                                       
+ @             GAS         9.72350E+05                                       
+ @            MSW PRES     2.60350E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   87 TIME=    324.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (20-NOV-2000)      
+  PAV=   272.3  BARSA  WCT=0.099 GOR=   184.00  SM3/SM3 WGR=   0.0006  SM3/SM3   
+
+ @--PROBLEM  AT TIME      324.0   DAYS    (20-NOV-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.28208E+03                                       
+ @             WATER       1.11788E-01                                       
+ @             GAS         9.71903E+05                                       
+ @            MSW PRES     2.60550E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   88 TIME=    329.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (25-NOV-2000)      
+  PAV=   272.2  BARSA  WCT=0.100 GOR=   184.00  SM3/SM3 WGR=   0.0006  SM3/SM3   
+
+ @--PROBLEM  AT TIME      329.0   DAYS    (25-NOV-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.24249E+03                                       
+ @             WATER       1.11670E-01                                       
+ @             GAS         9.64619E+05                                       
+ @            MSW PRES     2.79989E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   89 TIME=    332.00  DAYS (    +3.0  DAYS HALF  2 ITS) (28-NOV-2000)      
+  PAV=   272.1  BARSA  WCT=0.101 GOR=   184.00  SM3/SM3 WGR=   0.0006  SM3/SM3   
+
+ @--PROBLEM  AT TIME      332.0   DAYS    (28-NOV-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.24062E+03                                       
+ @             WATER       1.11908E-01                                       
+ @             GAS         9.64275E+05                                       
+ @            MSW PRES     2.80309E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   90 TIME=    335.00  DAYS (    +3.0  DAYS REPT  2 ITS) (1-DEC-2000)       
+  PAV=   272.1  BARSA  WCT=0.101 GOR=   184.00  SM3/SM3 WGR=   0.0006  SM3/SM3   
+   283 READING WCONHIST
+   284 READING DATES   
+
+ @--PROBLEM  AT TIME      335.0   DAYS    ( 1-DEC-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         3.04427E+03                                       
+ @             WATER       7.57072E-02                                       
+ @             GAS         5.60145E+05                                       
+ @            MSW PRES     1.03718E+02                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   91 TIME=    336.00  DAYS (    +1.0  DAYS MAXW  1 ITS) (2-DEC-2000)       
+  PAV=   272.0  BARSA  WCT=0.102 GOR=   184.00  SM3/SM3 WGR=   0.0006  SM3/SM3   
+
+ @--PROBLEM  AT TIME      336.0   DAYS    ( 2-DEC-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         2.39775E+03                                       
+ @             WATER       5.31053E-02                                       
+ @             GAS         4.41185E+05                                       
+ @            MSW PRES     6.59282E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   92 TIME=    339.00  DAYS (    +3.0  DAYS MAXF  2 ITS) (5-DEC-2000)       
+  PAV=   272.0  BARSA  WCT=0.102 GOR=   184.00  SM3/SM3 WGR=   0.0006  SM3/SM3   
+
+ @--PROBLEM  AT TIME      339.0   DAYS    ( 5-DEC-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.27515E+03                                       
+ @             WATER       1.12991E-01                                       
+ @             GAS         9.70627E+05                                       
+ @            MSW PRES     2.61191E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   93 TIME=    344.00  DAYS (    +5.0  DAYS MAXS  3 ITS) (10-DEC-2000)      
+  PAV=   271.9  BARSA  WCT=0.103 GOR=   184.00  SM3/SM3 WGR=   0.0006  SM3/SM3   
+
+ @--PROBLEM  AT TIME      344.0   DAYS    (10-DEC-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.27298E+03                                       
+ @             WATER       1.13377E-01                                       
+ @             GAS         9.70229E+05                                       
+ @            MSW PRES     2.61416E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   94 TIME=    349.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (15-DEC-2000)      
+  PAV=   271.8  BARSA  WCT=0.103 GOR=   184.00  SM3/SM3 WGR=   0.0006  SM3/SM3   
+
+ @--PROBLEM  AT TIME      349.0   DAYS    (15-DEC-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.27080E+03                                       
+ @             WATER       1.13761E-01                                       
+ @             GAS         9.69827E+05                                       
+ @            MSW PRES     2.61648E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   95 TIME=    354.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (20-DEC-2000)      
+  PAV=   271.7  BARSA  WCT=0.104 GOR=   184.00  SM3/SM3 WGR=   0.0006  SM3/SM3   
+
+ @--PROBLEM  AT TIME      354.0   DAYS    (20-DEC-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.26857E+03                                       
+ @             WATER       1.14144E-01                                       
+ @             GAS         9.69417E+05                                       
+ @            MSW PRES     2.61889E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   96 TIME=    359.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (25-DEC-2000)      
+  PAV=   271.6  BARSA  WCT=0.105 GOR=   184.00  SM3/SM3 WGR=   0.0006  SM3/SM3   
+
+ @--PROBLEM  AT TIME      359.0   DAYS    (25-DEC-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.24082E+03                                       
+ @             WATER       1.14125E-01                                       
+ @             GAS         9.64311E+05                                       
+ @            MSW PRES     2.75313E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   97 TIME=    362.50  DAYS (    +3.5  DAYS HALF  2 ITS) (28-DEC-2000)      
+  PAV=   271.6  BARSA  WCT=0.105 GOR=   184.00  SM3/SM3 WGR=   0.0006  SM3/SM3   
+
+ @--PROBLEM  AT TIME      362.5   DAYS    (28-DEC-2000):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.23892E+03                                       
+ @             WATER       1.14384E-01                                       
+ @             GAS         9.63962E+05                                       
+ @            MSW PRES     2.75642E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   98 TIME=    366.00  DAYS (    +3.5  DAYS REPT  2 ITS) (1-JAN-2001)       
+  PAV=   271.5  BARSA  WCT=0.106 GOR=   184.00  SM3/SM3 WGR=   0.0006  SM3/SM3   
+
+ @--MESSAGE  AT TIME      366.0   DAYS    ( 1-JAN-2001):
+ @           RESTART FILE WRITTEN   REPORT    12                             
+ @           RESTART INCLUDES FLUIDS IN PLACE                                
+   285 READING WELSPECS
+   286 READING COMPORD 
+   287 READING COMPDAT 
+   288 READING WELSEGS 
+   289 READING WELSEGS 
+   290 READING COMPSEGS
+   291 READING COMPSEGS
+   292 READING WCONHIST
+
+ @--MESSAGE  AT TIME      366.0   DAYS    ( 1-JAN-2001):
+ @           OPENING WELL OP_4     AT TIME    366.00   DAYS                  
+ @           CONTROLLED BY RESERVOIR FLUID VOLUME RATE                       
+
+ @--MESSAGE  AT TIME      366.0   DAYS    ( 1-JAN-2001):
+ @           OPENING WELL OP_5     AT TIME    366.00   DAYS                  
+ @           CONTROLLED BY RESERVOIR FLUID VOLUME RATE                       
+   293 READING WRFTPLT 
+   294 READING DATES   
+
+ @--PROBLEM  AT TIME      366.0   DAYS    ( 1-JAN-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         2.61828E+03                                       
+ @             WATER       6.56348E-02                                       
+ @             GAS         4.81764E+05                                       
+ @            MSW PRES     8.89468E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+
+ @--PROBLEM  AT TIME      366.0   DAYS    ( 1-JAN-2001):
+ @           POTENTIAL IN WELL OP_4     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         1.72555E+04                                       
+ @             WATER       1.77232E+01                                       
+ @             GAS         3.17501E+06                                       
+ @            MSW PRES     1.12219E-02                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+
+ @--PROBLEM  AT TIME      366.0   DAYS    ( 1-JAN-2001):
+ @           POTENTIAL IN WELL OP_5     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         1.27715E+04                                       
+ @             WATER       4.83928E+04                                       
+ @             GAS         2.57877E+06                                       
+ @            MSW PRES     2.30138E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP   99 TIME=    367.00  DAYS (    +1.0  DAYS MAXW  3 ITS) (2-JAN-2001)       
+  PAV=   271.3  BARSA  WCT=0.066 GOR=   184.00  SM3/SM3 WGR=   0.0004  SM3/SM3   
+
+ @--PROBLEM  AT TIME      367.0   DAYS    ( 2-JAN-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         2.38218E+03                                       
+ @             WATER       5.37199E-02                                       
+ @             GAS         4.38322E+05                                       
+ @            MSW PRES     6.64323E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  100 TIME=    370.00  DAYS (    +3.0  DAYS MAXF  2 ITS) (5-JAN-2001)       
+  PAV=   270.7  BARSA  WCT=0.067 GOR=   184.00  SM3/SM3 WGR=   0.0004  SM3/SM3   
+
+ @--PROBLEM  AT TIME      370.0   DAYS    ( 5-JAN-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.25006E+03                                       
+ @             WATER       1.15445E-01                                       
+ @             GAS         9.66011E+05                                       
+ @            MSW PRES     2.62575E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  101 TIME=    375.00  DAYS (    +5.0  DAYS MAXS  3 ITS) (10-JAN-2001)      
+  PAV=   269.8  BARSA  WCT=0.067 GOR=   184.00  SM3/SM3 WGR=   0.0004  SM3/SM3   
+
+ @--PROBLEM  AT TIME      375.0   DAYS    (10-JAN-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.23233E+03                                       
+ @             WATER       1.16442E-01                                       
+ @             GAS         9.62748E+05                                       
+ @            MSW PRES     2.63417E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  102 TIME=    380.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (15-JAN-2001)      
+  PAV=   269.0  BARSA  WCT=0.067 GOR=   184.00  SM3/SM3 WGR=   0.0004  SM3/SM3   
+
+ @--PROBLEM  AT TIME      380.0   DAYS    (15-JAN-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.21507E+03                                       
+ @             WATER       1.17365E-01                                       
+ @             GAS         9.59572E+05                                       
+ @            MSW PRES     2.64459E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  103 TIME=    385.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (20-JAN-2001)      
+  PAV=   268.3  BARSA  WCT=0.068 GOR=   184.00  SM3/SM3 WGR=   0.0004  SM3/SM3   
+
+ @--PROBLEM  AT TIME      385.0   DAYS    (20-JAN-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.19825E+03                                       
+ @             WATER       1.18217E-01                                       
+ @             GAS         9.56478E+05                                       
+ @            MSW PRES     2.65711E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  104 TIME=    390.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (25-JAN-2001)      
+  PAV=   267.5  BARSA  WCT=0.068 GOR=   184.00  SM3/SM3 WGR=   0.0004  SM3/SM3   
+
+ @--PROBLEM  AT TIME      390.0   DAYS    (25-JAN-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         1.09829E+03                                       
+ @             WATER       2.78886E-02                                       
+ @             GAS         2.02085E+05                                       
+ @            MSW PRES     9.01058E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  105 TIME=    393.50  DAYS (    +3.5  DAYS HALF  2 ITS) (28-JAN-2001)      
+  PAV=   267.0  BARSA  WCT=0.069 GOR=   184.00  SM3/SM3 WGR=   0.0004  SM3/SM3   
+
+ @--PROBLEM  AT TIME      393.5   DAYS    (28-JAN-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         2.30555E+03                                       
+ @             WATER       5.48195E-02                                       
+ @             GAS         4.24221E+05                                       
+ @            MSW PRES     6.73715E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  106 TIME=    397.00  DAYS (    +3.5  DAYS REPT  2 ITS) (1-FEB-2001)       
+  PAV=   266.5  BARSA  WCT=0.069 GOR=   184.00  SM3/SM3 WGR=   0.0004  SM3/SM3   
+   295 READING WCONHIST
+   296 READING DATES   
+
+ @--PROBLEM  AT TIME      397.0   DAYS    ( 1-FEB-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         7.41437E+03                                       
+ @             WATER       1.88533E-01                                       
+ @             GAS         1.36424E+06                                       
+ @            MSW PRES     1.76663E+02                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  107 TIME=    398.00  DAYS (    +1.0  DAYS MAXW  2 ITS) (2-FEB-2001)       
+  PAV=   266.5  BARSA  WCT=0.079 GOR=   184.00  SM3/SM3 WGR=   0.0005  SM3/SM3   
+
+ @--PROBLEM  AT TIME      398.0   DAYS    ( 2-FEB-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         1.58844E+03                                       
+ @             WATER       3.93188E-02                                       
+ @             GAS         2.92272E+05                                       
+ @            MSW PRES     8.08415E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  108 TIME=    401.00  DAYS (    +3.0  DAYS MAXF  2 ITS) (5-FEB-2001)       
+  PAV=   266.5  BARSA  WCT=0.080 GOR=   184.00  SM3/SM3 WGR=   0.0005  SM3/SM3   
+
+ @--PROBLEM  AT TIME      401.0   DAYS    ( 5-FEB-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.17938E+03                                       
+ @             WATER       1.19213E-01                                       
+ @             GAS         9.53007E+05                                       
+ @            MSW PRES     2.67027E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  109 TIME=    406.00  DAYS (    +5.0  DAYS MAXS  3 ITS) (10-FEB-2001)      
+  PAV=   266.3  BARSA  WCT=0.080 GOR=   184.00  SM3/SM3 WGR=   0.0005  SM3/SM3   
+
+ @--PROBLEM  AT TIME      406.0   DAYS    (10-FEB-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.17688E+03                                       
+ @             WATER       1.19416E-01                                       
+ @             GAS         9.52546E+05                                       
+ @            MSW PRES     2.67216E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  110 TIME=    411.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (15-FEB-2001)      
+  PAV=   266.1  BARSA  WCT=0.081 GOR=   184.00  SM3/SM3 WGR=   0.0005  SM3/SM3   
+
+ @--PROBLEM  AT TIME      411.0   DAYS    (15-FEB-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.17325E+03                                       
+ @             WATER       1.19656E-01                                       
+ @             GAS         9.51878E+05                                       
+ @            MSW PRES     2.67524E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  111 TIME=    416.00  DAYS (    +5.0  DAYS MAXS  3 ITS) (20-FEB-2001)      
+  PAV=   265.9  BARSA  WCT=0.082 GOR=   184.00  SM3/SM3 WGR=   0.0005  SM3/SM3   
+
+ @--PROBLEM  AT TIME      416.0   DAYS    (20-FEB-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.15954E+03                                       
+ @             WATER       1.19741E-01                                       
+ @             GAS         9.49356E+05                                       
+ @            MSW PRES     2.72808E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  112 TIME=    420.50  DAYS (    +4.5  DAYS HALF  2 ITS) (24-FEB-2001)      
+  PAV=   265.7  BARSA  WCT=0.082 GOR=   184.00  SM3/SM3 WGR=   0.0005  SM3/SM3   
+
+ @--PROBLEM  AT TIME      420.5   DAYS    (24-FEB-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.15495E+03                                       
+ @             WATER       1.19985E-01                                       
+ @             GAS         9.48511E+05                                       
+ @            MSW PRES     2.73330E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  113 TIME=    425.00  DAYS (    +4.5  DAYS REPT  3 ITS) (1-MAR-2001)       
+  PAV=   265.5  BARSA  WCT=0.083 GOR=   184.00  SM3/SM3 WGR=   0.0005  SM3/SM3   
+   297 READING WELSPECS
+   298 READING COMPORD 
+   299 READING COMPDAT 
+   300 READING WELSEGS 
+   301 READING COMPSEGS
+   302 READING WCONHIST
+   303 READING WCONINJH
+
+ @--MESSAGE  AT TIME      425.0   DAYS    ( 1-MAR-2001):
+ @           OPENING WELL WI_3     AT TIME    425.00   DAYS                  
+ @           CONTROLLED BY WATER RATE                                        
+   304 READING WRFTPLT 
+   305 READING DATES   
+
+ @--PROBLEM  AT TIME      425.0   DAYS    ( 1-MAR-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.01883E+03                                       
+ @             WATER       1.28398E-01                                       
+ @             GAS         9.23465E+05                                       
+ @            MSW PRES     1.26273E+02                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  114 TIME=    426.00  DAYS (    +1.0  DAYS MAXW  2 ITS) (2-MAR-2001)       
+  PAV=   265.5  BARSA  WCT=0.154 GOR=   184.00  SM3/SM3 WGR=   0.0010  SM3/SM3   
+
+ @--PROBLEM  AT TIME      426.0   DAYS    ( 2-MAR-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         1.91112E+03                                       
+ @             WATER       4.70167E-02                                       
+ @             GAS         3.51647E+05                                       
+ @            MSW PRES     7.64267E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  115 TIME=    429.00  DAYS (    +3.0  DAYS MAXF  2 ITS) (5-MAR-2001)       
+  PAV=   265.5  BARSA  WCT=0.157 GOR=   184.00  SM3/SM3 WGR=   0.0010  SM3/SM3   
+
+ @--PROBLEM  AT TIME      429.0   DAYS    ( 5-MAR-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.16786E+03                                       
+ @             WATER       1.20193E-01                                       
+ @             GAS         9.50887E+05                                       
+ @            MSW PRES     2.67809E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  116 TIME=    434.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (10-MAR-2001)      
+  PAV=   265.6  BARSA  WCT=0.160 GOR=   184.00  SM3/SM3 WGR=   0.0010  SM3/SM3   
+
+ @--PROBLEM  AT TIME      434.0   DAYS    (10-MAR-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.17012E+03                                       
+ @             WATER       1.20213E-01                                       
+ @             GAS         9.51302E+05                                       
+ @            MSW PRES     2.67521E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  117 TIME=    439.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (15-MAR-2001)      
+  PAV=   265.8  BARSA  WCT=0.163 GOR=   184.00  SM3/SM3 WGR=   0.0011  SM3/SM3   
+
+ @--PROBLEM  AT TIME      439.0   DAYS    (15-MAR-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.17261E+03                                       
+ @             WATER       1.20221E-01                                       
+ @             GAS         9.51760E+05                                       
+ @            MSW PRES     2.67221E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  118 TIME=    444.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (20-MAR-2001)      
+  PAV=   265.9  BARSA  WCT=0.165 GOR=   184.00  SM3/SM3 WGR=   0.0011  SM3/SM3   
+
+ @--PROBLEM  AT TIME      444.0   DAYS    (20-MAR-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.17521E+03                                       
+ @             WATER       1.20223E-01                                       
+ @             GAS         9.52240E+05                                       
+ @            MSW PRES     2.66922E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  119 TIME=    449.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (25-MAR-2001)      
+  PAV=   266.0  BARSA  WCT=0.168 GOR=   184.00  SM3/SM3 WGR=   0.0011  SM3/SM3   
+
+ @--PROBLEM  AT TIME      449.0   DAYS    (25-MAR-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         1.08206E+03                                       
+ @             WATER       2.77820E-02                                       
+ @             GAS         1.99099E+05                                       
+ @            MSW PRES     8.74203E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  120 TIME=    452.50  DAYS (    +3.5  DAYS HALF  2 ITS) (28-MAR-2001)      
+  PAV=   266.1  BARSA  WCT=0.169 GOR=   184.00  SM3/SM3 WGR=   0.0011  SM3/SM3   
+
+ @--PROBLEM  AT TIME      452.5   DAYS    (28-MAR-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         2.31715E+03                                       
+ @             WATER       5.54316E-02                                       
+ @             GAS         4.26355E+05                                       
+ @            MSW PRES     6.68529E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  121 TIME=    456.00  DAYS (    +3.5  DAYS REPT  2 ITS) (1-APR-2001)       
+  PAV=   266.2  BARSA  WCT=0.171 GOR=   184.00  SM3/SM3 WGR=   0.0011  SM3/SM3   
+   306 READING WCONHIST
+   307 READING WCONINJH
+   308 READING DATES   
+
+ @--PROBLEM  AT TIME      456.0   DAYS    ( 1-APR-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         6.98367E+03                                       
+ @             WATER       1.79421E-01                                       
+ @             GAS         1.28500E+06                                       
+ @            MSW PRES     1.69645E+02                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  122 TIME=    457.00  DAYS (    +1.0  DAYS MAXW  1 ITS) (2-APR-2001)       
+  PAV=   266.2  BARSA  WCT=0.203 GOR=   184.00  SM3/SM3 WGR=   0.0014  SM3/SM3   
+
+ @--PROBLEM  AT TIME      457.0   DAYS    ( 2-APR-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         1.21602E+03                                       
+ @             WATER       3.12495E-02                                       
+ @             GAS         2.23747E+05                                       
+ @            MSW PRES     8.61321E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  123 TIME=    460.00  DAYS (    +3.0  DAYS MAXF  2 ITS) (5-APR-2001)       
+  PAV=   266.2  BARSA  WCT=0.204 GOR=   184.00  SM3/SM3 WGR=   0.0014  SM3/SM3   
+
+ @--PROBLEM  AT TIME      460.0   DAYS    ( 5-APR-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         2.40356E+03                                       
+ @             WATER       5.67287E-02                                       
+ @             GAS         4.42256E+05                                       
+ @            MSW PRES     6.26162E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  124 TIME=    465.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (10-APR-2001)      
+  PAV=   266.3  BARSA  WCT=0.207 GOR=   184.00  SM3/SM3 WGR=   0.0014  SM3/SM3   
+
+ @--PROBLEM  AT TIME      465.0   DAYS    (10-APR-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.18535E+03                                       
+ @             WATER       1.20238E-01                                       
+ @             GAS         9.54105E+05                                       
+ @            MSW PRES     2.65867E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  125 TIME=    470.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (15-APR-2001)      
+  PAV=   266.4  BARSA  WCT=0.210 GOR=   184.00  SM3/SM3 WGR=   0.0014  SM3/SM3   
+
+ @--PROBLEM  AT TIME      470.0   DAYS    (15-APR-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.18743E+03                                       
+ @             WATER       1.20250E-01                                       
+ @             GAS         9.54487E+05                                       
+ @            MSW PRES     2.65671E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  126 TIME=    475.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (20-APR-2001)      
+  PAV=   266.5  BARSA  WCT=0.213 GOR=   184.00  SM3/SM3 WGR=   0.0015  SM3/SM3   
+
+ @--PROBLEM  AT TIME      475.0   DAYS    (20-APR-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.18942E+03                                       
+ @             WATER       1.20264E-01                                       
+ @             GAS         9.54853E+05                                       
+ @            MSW PRES     2.65490E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  127 TIME=    480.00  DAYS (    +5.0  DAYS MAXS  3 ITS) (25-APR-2001)      
+  PAV=   266.6  BARSA  WCT=0.216 GOR=   184.00  SM3/SM3 WGR=   0.0015  SM3/SM3   
+
+ @--PROBLEM  AT TIME      480.0   DAYS    (25-APR-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         1.17269E+03                                       
+ @             WATER       3.02168E-02                                       
+ @             GAS         2.15776E+05                                       
+ @            MSW PRES     8.75490E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  128 TIME=    483.00  DAYS (    +3.0  DAYS HALF  2 ITS) (28-APR-2001)      
+  PAV=   266.7  BARSA  WCT=0.218 GOR=   184.00  SM3/SM3 WGR=   0.0015  SM3/SM3   
+
+ @--PROBLEM  AT TIME      483.0   DAYS    (28-APR-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         1.27266E+03                                       
+ @             WATER       3.28041E-02                                       
+ @             GAS         2.34170E+05                                       
+ @            MSW PRES     9.67910E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  129 TIME=    486.00  DAYS (    +3.0  DAYS REPT  2 ITS) (1-MAY-2001)       
+  PAV=   266.7  BARSA  WCT=0.220 GOR=   184.00  SM3/SM3 WGR=   0.0015  SM3/SM3   
+   309 READING WCONHIST
+   310 READING DATES   
+
+ @--PROBLEM  AT TIME      486.0   DAYS    ( 1-MAY-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         7.35027E+03                                       
+ @             WATER       1.89499E-01                                       
+ @             GAS         1.35245E+06                                       
+ @            MSW PRES     1.78164E+02                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  130 TIME=    487.00  DAYS (    +1.0  DAYS MAXW  1 ITS) (2-MAY-2001)       
+  PAV=   266.7  BARSA  WCT=0.231 GOR=   184.00  SM3/SM3 WGR=   0.0016  SM3/SM3   
+
+ @--PROBLEM  AT TIME      487.0   DAYS    ( 2-MAY-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         3.89928E+03                                       
+ @             WATER       9.16183E-02                                       
+ @             GAS         7.17468E+05                                       
+ @            MSW PRES     4.69243E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  131 TIME=    490.00  DAYS (    +3.0  DAYS MAXF  2 ITS) (5-MAY-2001)       
+  PAV=   266.8  BARSA  WCT=0.233 GOR=   184.00  SM3/SM3 WGR=   0.0016  SM3/SM3   
+
+ @--PROBLEM  AT TIME      490.0   DAYS    ( 5-MAY-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.19393E+03                                       
+ @             WATER       1.20367E-01                                       
+ @             GAS         9.55684E+05                                       
+ @            MSW PRES     2.65119E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  132 TIME=    495.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (10-MAY-2001)      
+  PAV=   266.9  BARSA  WCT=0.236 GOR=   184.00  SM3/SM3 WGR=   0.0017  SM3/SM3   
+
+ @--PROBLEM  AT TIME      495.0   DAYS    (10-MAY-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.19528E+03                                       
+ @             WATER       1.20404E-01                                       
+ @             GAS         9.55932E+05                                       
+ @            MSW PRES     2.65015E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  133 TIME=    500.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (15-MAY-2001)      
+  PAV=   266.9  BARSA  WCT=0.240 GOR=   184.00  SM3/SM3 WGR=   0.0017  SM3/SM3   
+
+ @--PROBLEM  AT TIME      500.0   DAYS    (15-MAY-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.19658E+03                                       
+ @             WATER       1.20443E-01                                       
+ @             GAS         9.56170E+05                                       
+ @            MSW PRES     2.64920E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  134 TIME=    505.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (20-MAY-2001)      
+  PAV=   267.0  BARSA  WCT=0.244 GOR=   184.00  SM3/SM3 WGR=   0.0018  SM3/SM3   
+
+ @--PROBLEM  AT TIME      505.0   DAYS    (20-MAY-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.19782E+03                                       
+ @             WATER       1.20484E-01                                       
+ @             GAS         9.56399E+05                                       
+ @            MSW PRES     2.64832E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  135 TIME=    510.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (25-MAY-2001)      
+  PAV=   267.0  BARSA  WCT=0.248 GOR=   184.00  SM3/SM3 WGR=   0.0018  SM3/SM3   
+
+ @--PROBLEM  AT TIME      510.0   DAYS    (25-MAY-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.16452E+03                                       
+ @             WATER       1.20018E-01                                       
+ @             GAS         9.50272E+05                                       
+ @            MSW PRES     2.81980E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  136 TIME=    513.50  DAYS (    +3.5  DAYS HALF  2 ITS) (28-MAY-2001)      
+  PAV=   267.1  BARSA  WCT=0.251 GOR=   184.00  SM3/SM3 WGR=   0.0018  SM3/SM3   
+
+ @--PROBLEM  AT TIME      513.5   DAYS    (28-MAY-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.16549E+03                                       
+ @             WATER       1.20051E-01                                       
+ @             GAS         9.50450E+05                                       
+ @            MSW PRES     2.81860E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  137 TIME=    517.00  DAYS (    +3.5  DAYS REPT  2 ITS) (1-JUN-2001)       
+  PAV=   267.1  BARSA  WCT=0.253 GOR=   184.00  SM3/SM3 WGR=   0.0018  SM3/SM3   
+   311 READING WCONHIST
+   312 READING DATES   
+
+ @--PROBLEM  AT TIME      517.0   DAYS    ( 1-JUN-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         4.51033E+03                                       
+ @             WATER       1.10863E-01                                       
+ @             GAS         8.29901E+05                                       
+ @            MSW PRES     6.23131E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  138 TIME=    518.00  DAYS (    +1.0  DAYS MAXW  1 ITS) (2-JUN-2001)       
+  PAV=   267.1  BARSA  WCT=0.260 GOR=   184.00  SM3/SM3 WGR=   0.0019  SM3/SM3   
+
+ @--PROBLEM  AT TIME      518.0   DAYS    ( 2-JUN-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         1.12555E+03                                       
+ @             WATER       2.91312E-02                                       
+ @             GAS         2.07101E+05                                       
+ @            MSW PRES     8.75210E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  139 TIME=    521.00  DAYS (    +3.0  DAYS MAXF  2 ITS) (5-JUN-2001)       
+  PAV=   267.2  BARSA  WCT=0.262 GOR=   184.00  SM3/SM3 WGR=   0.0019  SM3/SM3   
+
+ @--PROBLEM  AT TIME      521.0   DAYS    ( 5-JUN-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         2.42046E+03                                       
+ @             WATER       5.71117E-02                                       
+ @             GAS         4.45364E+05                                       
+ @            MSW PRES     6.23145E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  140 TIME=    526.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (10-JUN-2001)      
+  PAV=   267.2  BARSA  WCT=0.266 GOR=   184.00  SM3/SM3 WGR=   0.0020  SM3/SM3   
+
+ @--PROBLEM  AT TIME      526.0   DAYS    (10-JUN-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.20240E+03                                       
+ @             WATER       1.20685E-01                                       
+ @             GAS         9.57242E+05                                       
+ @            MSW PRES     2.64565E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  141 TIME=    531.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (15-JUN-2001)      
+  PAV=   267.3  BARSA  WCT=0.270 GOR=   184.00  SM3/SM3 WGR=   0.0020  SM3/SM3   
+
+ @--PROBLEM  AT TIME      531.0   DAYS    (15-JUN-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.20348E+03                                       
+ @             WATER       1.20732E-01                                       
+ @             GAS         9.57441E+05                                       
+ @            MSW PRES     2.64511E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  142 TIME=    536.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (20-JUN-2001)      
+  PAV=   267.4  BARSA  WCT=0.274 GOR=   184.00  SM3/SM3 WGR=   0.0021  SM3/SM3   
+
+ @--PROBLEM  AT TIME      536.0   DAYS    (20-JUN-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.20452E+03                                       
+ @             WATER       1.20782E-01                                       
+ @             GAS         9.57631E+05                                       
+ @            MSW PRES     2.64464E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  143 TIME=    541.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (25-JUN-2001)      
+  PAV=   267.4  BARSA  WCT=0.278 GOR=   184.00  SM3/SM3 WGR=   0.0021  SM3/SM3   
+
+ @--PROBLEM  AT TIME      541.0   DAYS    (25-JUN-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         1.23709E+03                                       
+ @             WATER       3.16536E-02                                       
+ @             GAS         2.27624E+05                                       
+ @            MSW PRES     8.43889E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  144 TIME=    544.00  DAYS (    +3.0  DAYS HALF  2 ITS) (28-JUN-2001)      
+  PAV=   267.4  BARSA  WCT=0.281 GOR=   184.00  SM3/SM3 WGR=   0.0021  SM3/SM3   
+
+ @--PROBLEM  AT TIME      544.0   DAYS    (28-JUN-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         1.13147E+03                                       
+ @             WATER       2.93686E-02                                       
+ @             GAS         2.08191E+05                                       
+ @            MSW PRES     8.76356E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  145 TIME=    547.00  DAYS (    +3.0  DAYS REPT  2 ITS) (1-JLY-2001)       
+  PAV=   267.5  BARSA  WCT=0.283 GOR=   184.00  SM3/SM3 WGR=   0.0021  SM3/SM3   
+   313 READING WCONHIST
+   314 READING DATES   
+
+ @--PROBLEM  AT TIME      547.0   DAYS    ( 1-JLY-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         6.60180E+03                                       
+ @             WATER       1.71387E-01                                       
+ @             GAS         1.21473E+06                                       
+ @            MSW PRES     1.67666E+02                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  146 TIME=    548.00  DAYS (    +1.0  DAYS MAXW  1 ITS) (2-JLY-2001)       
+  PAV=   267.5  BARSA  WCT=0.287 GOR=   184.00  SM3/SM3 WGR=   0.0022  SM3/SM3   
+
+ @--PROBLEM  AT TIME      548.0   DAYS    ( 2-JLY-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         1.30243E+03                                       
+ @             WATER       3.38215E-02                                       
+ @             GAS         2.39648E+05                                       
+ @            MSW PRES     1.05611E+02                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  147 TIME=    551.00  DAYS (    +3.0  DAYS MAXF  2 ITS) (5-JLY-2001)       
+  PAV=   267.5  BARSA  WCT=0.289 GOR=   184.00  SM3/SM3 WGR=   0.0022  SM3/SM3   
+
+ @--PROBLEM  AT TIME      551.0   DAYS    ( 5-JLY-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         2.42565E+03                                       
+ @             WATER       5.73041E-02                                       
+ @             GAS         4.46319E+05                                       
+ @            MSW PRES     6.22624E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  148 TIME=    556.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (10-JLY-2001)      
+  PAV=   267.6  BARSA  WCT=0.293 GOR=   184.00  SM3/SM3 WGR=   0.0022  SM3/SM3   
+
+ @--PROBLEM  AT TIME      556.0   DAYS    (10-JLY-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.20878E+03                                       
+ @             WATER       1.20990E-01                                       
+ @             GAS         9.58416E+05                                       
+ @            MSW PRES     2.64323E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  149 TIME=    561.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (15-JLY-2001)      
+  PAV=   267.7  BARSA  WCT=0.296 GOR=   184.00  SM3/SM3 WGR=   0.0023  SM3/SM3   
+
+ @--PROBLEM  AT TIME      561.0   DAYS    (15-JLY-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.20990E+03                                       
+ @             WATER       1.21044E-01                                       
+ @             GAS         9.58622E+05                                       
+ @            MSW PRES     2.64299E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  150 TIME=    566.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (20-JLY-2001)      
+  PAV=   267.7  BARSA  WCT=0.300 GOR=   184.00  SM3/SM3 WGR=   0.0023  SM3/SM3   
+
+ @--PROBLEM  AT TIME      566.0   DAYS    (20-JLY-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.21096E+03                                       
+ @             WATER       1.21103E-01                                       
+ @             GAS         9.58817E+05                                       
+ @            MSW PRES     2.64287E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  151 TIME=    571.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (25-JLY-2001)      
+  PAV=   267.8  BARSA  WCT=0.304 GOR=   184.00  SM3/SM3 WGR=   0.0024  SM3/SM3   
+
+ @--PROBLEM  AT TIME      571.0   DAYS    (25-JLY-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.17914E+03                                       
+ @             WATER       1.20686E-01                                       
+ @             GAS         9.52961E+05                                       
+ @            MSW PRES     2.80699E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  152 TIME=    574.50  DAYS (    +3.5  DAYS HALF  2 ITS) (28-JLY-2001)      
+  PAV=   267.8  BARSA  WCT=0.306 GOR=   184.00  SM3/SM3 WGR=   0.0024  SM3/SM3   
+
+ @--PROBLEM  AT TIME      574.5   DAYS    (28-JLY-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.17988E+03                                       
+ @             WATER       1.20735E-01                                       
+ @             GAS         9.53098E+05                                       
+ @            MSW PRES     2.80677E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  153 TIME=    578.00  DAYS (    +3.5  DAYS REPT  2 ITS) (1-AUG-2001)       
+  PAV=   267.9  BARSA  WCT=0.308 GOR=   184.00  SM3/SM3 WGR=   0.0024  SM3/SM3   
+   315 READING WCONHIST
+   316 READING DATES   
+
+ @--PROBLEM  AT TIME      578.0   DAYS    ( 1-AUG-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         3.85861E+03                                       
+ @             WATER       1.00503E-01                                       
+ @             GAS         7.09984E+05                                       
+ @            MSW PRES     1.02318E+02                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  154 TIME=    579.00  DAYS (    +1.0  DAYS MAXW  1 ITS) (2-AUG-2001)       
+  PAV=   267.9  BARSA  WCT=0.311 GOR=   184.00  SM3/SM3 WGR=   0.0025  SM3/SM3   
+
+ @--PROBLEM  AT TIME      579.0   DAYS    ( 2-AUG-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         2.31494E+03                                       
+ @             WATER       5.58648E-02                                       
+ @             GAS         4.25949E+05                                       
+ @            MSW PRES     6.80517E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  155 TIME=    582.00  DAYS (    +3.0  DAYS MAXF  2 ITS) (5-AUG-2001)       
+  PAV=   267.9  BARSA  WCT=0.313 GOR=   184.00  SM3/SM3 WGR=   0.0025  SM3/SM3   
+
+ @--PROBLEM  AT TIME      582.0   DAYS    ( 5-AUG-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.21379E+03                                       
+ @             WATER       1.21349E-01                                       
+ @             GAS         9.59338E+05                                       
+ @            MSW PRES     2.64352E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  156 TIME=    587.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (10-AUG-2001)      
+  PAV=   268.0  BARSA  WCT=0.316 GOR=   184.00  SM3/SM3 WGR=   0.0025  SM3/SM3   
+
+ @--PROBLEM  AT TIME      587.0   DAYS    (10-AUG-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.21459E+03                                       
+ @             WATER       1.21447E-01                                       
+ @             GAS         9.59484E+05                                       
+ @            MSW PRES     2.64414E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  157 TIME=    592.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (15-AUG-2001)      
+  PAV=   268.0  BARSA  WCT=0.319 GOR=   184.00  SM3/SM3 WGR=   0.0025  SM3/SM3   
+
+ @--PROBLEM  AT TIME      592.0   DAYS    (15-AUG-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.21530E+03                                       
+ @             WATER       1.21561E-01                                       
+ @             GAS         9.59616E+05                                       
+ @            MSW PRES     2.64508E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  158 TIME=    597.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (20-AUG-2001)      
+  PAV=   268.1  BARSA  WCT=0.322 GOR=   184.00  SM3/SM3 WGR=   0.0026  SM3/SM3   
+
+ @--PROBLEM  AT TIME      597.0   DAYS    (20-AUG-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.21592E+03                                       
+ @             WATER       1.21696E-01                                       
+ @             GAS         9.59730E+05                                       
+ @            MSW PRES     2.64640E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  159 TIME=    602.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (25-AUG-2001)      
+  PAV=   268.1  BARSA  WCT=0.325 GOR=   184.00  SM3/SM3 WGR=   0.0026  SM3/SM3   
+
+ @--PROBLEM  AT TIME      602.0   DAYS    (25-AUG-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.18363E+03                                       
+ @             WATER       1.21333E-01                                       
+ @             GAS         9.53789E+05                                       
+ @            MSW PRES     2.81242E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  160 TIME=    605.50  DAYS (    +3.5  DAYS HALF  1 ITS) (28-AUG-2001)      
+  PAV=   268.2  BARSA  WCT=0.327 GOR=   184.00  SM3/SM3 WGR=   0.0026  SM3/SM3   
+
+ @--PROBLEM  AT TIME      605.5   DAYS    (28-AUG-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.18385E+03                                       
+ @             WATER       1.21448E-01                                       
+ @             GAS         9.53829E+05                                       
+ @            MSW PRES     2.81438E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  161 TIME=    609.00  DAYS (    +3.5  DAYS REPT  2 ITS) (1-SEP-2001)       
+  PAV=   268.2  BARSA  WCT=0.330 GOR=   184.00  SM3/SM3 WGR=   0.0027  SM3/SM3   
+   317 READING WCONHIST
+   318 READING DATES   
+
+ @--PROBLEM  AT TIME      609.0   DAYS    ( 1-SEP-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         3.92346E+03                                       
+ @             WATER       1.02606E-01                                       
+ @             GAS         7.21917E+05                                       
+ @            MSW PRES     1.03468E+02                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  162 TIME=    610.00  DAYS (    +1.0  DAYS MAXW  1 ITS) (2-SEP-2001)       
+  PAV=   268.2  BARSA  WCT=0.333 GOR=   184.00  SM3/SM3 WGR=   0.0027  SM3/SM3   
+
+ @--PROBLEM  AT TIME      610.0   DAYS    ( 2-SEP-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         2.31431E+03                                       
+ @             WATER       5.61630E-02                                       
+ @             GAS         4.25833E+05                                       
+ @            MSW PRES     6.82993E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  163 TIME=    613.00  DAYS (    +3.0  DAYS MAXF  1 ITS) (5-SEP-2001)       
+  PAV=   268.3  BARSA  WCT=0.334 GOR=   184.00  SM3/SM3 WGR=   0.0027  SM3/SM3   
+
+ @--PROBLEM  AT TIME      613.0   DAYS    ( 5-SEP-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.21768E+03                                       
+ @             WATER       1.22268E-01                                       
+ @             GAS         9.60054E+05                                       
+ @            MSW PRES     2.65321E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  164 TIME=    618.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (10-SEP-2001)      
+  PAV=   268.3  BARSA  WCT=0.337 GOR=   184.00  SM3/SM3 WGR=   0.0028  SM3/SM3   
+
+ @--PROBLEM  AT TIME      618.0   DAYS    (10-SEP-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.21784E+03                                       
+ @             WATER       1.22537E-01                                       
+ @             GAS         9.60082E+05                                       
+ @            MSW PRES     2.65698E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  165 TIME=    623.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (15-SEP-2001)      
+  PAV=   268.4  BARSA  WCT=0.340 GOR=   184.00  SM3/SM3 WGR=   0.0028  SM3/SM3   
+
+ @--PROBLEM  AT TIME      623.0   DAYS    (15-SEP-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.21773E+03                                       
+ @             WATER       1.22864E-01                                       
+ @             GAS         9.60062E+05                                       
+ @            MSW PRES     2.66189E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  166 TIME=    628.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (20-SEP-2001)      
+  PAV=   268.4  BARSA  WCT=0.343 GOR=   184.00  SM3/SM3 WGR=   0.0028  SM3/SM3   
+
+ @--PROBLEM  AT TIME      628.0   DAYS    (20-SEP-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.21729E+03                                       
+ @             WATER       1.23260E-01                                       
+ @             GAS         9.59982E+05                                       
+ @            MSW PRES     2.66827E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  167 TIME=    633.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (25-SEP-2001)      
+  PAV=   268.5  BARSA  WCT=0.345 GOR=   184.00  SM3/SM3 WGR=   0.0029  SM3/SM3   
+
+ @--PROBLEM  AT TIME      633.0   DAYS    (25-SEP-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         1.16944E+03                                       
+ @             WATER       3.07616E-02                                       
+ @             GAS         2.15177E+05                                       
+ @            MSW PRES     8.80872E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  168 TIME=    636.00  DAYS (    +3.0  DAYS HALF  1 ITS) (28-SEP-2001)      
+  PAV=   268.5  BARSA  WCT=0.347 GOR=   184.00  SM3/SM3 WGR=   0.0029  SM3/SM3   
+
+ @--PROBLEM  AT TIME      636.0   DAYS    (28-SEP-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         1.29873E+03                                       
+ @             WATER       3.41963E-02                                       
+ @             GAS         2.38967E+05                                       
+ @            MSW PRES     9.78625E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  169 TIME=    639.00  DAYS (    +3.0  DAYS REPT  2 ITS) (1-OCT-2001)       
+  PAV=   268.5  BARSA  WCT=0.349 GOR=   184.00  SM3/SM3 WGR=   0.0029  SM3/SM3   
+   319 READING WCONHIST
+   320 READING DATES   
+
+ @--PROBLEM  AT TIME      639.0   DAYS    ( 1-OCT-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         3.67557E+03                                       
+ @             WATER       9.68073E-02                                       
+ @             GAS         6.76304E+05                                       
+ @            MSW PRES     9.07615E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  170 TIME=    640.00  DAYS (    +1.0  DAYS MAXW  1 ITS) (2-OCT-2001)       
+  PAV=   268.6  BARSA  WCT=0.353 GOR=   184.00  SM3/SM3 WGR=   0.0030  SM3/SM3   
+
+ @--PROBLEM  AT TIME      640.0   DAYS    ( 2-OCT-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         1.44719E+03                                       
+ @             WATER       3.73898E-02                                       
+ @             GAS         2.66283E+05                                       
+ @            MSW PRES     8.33196E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  171 TIME=    643.00  DAYS (    +3.0  DAYS MAXF  1 ITS) (5-OCT-2001)       
+  PAV=   268.6  BARSA  WCT=0.354 GOR=   184.00  SM3/SM3 WGR=   0.0030  SM3/SM3   
+
+ @--PROBLEM  AT TIME      643.0   DAYS    ( 5-OCT-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.21462E+03                                       
+ @             WATER       1.24886E-01                                       
+ @             GAS         9.59490E+05                                       
+ @            MSW PRES     2.69842E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  172 TIME=    648.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (10-OCT-2001)      
+  PAV=   268.7  BARSA  WCT=0.357 GOR=   184.00  SM3/SM3 WGR=   0.0030  SM3/SM3   
+
+ @--PROBLEM  AT TIME      648.0   DAYS    (10-OCT-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.21200E+03                                       
+ @             WATER       1.25701E-01                                       
+ @             GAS         9.59008E+05                                       
+ @            MSW PRES     2.71630E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  173 TIME=    653.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (15-OCT-2001)      
+  PAV=   268.7  BARSA  WCT=0.359 GOR=   184.00  SM3/SM3 WGR=   0.0030  SM3/SM3   
+
+ @--PROBLEM  AT TIME      653.0   DAYS    (15-OCT-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.20800E+03                                       
+ @             WATER       1.26680E-01                                       
+ @             GAS         9.58272E+05                                       
+ @            MSW PRES     2.74078E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  174 TIME=    658.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (20-OCT-2001)      
+  PAV=   268.8  BARSA  WCT=0.362 GOR=   184.00  SM3/SM3 WGR=   0.0031  SM3/SM3   
+
+ @--PROBLEM  AT TIME      658.0   DAYS    (20-OCT-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         5.20193E+03                                       
+ @             WATER       1.27847E-01                                       
+ @             GAS         9.57156E+05                                       
+ @            MSW PRES     2.77531E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  175 TIME=    663.00  DAYS (    +5.0  DAYS MAXS  3 ITS) (25-OCT-2001)      
+  PAV=   268.8  BARSA  WCT=0.364 GOR=   184.00  SM3/SM3 WGR=   0.0031  SM3/SM3   
+
+ @--PROBLEM  AT TIME      663.0   DAYS    (25-OCT-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         2.63726E+03                                       
+ @             WATER       6.71769E-02                                       
+ @             GAS         4.85256E+05                                       
+ @            MSW PRES     6.76341E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  176 TIME=    666.50  DAYS (    +3.5  DAYS HALF  2 ITS) (28-OCT-2001)      
+  PAV=   268.9  BARSA  WCT=0.366 GOR=   184.00  SM3/SM3 WGR=   0.0031  SM3/SM3   
+
+ @--PROBLEM  AT TIME      666.5   DAYS    (28-OCT-2001):
+ @           POTENTIAL IN WELL OP_1     NOT CONVERGED IN  1 X  50 ITERATIONS 
+ @           RESIDUAL ERROR IN FLOWS AND PRESSURE                            
+ @             OIL         2.60264E+03                                       
+ @             WATER       6.69856E-02                                       
+ @             GAS         4.78886E+05                                       
+ @            MSW PRES     6.94092E+01                                       
+ @           TRY SETTING ITEM 2 IN THE WPOTCALC KEYWORD.                     
+ @           TRY CHANGING PARAMETERS IN THE WSEGITER KEYWORD                 
+ STEP  177 TIME=    670.00  DAYS (    +3.5  DAYS REPT  2 ITS) (1-NOV-2001)       
+  PAV=   268.9  BARSA  WCT=0.367 GOR=   184.00  SM3/SM3 WGR=   0.0032  SM3/SM3   
+   321 READING WCONHIST
+   322 READING DATES   
+ STEP  178 TIME=    671.00  DAYS (    +1.0  DAYS MAXW  1 ITS) (2-NOV-2001)       
+  PAV=   268.9  BARSA  WCT=0.370 GOR=   184.00  SM3/SM3 WGR=   0.0032  SM3/SM3   
+ STEP  179 TIME=    674.00  DAYS (    +3.0  DAYS MAXF  2 ITS) (5-NOV-2001)       
+  PAV=   269.0  BARSA  WCT=0.372 GOR=   184.00  SM3/SM3 WGR=   0.0032  SM3/SM3   
+ STEP  180 TIME=    679.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (10-NOV-2001)      
+  PAV=   269.0  BARSA  WCT=0.374 GOR=   184.00  SM3/SM3 WGR=   0.0032  SM3/SM3   
+ STEP  181 TIME=    684.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (15-NOV-2001)      
+  PAV=   269.1  BARSA  WCT=0.376 GOR=   184.00  SM3/SM3 WGR=   0.0033  SM3/SM3   
+ STEP  182 TIME=    689.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (20-NOV-2001)      
+  PAV=   269.1  BARSA  WCT=0.378 GOR=   184.00  SM3/SM3 WGR=   0.0033  SM3/SM3   
+ STEP  183 TIME=    694.00  DAYS (    +5.0  DAYS MAXS  3 ITS) (25-NOV-2001)      
+  PAV=   269.2  BARSA  WCT=0.380 GOR=   184.00  SM3/SM3 WGR=   0.0033  SM3/SM3   
+ STEP  184 TIME=    697.00  DAYS (    +3.0  DAYS HALF  2 ITS) (28-NOV-2001)      
+  PAV=   269.2  BARSA  WCT=0.382 GOR=   184.00  SM3/SM3 WGR=   0.0034  SM3/SM3   
+ STEP  185 TIME=    700.00  DAYS (    +3.0  DAYS REPT  2 ITS) (1-DEC-2001)       
+  PAV=   269.3  BARSA  WCT=0.383 GOR=   184.00  SM3/SM3 WGR=   0.0034  SM3/SM3   
+   323 READING WCONHIST
+   324 READING DATES   
+ STEP  186 TIME=    701.00  DAYS (    +1.0  DAYS MAXW  1 ITS) (2-DEC-2001)       
+  PAV=   269.3  BARSA  WCT=0.385 GOR=   184.00  SM3/SM3 WGR=   0.0034  SM3/SM3   
+ STEP  187 TIME=    704.00  DAYS (    +3.0  DAYS MAXF  2 ITS) (5-DEC-2001)       
+  PAV=   269.3  BARSA  WCT=0.386 GOR=   184.00  SM3/SM3 WGR=   0.0034  SM3/SM3   
+ STEP  188 TIME=    709.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (10-DEC-2001)      
+  PAV=   269.3  BARSA  WCT=0.388 GOR=   184.00  SM3/SM3 WGR=   0.0034  SM3/SM3   
+ STEP  189 TIME=    714.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (15-DEC-2001)      
+  PAV=   269.4  BARSA  WCT=0.390 GOR=   184.00  SM3/SM3 WGR=   0.0035  SM3/SM3   
+ STEP  190 TIME=    719.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (20-DEC-2001)      
+  PAV=   269.4  BARSA  WCT=0.392 GOR=   184.00  SM3/SM3 WGR=   0.0035  SM3/SM3   
+ STEP  191 TIME=    724.00  DAYS (    +5.0  DAYS MAXS  3 ITS) (25-DEC-2001)      
+  PAV=   269.5  BARSA  WCT=0.394 GOR=   184.00  SM3/SM3 WGR=   0.0035  SM3/SM3   
+ STEP  192 TIME=    727.50  DAYS (    +3.5  DAYS HALF  2 ITS) (28-DEC-2001)      
+  PAV=   269.5  BARSA  WCT=0.395 GOR=   184.00  SM3/SM3 WGR=   0.0035  SM3/SM3   
+ STEP  193 TIME=    731.00  DAYS (    +3.5  DAYS REPT  2 ITS) (1-JAN-2002)       
+  PAV=   269.6  BARSA  WCT=0.396 GOR=   184.00  SM3/SM3 WGR=   0.0036  SM3/SM3   
+
+ @--MESSAGE  AT TIME      731.0   DAYS    ( 1-JAN-2002):
+ @           RESTART FILE WRITTEN   REPORT    24                             
+ @           RESTART INCLUDES FLUIDS IN PLACE                                
+   325 READING WCONHIST
+   326 READING DATES   
+ STEP  194 TIME=    732.00  DAYS (    +1.0  DAYS MAXW  1 ITS) (2-JAN-2002)       
+  PAV=   269.6  BARSA  WCT=0.398 GOR=   184.00  SM3/SM3 WGR=   0.0036  SM3/SM3   
+ STEP  195 TIME=    735.00  DAYS (    +3.0  DAYS MAXF  2 ITS) (5-JAN-2002)       
+  PAV=   269.6  BARSA  WCT=0.399 GOR=   184.00  SM3/SM3 WGR=   0.0036  SM3/SM3   
+ STEP  196 TIME=    740.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (10-JAN-2002)      
+  PAV=   269.6  BARSA  WCT=0.401 GOR=   184.00  SM3/SM3 WGR=   0.0036  SM3/SM3   
+ STEP  197 TIME=    745.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (15-JAN-2002)      
+  PAV=   269.7  BARSA  WCT=0.402 GOR=   184.00  SM3/SM3 WGR=   0.0037  SM3/SM3   
+ STEP  198 TIME=    750.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (20-JAN-2002)      
+  PAV=   269.7  BARSA  WCT=0.404 GOR=   184.00  SM3/SM3 WGR=   0.0037  SM3/SM3   
+ STEP  199 TIME=    755.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (25-JAN-2002)      
+  PAV=   269.8  BARSA  WCT=0.406 GOR=   184.00  SM3/SM3 WGR=   0.0037  SM3/SM3   
+ STEP  200 TIME=    758.50  DAYS (    +3.5  DAYS HALF  2 ITS) (28-JAN-2002)      
+  PAV=   269.8  BARSA  WCT=0.407 GOR=   184.00  SM3/SM3 WGR=   0.0037  SM3/SM3   
+ STEP  201 TIME=    762.00  DAYS (    +3.5  DAYS REPT  2 ITS) (1-FEB-2002)       
+  PAV=   269.8  BARSA  WCT=0.408 GOR=   184.00  SM3/SM3 WGR=   0.0037  SM3/SM3   
+   327 READING WCONHIST
+   328 READING DATES   
+ STEP  202 TIME=    763.00  DAYS (    +1.0  DAYS MAXW  1 ITS) (2-FEB-2002)       
+  PAV=   269.8  BARSA  WCT=0.410 GOR=   184.00  SM3/SM3 WGR=   0.0038  SM3/SM3   
+ STEP  203 TIME=    766.00  DAYS (    +3.0  DAYS MAXF  1 ITS) (5-FEB-2002)       
+  PAV=   269.9  BARSA  WCT=0.411 GOR=   184.00  SM3/SM3 WGR=   0.0038  SM3/SM3   
+ STEP  204 TIME=    771.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (10-FEB-2002)      
+  PAV=   269.9  BARSA  WCT=0.412 GOR=   184.00  SM3/SM3 WGR=   0.0038  SM3/SM3   
+ STEP  205 TIME=    776.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (15-FEB-2002)      
+  PAV=   269.9  BARSA  WCT=0.414 GOR=   184.00  SM3/SM3 WGR=   0.0038  SM3/SM3   
+ STEP  206 TIME=    781.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (20-FEB-2002)      
+  PAV=   270.0  BARSA  WCT=0.416 GOR=   184.00  SM3/SM3 WGR=   0.0039  SM3/SM3   
+ STEP  207 TIME=    785.50  DAYS (    +4.5  DAYS HALF  2 ITS) (24-FEB-2002)      
+  PAV=   270.0  BARSA  WCT=0.417 GOR=   184.00  SM3/SM3 WGR=   0.0039  SM3/SM3   
+ STEP  208 TIME=    790.00  DAYS (    +4.5  DAYS REPT  2 ITS) (1-MAR-2002)       
+  PAV=   270.0  BARSA  WCT=0.418 GOR=   184.00  SM3/SM3 WGR=   0.0039  SM3/SM3   
+   329 READING WCONHIST
+   330 READING DATES   
+ STEP  209 TIME=    791.00  DAYS (    +1.0  DAYS MAXW  1 ITS) (2-MAR-2002)       
+  PAV=   270.0  BARSA  WCT=0.420 GOR=   184.00  SM3/SM3 WGR=   0.0039  SM3/SM3   
+ STEP  210 TIME=    794.00  DAYS (    +3.0  DAYS MAXF  2 ITS) (5-MAR-2002)       
+  PAV=   270.1  BARSA  WCT=0.421 GOR=   184.00  SM3/SM3 WGR=   0.0039  SM3/SM3   
+ STEP  211 TIME=    799.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (10-MAR-2002)      
+  PAV=   270.1  BARSA  WCT=0.422 GOR=   184.00  SM3/SM3 WGR=   0.0040  SM3/SM3   
+ STEP  212 TIME=    804.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (15-MAR-2002)      
+  PAV=   270.1  BARSA  WCT=0.424 GOR=   184.00  SM3/SM3 WGR=   0.0040  SM3/SM3   
+ STEP  213 TIME=    809.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (20-MAR-2002)      
+  PAV=   270.2  BARSA  WCT=0.425 GOR=   184.00  SM3/SM3 WGR=   0.0040  SM3/SM3   
+ STEP  214 TIME=    814.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (25-MAR-2002)      
+  PAV=   270.2  BARSA  WCT=0.426 GOR=   184.00  SM3/SM3 WGR=   0.0040  SM3/SM3   
+ STEP  215 TIME=    817.50  DAYS (    +3.5  DAYS HALF  2 ITS) (28-MAR-2002)      
+  PAV=   270.2  BARSA  WCT=0.427 GOR=   184.00  SM3/SM3 WGR=   0.0041  SM3/SM3   
+ STEP  216 TIME=    821.00  DAYS (    +3.5  DAYS REPT  2 ITS) (1-APR-2002)       
+  PAV=   270.3  BARSA  WCT=0.428 GOR=   184.00  SM3/SM3 WGR=   0.0041  SM3/SM3   
+   331 READING WCONHIST
+   332 READING DATES   
+ STEP  217 TIME=    822.00  DAYS (    +1.0  DAYS MAXW  1 ITS) (2-APR-2002)       
+  PAV=   270.3  BARSA  WCT=0.431 GOR=   184.00  SM3/SM3 WGR=   0.0041  SM3/SM3   
+ STEP  218 TIME=    825.00  DAYS (    +3.0  DAYS MAXF  2 ITS) (5-APR-2002)       
+  PAV=   270.3  BARSA  WCT=0.432 GOR=   184.00  SM3/SM3 WGR=   0.0041  SM3/SM3   
+ STEP  219 TIME=    830.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (10-APR-2002)      
+  PAV=   270.3  BARSA  WCT=0.433 GOR=   184.00  SM3/SM3 WGR=   0.0042  SM3/SM3   
+ STEP  220 TIME=    835.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (15-APR-2002)      
+  PAV=   270.4  BARSA  WCT=0.434 GOR=   184.00  SM3/SM3 WGR=   0.0042  SM3/SM3   
+ STEP  221 TIME=    840.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (20-APR-2002)      
+  PAV=   270.4  BARSA  WCT=0.436 GOR=   184.00  SM3/SM3 WGR=   0.0042  SM3/SM3   
+ STEP  222 TIME=    845.00  DAYS (    +5.0  DAYS MAXS  3 ITS) (25-APR-2002)      
+  PAV=   270.5  BARSA  WCT=0.437 GOR=   184.00  SM3/SM3 WGR=   0.0042  SM3/SM3   
+ STEP  223 TIME=    848.00  DAYS (    +3.0  DAYS HALF  1 ITS) (28-APR-2002)      
+  PAV=   270.5  BARSA  WCT=0.438 GOR=   184.00  SM3/SM3 WGR=   0.0042  SM3/SM3   
+ STEP  224 TIME=    851.00  DAYS (    +3.0  DAYS REPT  1 ITS) (1-MAY-2002)       
+  PAV=   270.5  BARSA  WCT=0.438 GOR=   184.00  SM3/SM3 WGR=   0.0042  SM3/SM3   
+   333 READING WCONHIST
+   334 READING DATES   
+ STEP  225 TIME=    852.00  DAYS (    +1.0  DAYS MAXW  1 ITS) (2-MAY-2002)       
+  PAV=   270.5  BARSA  WCT=0.441 GOR=   184.00  SM3/SM3 WGR=   0.0043  SM3/SM3   
+ STEP  226 TIME=    855.00  DAYS (    +3.0  DAYS MAXF  2 ITS) (5-MAY-2002)       
+  PAV=   270.5  BARSA  WCT=0.441 GOR=   184.00  SM3/SM3 WGR=   0.0043  SM3/SM3   
+ STEP  227 TIME=    860.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (10-MAY-2002)      
+  PAV=   270.6  BARSA  WCT=0.442 GOR=   184.00  SM3/SM3 WGR=   0.0043  SM3/SM3   
+ STEP  228 TIME=    865.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (15-MAY-2002)      
+  PAV=   270.6  BARSA  WCT=0.444 GOR=   184.00  SM3/SM3 WGR=   0.0043  SM3/SM3   
+ STEP  229 TIME=    870.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (20-MAY-2002)      
+  PAV=   270.6  BARSA  WCT=0.445 GOR=   184.00  SM3/SM3 WGR=   0.0044  SM3/SM3   
+ STEP  230 TIME=    875.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (25-MAY-2002)      
+  PAV=   270.7  BARSA  WCT=0.446 GOR=   184.00  SM3/SM3 WGR=   0.0044  SM3/SM3   
+ STEP  231 TIME=    878.50  DAYS (    +3.5  DAYS HALF  3 ITS) (28-MAY-2002)      
+  PAV=   270.7  BARSA  WCT=0.447 GOR=   184.00  SM3/SM3 WGR=   0.0044  SM3/SM3   
+ STEP  232 TIME=    882.00  DAYS (    +3.5  DAYS REPT  2 ITS) (1-JUN-2002)       
+  PAV=   270.7  BARSA  WCT=0.447 GOR=   184.00  SM3/SM3 WGR=   0.0044  SM3/SM3   
+   335 READING WCONHIST
+   336 READING DATES   
+ STEP  233 TIME=    883.00  DAYS (    +1.0  DAYS MAXW  1 ITS) (2-JUN-2002)       
+  PAV=   270.7  BARSA  WCT=0.448 GOR=   184.00  SM3/SM3 WGR=   0.0044  SM3/SM3   
+ STEP  234 TIME=    886.00  DAYS (    +3.0  DAYS MAXF  2 ITS) (5-JUN-2002)       
+  PAV=   270.7  BARSA  WCT=0.449 GOR=   184.00  SM3/SM3 WGR=   0.0044  SM3/SM3   
+ STEP  235 TIME=    891.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (10-JUN-2002)      
+  PAV=   270.8  BARSA  WCT=0.450 GOR=   184.00  SM3/SM3 WGR=   0.0044  SM3/SM3   
+ STEP  236 TIME=    896.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (15-JUN-2002)      
+  PAV=   270.8  BARSA  WCT=0.451 GOR=   184.00  SM3/SM3 WGR=   0.0045  SM3/SM3   
+ STEP  237 TIME=    901.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (20-JUN-2002)      
+  PAV=   270.8  BARSA  WCT=0.452 GOR=   184.00  SM3/SM3 WGR=   0.0045  SM3/SM3   
+ STEP  238 TIME=    906.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (25-JUN-2002)      
+  PAV=   270.9  BARSA  WCT=0.453 GOR=   184.00  SM3/SM3 WGR=   0.0045  SM3/SM3   
+ STEP  239 TIME=    909.00  DAYS (    +3.0  DAYS HALF  1 ITS) (28-JUN-2002)      
+  PAV=   270.9  BARSA  WCT=0.454 GOR=   184.00  SM3/SM3 WGR=   0.0045  SM3/SM3   
+ STEP  240 TIME=    912.00  DAYS (    +3.0  DAYS REPT  2 ITS) (1-JLY-2002)       
+  PAV=   270.9  BARSA  WCT=0.454 GOR=   184.00  SM3/SM3 WGR=   0.0045  SM3/SM3   
+   337 READING WCONHIST
+   338 READING DATES   
+ STEP  241 TIME=    913.00  DAYS (    +1.0  DAYS MAXW  1 ITS) (2-JLY-2002)       
+  PAV=   270.9  BARSA  WCT=0.455 GOR=   184.00  SM3/SM3 WGR=   0.0045  SM3/SM3   
+ STEP  242 TIME=    916.00  DAYS (    +3.0  DAYS MAXF  2 ITS) (5-JLY-2002)       
+  PAV=   270.9  BARSA  WCT=0.456 GOR=   184.00  SM3/SM3 WGR=   0.0046  SM3/SM3   
+ STEP  243 TIME=    921.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (10-JLY-2002)      
+  PAV=   271.0  BARSA  WCT=0.457 GOR=   184.00  SM3/SM3 WGR=   0.0046  SM3/SM3   
+ STEP  244 TIME=    926.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (15-JLY-2002)      
+  PAV=   271.0  BARSA  WCT=0.458 GOR=   184.00  SM3/SM3 WGR=   0.0046  SM3/SM3   
+ STEP  245 TIME=    931.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (20-JLY-2002)      
+  PAV=   271.0  BARSA  WCT=0.459 GOR=   184.00  SM3/SM3 WGR=   0.0046  SM3/SM3   
+ STEP  246 TIME=    936.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (25-JLY-2002)      
+  PAV=   271.0  BARSA  WCT=0.460 GOR=   184.00  SM3/SM3 WGR=   0.0046  SM3/SM3   
+ STEP  247 TIME=    939.50  DAYS (    +3.5  DAYS HALF  2 ITS) (28-JLY-2002)      
+  PAV=   271.1  BARSA  WCT=0.461 GOR=   184.00  SM3/SM3 WGR=   0.0046  SM3/SM3   
+ STEP  248 TIME=    943.00  DAYS (    +3.5  DAYS REPT  2 ITS) (1-AUG-2002)       
+  PAV=   271.1  BARSA  WCT=0.462 GOR=   184.00  SM3/SM3 WGR=   0.0047  SM3/SM3   
+   339 READING WCONHIST
+   340 READING DATES   
+ STEP  249 TIME=    944.00  DAYS (    +1.0  DAYS MAXW  1 ITS) (2-AUG-2002)       
+  PAV=   271.1  BARSA  WCT=0.464 GOR=   184.00  SM3/SM3 WGR=   0.0047  SM3/SM3   
+ STEP  250 TIME=    947.00  DAYS (    +3.0  DAYS MAXF  1 ITS) (5-AUG-2002)       
+  PAV=   271.1  BARSA  WCT=0.464 GOR=   184.00  SM3/SM3 WGR=   0.0047  SM3/SM3   
+ STEP  251 TIME=    952.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (10-AUG-2002)      
+  PAV=   271.1  BARSA  WCT=0.465 GOR=   184.00  SM3/SM3 WGR=   0.0047  SM3/SM3   
+ STEP  252 TIME=    957.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (15-AUG-2002)      
+  PAV=   271.2  BARSA  WCT=0.467 GOR=   184.00  SM3/SM3 WGR=   0.0048  SM3/SM3   
+ STEP  253 TIME=    962.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (20-AUG-2002)      
+  PAV=   271.2  BARSA  WCT=0.468 GOR=   184.00  SM3/SM3 WGR=   0.0048  SM3/SM3   
+ STEP  254 TIME=    967.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (25-AUG-2002)      
+  PAV=   271.2  BARSA  WCT=0.469 GOR=   184.00  SM3/SM3 WGR=   0.0048  SM3/SM3   
+ STEP  255 TIME=    970.50  DAYS (    +3.5  DAYS HALF  1 ITS) (28-AUG-2002)      
+  PAV=   271.3  BARSA  WCT=0.470 GOR=   184.00  SM3/SM3 WGR=   0.0048  SM3/SM3   
+ STEP  256 TIME=    974.00  DAYS (    +3.5  DAYS REPT  2 ITS) (1-SEP-2002)       
+  PAV=   271.3  BARSA  WCT=0.470 GOR=   184.00  SM3/SM3 WGR=   0.0048  SM3/SM3   
+   341 READING WCONHIST
+   342 READING DATES   
+ STEP  257 TIME=    975.00  DAYS (    +1.0  DAYS MAXW  1 ITS) (2-SEP-2002)       
+  PAV=   271.3  BARSA  WCT=0.475 GOR=   184.00  SM3/SM3 WGR=   0.0049  SM3/SM3   
+ STEP  258 TIME=    978.00  DAYS (    +3.0  DAYS MAXF  2 ITS) (5-SEP-2002)       
+  PAV=   271.3  BARSA  WCT=0.475 GOR=   184.00  SM3/SM3 WGR=   0.0049  SM3/SM3   
+ STEP  259 TIME=    983.00  DAYS (    +5.0  DAYS MAXS  3 ITS) (10-SEP-2002)      
+  PAV=   271.4  BARSA  WCT=0.476 GOR=   184.00  SM3/SM3 WGR=   0.0049  SM3/SM3   
+ STEP  260 TIME=    988.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (15-SEP-2002)      
+  PAV=   271.4  BARSA  WCT=0.478 GOR=   184.00  SM3/SM3 WGR=   0.0050  SM3/SM3   
+ STEP  261 TIME=    993.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (20-SEP-2002)      
+  PAV=   271.5  BARSA  WCT=0.479 GOR=   184.00  SM3/SM3 WGR=   0.0050  SM3/SM3   
+ STEP  262 TIME=    998.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (25-SEP-2002)      
+  PAV=   271.5  BARSA  WCT=0.480 GOR=   184.00  SM3/SM3 WGR=   0.0050  SM3/SM3   
+ STEP  263 TIME=   1001.00  DAYS (    +3.0  DAYS HALF  2 ITS) (28-SEP-2002)      
+  PAV=   271.5  BARSA  WCT=0.481 GOR=   184.00  SM3/SM3 WGR=   0.0050  SM3/SM3   
+ STEP  264 TIME=   1004.00  DAYS (    +3.0  DAYS REPT  1 ITS) (1-OCT-2002)       
+  PAV=   271.6  BARSA  WCT=0.482 GOR=   184.00  SM3/SM3 WGR=   0.0051  SM3/SM3   
+   343 READING WCONHIST
+   344 READING DATES   
+ STEP  265 TIME=   1005.00  DAYS (    +1.0  DAYS MAXW  1 ITS) (2-OCT-2002)       
+  PAV=   271.6  BARSA  WCT=0.488 GOR=   184.00  SM3/SM3 WGR=   0.0052  SM3/SM3   
+ STEP  266 TIME=   1008.00  DAYS (    +3.0  DAYS MAXF  2 ITS) (5-OCT-2002)       
+  PAV=   271.6  BARSA  WCT=0.489 GOR=   184.00  SM3/SM3 WGR=   0.0052  SM3/SM3   
+ STEP  267 TIME=   1013.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (10-OCT-2002)      
+  PAV=   271.7  BARSA  WCT=0.490 GOR=   184.00  SM3/SM3 WGR=   0.0052  SM3/SM3   
+ STEP  268 TIME=   1018.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (15-OCT-2002)      
+  PAV=   271.7  BARSA  WCT=0.492 GOR=   184.00  SM3/SM3 WGR=   0.0053  SM3/SM3   
+ STEP  269 TIME=   1023.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (20-OCT-2002)      
+  PAV=   271.8  BARSA  WCT=0.493 GOR=   184.00  SM3/SM3 WGR=   0.0053  SM3/SM3   
+ STEP  270 TIME=   1028.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (25-OCT-2002)      
+  PAV=   271.8  BARSA  WCT=0.495 GOR=   184.00  SM3/SM3 WGR=   0.0053  SM3/SM3   
+ STEP  271 TIME=   1031.50  DAYS (    +3.5  DAYS HALF  1 ITS) (28-OCT-2002)      
+  PAV=   271.9  BARSA  WCT=0.496 GOR=   184.00  SM3/SM3 WGR=   0.0053  SM3/SM3   
+ STEP  272 TIME=   1035.00  DAYS (    +3.5  DAYS REPT  1 ITS) (1-NOV-2002)       
+  PAV=   271.9  BARSA  WCT=0.497 GOR=   184.00  SM3/SM3 WGR=   0.0054  SM3/SM3   
+   345 READING WCONHIST
+   346 READING DATES   
+ STEP  273 TIME=   1036.00  DAYS (    +1.0  DAYS MAXW  1 ITS) (2-NOV-2002)       
+  PAV=   271.9  BARSA  WCT=0.500 GOR=   184.00  SM3/SM3 WGR=   0.0054  SM3/SM3   
+ STEP  274 TIME=   1039.00  DAYS (    +3.0  DAYS MAXF  1 ITS) (5-NOV-2002)       
+  PAV=   272.0  BARSA  WCT=0.501 GOR=   184.00  SM3/SM3 WGR=   0.0055  SM3/SM3   
+ STEP  275 TIME=   1044.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (10-NOV-2002)      
+  PAV=   272.0  BARSA  WCT=0.503 GOR=   184.00  SM3/SM3 WGR=   0.0055  SM3/SM3   
+ STEP  276 TIME=   1049.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (15-NOV-2002)      
+  PAV=   272.1  BARSA  WCT=0.504 GOR=   184.00  SM3/SM3 WGR=   0.0055  SM3/SM3   
+ STEP  277 TIME=   1054.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (20-NOV-2002)      
+  PAV=   272.1  BARSA  WCT=0.506 GOR=   184.00  SM3/SM3 WGR=   0.0056  SM3/SM3   
+ STEP  278 TIME=   1059.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (25-NOV-2002)      
+  PAV=   272.2  BARSA  WCT=0.507 GOR=   184.00  SM3/SM3 WGR=   0.0056  SM3/SM3   
+ STEP  279 TIME=   1062.00  DAYS (    +3.0  DAYS HALF  1 ITS) (28-NOV-2002)      
+  PAV=   272.2  BARSA  WCT=0.508 GOR=   184.00  SM3/SM3 WGR=   0.0056  SM3/SM3   
+ STEP  280 TIME=   1065.00  DAYS (    +3.0  DAYS REPT  2 ITS) (1-DEC-2002)       
+  PAV=   272.3  BARSA  WCT=0.509 GOR=   184.00  SM3/SM3 WGR=   0.0056  SM3/SM3   
+   347 READING WCONHIST
+   348 READING WCONINJH
+   349 READING DATES   
+ STEP  281 TIME=   1066.00  DAYS (    +1.0  DAYS MAXW  1 ITS) (2-DEC-2002)       
+  PAV=   272.3  BARSA  WCT=0.508 GOR=   184.00  SM3/SM3 WGR=   0.0056  SM3/SM3   
+ STEP  282 TIME=   1069.00  DAYS (    +3.0  DAYS MAXF  2 ITS) (5-DEC-2002)       
+  PAV=   272.3  BARSA  WCT=0.509 GOR=   184.00  SM3/SM3 WGR=   0.0056  SM3/SM3   
+ STEP  283 TIME=   1074.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (10-DEC-2002)      
+  PAV=   272.4  BARSA  WCT=0.511 GOR=   184.00  SM3/SM3 WGR=   0.0057  SM3/SM3   
+ STEP  284 TIME=   1079.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (15-DEC-2002)      
+  PAV=   272.4  BARSA  WCT=0.512 GOR=   184.00  SM3/SM3 WGR=   0.0057  SM3/SM3   
+ STEP  285 TIME=   1084.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (20-DEC-2002)      
+  PAV=   272.5  BARSA  WCT=0.513 GOR=   184.00  SM3/SM3 WGR=   0.0057  SM3/SM3   
+ STEP  286 TIME=   1089.00  DAYS (    +5.0  DAYS MAXS  2 ITS) (25-DEC-2002)      
+  PAV=   272.5  BARSA  WCT=0.515 GOR=   184.00  SM3/SM3 WGR=   0.0058  SM3/SM3   
+ STEP  287 TIME=   1092.50  DAYS (    +3.5  DAYS HALF  1 ITS) (28-DEC-2002)      
+  PAV=   272.5  BARSA  WCT=0.516 GOR=   184.00  SM3/SM3 WGR=   0.0058  SM3/SM3   
+ STEP  288 TIME=   1096.00  DAYS (    +3.5  DAYS REPT  2 ITS) (1-JAN-2003)       
+  PAV=   272.6  BARSA  WCT=0.517 GOR=   184.00  SM3/SM3 WGR=   0.0058  SM3/SM3   
+
+ @--MESSAGE  AT TIME     1096.0   DAYS    ( 1-JAN-2003):
+ @           RESTART FILE WRITTEN   REPORT    36                             
+ @           RESTART INCLUDES FLUIDS IN PLACE                                
+               END OF INCLUDE FILE 
+   350 READING SAVE    
+   351 READING TSTEP   
+
+ @--MESSAGE  AT TIME     1096.0   DAYS    ( 1-JAN-2003):
+ @           SAVE TYPE RESTART FILE WRITTEN   REPORT    36                   
+ STEP  289 TIME=   1097.00  DAYS (    +1.0  DAYS REPT  1 ITS) (2-JAN-2003)       
+  PAV=   272.6  BARSA  WCT=0.517 GOR=   184.00  SM3/SM3 WGR=   0.0058  SM3/SM3   
+   352 READING END     
+          630 Mbytes of storage required                         
+  18.0034     KB/active cell                                     
+          789 Mbytes (image size)                                
+
+ Error summary 
+ Comments               2
+ Warnings               8
+ Problems             171
+ Errors                 0
+ Bugs                   0
+ Final cpu      58.15 elapsed      61.20
+ Total number of time steps forced to be accepted          0

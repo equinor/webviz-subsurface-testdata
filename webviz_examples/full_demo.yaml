@@ -165,6 +165,20 @@ pages:
             - Top Lower Reek
             - Base Lower Reek
 
+  - title: Surface viewer (FMU)
+    content:
+      - SurfaceViewerFMU:
+          ensembles:
+            - iter-0
+            - iter-3
+          wellfolder:
+            ../observed_data/wells
+          attribute_settings:
+            stoiip:
+              min: 0
+              max: 2
+              color: inferno
+
   - title: Well cross-section (FMU)
     content:
       - WellCrossSectionFMU:

@@ -122,6 +122,15 @@ pages:
             - iter-2
             - iter-3
 
+  - title: Parameter parallel coordinates
+    content:
+      - ParameterParallelCoordinates:
+          ensembles:
+            - iter-0
+            - iter-1
+            - iter-2
+            - iter-3
+
   - title: SEG-Y viewer
     content:
       - SegyViewer:

@@ -10,13 +10,13 @@ pages:
     content:
       - InplaceVolumesOneByOne:
           csvfile_vol: ../aggregated_data/volumes.csv
-          csvfile_reals: ../aggregated_data/realdata.csv
+          csvfile_parameters: ../aggregated_data/parameters.csv
 
   - title: ReservoirSimulationTimeSeriesOneByOne
     content:
       - ReservoirSimulationTimeSeriesOneByOne:
           csvfile_smry: ../aggregated_data/smry.csv
-          csvfile_reals: ../aggregated_data/realdata.csv
+          csvfile_parameters: ../aggregated_data/parameters.csv
           initial_vector: FOPT
 
   - title: InplaceVolumes

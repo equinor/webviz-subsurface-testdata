@@ -213,6 +213,15 @@ pages:
             - Perm
           nextend: 20
 
+  - title: Running time analysis (FMU)
+    content:
+      - RunningTimeAnalysisFMU:
+          ensembles:
+            - iter-0
+            - iter-1
+            - iter-2
+            - iter-3
+
   - title: How was this made?
     content:
       - Markdown:

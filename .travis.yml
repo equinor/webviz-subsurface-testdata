@@ -44,3 +44,4 @@ script:
   - pushd webviz-subsurface
   - pytest tests --forked
   - popd
+  - webviz build ./webviz_examples/full_demo.yaml --portable ./webviz_examples/example_subsurface_app

@@ -9,6 +9,7 @@ env:
     # If you want the CI to (temporarily) run against another branch than master,
     # change the value her from "master" to the relevant branch name.
     - SUBSURFACE_REPO_BRANCH="master"
+    - INSTALL_ROOT=$HOME/install
 
 addons:
   chrome: stable
@@ -23,6 +24,7 @@ before_install:
   - sudo apt-get -qq update
   - pip freeze | grep -vw "pip" | xargs pip uninstall -y
   - pip install --upgrade pip
+  - export PYTHONPATH=$INSTALL_ROOT/lib/python$TRAVIS_PYTHON_VERSION/site-packages:$INSTALL_ROOT/lib/python$TRAVIS_PYTHON_VERSION/dist-packages:$PYTHONPATH
 
 install:
   - wget https://chromedriver.storage.googleapis.com/$(wget https://chromedriver.storage.googleapis.com/LATEST_RELEASE -q -O -)/chromedriver_linux64.zip
@@ -31,6 +33,22 @@ install:
   - pip install yamllint
   - pip install git+https://github.com/equinor/libecl
   - pip install git+https://github.com/equinor/fmu-ensemble
+  - sudo apt-get update
+  - sudo apt-get install libboost-all-dev liblapack-dev
+  - pushd ..
+  - git clone --recursive https://github.com/OPM/opm-common.git
+  - mkdir opm-common/build
+  - pushd opm-common/build
+  - cmake .. -DCMAKE_PREFIX_PATH=$INSTALL_ROOT
+             -DCMAKE_INSTALL_PREFIX=$INSTALL_ROOT
+             -DBUILD_TESTING=OFF
+             -DBUILD_SHARED_LIBS=ON
+             -DOPM_ENABLE_PYTHON=ON
+             -DOPM_INSTALL_PYTHON=ON
+  - make -j4 install
+  - popd
+  - popd
+  - pip install ecl2df
   - git clone --depth 1 --branch $SUBSURFACE_REPO_BRANCH https://github.com/$SUBSURFACE_REPO_OWNER/webviz-subsurface
   - pushd webviz-subsurface
   - pip install .[tests]

@@ -31,8 +31,6 @@ install:
   - unzip chromedriver_linux64.zip
   - export PATH=$PATH:$PWD
   - pip install yamllint
-  - pip install git+https://github.com/equinor/libecl
-  - pip install git+https://github.com/equinor/fmu-ensemble
   - sudo apt-get update
   - sudo apt-get install libboost-all-dev liblapack-dev
   - pushd ..

@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/equinor/webviz-subsurface-testdata.svg?branch=master)](https://travis-ci.org/equinor/webviz-subsurface-testdata)
+[![Build Status](https://github.com/equinor/webviz-subsurface-testdata/workflows/webviz-subsurface-testdata/badge.svg)](https://github.com/equinor/webviz-subsurface-testdata/actions?query=branch%3Amaster)
 
 # Testdata for `webviz-subsurface`
 

@@ -20,6 +20,14 @@ pages:
       - Markdown:
           markdown_file: ./content/front_page.md
 
+  - title: How was this made?
+    content:
+      - Markdown:
+          markdown_file: ./content/how_was_this_made.md
+      - SyntaxHighlighter:
+          filename: ./full_demo.yaml
+          dark_theme: yes
+
   - title: Sensitivity study (inplace)
     content:
       - InplaceVolumesOneByOne:
@@ -232,11 +240,3 @@ pages:
             - iter-1
             - iter-2
             - iter-3
-
-  - title: How was this made?
-    content:
-      - Markdown:
-          markdown_file: ./content/how_was_this_made.md
-      - SyntaxHighlighter:
-          filename: ./full_demo.yaml
-          dark_theme: yes

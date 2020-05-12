@@ -1,0 +1,84 @@
+name: webviz-subsurface-testdata
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  schedule:
+    # Run CI daily and check that tests are working with latest dependencies
+    - cron: '0 0 * * *'
+
+jobs:
+  webviz-subsurface:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.6', '3.7', '3.8']
+        pandas-version: ['0.24.2', '1.*']  # Necessary as long as RHEL6 is used internally
+        exclude:
+          # Skip Python 3.8 and Pandas 0.24.2 combination due to missing 3.8 wheel for that specific pandas version
+          - python-version: '3.8'
+            pandas-version: '0.24.2'
+
+    steps:
+
+      - name: 🧹 Remove unused pre-installed software
+        run: |
+          # https://github.com/actions/virtual-environments/issues/751
+          # https://github.com/actions/virtual-environments/issues/709
+          sudo apt-get purge p7zip* yarn ruby-full zulu-*-azure-jdk* ghc* php7*
+          sudo apt-get autoremove
+          sudo apt-get clean
+          df -h
+
+      - name: 📖 Checkout commit locally
+        uses: actions/checkout@v2
+
+      - name: 🐍 Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v1
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: 📦 Install webviz-subsurface with dependencies
+        env:
+          # If you want the CI to (temporarily) run against your fork of the webviz-subsurface,
+          # change the value her from "equinor" to your username.
+          SUBSURFACE_REPO_OWNER: equinor
+          # If you want the CI to (temporarily) run against another branch than master,
+          # change the value her from "master" to the relevant branch name.
+          SUBSURFACE_REPO_BRANCH: master
+        run: |
+          pip install --upgrade pip
+          pip install 'pandas==${{ matrix.pandas-version }}'
+          pip install libecl  # while waiting for it to be included as dependency in fmu-ensemble
+
+          git clone --depth 1 --branch $SUBSURFACE_REPO_BRANCH https://github.com/$SUBSURFACE_REPO_OWNER/webviz-subsurface
+
+      - name: 📦 Install test dependencies
+        run: |
+          pushd webviz-subsurface
+          pip install .[tests]
+          pip install dash[testing]
+          pip install yamllint
+          wget https://chromedriver.storage.googleapis.com/$(wget https://chromedriver.storage.googleapis.com/LATEST_RELEASE -q -O -)/chromedriver_linux64.zip
+          unzip chromedriver_linux64.zip
+
+      - name: 🧾 List all installed packages
+        run: pip freeze
+
+      - name: 🕵️ Check config style
+        if: matrix.pandas-version == '1.*'
+        run: yamllint .
+
+      - name: 🤖 Run tests
+        run: |
+          webviz certificate
+          pushd webviz-subsurface
+          sed -i "s&\./webviz-subsurface-testdata/&\.\./&g" tests/integration_tests/test_raw_data_example.py
+          sed -i "s&\./webviz-subsurface-testdata/&\.\./&g" tests/integration_tests/test_aggregated_data_example.py
+          pytest tests --headless
+          popd
+          webviz build ./webviz_examples/full_demo.yaml --portable ./webviz_examples/example_subsurface_app

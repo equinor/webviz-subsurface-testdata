@@ -104,3 +104,11 @@ pages:
           zonelog: Zonelog
           zmin: 1500.0
           zmax: 1800.0
+
+  - title: RFT plotter (aggregated)
+    content:
+      - RftPlotter:
+          csvfile_rft: ../aggregated_data/rft.csv
+          csvfile_rft_ert: ../aggregated_data/rft_ert.csv
+          formations: ../reek_history_match/share/results/tables/formations.csv
+          faultlines: ../reek_history_match/share/results/polygons/faultpolygons.csv

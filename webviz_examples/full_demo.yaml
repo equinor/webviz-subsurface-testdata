@@ -69,6 +69,16 @@ pages:
             vector1: WOPR:OP_1
             visualization: statistics
 
+  - title: Regional simulation time series
+    content:
+      - ReservoirSimulationTimeSeriesRegional:
+          ensembles:
+            - iter-0
+            - iter-1
+            - iter-2
+            - iter-3
+          fipfile: ../reek_history_match/share/regions/fip.yaml
+
   - title: Reservoir simulation map
     content:
       - In this example, the horizontal permeability is shown together with oil fluid flow for a given date during simulation.
@@ -130,7 +140,7 @@ pages:
             - iter-2
             - iter-3
 
-  - title: Relative Permeability
+  - title: Relative permeability
     content:
       - RelativePermeability:
           ensembles:

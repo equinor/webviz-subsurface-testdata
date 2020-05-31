@@ -1,6 +1,4 @@
-# This is an example configuration file, demonstrating subsurface webviz plugins.
-
-title: FMU (Fast Model Update) Webviz Example
+title: Reek Webviz Example
 
 shared_settings:
   scratch_ensembles:
@@ -250,3 +248,14 @@ pages:
             - iter-1
             - iter-2
             - iter-3
+
+  - title: RFT plotter
+    content:
+      - RftPlotter:
+          ensembles:
+            - iter-0
+            - iter-1
+            - iter-2
+            - iter-3
+          formations: ../reek_history_match/share/results/tables/formations.csv
+          faultlines: ../reek_history_match/share/results/polygons/faultpolygons.csv

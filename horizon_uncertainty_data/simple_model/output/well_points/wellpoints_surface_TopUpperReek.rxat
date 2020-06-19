@@ -1,0 +1,38 @@
+Float Measured depth
+Float Travel time value
+String Surface
+String Well
+String Fault block
+Discrete Obtained from zone log
+Discrete Point has a duplicate
+Discrete Possibly involved in conflict
+Discrete Close observation uncertainty added
+Discrete Severe outlier uncertainty added
+Discrete Part of pinch-out
+Discrete Leverage point
+Discrete Outlier
+Discrete Deleted
+Float Prior trend
+Float Estimated trend
+Float Posterior trend
+Float Simulated trend
+Float Prior trend uncertainty (SD)
+Float Estimated trend uncertainty (SD)
+Float Posterior trend uncertainty (SD)
+Float Trend uncertainty reduction
+Float Well point TVD pick uncertainty specified (SD)
+Float Well point TVD pick uncertainty (SD)
+Float Well path TVD uncertainty (SD)
+Float Residual
+Float Residual uncertainty (SD)
+Float Total uncertainty (SD)
+Float Mismatch
+Float Leverage point indicator
+Float t-value
+Float t-Student
+462584.00 5934072.85 1598.72  2231.26 -999.000000 "TopUpperReek" "OP_1" "-" 1 0 0 0 0 0 0 0 0 1595.449082 -999.000000 1599.663723 -999.000000 159.544908 -999.000000 1.628131 98.98 0.000 0.000 0.000 -0.947323 4.000000 4.318658 -0.000000 -999.0000 0.237 -999.000
+460300.03 5935743.91 1628.55  3857.54 -999.000000 "TopUpperReek" "OP_2" "-" 1 0 0 0 0 0 0 0 0 1625.347888 -999.000000 1629.641512 -999.000000 162.534789 -999.000000 1.658642 98.98 0.000 0.000 0.000 -1.087512 4.000000 4.330253 0.000000 -999.0000 0.272 -999.000
+464009.22 5931756.41 1630.66  3404.81 -999.000000 "TopUpperReek" "OP_3" "-" 1 0 0 0 0 0 0 0 0 1627.421557 -999.000000 1631.720658 -999.000000 162.742156 -999.000000 1.660758 98.98 0.000 0.000 0.000 -1.056858 4.000000 4.331064 0.000000 -999.0000 0.264 -999.000
+461288.78 5933414.95 1643.31  1807.82 -999.000000 "TopUpperReek" "OP_4" "-" 1 0 0 0 0 0 0 0 0 1640.257920 -999.000000 1644.590930 -999.000000 164.025792 -999.000000 1.673858 98.98 0.000 0.000 0.000 -1.276330 4.000000 4.336104 0.000000 -999.0000 0.319 -999.000
+462749.37 5932898.51 1605.02  1930.12 -999.000000 "TopUpperReek" "OP_5" "-" 1 0 0 0 0 0 0 0 0 1601.819351 -999.000000 1606.050819 -999.000000 160.181935 -999.000000 1.634632 98.98 0.000 0.000 0.000 -1.033619 4.000000 4.321113 0.000000 -999.0000 0.258 -999.000
+463316.17 5933082.59 1577.93  2371.09 -999.000000 "TopUpperReek" "OP_6" "-" 1 0 0 0 0 0 0 0 0 1571.117801 -999.000000 1575.268166 -999.000000 157.111780 -999.000000 1.603301 98.98 0.000 0.000 0.000 2.657234 4.000000 4.309359 -0.000000 -999.0000 0.664 -999.000

@@ -265,3 +265,9 @@ pages:
             - iter-3
           formations: ../reek_history_match/share/results/tables/formations.csv
           faultlines: ../reek_history_match/share/results/polygons/faultpolygons.csv
+
+  - title: Horizon Uncertainty Viewer
+    content:
+      - HorizonUncertaintyViewer:
+          basedir: ../horizon_uncertainty_data/simple_model
+          planned_wells_dir: ../horizon_uncertainty_data/additional_wells

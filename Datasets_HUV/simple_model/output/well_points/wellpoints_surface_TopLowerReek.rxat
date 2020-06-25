@@ -1,0 +1,37 @@
+Float Measured depth
+Float Travel time value
+String Surface
+String Well
+String Fault block
+Discrete Obtained from zone log
+Discrete Point has a duplicate
+Discrete Possibly involved in conflict
+Discrete Close observation uncertainty added
+Discrete Severe outlier uncertainty added
+Discrete Part of pinch-out
+Discrete Leverage point
+Discrete Outlier
+Discrete Deleted
+Float Prior trend
+Float Estimated trend
+Float Posterior trend
+Float Simulated trend
+Float Prior trend uncertainty (SD)
+Float Estimated trend uncertainty (SD)
+Float Posterior trend uncertainty (SD)
+Float Trend uncertainty reduction
+Float Well point TVD pick uncertainty specified (SD)
+Float Well point TVD pick uncertainty (SD)
+Float Well path TVD uncertainty (SD)
+Float Residual
+Float Residual uncertainty (SD)
+Float Total uncertainty (SD)
+Float Mismatch
+Float Leverage point indicator
+Float t-value
+Float t-Student
+462582.79 5934067.24 1626.84  2259.96 -999.000000 "TopLowerReek" "OP_1" "-" 1 0 0 0 0 0 0 0 0 1623.786580 -999.000000 1628.838973 -999.000000 159.538112 -999.000000 2.213276 98.61 0.000 0.000 0.000 -2.001973 6.928203 7.273142 -0.000000 -999.0000 0.289 -999.000
+460294.48 5935753.74 1658.24  3889.30 -999.000000 "TopLowerReek" "OP_2" "-" 1 0 0 0 0 0 0 0 0 1655.011890 -999.000000 1660.137109 -999.000000 162.705119 -999.000000 2.219845 98.64 0.000 0.000 0.000 -1.897009 6.928203 7.275143 0.000000 -999.0000 0.274 -999.000
+464011.59 5931757.20 1661.11  3435.36 -999.000000 "TopLowerReek" "OP_3" "-" 1 0 0 0 0 0 0 0 0 1657.816257 -999.000000 1663.007630 -999.000000 162.759893 -999.000000 2.304473 98.58 0.000 0.000 0.000 -1.900530 6.928203 7.301410 0.000000 -999.0000 0.274 -999.000
+461288.68 5933415.03 1670.42  1834.93 -999.000000 "TopLowerReek" "OP_4" "-" 1 0 0 0 0 0 0 0 0 1667.155218 -999.000000 1672.278922 -999.000000 164.036938 -999.000000 2.187936 98.67 0.000 0.000 0.000 -1.857422 6.928203 7.265471 0.000000 -999.0000 0.268 -999.000
+462749.50 5932898.49 1633.33  1958.43 -999.000000 "TopLowerReek" "OP_5" "-" 1 0 0 0 0 0 0 0 0 1630.312698 -999.000000 1635.381320 -999.000000 160.194190 -999.000000 2.216768 98.62 0.000 0.000 0.000 -2.055720 6.928203 7.274205 -0.000000 -999.0000 0.297 -999.000

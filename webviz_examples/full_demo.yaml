@@ -40,6 +40,7 @@ pages:
           volfiles:
             geogrid: geogrid--oil.csv
             simgrid: simgrid--oil.csv
+          metadata: ../metadata/volume_terminology.json
 
   - title: Sensitivity study (time series)
     content:
@@ -59,6 +60,7 @@ pages:
           volfiles:
             geogrid: geogrid--oil.csv
             simgrid: simgrid--oil.csv
+          metadata: ../metadata/volume_terminology.json
 
   - title: Simulation time series
     content:

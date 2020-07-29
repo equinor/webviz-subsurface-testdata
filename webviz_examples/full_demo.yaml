@@ -1,6 +1,30 @@
 title: Reek Webviz Example
 
+shared_settings:
+  scratch_ensembles:
+    sens_run: ../reek_fullmatrix/realization-*/iter-0
+    iter-0: ../reek_history_match/realization-*/iter-0
+    iter-1: ../reek_history_match/realization-*/iter-1
+    iter-2: ../reek_history_match/realization-*/iter-2
+    iter-3: ../reek_history_match/realization-*/iter-3
+
 pages:
+
+  - title: Front page
+    content:
+      - BannerImage:
+          image: ./content/reek_image.jpg
+          title: Reek FMU Webviz example
+      - Markdown:
+          markdown_file: ./content/front_page.md
+
+  - title: How was this made?
+    content:
+      - Markdown:
+          markdown_file: ./content/how_was_this_made.md
+      - SyntaxHighlighter:
+          filename: ./full_demo.yaml
+          dark_theme: yes
 
   - title: Horizon Uncertainty Viewer
     content:

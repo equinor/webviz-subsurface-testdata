@@ -1,0 +1,14 @@
+1    BelowTopReek
+2    BelowTopReek
+3    BelowTopReek
+4    BelowTopReek
+5    BelowTopReek
+6    BelowMidReek 
+7    BelowMidReek 
+8    BelowMidReek 
+9    BelowMidReek
+10   BelowMidReek
+11   BelowLowReek
+12   BelowLowReek
+13   BelowLowReek
+14   BelowLowReek

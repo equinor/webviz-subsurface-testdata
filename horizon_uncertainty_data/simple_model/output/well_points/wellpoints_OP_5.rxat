@@ -1,0 +1,36 @@
+Float Measured depth
+Float Travel time value
+String Surface
+String Well
+String Fault block
+Discrete Obtained from zone log
+Discrete Point has a duplicate
+Discrete Possibly involved in conflict
+Discrete Close observation uncertainty added
+Discrete Severe outlier uncertainty added
+Discrete Part of pinch-out
+Discrete Leverage point
+Discrete Outlier
+Discrete Deleted
+Float Prior trend
+Float Estimated trend
+Float Posterior trend
+Float Simulated trend
+Float Prior trend uncertainty (SD)
+Float Estimated trend uncertainty (SD)
+Float Posterior trend uncertainty (SD)
+Float Trend uncertainty reduction
+Float Well point TVD pick uncertainty specified (SD)
+Float Well point TVD pick uncertainty (SD)
+Float Well path TVD uncertainty (SD)
+Float Residual
+Float Residual uncertainty (SD)
+Float Total uncertainty (SD)
+Float Mismatch
+Float Leverage point indicator
+Float t-value
+Float t-Student
+462749.37 5932898.51 1605.02  1930.12 -999.000000 "TopUpperReek" "OP_5" "-" 1 0 0 0 0 0 0 0 0 1601.819351 -999.000000 1606.050819 -999.000000 160.181935 -999.000000 1.634632 98.98 0.000 0.000 0.000 -1.033619 4.000000 4.321113 0.000000 -999.0000 0.258 -999.000
+462749.49 5932898.49 1619.33  1944.44 -999.000000 "TopMidReek" "OP_5" "-" 1 0 0 0 0 0 0 0 0 1616.066458 -999.000000 1621.029062 -999.000000 160.187889 -999.000000 1.916753 98.80 0.000 0.000 0.000 -1.694462 5.656854 5.972767 0.000000 -999.0000 0.300 -999.000
+462749.50 5932898.49 1633.33  1958.43 -999.000000 "TopLowerReek" "OP_5" "-" 1 0 0 0 0 0 0 0 0 1630.312698 -999.000000 1635.381320 -999.000000 160.194190 -999.000000 2.216768 98.62 0.000 0.000 0.000 -2.055720 6.928203 7.274205 -0.000000 -999.0000 0.297 -999.000
+462749.46 5932898.50 1644.87  1969.98 -999.000000 "BaseLowerReek" "OP_5" "-" 1 0 0 0 0 0 0 0 0 1641.688554 -999.000000 1646.734098 -999.000000 160.198354 -999.000000 2.415377 98.49 0.000 0.000 0.000 -1.863998 8.000000 8.356677 -0.000000 -999.0000 0.233 -999.000

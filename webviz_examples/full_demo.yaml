@@ -40,6 +40,7 @@ pages:
           volfiles:
             geogrid: geogrid--oil.csv
             simgrid: simgrid--oil.csv
+          metadata: metric # Can also be defined as a path as seen in InplaceVolumes below
 
   - title: Sensitivity study (time series)
     content:
@@ -59,6 +60,7 @@ pages:
           volfiles:
             geogrid: geogrid--oil.csv
             simgrid: simgrid--oil.csv
+          metadata: ../metadata/volume_terminology_metric.json
 
   - title: Simulation time series
     content:

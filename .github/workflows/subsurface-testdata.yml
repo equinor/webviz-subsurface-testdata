@@ -81,4 +81,4 @@ jobs:
           sed -i "s&\./webviz-subsurface-testdata/&\.\./&g" tests/integration_tests/test_aggregated_data_example.py
           pytest tests --headless
           popd
-          webviz build ./webviz_examples/full_demo.yaml --portable ./webviz_examples/example_subsurface_app
+          webviz build ./webviz_examples/webviz-full-demo.yml --portable ./webviz_examples/example_subsurface_app

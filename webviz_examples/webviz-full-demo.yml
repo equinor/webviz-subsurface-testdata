@@ -23,7 +23,7 @@ pages:
       - Markdown:
           markdown_file: ./content/how_was_this_made.md
       - SyntaxHighlighter:
-          filename: ./full_demo.yaml
+          filename: ./webviz-full-demo.yml
           dark_theme: yes
 
   - title: Disk usage

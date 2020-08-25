@@ -37,7 +37,8 @@ such that it easily can be deployed to cloud, optionally with authentication.
 
 #### More information
 
-See the following repositories for more information:
+Either go to the [subsurface plugin documentation](https://equinor.github.io/webviz-subsurface),
+or see the following repositories for more information:
 
 Python package                 | What is it?                                                                                | Link to GitHub repository
 ------------------------------ | ------------------------------------------------------------------------------------------ | ----------------------------------------

@@ -12,11 +12,17 @@ pages:
       - Markdown:
           markdown_file: ./content/front_page.md
 
-  - title: Drogon static property analysis
+  - title: Static property analysis
     content:
       - PropertyStatistics:
-          agg_propstatfile: ../aggregated_data/drogon_properties.parquet
-          agg_vectorfile: ../aggregated_data/drogon_smry.parquet
           ensembles:
             - iter-0
             - iter-3
+          surface_remapping:
+            Total: all
+            PORO: average_poro
+            PERM: average_permz
+            SW: average_swat--20030101
+            UpperReek: upperreek
+            MidReek: midreek
+            LowerReek: lowerreek

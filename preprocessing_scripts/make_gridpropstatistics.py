@@ -20,8 +20,7 @@ SELECTORS = {
     "REGION": {"name": "geogrid--regions.roff"},
     "FACIES": {"name": "geogrid--facies.roff"},
 }
-# REPORT = "simgridstats.csv"
-dfs = []
+
 for fname in glob.glob(SCRATCH + "/*"):
     for iteration in ["iter-0", "iter-3"]:
         real_path = os.path.join(fname, iteration, PATH)
@@ -36,9 +35,6 @@ for fname in glob.glob(SCRATCH + "/*"):
         qcp = QCProperties()
         try:
             qcp.get_grid_statistics(data=usedata)
-            qcp.dataframe["REAL"] = fname.split("-")[1]
-            qcp.dataframe["ENSEMBLE"] = iteration
-            # dfs.append(qcp.dataframe)
             qcp.dataframe.to_csv(os.path.join(fname, iteration, TABLEPATH), index=False)
         except:
             print("Not able to extract stats for ", real_path)

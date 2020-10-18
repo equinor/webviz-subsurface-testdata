@@ -1,5 +1,8 @@
 title: Drogon Webviz Example
-
+shared_settings:
+  scratch_ensembles:
+    iter-0: ../reek_history_match/realization-*/iter-0
+    iter-3: ../reek_history_match/realization-*/iter-3
 pages:
   - title: Front page
     content:
@@ -14,3 +17,6 @@ pages:
       - PropertyStatistics:
           agg_propstatfile: ../aggregated_data/drogon_properties.parquet
           agg_vectorfile: ../aggregated_data/drogon_smry.parquet
+          ensembles:
+            - iter-0
+            - iter-3

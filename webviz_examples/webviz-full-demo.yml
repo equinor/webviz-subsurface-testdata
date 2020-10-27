@@ -26,3 +26,17 @@ pages:
             UpperReek: upperreek
             MidReek: midreek
             LowerReek: lowerreek
+
+  - title: Static property analysis (single ensemble)
+    content:
+      - PropertyStatistics:
+          ensembles:
+            - iter-0
+          surface_renaming:
+            Total: all
+            PORO: average_poro
+            PERM: average_permz
+            SW: average_swat--20030101
+            UpperReek: upperreek
+            MidReek: midreek
+            LowerReek: lowerreek

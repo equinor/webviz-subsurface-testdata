@@ -18,7 +18,7 @@ pages:
           ensembles:
             - iter-0
             - iter-3
-          surface_remapping:
+          surface_renaming:
             Total: all
             PORO: average_poro
             PERM: average_permz

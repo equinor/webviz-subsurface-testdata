@@ -1,6 +1,6 @@
-well,time,pressure,zone,utm_x,utm_y,measured_depth,true_vertical_depth,isactive,inactive_info,i,j,k,valid_zone,zone_is_active,comment,error,obs
+well,time,pressure,zone,utm_x,utm_y,measured_depth,true_vertical_depth,isactive,inactive_info,i,j,k,valid_zone,zone_is_active,comment,error,observed
 OP_1,2000-02-01,304.255065918,BelowMidReek,462583.164035645,5934068.83473145,2252.21,1619.2658691406302,True,,27,30,8,True,True,RFT pressure OP_1 before well start up,3,303.5
 WI_2,2000-06-01,267.685424805,BelowMidReek,461937.713031616,5935558.31166016,3352.50958854404,1701.74,True,,28,20,9,True,True,RFT pressure WI_2 before well start up,3,304.05
-OP_4,2001-01-01,283.330688477,BelowTopReek,461288.71902832,5933415.00001465,1816.18619601283,1651.68359375,True,,18,29,1,True,True,RFT pressure OP_4 before well start up,3,273.7
+OP_4,2001-01-01,283.330688477,BelowTopReek,461288.71902832,5933415.00001465,1816.1861960128301,1651.68359375,True,,18,29,1,True,True,RFT pressure OP_4 before well start up,3,273.7
 OP_4,2001-01-01,278.149414062,BelowLowReek,461288.68,5933415.03,1840.0,1675.43,True,,18,29,11,True,True,RFT pressure OP_4 before well start up,3,275.0
 OP_5,2001-01-01,274.466583252,BelowTopReek,462749.43698486296,5932898.49999939,1935.93267441157,1610.8291015625,True,,24,37,1,True,True,RFT pressure OP_5 before well start up,3,268.1

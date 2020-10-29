@@ -55,7 +55,7 @@ jobs:
         run: |
           pip install --upgrade pip
           pip install 'pandas==${{ matrix.pandas-version }}'
-          pip install libecl  # while waiting for it to be included as dependency in fmu-ensemble
+          pip install libecl opm  # while waiting for it to be included as formal dependency
 
           git clone --depth 1 --branch $SUBSURFACE_REPO_BRANCH https://github.com/$SUBSURFACE_REPO_OWNER/webviz-subsurface
 

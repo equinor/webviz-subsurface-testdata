@@ -59,6 +59,21 @@ pages:
             geogrid: geogrid--oil.csv
             simgrid: simgrid--oil.csv
 
+  - title: Analysis of grid property statistics
+    content:
+      - PropertyStatistics:
+          ensembles:
+            - iter-0
+            - iter-3
+          surface_renaming:
+            Total: all
+            PORO: average_poro
+            PERM: average_permz
+            SW: average_swat--20030101
+            UpperReek: upperreek
+            MidReek: midreek
+            LowerReek: lowerreek
+
   - title: Simulation time series
     content:
       - ReservoirSimulationTimeSeries:
@@ -300,18 +315,3 @@ pages:
             - iter-1
             - iter-2
             - iter-3
-
-  - title: Analysis of grid property statistics
-    content:
-      - PropertyStatistics:
-          ensembles:
-            - iter-0
-            - iter-3
-          surface_renaming:
-            Total: all
-            PORO: average_poro
-            PERM: average_permz
-            SW: average_swat--20030101
-            UpperReek: upperreek
-            MidReek: midreek
-            LowerReek: lowerreek

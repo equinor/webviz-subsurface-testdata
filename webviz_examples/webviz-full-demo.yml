@@ -4,13 +4,11 @@ shared_settings:
     iter-0: ../reek_history_match/realization-*/iter-0
     iter-3: ../reek_history_match/realization-*/iter-3
 pages:
-  - title: Front page
+  - title: How was this made?
     content:
-      - BannerImage:
-          image: ./content/reek_image.jpg
-          title: Reek FMU Webviz example
-      - Markdown:
-          markdown_file: ./content/front_page.md
+      - SyntaxHighlighter:
+          filename: ./webviz-full-demo.yml
+          dark_theme: yes
 
   - title: Static property analysis
     content:
@@ -18,20 +16,6 @@ pages:
           ensembles:
             - iter-0
             - iter-3
-          surface_renaming:
-            Total: all
-            PORO: average_poro
-            PERM: average_permz
-            SW: average_swat--20030101
-            UpperReek: upperreek
-            MidReek: midreek
-            LowerReek: lowerreek
-
-  - title: Static property analysis (single ensemble)
-    content:
-      - PropertyStatistics:
-          ensembles:
-            - iter-0
           surface_renaming:
             Total: all
             PORO: average_poro

@@ -281,3 +281,12 @@ pages:
             - iter-2
             - iter-3
           pvt_relative_file_path: share/results/tables/pvt.csv
+
+  - title: BHP QC
+    content:
+      - BhpQc:
+          ensembles:
+            - iter-0
+            - iter-1
+            - iter-2
+            - iter-3

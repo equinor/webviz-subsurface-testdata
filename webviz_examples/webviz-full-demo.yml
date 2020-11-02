@@ -9,7 +9,6 @@ shared_settings:
     iter-3: ../reek_history_match/realization-*/iter-3
 
 pages:
-
   - title: Front page
     content:
       - BannerImage:
@@ -60,6 +59,21 @@ pages:
             geogrid: geogrid--oil.csv
             simgrid: simgrid--oil.csv
 
+  - title: Analysis of grid property statistics
+    content:
+      - PropertyStatistics:
+          ensembles:
+            - iter-0
+            - iter-3
+          surface_renaming:
+            Total: all
+            PORO: average_poro
+            PERM: average_permz
+            SW: average_swat--20030101
+            UpperReek: upperreek
+            MidReek: midreek
+            LowerReek: lowerreek
+
   - title: Simulation time series
     content:
       - ReservoirSimulationTimeSeries:
@@ -103,7 +117,7 @@ pages:
 
   - title: Correlation between input parameters and responses
     content:
-      - '# Correlation between input parameters and inplace volumes'
+      - "# Correlation between input parameters and inplace volumes"
       - ParameterResponseCorrelation:
           ensembles:
             - iter-0
@@ -115,7 +129,7 @@ pages:
             ZONE: multi
             REGION: multi
 
-      - '# Correlation between input parameters and time series'
+      - "# Correlation between input parameters and time series"
       - ParameterResponseCorrelation:
           ensembles:
             - iter-0
@@ -126,7 +140,7 @@ pages:
           response_filters:
             DATE: single
 
-      - '# Pairwise correlation between all input parameters'
+      - "# Pairwise correlation between all input parameters"
       - ParameterCorrelation:
           ensembles:
             - iter-0
@@ -213,13 +227,24 @@ pages:
           ensembles:
             - iter-0
             - iter-3
-          wellfolder:
-            ../observed_data/wells
+          wellfolder: ../observed_data/wells
           attribute_settings:
             stoiip:
               min: 0
               max: 2
-              color: ['#000004', '#1b0c41', '#4a0c6b', '#781c6d', '#a52c60', '#cf4446', '#ed6925', '#fb9b06', '#f7d13d', '#fcffa4']
+              color:
+                [
+                  "#000004",
+                  "#1b0c41",
+                  "#4a0c6b",
+                  "#781c6d",
+                  "#a52c60",
+                  "#cf4446",
+                  "#ed6925",
+                  "#fb9b06",
+                  "#f7d13d",
+                  "#fcffa4",
+                ]
 
   - title: Well cross-section (FMU)
     content:
@@ -287,3 +312,13 @@ pages:
       - AssistedHistoryMatchingAnalysis:
           title: Data analytics what affects what
           input_dir: ../reek_history_match/share/output_analysis/scalar_ahm_analysis/
+
+  - title: BHP QC
+    content:
+      - BhpQc:
+          ensembles:
+            - iter-0
+            - iter-1
+            - iter-2
+            - iter-3
+

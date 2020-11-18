@@ -59,6 +59,15 @@ pages:
             geogrid: geogrid--oil.csv
             simgrid: simgrid--oil.csv
 
+  - title: Parameter analysis
+    content:
+      - ParameterAnalysis:
+          ensembles:
+            - iter-0
+            - iter-1
+            - iter-2
+            - iter-3
+
   - title: Analysis of grid property statistics
     content:
       - PropertyStatistics:

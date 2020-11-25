@@ -319,6 +319,4 @@ pages:
   - title: Assisted History matching parameters update vs observations
     content:
       - AssistedHistoryMatchingAnalysis:
-          input_dir: ../reek_history_match/share/output_analysis/scalar_ahm_analysis/
-          title: Data analytics what affects what
-
+          input_dir: ../reek_history_match/share/output_analysis/scalar_ahm_analysis

@@ -315,3 +315,8 @@ pages:
             - iter-1
             - iter-2
             - iter-3
+
+  - title: Assisted History matching parameters update vs observations
+    content:
+      - AssistedHistoryMatchingAnalysis:
+          input_dir: ../reek_history_match/share/output_analysis/scalar_ahm_analysis

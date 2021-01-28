@@ -117,3 +117,9 @@ pages:
       - ParameterAnalysis:
           csvfile_parameters: ../aggregated_data/parameters_hm.csv
           csvfile_smry: ../aggregated_data/smry_hm.csv
+
+  - title: PropertyStatistics
+    content:
+      - PropertyStatistics:
+          csvfile_statistics: ../aggregated_data/property_statistics.csv
+          csvfile_smry: ../aggregated_data/smry_hm.csv

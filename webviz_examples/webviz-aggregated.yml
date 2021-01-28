@@ -1,7 +1,6 @@
 title: Reek Webviz Demonstration
 
 pages:
-
   - title: Front page
     content:
       - Webviz created from configuration file
@@ -112,3 +111,9 @@ pages:
           csvfile_rft_ert: ../aggregated_data/rft_ert.csv
           formations: ../reek_history_match/share/results/tables/formations.csv
           faultlines: ../reek_history_match/share/results/polygons/faultpolygons.csv
+
+  - title: ParameterAnalysis
+    content:
+      - ParameterAnalysis:
+          csvfile_parameters: ../aggregated_data/parameters_hm.csv
+          csvfile_smry: ../aggregated_data/smry_hm.csv

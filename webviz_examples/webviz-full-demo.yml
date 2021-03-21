@@ -8,3 +8,9 @@ pages:
           aggregated_csvfile: ../aggregated_data/smry_hm.csv
           observation_file: ../reek_history_match/share/observations/observations.yml
           aggregated_parameterfile: ../aggregated_data/parameters_hm.csv
+          initial_data:
+            x: DATE
+            y: FOPT
+            ensembles:
+              - iter-0
+              - iter-3

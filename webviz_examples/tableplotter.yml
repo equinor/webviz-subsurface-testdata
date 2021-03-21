@@ -1,0 +1,10 @@
+title: Reek Webviz Example
+
+
+pages:
+  - title: Front page
+    content:
+      - LinePlotterFMU:
+          aggregated_csvfile: ../aggregated_data/smry_hm.csv
+          observation_file: ../reek_history_match/share/observations/observations.yml
+          aggregated_parameterfile: ../aggregated_data/parameters_hm.csv

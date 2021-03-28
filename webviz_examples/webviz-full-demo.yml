@@ -9,7 +9,6 @@ shared_settings:
     iter-3: ../reek_history_match/realization-*/iter-3
 
 pages:
-  
   - title: Well cross-section (FMU)
     content:
       - WellCrossSectionFMU:
@@ -27,7 +26,7 @@ pages:
             - toplowerreek
             - baselowerreek
           zonelog: Zonelog
-          zmin: 1500.0
+          zmin: 1550.0
           zmax: 1700.0
           nextend: 20
           initial_settings:
@@ -43,5 +42,19 @@ pages:
                 - Mean
                 - Min
                 - Max
+                - Realizations
+                # - Uncertainty envelope
               well: OP_6
               realizations: [0,1,2,3,4,5,6,7,8,9]
+            colors:
+              topupperreek:
+                iter-0: '#2C82C9'
+                iter-1: '#2CC990'
+              baselowerreek:
+                iter-0: '#EEE657'
+                iter-1: '#FC6042'
+  - title: Configuration
+    content:
+      - SyntaxHighlighter:
+          filename: ./webviz-full-demo.yml
+          dark_theme: yes

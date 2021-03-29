@@ -26,13 +26,11 @@ pages:
             - toplowerreek
             - baselowerreek
           zonelog: Zonelog
-          zmin: 1550.0
-          zmax: 1700.0
-          nextend: 20
           initial_settings:
             intersection_data:
               surface_names:
                 - topupperreek
+                - topmidreek
                 - baselowerreek
               surface_attribute: ds_extracted_horizons
               ensembles:
@@ -50,9 +48,19 @@ pages:
               topupperreek:
                 iter-0: '#2C82C9'
                 iter-1: '#2CC990'
+              topmidreek:
+                iter-0: '512E34'
+                iter-1: '7D93C1'
               baselowerreek:
                 iter-0: '#EEE657'
                 iter-1: '#FC6042'
+            intersection_layout:
+              yaxis:
+                range: [1700,1550]
+                title: True vertical depth [m]
+              xaxis:
+                title: Lateral distance [m]
+                
   - title: Configuration
     content:
       - SyntaxHighlighter:

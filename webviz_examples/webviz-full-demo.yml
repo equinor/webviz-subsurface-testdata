@@ -49,8 +49,8 @@ pages:
                 iter-0: '#2C82C9'
                 iter-1: '#2CC990'
               topmidreek:
-                iter-0: '512E34'
-                iter-1: '7D93C1'
+                iter-0: '#512E34'
+                iter-1: '#7D93C1'
               baselowerreek:
                 iter-0: '#EEE657'
                 iter-1: '#FC6042'

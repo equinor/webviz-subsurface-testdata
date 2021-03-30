@@ -9,9 +9,9 @@ shared_settings:
     iter-3: ../reek_history_match/realization-*/iter-3
 
 pages:
-  - title: Well cross-section (FMU)
+  - title: StructuralUncertainty
     content:
-      - WellCrossSectionFMU:
+      - StructuralUncertainty:
           ensembles:
             - iter-0
             - iter-1

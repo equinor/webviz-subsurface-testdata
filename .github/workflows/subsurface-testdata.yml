@@ -19,11 +19,6 @@ jobs:
     strategy:
       matrix:
         python-version: ['3.6', '3.7', '3.8']
-        pandas-version: ['0.24.2', '1.*']  # Necessary as long as RHEL6 is used internally
-        exclude:
-          # Skip Python 3.8 and Pandas 0.24.2 combination due to missing 3.8 wheel for that specific pandas version
-          - python-version: '3.8'
-            pandas-version: '0.24.2'
 
     steps:
 
@@ -31,7 +26,7 @@ jobs:
         run: |
           # https://github.com/actions/virtual-environments/issues/751
           # https://github.com/actions/virtual-environments/issues/709
-          sudo apt-get purge p7zip* yarn ruby-full zulu-*-azure-jdk* ghc* php7*
+          sudo apt-get purge p7zip* yarn ruby-full ghc* php7*
           sudo apt-get autoremove
           sudo apt-get clean
           df -h
@@ -54,9 +49,6 @@ jobs:
           SUBSURFACE_REPO_BRANCH: master
         run: |
           pip install --upgrade pip
-          pip install 'pandas==${{ matrix.pandas-version }}'
-          pip install libecl opm  # while waiting for it to be included as formal dependency
-
           git clone --depth 1 --branch $SUBSURFACE_REPO_BRANCH https://github.com/$SUBSURFACE_REPO_OWNER/webviz-subsurface
 
       - name: 📦 Install test dependencies
@@ -72,7 +64,6 @@ jobs:
         run: pip freeze
 
       - name: 🕵️ Check config style
-        if: matrix.pandas-version == '1.*'
         run: yamllint .
 
       - name: 🤖 Run tests

@@ -338,3 +338,5 @@ pages:
           compdat_file: "share/results/wells/compdat.csv"
           zone_layer_mapping_file: "rms/output/zone/simgrid_zone_layer_mapping.lyr"
           well_attributes_file: "rms/output/wells/well_attributes.json"
+          kh_unit: "mDm"
+          kh_decimal_places: 2

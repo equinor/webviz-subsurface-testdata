@@ -179,7 +179,7 @@ pages:
           zmin: 1500.0
           zmax: 1800.0
 
-  - title: Well Completions
+  - title: WellCompletions
     content:
       - WellCompletions:
           ensembles:

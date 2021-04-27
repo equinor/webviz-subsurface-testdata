@@ -25,11 +25,55 @@ pages:
           filename: ./webviz-full-demo.yml
           dark_theme: yes
 
-  - title: Disk usage
+  - title: Structural Uncertainty
     content:
-      - DiskUsage:
-          scratch_dir: ../.
-          date: 2020-07-11 # Date only necessary if you want an explicit date.
+      - StructuralUncertainty:
+          ensembles:
+            - iter-0
+            - iter-1
+            - iter-2
+            - iter-3
+          surface_attributes:
+            - ds_extracted_horizons
+          surface_name_filter:
+            - topupperreek
+            - topmidreek
+            - baselowerreek
+          #Everything below is optional
+          wellfolder: ../observed_data/wells
+          zonelog: Zonelog
+          initial_settings:
+            intersection_data:
+              surface_names:
+                - topupperreek
+                - topmidreek
+                - baselowerreek
+              surface_attribute: ds_extracted_horizons
+              ensembles:
+                - iter-0
+                - iter-1
+              calculation:
+                - Mean
+                - Min
+                - Max
+              well: OP_6
+              realizations: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+            colors:
+              topupperreek:
+                iter-0: '#2C82C9'
+                iter-1: '#2CC990'
+              topmidreek:
+                iter-0: '#512E34'
+                iter-1: '#7D93C1'
+              baselowerreek:
+                iter-0: '#EEE657'
+                iter-1: '#FC6042'
+            intersection_layout:
+              yaxis:
+                range: [1700, 1550]
+                title: True vertical depth [m]
+              xaxis:
+                title: Lateral distance [m]
 
   - title: Sensitivity study (inplace)
     content:
@@ -255,31 +299,6 @@ pages:
                   "#fcffa4",
                 ]
 
-  - title: Well cross-section (FMU)
-    content:
-      - WellCrossSectionFMU:
-          ensembles:
-            - iter-0
-            - iter-3
-          wellfolder: ../observed_data/wells
-          surfacefiles:
-            - topupperreek--ds_extracted_horizons.gri
-            - topmidreek--ds_extracted_horizons.gri
-            - toplowerreek--ds_extracted_horizons.gri
-            - baselowerreek--ds_extracted_horizons.gri
-          surfacenames:
-            - Top Upper Reek
-            - Top Middle Reek
-            - Top Lower Reek
-            - Base Lower Reek
-          zonelog: Zonelog
-          zmin: 1500.0
-          zmax: 1700.0
-          marginal_logs:
-            - Poro
-            - Perm
-          nextend: 20
-
   - title: Running time analysis (FMU)
     content:
       - RunningTimeAnalysisFMU:
@@ -299,12 +318,6 @@ pages:
             - iter-3
           formations: ../reek_history_match/share/results/tables/formations.csv
           faultlines: ../reek_history_match/share/results/polygons/faultpolygons.csv
-
-  - title: Horizon Uncertainty Viewer
-    content:
-      - HorizonUncertaintyViewer:
-          basedir: ../horizon_uncertainty_data/simple_model
-          planned_wells_dir: ../horizon_uncertainty_data/additional_wells
 
   - title: PVT
     content:
@@ -340,3 +353,9 @@ pages:
           well_attributes_file: "rms/output/wells/well_attributes.json"
           kh_unit: "mDm"
           kh_decimal_places: 2
+
+  - title: Disk usage
+    content:
+      - DiskUsage:
+          scratch_dir: ../.
+          date: 2020-07-11 # Date only necessary if you want an explicit date.

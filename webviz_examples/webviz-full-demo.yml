@@ -159,6 +159,17 @@ pages:
           flow_value: FLROIL
           time_step: 2
 
+  - title: Well Completions
+    content:
+      - WellCompletions:
+          ensembles:
+            - iter-0
+          compdat_file: "share/results/wells/compdat.csv"
+          zone_layer_mapping_file: "rms/output/zone/simgrid_zone_layer_mapping.lyr"
+          well_attributes_file: "rms/output/wells/well_attributes.json"
+          kh_unit: "mD⋅m"
+          kh_decimal_places: 2
+
   - title: Parameter distribution
     content:
       - ParameterDistribution:
@@ -342,17 +353,6 @@ pages:
     content:
       - AssistedHistoryMatchingAnalysis:
           input_dir: ../reek_history_match/share/output_analysis/scalar_ahm_analysis
-
-  - title: Well Completions
-    content:
-      - WellCompletions:
-          ensembles:
-            - iter-0
-          compdat_file: "share/results/wells/compdat.csv"
-          zone_layer_mapping_file: "rms/output/zone/simgrid_zone_layer_mapping.lyr"
-          well_attributes_file: "rms/output/wells/well_attributes.json"
-          kh_unit: "mDm"
-          kh_decimal_places: 2
 
   - title: Disk usage
     content:

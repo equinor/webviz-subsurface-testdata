@@ -169,7 +169,6 @@ pages:
           stratigraphy_file: "rms/output/zone/stratigraphy.json"
           well_attributes_file: "rms/output/wells/well_attributes.json"
 
-
   - title: Parameter distribution
     content:
       - ParameterDistribution:

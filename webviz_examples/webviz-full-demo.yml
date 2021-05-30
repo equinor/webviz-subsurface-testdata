@@ -358,3 +358,19 @@ pages:
       - DiskUsage:
           scratch_dir: ../.
           date: 2020-07-11 # Date only necessary if you want an explicit date.
+
+  - title: Line plotter
+    content:
+      - LinePlotterFMU:
+          aggregated_csvfile: ../aggregated_data/smry_hm.csv
+          observation_file: ../reek_history_match/share/observations/observations.yml
+          aggregated_parameterfile: ../aggregated_data/parameters_hm.csv
+          initial_data:
+            x: DATE
+            y: FOPT
+            ensembles:
+              - iter-0
+              - iter-3
+          colors:
+            iter-0: red
+            iter-3: blue

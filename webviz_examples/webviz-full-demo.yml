@@ -75,6 +75,18 @@ pages:
               xaxis:
                 title: Lateral distance [m]
 
+  - title: Volumetric Analysis
+    content:
+      - VolumetricAnalysis:
+          ensembles:
+            - iter-0
+            - iter-1
+            - iter-2
+            - iter-3
+          volfiles:
+            geogrid: geogrid--oil.csv
+            simgrid: simgrid--oil.csv
+
   - title: Sensitivity study (inplace)
     content:
       - InplaceVolumesOneByOne:
@@ -90,18 +102,6 @@ pages:
           ensembles:
             - sens_run
           initial_vector: FOPT
-
-  - title: Inplace volumes
-    content:
-      - InplaceVolumes:
-          ensembles:
-            - iter-0
-            - iter-1
-            - iter-2
-            - iter-3
-          volfiles:
-            geogrid: geogrid--oil.csv
-            simgrid: simgrid--oil.csv
 
   - title: Parameter analysis
     content:

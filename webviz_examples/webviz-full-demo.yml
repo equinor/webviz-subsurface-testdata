@@ -365,9 +365,12 @@ pages:
           aggregated_csvfile: ../aggregated_data/smry_hm.csv
           observation_file: ../reek_history_match/share/observations/observations.yml
           aggregated_parameterfile: ../aggregated_data/parameters_hm.csv
+          observation_group: smry
+          remap_observation_values:
+            DATE: date
           initial_data:
             x: DATE
-            y: FOPT
+            y: FOPR
             ensembles:
               - iter-0
               - iter-3

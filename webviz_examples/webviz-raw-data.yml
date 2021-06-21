@@ -111,9 +111,10 @@ pages:
             - iter-2
             - iter-3
           options:
-            vector1: FOPT
-            vector2: FGPT
-            vector3: FWPT
+            vectors: 
+              - FOPT
+              - FGPT
+              - FWPT
             date: 2003-02-01
             visualization: statistics_hist
 

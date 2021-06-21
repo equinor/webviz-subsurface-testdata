@@ -137,7 +137,8 @@ pages:
             - iter-3
           obsfile: ../reek_history_match/share/observations/observations.yml
           options:
-            vector1: WOPR:OP_1
+            vectors: 
+              - WOPR:OP_1
             visualization: statistics
 
   - title: Regional simulation time series

@@ -23,7 +23,7 @@ pages:
           markdown_file: ./content/how_was_this_made.md
       - SyntaxHighlighter:
           filename: ./webviz-full-demo.yml
-          dark_theme: yes
+          dark_theme: true
 
   - title: Structural Uncertainty
     content:
@@ -39,7 +39,7 @@ pages:
             - topupperreek
             - topmidreek
             - baselowerreek
-          #Everything below is optional
+          # Everything below is optional
           wellfolder: ../observed_data/wells
           zonelog: Zonelog
           initial_settings:
@@ -75,6 +75,15 @@ pages:
               xaxis:
                 title: Lateral distance [m]
 
+  - title: Volumetric Analysis (sensitivity)
+    content:
+      - VolumetricAnalysis:
+          ensembles:
+            - sens_run
+          volfiles:
+            geogrid: geogrid--oil.csv
+            simgrid: simgrid--oil.csv
+
   - title: Volumetric Analysis
     content:
       - VolumetricAnalysis:
@@ -87,21 +96,25 @@ pages:
             geogrid: geogrid--oil.csv
             simgrid: simgrid--oil.csv
 
-  - title: Sensitivity study (inplace)
-    content:
-      - InplaceVolumesOneByOne:
-          ensembles:
-            - sens_run
-          volfiles:
-            geogrid: geogrid--oil.csv
-            simgrid: simgrid--oil.csv
-
-  - title: Sensitivity study (time series)
+  - title: Simulation time series (sensitivity)
     content:
       - ReservoirSimulationTimeSeriesOneByOne:
           ensembles:
             - sens_run
           initial_vector: FOPT
+
+  - title: Simulation time series
+    content:
+      - ReservoirSimulationTimeSeries:
+          ensembles:
+            - iter-0
+            - iter-1
+            - iter-2
+            - iter-3
+          obsfile: ../reek_history_match/share/observations/observations.yml
+          options:
+            vector1: WOPR:OP_1
+            visualization: statistics
 
   - title: Parameter analysis
     content:
@@ -127,19 +140,6 @@ pages:
             MidReek: midreek
             LowerReek: lowerreek
 
-  - title: Simulation time series
-    content:
-      - ReservoirSimulationTimeSeries:
-          ensembles:
-            - iter-0
-            - iter-1
-            - iter-2
-            - iter-3
-          obsfile: ../reek_history_match/share/observations/observations.yml
-          options:
-            vector1: WOPR:OP_1
-            visualization: statistics
-
   - title: Regional simulation time series
     content:
       - ReservoirSimulationTimeSeriesRegional:
@@ -149,15 +149,6 @@ pages:
             - iter-2
             - iter-3
           fipfile: ../reek_history_match/share/regions/fip.yaml
-
-  - title: Reservoir simulation map
-    content:
-      - In this example, the horizontal permeability is shown together with oil fluid flow for a given date during simulation.
-      - SubsurfaceMap:
-          ensemble: iter-0
-          map_value: PERMX
-          flow_value: FLROIL
-          time_step: 2
 
   - title: Well Completions
     content:
@@ -169,18 +160,8 @@ pages:
           stratigraphy_file: "rms/output/zone/stratigraphy.json"
           well_attributes_file: "rms/output/wells/well_attributes.json"
 
-  - title: Parameter distribution
+  - title: Correlation between input parameters and inplace volumes
     content:
-      - ParameterDistribution:
-          ensembles:
-            - iter-0
-            - iter-1
-            - iter-2
-            - iter-3
-
-  - title: Correlation between input parameters and responses
-    content:
-      - "# Correlation between input parameters and inplace volumes"
       - ParameterResponseCorrelation:
           ensembles:
             - iter-0
@@ -192,7 +173,8 @@ pages:
             ZONE: multi
             REGION: multi
 
-      - "# Correlation between input parameters and time series"
+  - title: Correlation between input parameters and time series
+    content:
       - ParameterResponseCorrelation:
           ensembles:
             - iter-0
@@ -203,18 +185,9 @@ pages:
           response_filters:
             DATE: single
 
-      - "# Pairwise correlation between all input parameters"
-      - ParameterCorrelation:
-          ensembles:
-            - iter-0
-            - iter-1
-            - iter-2
-            - iter-3
-
-  - title: History match
+  - title: Pairwise correlation between all input parameters
     content:
-      - HistoryMatch:
-          observation_file: ../reek_history_match/share/observations/observations.yml
+      - ParameterCorrelation:
           ensembles:
             - iter-0
             - iter-1
@@ -284,31 +257,6 @@ pages:
             - Top Lower Reek
             - Base Lower Reek
 
-  - title: Surface viewer (FMU)
-    content:
-      - SurfaceViewerFMU:
-          ensembles:
-            - iter-0
-            - iter-3
-          wellfolder: ../observed_data/wells
-          attribute_settings:
-            stoiip:
-              min: 0
-              max: 2
-              color:
-                [
-                  "#000004",
-                  "#1b0c41",
-                  "#4a0c6b",
-                  "#781c6d",
-                  "#a52c60",
-                  "#cf4446",
-                  "#ed6925",
-                  "#fb9b06",
-                  "#f7d13d",
-                  "#fcffa4",
-                ]
-
   - title: Running time analysis (FMU)
     content:
       - RunningTimeAnalysisFMU:
@@ -353,11 +301,17 @@ pages:
       - AssistedHistoryMatchingAnalysis:
           input_dir: ../reek_history_match/share/output_analysis/scalar_ahm_analysis
 
-  - title: Disk usage
+  - title: Tornado plotter
     content:
-      - DiskUsage:
-          scratch_dir: ../.
-          date: 2020-07-11 # Date only necessary if you want an explicit date.
+      - TornadoPlotterFMU:
+          aggregated_csvfile: ../aggregated_data/volumes.csv
+          aggregated_parameterfile: ../aggregated_data/realdata.csv
+          initial_response: STOIIP_OIL
+          single_value_selectors:
+            - SOURCE
+          multi_value_selectors:
+            - ZONE
+            - REGION
 
   - title: Line plotter
     content:
@@ -377,3 +331,62 @@ pages:
           colors:
             iter-0: red
             iter-3: blue
+
+  - title: Disk usage
+    content:
+      - DiskUsage:
+          scratch_dir: ../.
+          date: 2020-07-11  # Date only necessary if you want an explicit date.
+
+  - title: Surface viewer (FMU)
+    content:
+      - SurfaceViewerFMU:
+          ensembles:
+            - iter-0
+            - iter-3
+          wellfolder: ../observed_data/wells
+          attribute_settings:
+            stoiip:
+              min: 0
+              max: 2
+              color:
+                [
+                  "#000004",
+                  "#1b0c41",
+                  "#4a0c6b",
+                  "#781c6d",
+                  "#a52c60",
+                  "#cf4446",
+                  "#ed6925",
+                  "#fb9b06",
+                  "#f7d13d",
+                  "#fcffa4",
+                ]
+
+  - title: Parameter distribution
+    content:
+      - ParameterDistribution:
+          ensembles:
+            - iter-0
+            - iter-1
+            - iter-2
+            - iter-3
+
+  - title: Reservoir simulation map
+    content:
+      - In this example, the horizontal permeability is shown together with oil fluid flow for a given date during simulation.
+      - SubsurfaceMap:
+          ensemble: iter-0
+          map_value: PERMX
+          flow_value: FLROIL
+          time_step: 2
+
+  - title: History match
+    content:
+      - HistoryMatch:
+          observation_file: ../reek_history_match/share/observations/observations.yml
+          ensembles:
+            - iter-0
+            - iter-1
+            - iter-2
+            - iter-3

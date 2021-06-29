@@ -1,0 +1,381 @@
+smry:
+- key: WBHP:A1
+  observations:
+  - date: '2019-05-05'
+    error: 10.0
+    label: A1_WBHP_05_05_2019
+    value: 237.8
+  - date: '2019-11-02'
+    error: 10.0
+    label: A1_WBHP_02_11_2019
+    value: 214.0
+  - date: '2020-05-05'
+    error: 10.0
+    label: A1_WBHP_05_05_2020
+    value: 222.9
+- key: WBHP:A2
+  observations:
+  - date: '2019-05-05'
+    error: 10.0
+    label: A2_WBHP_05_05_2019
+    value: 266.8
+  - date: '2019-11-02'
+    error: 10.0
+    label: A2_WBHP_02_11_2019
+    value: 261.2
+  - date: '2020-05-05'
+    error: 10.0
+    label: A2_WBHP_05_05_2020
+    value: 267.1
+- key: WBHP:A3
+  observations:
+  - date: '2019-05-05'
+    error: 10.0
+    label: A3_WBHP_05_05_2019
+    value: 218.2
+  - date: '2019-11-02'
+    error: 10.0
+    label: A3_WBHP_02_11_2019
+    value: 200.6
+  - date: '2020-05-05'
+    error: 10.0
+    label: A3_WBHP_05_05_2020
+    value: 218.8
+- key: WBHP:A4
+  observations:
+  - date: '2019-05-05'
+    error: 10.0
+    label: A4_WBHP_05_05_2019
+    value: 245.2
+  - date: '2019-11-02'
+    error: 10.0
+    label: A4_WBHP_02_11_2019
+    value: 243.3
+  - date: '2020-05-05'
+    error: 10.0
+    label: A4_WBHP_05_05_2020
+    value: 248.1
+- key: WBHP:A5
+  observations:
+  - date: '2019-05-05'
+    error: 10.0
+    label: A5_WBHP_05_05_2019
+    value: 296.2
+  - date: '2019-11-02'
+    error: 10.0
+    label: A5_WBHP_02_11_2019
+    value: 307.7
+  - date: '2020-05-05'
+    error: 10.0
+    label: A5_WBHP_05_05_2020
+    value: 289.5
+- key: WBHP:A6
+  observations:
+  - date: '2019-05-05'
+    error: 10.0
+    label: A6_WBHP_05_05_2019
+    value: 287.1
+  - date: '2019-11-02'
+    error: 10.0
+    label: A6_WBHP_02_11_2019
+    value: 294.1
+  - date: '2020-05-05'
+    error: 10.0
+    label: A6_WBHP_05_05_2020
+    value: 290.4
+- key: WGOR:A1
+  observations:
+  - date: '2018-03-30'
+    error: 50.0
+    label: WGOR_A1_0
+    value: 138.32456970214844
+  - date: '2018-06-22'
+    error: 50.0
+    label: WGOR_A1_1
+    value: 137.20663452148438
+  - date: '2018-09-14'
+    error: 50.0
+    label: WGOR_A1_2
+    value: 137.1474609375
+  - date: '2018-12-07'
+    error: 50.0
+    label: WGOR_A1_3
+    value: 134.7957305908203
+  - date: '2019-03-01'
+    error: 50.0
+    label: WGOR_A1_4
+    value: 133.6744842529297
+  - date: '2019-05-24'
+    error: 50.0
+    label: WGOR_A1_5
+    value: 150.79522705078125
+  - date: '2019-08-16'
+    error: 50.0
+    label: WGOR_A1_6
+    value: 181.50244140625
+  - date: '2019-11-08'
+    error: 50.0
+    label: WGOR_A1_7
+    value: 202.2801971435547
+  - date: '2020-01-31'
+    error: 50.0
+    label: WGOR_A1_8
+    value: 182.59190368652344
+  - date: '2020-04-24'
+    error: 50.0
+    label: WGOR_A1_9
+    value: 147.66795349121094
+- key: WGOR:A2
+  observations:
+  - date: '2018-06-02'
+    error: 50.0
+    label: WGOR_A2_0
+    value: 153.72811889648438
+  - date: '2018-08-25'
+    error: 50.0
+    label: WGOR_A2_1
+    value: 156.37786865234375
+  - date: '2018-11-17'
+    error: 50.0
+    label: WGOR_A2_2
+    value: 155.46145629882812
+  - date: '2019-02-09'
+    error: 50.0
+    label: WGOR_A2_3
+    value: 152.78273010253906
+  - date: '2019-05-04'
+    error: 50.0
+    label: WGOR_A2_4
+    value: 0.0
+  - date: '2019-07-27'
+    error: 50.0
+    label: WGOR_A2_5
+    value: 156.41839599609375
+  - date: '2019-10-19'
+    error: 50.0
+    label: WGOR_A2_6
+    value: 157.92662048339844
+  - date: '2020-01-11'
+    error: 50.0
+    label: WGOR_A2_7
+    value: 159.18914794921875
+  - date: '2020-04-04'
+    error: 50.0
+    label: WGOR_A2_8
+    value: 159.24913024902344
+  - date: '2020-06-27'
+    error: 50.0
+    label: WGOR_A2_9
+    value: 160.32638549804688
+- key: WGOR:A3
+  observations:
+  - date: '2018-10-05'
+    error: 50.0
+    label: WGOR_A3_0
+    value: 256.6658935546875
+  - date: '2018-12-28'
+    error: 50.0
+    label: WGOR_A3_1
+    value: 141.71803283691406
+  - date: '2019-03-22'
+    error: 50.0
+    label: WGOR_A3_2
+    value: 142.8449249267578
+  - date: '2019-06-14'
+    error: 50.0
+    label: WGOR_A3_3
+    value: 161.7709197998047
+  - date: '2019-09-06'
+    error: 50.0
+    label: WGOR_A3_4
+    value: 161.30799865722656
+  - date: '2019-11-29'
+    error: 50.0
+    label: WGOR_A3_5
+    value: 156.68983459472656
+  - date: '2020-02-21'
+    error: 50.0
+    label: WGOR_A3_6
+    value: 149.95159912109375
+  - date: '2020-05-15'
+    error: 50.0
+    label: WGOR_A3_7
+    value: 142.96775817871094
+- key: WGOR:A4
+  observations:
+  - date: '2018-12-15'
+    error: 50.0
+    label: WGOR_A4_0
+    value: 136.2583465576172
+  - date: '2019-03-09'
+    error: 50.0
+    label: WGOR_A4_1
+    value: 133.3849639892578
+  - date: '2019-06-01'
+    error: 50.0
+    label: WGOR_A4_2
+    value: 133.1396942138672
+  - date: '2019-08-24'
+    error: 50.0
+    label: WGOR_A4_3
+    value: 135.09825134277344
+  - date: '2019-11-16'
+    error: 50.0
+    label: WGOR_A4_4
+    value: 135.28724670410156
+  - date: '2020-02-08'
+    error: 50.0
+    label: WGOR_A4_5
+    value: 134.9546356201172
+  - date: '2020-05-02'
+    error: 50.0
+    label: WGOR_A4_6
+    value: 0.0
+- key: WWCT:A1
+  observations:
+  - date: '2018-03-30'
+    error: 0.1
+    label: WWCT_A1_0
+    value: 2.990008169945213e-06
+  - date: '2018-06-22'
+    error: 0.1
+    label: WWCT_A1_1
+    value: 2.9680345505767036e-06
+  - date: '2018-09-14'
+    error: 0.1
+    label: WWCT_A1_2
+    value: 2.8782408207916887e-06
+  - date: '2018-12-07'
+    error: 0.1
+    label: WWCT_A1_3
+    value: 2.976913492602762e-06
+  - date: '2019-03-01'
+    error: 0.1
+    label: WWCT_A1_4
+    value: 0.000736650254111737
+  - date: '2019-05-24'
+    error: 0.1
+    label: WWCT_A1_5
+    value: 0.035560693591833115
+  - date: '2019-08-16'
+    error: 0.1
+    label: WWCT_A1_6
+    value: 0.06950899958610535
+  - date: '2019-11-08'
+    error: 0.1
+    label: WWCT_A1_7
+    value: 0.20865759253501892
+  - date: '2020-01-31'
+    error: 0.1
+    label: WWCT_A1_8
+    value: 0.3314569592475891
+  - date: '2020-04-24'
+    error: 0.1
+    label: WWCT_A1_9
+    value: 0.4636625051498413
+- key: WWCT:A2
+  observations:
+  - date: '2018-06-02'
+    error: 0.1
+    label: WWCT_A2_0
+    value: 0.10108489543199539
+  - date: '2018-08-25'
+    error: 0.1
+    label: WWCT_A2_1
+    value: 0.25315606594085693
+  - date: '2018-11-17'
+    error: 0.1
+    label: WWCT_A2_2
+    value: 0.2776966989040375
+  - date: '2019-02-09'
+    error: 0.1
+    label: WWCT_A2_3
+    value: 0.283459335565567
+  - date: '2019-05-04'
+    error: 0.1
+    label: WWCT_A2_4
+    value: 0.0
+  - date: '2019-07-27'
+    error: 0.1
+    label: WWCT_A2_5
+    value: 0.32546260952949524
+  - date: '2019-10-19'
+    error: 0.1
+    label: WWCT_A2_6
+    value: 0.351017028093338
+  - date: '2020-01-11'
+    error: 0.1
+    label: WWCT_A2_7
+    value: 0.37808743119239807
+  - date: '2020-04-04'
+    error: 0.1
+    label: WWCT_A2_8
+    value: 0.4027750790119171
+  - date: '2020-06-27'
+    error: 0.1
+    label: WWCT_A2_9
+    value: 0.43981707096099854
+- key: WWCT:A3
+  observations:
+  - date: '2018-10-05'
+    error: 0.1
+    label: WWCT_A3_0
+    value: 0.00023010979930404574
+  - date: '2018-12-28'
+    error: 0.1
+    label: WWCT_A3_1
+    value: 0.22004300355911255
+  - date: '2019-03-22'
+    error: 0.1
+    label: WWCT_A3_2
+    value: 0.38389915227890015
+  - date: '2019-06-14'
+    error: 0.1
+    label: WWCT_A3_3
+    value: 0.45054447650909424
+  - date: '2019-09-06'
+    error: 0.1
+    label: WWCT_A3_4
+    value: 0.4891080856323242
+  - date: '2019-11-29'
+    error: 0.1
+    label: WWCT_A3_5
+    value: 0.5082587003707886
+  - date: '2020-02-21'
+    error: 0.1
+    label: WWCT_A3_6
+    value: 0.5267271399497986
+  - date: '2020-05-15'
+    error: 0.1
+    label: WWCT_A3_7
+    value: 0.5443038940429688
+- key: WWCT:A4
+  observations:
+  - date: '2018-12-15'
+    error: 0.1
+    label: WWCT_A4_0
+    value: 8.481842087348923e-06
+  - date: '2019-03-09'
+    error: 0.1
+    label: WWCT_A4_1
+    value: 0.081839919090271
+  - date: '2019-06-01'
+    error: 0.1
+    label: WWCT_A4_2
+    value: 0.2239859402179718
+  - date: '2019-08-24'
+    error: 0.1
+    label: WWCT_A4_3
+    value: 0.3734499514102936
+  - date: '2019-11-16'
+    error: 0.1
+    label: WWCT_A4_4
+    value: 0.4346226453781128
+  - date: '2020-02-08'
+    error: 0.1
+    label: WWCT_A4_5
+    value: 0.49893033504486084
+  - date: '2020-05-02'
+    error: 0.1
+    label: WWCT_A4_6
+    value: 0.0

@@ -1,0 +1,311 @@
+<eclipse>
+<message date="1/1/2018" time="0.00000000000000">
+ CHECKING FOR LICENSES                                                   
+</message>
+<message date="1/1/2018" time="0.00000000000000">
+ CHECKING FOR LICENSES                                                   
+</message>
+<message date="1/1/2018" time="0.00000000000000">
+ THE MEMORY REQUIRED TO PROCESS THE GRID SECTION IS                      
+      55502 KBYTES                                                       
+</message>
+<message date="1/1/2018" time="0.00000000000000">
+  THE MULTNUM ARRAY WILL BE USED WITH THE MULTREGT                       
+  KEYWORD BETWEEN REGIONS      1 AND      2                              
+</message>
+<message date="1/1/2018" time="0.00000000000000">
+  THE MULTNUM ARRAY WILL BE USED WITH THE MULTREGT                       
+  KEYWORD BETWEEN REGIONS      1 AND      3                              
+</message>
+<message date="1/1/2018" time="0.00000000000000">
+  THE MULTNUM ARRAY WILL BE USED WITH THE MULTREGT                       
+  KEYWORD BETWEEN REGIONS      2 AND      3                              
+</message>
+<message date="1/1/2018" time="0.00000000000000">
+     2411 PINCH-OUT CONNECTIONS GENERATED                                
+</message>
+<warning date="1/1/2018" time="0.00000000000000">
+    371 OUT OF   7110 NNCS DEFINED UNDER EDITNNC  WERE                   
+ NOT FOUND. SET MNEMONIC ALLNNC IN RPTGRID TO                            
+ OBTAIN A FULL LISTING OF THESE MISSING NNCS                             
+</warning>
+<message date="1/1/2018" time="0.00000000000000">
+     18   NON-NEIGHBOUR CONNECTIONS NNCS HAVE BEEN                       
+ DELETED SINCE THEY HAVE ZERO TRANSMISSIBILITY                           
+ AFTER PROCESSING THE EDIT SECTION                                       
+</message>
+<message date="1/1/2018" time="0.00000000000000">
+ PRE-PROCESSING HAS FOUND 2327 NON-NEIGHBOUR CONNECTIONS                 
+ WHICH EITHER JOIN ADJACENT CELLS OR CAN BE TREATED AS A                 
+ NORMAL CONNECTION. THE TRANSMISSIBILITY HAS BEEN ADDED TO               
+ THE APPROPRIATE CELL TRANSMISSIBILITY AND THE                           
+ NON-NEIGHBOUR CONNECTION REMOVED FROM THE SIMULATION                    
+</message>
+<message date="1/1/2018" time="0.00000000000000">
+ A FULL LISTING OF THESE NNCS CAN BE OBTAINED BY SETTING                 
+ THE ALLNNC MNEMONIC IN RPTGRID. THE OUTPUT HAS THE                      
+ TITLE MNEMONIC DEL-NNC                                                  
+</message>
+<message date="1/1/2018" time="0.00000000000000">
+      158 NON-NEIGHBOUR CONNECTIONS HAVE BEEN IGNORED                    
+ AS THEIR TRANSMISSIBILITY IS LESS THAN 0.100000E-05                     
+       84 OF THESE ARE Z-PINCHOUTS.                                      
+</message>
+<message date="1/1/2018" time="0.00000000000000">
+ 6741 NON-NEIGHBOUR CONNECTIONS PRESENT                                  
+</message>
+<comment date="1/1/2018" time="0.00000000000000">
+ LEFT HANDED GRIDS MAY NOT BE SUPPORTED                                  
+  IN ALL PRE AND POST PROCESSORS                                         
+</comment>
+<message date="1/1/2018" time="0.00000000000000">
+ NUMBER OF ACTIVE CELLS IS 70601                                         
+</message>
+<message date="1/1/2018" time="0.00000000000000">
+ THE MEMORY REQUIRED TO PROCESS THE SOLUTION SECTION IS                  
+     166440 KBYTES                                                       
+</message>
+<message date="1/1/2018" time="0.00000000000000">
+    62973 CHARACTER VARIABLES USED                                       
+</message>
+<warning date="1/1/2018" time="0.00000000000000">
+ ALTHOUGH ROCK DATA WAS ASSOCIATED WITH ROCKNUM                          
+ THE NUMBER OF REGIONS WAS NOT EXPLICITLY SET                            
+ USING ARGUMENT 13 OF KEYWORD TABDIMS                                    
+ ROCK WILL BE ASSOCIATED WITH PVTNUM INSTEAD                             
+</warning>
+<warning date="1/1/2018" time="0.00000000000000">
+ THERE IS A TRANSMISSIBILITY IN THE  X  DIRECTION                        
+ BETWEEN CELLS 25,8,1 AND 26,8,1                                         
+ THESE CELLS ARE IN DIFFERENT PVT REGIONS                                
+</warning>
+<warning date="1/1/2018" time="0.00000000000000">
+ THERE IS A TRANSMISSIBILITY IN THE  X  DIRECTION                        
+ BETWEEN CELLS 26,8,1 AND 27,8,1                                         
+ THESE CELLS ARE IN DIFFERENT PVT REGIONS                                
+</warning>
+<warning date="1/1/2018" time="0.00000000000000">
+ THERE IS A TRANSMISSIBILITY IN THE  X  DIRECTION                        
+ BETWEEN CELLS 24,9,1 AND 25,9,1                                         
+ THESE CELLS ARE IN DIFFERENT PVT REGIONS                                
+</warning>
+<warning date="1/1/2018" time="0.00000000000000">
+ THERE IS A TRANSMISSIBILITY IN THE  X  DIRECTION                        
+ BETWEEN CELLS 26,9,1 AND 27,9,1                                         
+ THESE CELLS ARE IN DIFFERENT PVT REGIONS                                
+</warning>
+<warning date="1/1/2018" time="0.00000000000000">
+ THERE IS A TRANSMISSIBILITY IN THE  X  DIRECTION                        
+ BETWEEN CELLS 23,10,1 AND 24,10,1                                       
+ THESE CELLS ARE IN DIFFERENT PVT REGIONS                                
+</warning>
+<warning date="1/1/2018" time="0.00000000000000">
+ THERE IS A TRANSMISSIBILITY IN THE  X  DIRECTION                        
+ BETWEEN CELLS 26,10,1 AND 27,10,1                                       
+ THESE CELLS ARE IN DIFFERENT PVT REGIONS                                
+</warning>
+<warning date="1/1/2018" time="0.00000000000000">
+ THERE IS A TRANSMISSIBILITY IN THE  X  DIRECTION                        
+ BETWEEN CELLS 22,11,1 AND 23,11,1                                       
+ THESE CELLS ARE IN DIFFERENT PVT REGIONS                                
+</warning>
+<warning date="1/1/2018" time="0.00000000000000">
+ THERE IS A TRANSMISSIBILITY IN THE  X  DIRECTION                        
+ BETWEEN CELLS 26,11,1 AND 27,11,1                                       
+ THESE CELLS ARE IN DIFFERENT PVT REGIONS                                
+</warning>
+<warning date="1/1/2018" time="0.00000000000000">
+ THERE IS A TRANSMISSIBILITY IN THE  X  DIRECTION                        
+ BETWEEN CELLS 26,12,1 AND 27,12,1                                       
+ THESE CELLS ARE IN DIFFERENT PVT REGIONS                                
+</warning>
+<warning date="1/1/2018" time="0.00000000000000">
+ THERE IS A TRANSMISSIBILITY IN THE  X  DIRECTION                        
+ BETWEEN CELLS 26,13,1 AND 27,13,1                                       
+ THESE CELLS ARE IN DIFFERENT PVT REGIONS                                
+</warning>
+<warning date="1/1/2018" time="0.00000000000000">
+ NO FURTHER MESSAGES ABOUT                                               
+ PVT REGION CONNECTION CONSISTENCY                                       
+ WILL BE EMITTED.                                                        
+</warning>
+<message date="1/1/2018" time="0.00000000000000">
+ THE OUTPUT LIMIT FOR THESE MESSAGES                                     
+ CAN BE CHANGED WITH ITEM 13 OF THE                                      
+ MESSAGES KEYWORD OR WITH ITEM 220                                       
+ OF THE OPTIONS KEYWORD.                                                 
+</message>
+<warning date="1/1/2018" time="0.00000000000000">
+ CONNECTION (  22  29  28) IN WELL R_A2                                  
+ HAS ROCK Z-PERMEABILITY   0.0000E+00 .                                  
+ RESETTING KZ TO 10**(-10)                                               
+</warning>
+<warning date="1/1/2018" time="0.00000000000000">
+ WELL R_A5     CONNECTS WITH A DEAD BLOCK                                
+ (  31  20   8). THIS CONNECTION WILL BE IGNORED.                        
+</warning>
+<warning date="1/1/2018" time="0.00000000000000">
+ WELL R_A5     CONNECTS WITH A DEAD BLOCK                                
+ (  31  20   9). THIS CONNECTION WILL BE IGNORED.                        
+</warning>
+<warning date="1/1/2018" time="0.00000000000000">
+ WELL R_A5     CONNECTS WITH A DEAD BLOCK                                
+ (  31  21   9). THIS CONNECTION WILL BE IGNORED.                        
+</warning>
+<warning date="1/1/2018" time="0.00000000000000">
+ WELL R_A5     CONNECTS WITH A DEAD BLOCK                                
+ (  31  21  10). THIS CONNECTION WILL BE IGNORED.                        
+</warning>
+<warning date="1/1/2018" time="0.00000000000000">
+ WELL R_A5     CONNECTS WITH A DEAD BLOCK                                
+ (  31  21  20). THIS CONNECTION WILL BE IGNORED.                        
+</warning>
+<message date="1/1/2018" time="0.00000000000000">
+ GRAPHICS ONLY RESTART FILE WRITTEN   REPORT     0                       
+ RESTART INCLUDES FLUIDS IN PLACE                                        
+                  BUBBLE AND DEW POINT PRESSURES                         
+                  SATURATED GOR                                          
+                  SATURATED OGR                                          
+</message>
+<message date="5/1/2018" time="4.00000000000000">
+ OPENING WELL A1       AT TIME      4.00   DAYS                          
+ CONTROLLED BY RESERVOIR FLUID VOLUME RATE                               
+</message>
+<message date="10/3/2018" time="68.00000000000000">
+ OPENING WELL A2       AT TIME     68.00   DAYS                          
+ CONTROLLED BY RESERVOIR FLUID VOLUME RATE                               
+</message>
+<warning date="8/5/2018" time="127.00000000000000">
+ WELL A5       CONNECTS WITH A DEAD BLOCK                                
+ (  31  20   8). THIS CONNECTION WILL BE IGNORED.                        
+</warning>
+<warning date="8/5/2018" time="127.00000000000000">
+ WELL A5       CONNECTS WITH A DEAD BLOCK                                
+ (  31  20   9). THIS CONNECTION WILL BE IGNORED.                        
+</warning>
+<warning date="8/5/2018" time="127.00000000000000">
+ WELL A5       CONNECTS WITH A DEAD BLOCK                                
+ (  31  21   9). THIS CONNECTION WILL BE IGNORED.                        
+</warning>
+<warning date="8/5/2018" time="127.00000000000000">
+ WELL A5       CONNECTS WITH A DEAD BLOCK                                
+ (  31  21  10). THIS CONNECTION WILL BE IGNORED.                        
+</warning>
+<warning date="8/5/2018" time="127.00000000000000">
+ WELL A5       CONNECTS WITH A DEAD BLOCK                                
+ (  31  21  20). THIS CONNECTION WILL BE IGNORED.                        
+</warning>
+<warning date="8/5/2018" time="127.00000000000000">
+ NO FURTHER MESSAGES ABOUT                                               
+ WELLS CONNECTING WITH DEAD BLOCKS                                       
+ WILL BE EMITTED.                                                        
+</warning>
+<message date="8/5/2018" time="127.00000000000000">
+ THE OUTPUT LIMIT FOR THESE MESSAGES                                     
+ CAN BE CHANGED WITH ITEM 13 OF THE                                      
+ MESSAGES KEYWORD OR WITH ITEM 220                                       
+ OF THE OPTIONS KEYWORD.                                                 
+</message>
+<message date="8/5/2018" time="127.00000000000000">
+ OPENING WELL A5       AT TIME    127.00   DAYS                          
+ CONTROLLED BY WATER RATE                                                
+</message>
+<message date="30/6/2018" time="180.00000000000000">
+ ROCKC TRAN_ OUTPUT HAS BEEN RENAMED TO PERM_                            
+ FROM 2013.1 FOR COMPATIBILITY WITH E300                                 
+</message>
+<message date="1/7/2018" time="181.00000000000000">
+ GRAPHICS ONLY RESTART FILE WRITTEN   REPORT    16                       
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  FLUIDS IN PLACE                                        
+                  BUBBLE AND DEW POINT PRESSURES                         
+                  PHASE RESERVOIR DENSITIES                              
+                  SATURATED GOR                                          
+                  SATURATED OGR                                          
+</message>
+<message date="13/7/2018" time="193.00000000000000">
+ OPENING WELL A3       AT TIME    193.00   DAYS                          
+ CONTROLLED BY RESERVOIR FLUID VOLUME RATE                               
+</message>
+<message date="22/9/2018" time="264.00000000000000">
+ OPENING WELL A4       AT TIME    264.00   DAYS                          
+ CONTROLLED BY RESERVOIR FLUID VOLUME RATE                               
+</message>
+<message date="17/11/2018" time="320.00000000000000">
+ OPENING WELL A6       AT TIME    320.00   DAYS                          
+ CONTROLLED BY WATER RATE                                                
+</message>
+<warning date="16/12/2018" time="349.00000000000000">
+ NEW SOLUTION OBTAINED BY EXTRAPOLATION OF                               
+ OIL PVT TABLES                                                          
+</warning>
+<message date="16/12/2018" time="349.00000000000000">
+  EXTRAPOLATION IN PVTO TABLE NUMBER 1                                   
+  RS BELOW LOWEST  RS VALUE ENTERED IN TABLE                             
+  RS = 9.74629 SM3/SM3 PO = 276.0190 BARSA                               
+  CELL (14,27,7)          STATE 3                                        
+  SW = 1.00000 SG = 0.00000 SO = 3.28117E-06                             
+</message>
+<warning date="17/12/2018" time="350.00000000000000">
+ NEW SOLUTION OBTAINED BY EXTRAPOLATION OF                               
+ OIL PVT TABLES                                                          
+</warning>
+<message date="17/12/2018" time="350.00000000000000">
+  EXTRAPOLATION IN PVTO TABLE NUMBER 1                                   
+  RS BELOW LOWEST  RS VALUE ENTERED IN TABLE                             
+  RS = 3.89851 SM3/SM3 PO = 276.0151 BARSA                               
+  CELL (14,27,7)          STATE 3                                        
+  SW = 1.00000 SG = 0.00000 SO = 3.11104E-06                             
+</message>
+<warning date="18/12/2018" time="351.00000000000000">
+ NEW SOLUTION OBTAINED BY EXTRAPOLATION OF                               
+ OIL PVT TABLES                                                          
+</warning>
+<message date="18/12/2018" time="351.00000000000000">
+  EXTRAPOLATION IN PVTO TABLE NUMBER 1                                   
+  RS BELOW LOWEST  RS VALUE ENTERED IN TABLE                             
+  RS = 7.49025 SM3/SM3 PO = 276.0115 BARSA                               
+  CELL (14,27,7)          STATE 3                                        
+  SW = 1.00000 SG = 0.00000 SO = 3.19289E-06                             
+</message>
+<warning date="19/12/2018" time="352.00000000000000">
+ NEW SOLUTION OBTAINED BY EXTRAPOLATION OF                               
+ OIL PVT TABLES                                                          
+</warning>
+<message date="19/12/2018" time="352.00000000000000">
+  EXTRAPOLATION IN PVTO TABLE NUMBER 1                                   
+  RS BELOW LOWEST  RS VALUE ENTERED IN TABLE                             
+  RS = 12.10367 SM3/SM3 PO = 276.0035 BARSA                              
+  CELL (14,27,7)          STATE 3                                        
+  SW = 1.00000 SG = 0.00000 SO = 3.34048E-06                             
+</message>
+<warning date="28/12/2018" time="361.00000000000000">
+ NEW SOLUTION OBTAINED BY EXTRAPOLATION OF                               
+ OIL PVT TABLES                                                          
+</warning>
+<message date="28/12/2018" time="361.00000000000000">
+  EXTRAPOLATION IN PVTO TABLE NUMBER 1                                   
+  RS BELOW LOWEST  RS VALUE ENTERED IN TABLE                             
+  RS = 16.33138 SM3/SM3 PO = 275.9943 BARSA                              
+  CELL (14,27,7)          STATE 3                                        
+  SW = 1.00000 SG = 0.00000 SO = 3.70587E-06                             
+</message>
+<message date="30/6/2019" time="545.00000000000000">
+ ROCKC TRAN_ OUTPUT HAS BEEN RENAMED TO PERM_                            
+ FROM 2013.1 FOR COMPATIBILITY WITH E300                                 
+</message>
+<message date="1/7/2019" time="546.00000000000000">
+ GRAPHICS ONLY RESTART FILE WRITTEN   REPORT    50                       
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  PHASE RESERVOIR DENSITIES                              
+</message>
+<message date="30/6/2020" time="911.00000000000000">
+ ROCKC TRAN_ OUTPUT HAS BEEN RENAMED TO PERM_                            
+ FROM 2013.1 FOR COMPATIBILITY WITH E300                                 
+</message>
+<message date="1/7/2020" time="912.00000000000000">
+ RESTART FILE WRITTEN   REPORT    82                                     
+ RESTART INCLUDES INTERBLOCK FLOWS                                       
+                  PHASE RESERVOIR DENSITIES                              
+</message>
+</eclipse>

@@ -1,0 +1,47 @@
+name: All logs
+scale:
+  primary: MD
+  allowSecondary: true
+tracks:
+  - title: Porosity
+    plots:
+      - name: PHIT
+        type: area
+        color: green
+      - name: PHIT_ORIG
+        type: line
+  - plots:
+      - name: ZONE
+        type: area
+  - plots:
+      - name: FACIES
+        type: area
+  - plots:
+      - name: VSH
+        type: area
+  - plots:
+      - name: SW
+        type: dot
+  - plots:
+      - name: VP
+        type: line
+  - plots:
+      - name: VS
+        type: line
+  - plots:
+      - name: AI
+        type: line
+  - plots:
+      - name: DENS
+        type: line
+  - plots:
+      - name: SI
+        type: line
+  - plots:
+      - name: VPVS
+        type: line
+
+  - plots:
+      - name: VPHYL
+        type: line
+styles: []

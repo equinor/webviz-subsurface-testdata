@@ -60,6 +60,8 @@
 !01_drogon_ahm/*/*/eclipse/model/*.UNSMRY
 !01_drogon_ahm/*/*/eclipse/model/*.SMSPEC
 01_drogon_ahm/*/*/share/results/tables/*unsmry*
+!01_drogon_ahm/realization-0/iter-0/eclipse/model/*
+!01_drogon_ahm/realization-0/iter-0/eclipse/include/*
 !01_drogon_ahm/realization-0/iter-0/share/results/wells/*
 !01_drogon_ahm/realization-0/iter-0/share/results/grids/eclgrid.roff
 !01_drogon_ahm/realization-0/iter-0/share/results/grids/eclgrid--poro.roff

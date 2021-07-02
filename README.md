@@ -13,8 +13,8 @@ That will download the content to a folder called `webviz-subsurface-testdata`.
 
 ## Description of example data
 
-- `reek_fullmatrix`: A raw FMU result run using design matrix.
-- `aggregated_data`: Aggregated result files.
+- `01_drogon_design`: Results from a FMU case with design matrix.
+- `01_drogon_ahm`: Results from a FMU case with assisted history matching.
 
 ## Corresponding webviz configuration files
 

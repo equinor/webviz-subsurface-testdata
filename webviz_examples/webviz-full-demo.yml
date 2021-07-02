@@ -7,6 +7,7 @@ title: Drogon Webviz
 
 
 shared_settings:
+  predefined_expressions: ../vector_calculator_expressions/PredefinedVectorCalculatorExpressions.json
   scratch_ensembles:
     sens_run: ../01_drogon_design/realization-*/iter-0
     iter-0: ../01_drogon_ahm/realization-*/iter-0
@@ -182,6 +183,7 @@ pages:
             vector2: WGOR:A1
             vector3: WBHP:A1
             visualization: statistics
+          predefined_expressions: predefined_expressions
 
   - title: Well log viewer
     content:

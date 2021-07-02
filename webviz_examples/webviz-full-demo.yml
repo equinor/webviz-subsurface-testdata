@@ -14,11 +14,11 @@ shared_settings:
     iter-2: ../01_drogon_ahm/realization-*/iter-2
     iter-3: ../01_drogon_ahm/realization-*/iter-3
     iter-0-surfaces: ../01_drogon_ahm/realization-[0-1]/iter-0
-#Ensembles used for sensitivity analysis
+# Ensembles used for sensitivity analysis
 dm_ensembles: &dm_ensembles
   - sens_run
 
-#Ensembes used for history matching analysis
+# Ensembes used for history matching analysis
 hm_ensembles: &hm_ensembles
   - iter-0
   - iter-1
@@ -105,7 +105,7 @@ pages:
   - title: Structural Uncertainty
     content:
       - StructuralUncertainty:
-          ensembles: 
+          ensembles:
             - iter-0-surfaces
           surface_attributes:
             - ds_extract_postprocess
@@ -130,7 +130,7 @@ pages:
                 - Mean
                 - Min
                 - Max
-              # well: 55_33-A-4
+            # well: 55_33-A-4
             colors:
               topvolon:
                 iter-0: '#2C82C9'
@@ -265,8 +265,6 @@ pages:
           surfacefiles: *surfacefiles
           surfacenames: *surfacenames
 
-
-
   - title: Running time analysis (FMU)
     content:
       - RunningTimeAnalysisFMU:
@@ -295,9 +293,9 @@ pages:
   - title: Parameter analysis
     content:
       - ParameterAnalysis:
-          ensembles: *hm_ensembles # Optional, type Union[list, NoneType].
-          #csvfile_parameters: null # Optional, type str (corresponding to a path).
-          #csvfile_smry: null # Optional, type str (corresponding to a path).
-          time_index: "monthly" # Optional, type str.
-          column_keys: ["WWCT:*"] # Optional, type Union[list, NoneType].
-          drop_constants: true # Optional, type bool.
+          ensembles: *hm_ensembles  # Optional, type Union[list, NoneType].
+          # csvfile_parameters: null # Optional, type str (corresponding to a path).
+          # csvfile_smry: null # Optional, type str (corresponding to a path).
+          time_index: "monthly"  # Optional, type str.
+          column_keys: ["WWCT:*"]  # Optional, type Union[list, NoneType].
+          drop_constants: true  # Optional, type bool.

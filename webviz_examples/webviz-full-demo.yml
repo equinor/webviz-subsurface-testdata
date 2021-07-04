@@ -54,7 +54,7 @@ surfacenames: &surfacenames
   - Top Volantis
   - Base Volantis
 
-formationfile: &formationfile ../01_drogon_ahm/realization-0/iter-0/share/results/tables/formations.csv
+formationfile: &formationfile ../01_drogon_ahm/realization-0/iter-0/share/results/tables/formations_res_only.csv
 
 faultlinefile: &faultlinefile ../01_drogon_ahm/realization-0/iter-0/share/results/polygons/toptherys--gl_faultlines_extract_postprocess.csv
 

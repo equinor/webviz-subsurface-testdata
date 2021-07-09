@@ -332,7 +332,7 @@ pages:
     content:
       - DiskUsage:
           scratch_dir: ../.
-          date: 2020-07-11  # Date only necessary if you want an explicit date.
+          date: 2021-07-09  # Date only necessary if you want an explicit date.
 
   - title: Surface viewer (FMU)
     content:

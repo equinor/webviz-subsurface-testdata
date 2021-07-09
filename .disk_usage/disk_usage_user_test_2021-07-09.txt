@@ -1,0 +1,16 @@
+Usage of filesystem : webviz-subsurface-testdata
+user kari: 9.9 GiB
+user ola: 4.9 GiB
+user nora: 8.7 GiB
+user sofie: 5.2 GiB
+user emil: 5.3 GiB
+user ella: 6.8 GiB
+user olivia: 1.4 GiB
+user henrik: 3.4 GiB
+user sofia: 2.4 GiB
+user aksel: 6.1 GiB
+user ingrid: 5.6 GiB
+user jakob: 7 GiB
+user lucas: 2.1 GiB
+Total usage 71.3 GiB
+Total usage without overhead 68.8 GiB

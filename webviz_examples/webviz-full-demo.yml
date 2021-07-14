@@ -1,6 +1,7 @@
 title: Reek Webviz Example
 
 shared_settings:
+  predefined_expressions: ../vector_calculator_expressions/PredefinedVectorCalculatorExpressions.json
   scratch_ensembles:
     sens_run: ../reek_fullmatrix/realization-*/iter-0
     iter-0: ../reek_history_match/realization-*/iter-0
@@ -115,6 +116,7 @@ pages:
           options:
             vector1: WOPR:OP_1
             visualization: statistics
+          predefined_expressions: predefined_expressions
 
   - title: Parameter analysis
     content:

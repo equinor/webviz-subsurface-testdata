@@ -116,6 +116,16 @@ pages:
             vector1: WOPR:OP_1
             visualization: statistics
 
+  - title: Well log viewer
+    content:
+      - WellLogViewer:
+          wellfolder: ../observed_data/drogon_wells
+          wellsuffix: .rmswell
+          well_tvdmin: 1500
+          mdlog: MDepth
+          logtemplates:
+            - all_logs.yml
+
   - title: Parameter analysis
     content:
       - ParameterAnalysis:

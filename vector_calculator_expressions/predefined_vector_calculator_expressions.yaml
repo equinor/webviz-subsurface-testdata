@@ -1,0 +1,37 @@
+WWCTCALC:OP_1:
+  expression: x/(x+y)
+  variableVectorMap:
+    x: WWPR:OP_1
+    y: WOPR:OP_1
+
+WGLRCALC:OP_1:
+  expression: x/(y+z)
+  variableVectorMap:
+    x: WGPR:OP_1
+    y: WOPR:OP_1
+    z: WWPR:OP_1
+
+FPRLOG10:
+  expression: log10(x)
+  variableVectorMap:
+    x: FPR
+
+FOILEQVR:
+  expression: x + y/1000
+  variableVectorMap:
+    x: FOPR
+    y: FGPR
+
+FOILEQVT:
+  expression: x + y/1000
+  variableVectorMap:
+    x: FOPT
+    y: FGPT
+
+WOILPI9:OP_1:
+  expression: x / (y-z)
+  variableVectorMap:
+    x: WOPR:OP_1
+    y: WBP9:OP_1
+    z: WBHP:OP_1
+

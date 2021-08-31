@@ -7,7 +7,7 @@ title: Drogon Webviz
 
 
 shared_settings:
-  predefined_expressions: 
+  predefined_expressions:
     timeseries_expressions: ../vector_calculator_expressions/predefined_vector_calculator_expressions.yaml
   scratch_ensembles:
     sens_run: ../01_drogon_design/realization-*/iter-0

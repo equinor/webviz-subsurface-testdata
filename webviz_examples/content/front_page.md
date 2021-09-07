@@ -1,7 +1,7 @@
 ### Welcome to the webviz-subsurface example application
 
 Welcome to this example application, which is based on an openly available
-[Reek output test dataset](https://github.com/equinor/webviz-subsurface-testdata)
+[Drogon output test dataset](https://github.com/equinor/webviz-subsurface-testdata)
 and [Webviz](https://github.com/equinor/webviz-config).
 
 #### User groups targeted by Webviz

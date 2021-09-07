@@ -1,19 +1,96 @@
-title: Reek Webviz Example
+title: Drogon Webviz
+
+
+# live example: https://webviz-subsurface-example.azurewebsites.net/
+# https://equinor.github.io/webviz-subsurface/#/
+# > webviz docs
+
 
 shared_settings:
   scratch_ensembles:
-    sens_run: ../reek_fullmatrix/realization-*/iter-0
-    iter-0: ../reek_history_match/realization-*/iter-0
-    iter-1: ../reek_history_match/realization-*/iter-1
-    iter-2: ../reek_history_match/realization-*/iter-2
-    iter-3: ../reek_history_match/realization-*/iter-3
+    sens_run: ../01_drogon_design/realization-*/iter-0
+    iter-0: ../01_drogon_ahm/realization-*/iter-0
+    iter-1: ../01_drogon_ahm/realization-*/iter-1
+    iter-2: ../01_drogon_ahm/realization-*/iter-2
+    iter-3: ../01_drogon_ahm/realization-*/iter-3
+    iter-0-surfaces: ../01_drogon_ahm/realization-[0-1]/iter-0
+# Ensembles used for sensitivity analysis
+dm_ensembles: &dm_ensembles
+  - sens_run
+
+# Ensembes used for history matching analysis
+hm_ensembles: &hm_ensembles
+  - iter-0
+  - iter-1
+  - iter-2
+  - iter-3
+
+# Shared settings
+obsfile: &obsfile ../01_drogon_ahm/share/observations/tables/ert_observations.yml
+
+scalfile: &scalfile ../01_drogon_ahm/realization-0/iter-0/rms/output/pyscal/pyscal_config_lowbasehigh.csv
+
+fipfile: &fipfile ../01_drogon_ahm/realization-0/iter-0/share/results/tables/fip.yml
+
+segyfiles: &segyfiles
+  - ../01_drogon_ahm/realization-0/iter-0/share/results/seismic/seismic--amplitude_depth--20180701_20180101.segy
+  - ../01_drogon_ahm/realization-0/iter-0/share/results/seismic/seismic--amplitude_depth--20200701_20190701.segy
+
+gridfile: &gridfile ../01_drogon_ahm/realization-0/iter-0/share/results/grids/geogrid.roff
+
+gridparameterfiles: &gridparameterfiles
+  - ../01_drogon_ahm/realization-0/iter-0/share/results/grids/geogrid--phit.roff
+  - ../01_drogon_ahm/realization-0/iter-0/share/results/grids/geogrid--facies.roff
+
+surfacefiles: &surfacefiles
+  - ../01_drogon_ahm/realization-0/iter-0/share/results/maps/topvolon--ds_extract_geogrid.gri
+  - ../01_drogon_ahm/realization-0/iter-0/share/results/maps/toptherys--ds_extract_geogrid.gri
+  - ../01_drogon_ahm/realization-0/iter-0/share/results/maps/topvolantis--ds_extract_geogrid.gri
+  - ../01_drogon_ahm/realization-0/iter-0/share/results/maps/basevolantis--ds_extract_geogrid.gri
+
+surfacenames: &surfacenames
+  - Top Volon
+  - Top Therys
+  - Top Volantis
+  - Base Volantis
+
+formationfile: &formationfile ../01_drogon_ahm/realization-0/iter-0/share/results/tables/formations_res_only.csv
+
+faultlinefile: &faultlinefile ../01_drogon_ahm/realization-0/iter-0/share/results/polygons/toptherys--gl_faultlines_extract_postprocess.csv
+
+wellfolder: &wellfolder ../01_drogon_ahm/realization-0/iter-0/share/results/wells
+meanmap_colors: &meanmap_colors
+  - "#7f3b08"
+  - "#b35806"
+  - "#e08214"
+  - "#fdb863"
+  - "#fee0b6"
+  - "#f7f7f7"
+  - "#d8daeb"
+  - "#b2abd2"
+  - "#8073ac"
+  - "#542788"
+  - "#2d004b"
+
+rmsmap_colors: &rmsmap_colors
+  - "#fff7ec"
+  - "#fee8c8"
+  - "#fdd49e"
+  - "#fdbb84"
+  - "#fc8d59"
+  - "#ef6548"
+  - "#d7301f"
+  - "#b30000"
+  - "#7f0000"
+
 
 pages:
+
   - title: Front page
     content:
       - BannerImage:
           image: ./content/reek_image.jpg
-          title: Reek FMU Webviz example
+          title: Drogon FMU Webviz example
       - Markdown:
           markdown_file: ./content/front_page.md
 
@@ -25,272 +102,208 @@ pages:
           filename: ./webviz-full-demo.yml
           dark_theme: true
 
+  - title: Volumetrics Analysis (sensitivity)
+    content:
+      - VolumetricAnalysis:
+          ensembles: *dm_ensembles
+          volfiles:
+            geogrid: geogrid--vol.csv
+            simgrid: simgrid--vol.csv
+
+  - title: Volumetrics Analysis
+    content:
+      - VolumetricAnalysis:
+          ensembles: *hm_ensembles
+          volfiles:
+            geogrid: geogrid--vol.csv
+            simgrid: simgrid--vol.csv
+
   - title: Structural Uncertainty
     content:
       - StructuralUncertainty:
           ensembles:
-            - iter-0
-            - iter-1
-            - iter-2
-            - iter-3
+            - iter-0-surfaces
           surface_attributes:
-            - ds_extracted_horizons
+            - ds_extract_postprocess
           surface_name_filter:
-            - topupperreek
-            - topmidreek
-            - baselowerreek
+            - topvolantis
+            - toptherys
+            - topvolon
+            - basevolantis
           # Everything below is optional
-          wellfolder: ../observed_data/wells
-          zonelog: Zonelog
+          wellfolder: *wellfolder
+          wellsuffix: .rmswell
+          zonelog: Zone
+          well_downsample_interval: 4
           initial_settings:
             intersection_data:
               surface_names:
-                - topupperreek
-                - topmidreek
-                - baselowerreek
-              surface_attribute: ds_extracted_horizons
+                - topvolantis
+                - topvolon
+              surface_attribute: ds_extract_postprocess
               ensembles:
-                - iter-0
-                - iter-1
+                - iter-0-surfaces
               calculation:
                 - Mean
                 - Min
                 - Max
-              well: OP_6
-              realizations: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+              well: 55_33-A-4
             colors:
-              topupperreek:
+              topvolon:
                 iter-0: '#2C82C9'
                 iter-1: '#2CC990'
-              topmidreek:
+              topvolantis:
                 iter-0: '#512E34'
                 iter-1: '#7D93C1'
-              baselowerreek:
+              basevolantis:
                 iter-0: '#EEE657'
                 iter-1: '#FC6042'
             intersection_layout:
               yaxis:
-                range: [1700, 1550]
+                range: [1850, 1550]
                 title: True vertical depth [m]
               xaxis:
                 title: Lateral distance [m]
 
-  - title: Volumetric Analysis (sensitivity)
-    content:
-      - VolumetricAnalysis:
-          ensembles:
-            - sens_run
-          volfiles:
-            geogrid: geogrid--oil.csv
-            simgrid: simgrid--oil.csv
-
-  - title: Volumetric Analysis
-    content:
-      - VolumetricAnalysis:
-          ensembles:
-            - iter-0
-            - iter-1
-            - iter-2
-            - iter-3
-          volfiles:
-            geogrid: geogrid--oil.csv
-            simgrid: simgrid--oil.csv
-
-  - title: Simulation time series (sensitivity)
+  - title: Sensitivity study (time series)
     content:
       - ReservoirSimulationTimeSeriesOneByOne:
-          ensembles:
-            - sens_run
+          ensembles: *dm_ensembles
           initial_vector: FOPT
+
 
   - title: Simulation time series
     content:
       - ReservoirSimulationTimeSeries:
-          ensembles:
-            - iter-0
-            - iter-1
-            - iter-2
-            - iter-3
-          obsfile: ../reek_history_match/share/observations/observations.yml
+          ensembles: *hm_ensembles
+          obsfile: *obsfile
           options:
-            vector1: WOPR:OP_1
+            vector1: WWCT:A1
+            vector2: WGOR:A1
+            vector3: WBHP:A1
             visualization: statistics
 
   - title: Well log viewer
     content:
       - WellLogViewer:
-          wellfolder: ../observed_data/drogon_wells
+          wellfolder: ../observed_data/wells
           wellsuffix: .rmswell
           well_tvdmin: 1500
           mdlog: MDepth
           logtemplates:
-            - all_logs.yml
-
-  - title: Parameter analysis
-    content:
-      - ParameterAnalysis:
-          ensembles:
-            - iter-0
-            - iter-1
-            - iter-2
-            - iter-3
-
-  - title: Analysis of grid property statistics
-    content:
-      - PropertyStatistics:
-          ensembles:
-            - iter-0
-            - iter-3
-          surface_renaming:
-            Total: all
-            PORO: average_poro
-            PERM: average_permz
-            SW: average_swat--20030101
-            UpperReek: upperreek
-            MidReek: midreek
-            LowerReek: lowerreek
+            - all_logs_template.yml
 
   - title: Regional simulation time series
     content:
       - ReservoirSimulationTimeSeriesRegional:
-          ensembles:
-            - iter-0
-            - iter-1
-            - iter-2
-            - iter-3
-          fipfile: ../reek_history_match/share/regions/fip.yaml
-
-  - title: Well Completions
-    content:
-      - WellCompletions:
-          ensembles:
-            - iter-0
+          ensembles: *hm_ensembles
+          fipfile: *fipfile
 
   - title: Correlation between input parameters and inplace volumes
     content:
       - ParameterResponseCorrelation:
-          ensembles:
-            - iter-0
-            - iter-1
-            - iter-2
-            - iter-3
-          response_file: share/results/volumes/geogrid--oil.csv
+          ensembles: *hm_ensembles
+          response_file: share/results/volumes/geogrid--vol.csv
           response_filters:
             ZONE: multi
             REGION: multi
 
-  - title: Correlation between input parameters and time series
-    content:
-      - ParameterResponseCorrelation:
-          ensembles:
-            - iter-0
-            - iter-1
-            - iter-2
-            - iter-3
-          response_file: share/results/tables/unsmry--monthly.csv
-          response_filters:
-            DATE: single
-
-  - title: Pairwise correlation between all input parameters
+  - title: Pairwise correlation between all input parameters'
     content:
       - ParameterCorrelation:
-          ensembles:
-            - iter-0
-            - iter-1
-            - iter-2
-            - iter-3
+          ensembles: *hm_ensembles
+          drop_constants: true
+
+
+  - title: Parameter distributions
+    content:
+      - ParameterDistribution:
+          ensembles: *hm_ensembles
 
   - title: Relative permeability
     content:
       - RelativePermeability:
-          ensembles:
-            - iter-0
-            - iter-1
-            - iter-2
-            - iter-3
+          ensembles: *hm_ensembles
           relpermfile: share/results/tables/relperm.csv
-          scalfile: ../reek_history_match/share/scal/scalreek.csv
+          # scalfile: *scalfile
 
   - title: Parameter parallel coordinates
     content:
       - ParameterParallelCoordinates:
-          ensembles:
-            - iter-0
-            - iter-1
-            - iter-2
-            - iter-3
+          ensembles: *hm_ensembles
 
   - title: SEG-Y viewer
     content:
       - SegyViewer:
-          segyfiles:
-            - ../observed_data/seismic/syntseis_20000101_seismic_depth_stack.segy
-            - ../observed_data/seismic/syntseis_20030101_seismic_depth_stack.segy
+          segyfiles: *segyfiles
+          colors:
+            - '#000000'
+            - '#001f4d'
+            - '#003786'
+            - '#0e58a8'
+            - '#217eb8'
+            - '#30a4ca'
+            - '#54c8df'
+            - '#9be4ef'
+            - '#e1e9d1'
+            - '#f3d573'
+            - '#e7b000'
+            - '#da8200'
+            - '#c65400'
+            - '#ac2301'
+            - '#820000'
+            - '#4c0000'
+            - '#040100'
 
   - title: Surface with seismic cross-section
     content:
       - SurfaceWithSeismicCrossSection:
-          segyfiles:
-            - ../observed_data/seismic/syntseis_20000101_seismic_depth_stack.segy
-            - ../observed_data/seismic/syntseis_20030101_seismic_depth_stack.segy
-          surfacefiles:
-            - ../reek_fullmatrix/realization-0/iter-0/share/results/maps/topupperreek--ds_extracted_horizons.gri
-            - ../reek_fullmatrix/realization-0/iter-0/share/results/maps/topmidreek--ds_extracted_horizons.gri
-            - ../reek_fullmatrix/realization-0/iter-0/share/results/maps/toplowerreek--ds_extracted_horizons.gri
-            - ../reek_fullmatrix/realization-0/iter-0/share/results/maps/baselowerreek--ds_extracted_horizons.gri
-          surfacenames:
-            - Top Upper Reek
-            - Top Middle Reek
-            - Top Lower Reek
-            - Base Lower Reek
+          segyfiles: *segyfiles
+          colors:
+            - '#000000'
+            - '#001f4d'
+            - '#003786'
+            - '#0e58a8'
+            - '#217eb8'
+            - '#30a4ca'
+            - '#54c8df'
+            - '#9be4ef'
+            - '#e1e9d1'
+            - '#f3d573'
+            - '#e7b000'
+            - '#da8200'
+            - '#c65400'
+            - '#ac2301'
+            - '#820000'
+            - '#4c0000'
+            - '#040100'
+          surfacefiles: *surfacefiles
+          surfacenames: *surfacenames
 
   - title: Surface with grid cross-section
     content:
       - SurfaceWithGridCrossSection:
-          gridfile: ../reek_history_match/realization-0/iter-0/share/results/grids/geogrid.roff
-          gridparameterfiles:
-            - ../reek_history_match/realization-0/iter-0/share/results/grids/geogrid--poro.roff
-            - ../reek_history_match/realization-0/iter-0/share/results/grids/geogrid--perm.roff
-            - ../reek_history_match/realization-0/iter-0/share/results/grids/geogrid--facies.roff
-          surfacefiles:
-            - ../reek_history_match/realization-0/iter-0/share/results/maps/topupperreek--ds_extracted_horizons.gri
-            - ../reek_history_match/realization-0/iter-0/share/results/maps/topmidreek--ds_extracted_horizons.gri
-            - ../reek_history_match/realization-0/iter-0/share/results/maps/toplowerreek--ds_extracted_horizons.gri
-            - ../reek_history_match/realization-0/iter-0/share/results/maps/baselowerreek--ds_extracted_horizons.gri
-          surfacenames:
-            - Top Upper Reek
-            - Top Middle Reek
-            - Top Lower Reek
-            - Base Lower Reek
+          gridfile: *gridfile
+          gridparameterfiles: *gridparameterfiles
+          surfacefiles: *surfacefiles
+          surfacenames: *surfacenames
 
   - title: Running time analysis (FMU)
     content:
       - RunningTimeAnalysisFMU:
-          ensembles:
-            - iter-0
-            - iter-1
-            - iter-2
-            - iter-3
+          ensembles: *hm_ensembles
 
   - title: RFT plotter
     content:
       - RftPlotter:
-          ensembles:
-            - iter-0
-            - iter-1
-            - iter-2
-            - iter-3
-          formations: ../reek_history_match/share/results/tables/formations.csv
-          faultlines: ../reek_history_match/share/results/polygons/faultpolygons.csv
+          ensembles: *hm_ensembles
+          formations: *formationfile
+          faultlines: *faultlinefile
 
   - title: PVT
     content:
       - PvtPlot:
-          ensembles:
-            - iter-0
-            - iter-1
-            - iter-2
-            - iter-3
+          ensembles: *hm_ensembles
           pvt_relative_file_path: share/results/tables/pvt.csv
 
   - title: BHP QC
@@ -298,33 +311,37 @@ pages:
       - BhpQc:
           ensembles:
             - iter-0
-            - iter-1
-            - iter-2
             - iter-3
 
-  - title: Assisted History matching parameters update vs observations
+  - title: Parameter analysis
     content:
-      - AssistedHistoryMatchingAnalysis:
-          input_dir: ../reek_history_match/share/output_analysis/scalar_ahm_analysis
+      - ParameterAnalysis:
+          ensembles: *hm_ensembles
+          time_index: "monthly"
+          column_keys: ["WWCT:*"]
+          drop_constants: true
 
-  - title: Tornado plotter
+  - title: Grid property statistics
+    content:
+      - PropertyStatistics:
+          ensembles: *hm_ensembles
+          statistics_file: share/results/tables/grid_property_statistics_geogrid.csv
+
+  - title: Tornado Plotter
     content:
       - TornadoPlotterFMU:
-          aggregated_csvfile: ../aggregated_data/volumes.csv
-          aggregated_parameterfile: ../aggregated_data/realdata.csv
-          initial_response: STOIIP_OIL
-          single_value_selectors:
-            - SOURCE
+          ensemble: sens_run
+          csvfile: share/results/volumes/geogrid--vol.csv
           multi_value_selectors:
-            - ZONE
             - REGION
+            - ZONE
 
-  - title: Line plotter
+  - title: Line Plotter
     content:
       - LinePlotterFMU:
-          aggregated_csvfile: ../aggregated_data/smry_hm.csv
-          observation_file: ../reek_history_match/share/observations/observations.yml
-          aggregated_parameterfile: ../aggregated_data/parameters_hm.csv
+          aggregated_csvfile: ../reek_test_data/aggregated_data/smry_hm.csv
+          aggregated_parameterfile: ../reek_test_data/aggregated_data/parameters_hm.csv
+          observation_file: ../reek_test_data/observations.yml
           observation_group: smry
           remap_observation_values:
             DATE: date
@@ -338,61 +355,16 @@ pages:
             iter-0: red
             iter-3: blue
 
-  - title: Disk usage
+  - title: History match
     content:
-      - DiskUsage:
-          scratch_dir: ../.
-          date: 2021-07-09  # Date only necessary if you want an explicit date.
+      - HistoryMatch:
+          observation_file: *obsfile
+          ensembles: *hm_ensembles
 
   - title: Surface viewer (FMU)
     content:
       - SurfaceViewerFMU:
           ensembles:
-            - iter-0
-            - iter-3
-          wellfolder: ../observed_data/wells
-          attribute_settings:
-            stoiip:
-              min: 0
-              max: 2
-              color:
-                [
-                  "#000004",
-                  "#1b0c41",
-                  "#4a0c6b",
-                  "#781c6d",
-                  "#a52c60",
-                  "#cf4446",
-                  "#ed6925",
-                  "#fb9b06",
-                  "#f7d13d",
-                  "#fcffa4",
-                ]
-
-  - title: Parameter distribution
-    content:
-      - ParameterDistribution:
-          ensembles:
-            - iter-0
-            - iter-1
-            - iter-2
-            - iter-3
-
-  - title: Reservoir simulation map
-    content:
-      - In this example, the horizontal permeability is shown together with oil fluid flow for a given date during simulation.
-      - SubsurfaceMap:
-          ensemble: iter-0
-          map_value: PERMX
-          flow_value: FLROIL
-          time_step: 2
-
-  - title: History match
-    content:
-      - HistoryMatch:
-          observation_file: ../reek_history_match/share/observations/observations.yml
-          ensembles:
-            - iter-0
-            - iter-1
-            - iter-2
-            - iter-3
+            - iter-0-surfaces
+          wellfolder: *wellfolder
+          wellsuffix: ".rmswell"

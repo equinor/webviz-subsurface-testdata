@@ -1,0 +1,106 @@
+{
+ "run_id": "23721:30263:2021-8-30-12-34-00:3182772958d",
+ "start_time": 1630326880.0,
+ "end_time": 1630327033.0,
+ "jobs": [
+  {
+   "name": "MAKE_SYMLINK",
+   "status": "Success",
+   "error": null,
+   "start_time": 1630326880.0,
+   "end_time": 1630326880.0,
+   "stdout": "make_symlink.stdout.0",
+   "stderr": "make_symlink.stderr.0",
+   "current_memory_usage": 364544,
+   "max_memory_usage": 364544
+  },
+  {
+   "name": "MAKE_DIRECTORY",
+   "status": "Success",
+   "error": null,
+   "start_time": 1630326880.0,
+   "end_time": 1630326880.0,
+   "stdout": "make_directory.stdout.1",
+   "stderr": "make_directory.stderr.1",
+   "current_memory_usage": 188416,
+   "max_memory_usage": 188416
+  },
+  {
+   "name": "COPY_FILE",
+   "status": "Success",
+   "error": null,
+   "start_time": 1630326880.0,
+   "end_time": 1630326880.0,
+   "stdout": "copy_file.stdout.2",
+   "stderr": "copy_file.stderr.2",
+   "current_memory_usage": 364544,
+   "max_memory_usage": 364544
+  },
+  {
+   "name": "ECLIPSE100",
+   "status": "Success",
+   "error": null,
+   "start_time": 1630326880.0,
+   "end_time": 1630327025.0,
+   "stdout": "ECLIPSE100.stdout.3",
+   "stderr": "ECLIPSE100.stderr.3",
+   "current_memory_usage": 52953088,
+   "max_memory_usage": 52953088
+  },
+  {
+   "name": "MAKE_DIRECTORY",
+   "status": "Success",
+   "error": null,
+   "start_time": 1630327025.0,
+   "end_time": 1630327025.0,
+   "stdout": "make_directory.stdout.4",
+   "stderr": "make_directory.stderr.4",
+   "current_memory_usage": 188416,
+   "max_memory_usage": 188416
+  },
+  {
+   "name": "GRID3D_HC_THICKNESS",
+   "status": "Success",
+   "error": null,
+   "start_time": 1630327025.0,
+   "end_time": 1630327030.0,
+   "stdout": "GRID3D_HC_THICKNESS.stdout.5",
+   "stderr": "GRID3D_HC_THICKNESS.stderr.5",
+   "current_memory_usage": 225280,
+   "max_memory_usage": 225280
+  },
+  {
+   "name": "MAKE_SYMLINK",
+   "status": "Success",
+   "error": null,
+   "start_time": 1630327030.0,
+   "end_time": 1630327031.0,
+   "stdout": "make_symlink.stdout.6",
+   "stderr": "make_symlink.stderr.6",
+   "current_memory_usage": 192512,
+   "max_memory_usage": 192512
+  },
+  {
+   "name": "MAKE_SYMLINK",
+   "status": "Success",
+   "error": null,
+   "start_time": 1630327031.0,
+   "end_time": 1630327031.0,
+   "stdout": "make_symlink.stdout.7",
+   "stderr": "make_symlink.stderr.7",
+   "current_memory_usage": 196608,
+   "max_memory_usage": 196608
+  },
+  {
+   "name": "STEA",
+   "status": "Success",
+   "error": null,
+   "start_time": 1630327031.0,
+   "end_time": 1630327033.0,
+   "stdout": "STEA.stdout.8",
+   "stderr": "STEA.stderr.8",
+   "current_memory_usage": 221184,
+   "max_memory_usage": 221184
+  }
+ ]
+}

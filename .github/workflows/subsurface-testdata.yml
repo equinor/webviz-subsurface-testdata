@@ -67,7 +67,7 @@ jobs:
         run: pip freeze
 
       - name: 🕵️ Check config style
-        run: yamllint .
+        run: yamllint ./webviz_examples
 
       - name: 🤖 Run tests
         run: |

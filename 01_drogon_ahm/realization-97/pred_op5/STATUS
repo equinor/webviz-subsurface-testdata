@@ -1,0 +1,21 @@
+Current host                    : st-rsv20-20-17.st.statoil.no/x86_64
+MAKE_SYMLINK                    : 15:00:39 .... 15:00:39  
+MAKE_DIRECTORY                  : 15:00:39 .... 15:00:39  
+COPY_DIRECTORY                  : 15:00:39 .... 15:00:39  
+MAKE_DIRECTORY                  : 15:00:39 .... 15:00:39  
+MAKE_DIRECTORY                  : 15:00:39 .... 15:00:40  
+MAKE_DIRECTORY                  : 15:00:40 .... 15:00:40  
+MAKE_DIRECTORY                  : 15:00:40 .... 15:00:40  
+MAKE_DIRECTORY                  : 15:00:40 .... 15:00:40  
+MAKE_SYMLINK                    : 15:00:40 .... 15:00:40  
+MAKE_SYMLINK                    : 15:00:40 .... 15:00:40  
+MAKE_SYMLINK                    : 15:00:40 .... 15:00:41  
+MAKE_SYMLINK                    : 15:00:41 .... 15:00:41  
+MAKE_SYMLINK                    : 15:00:41 .... 15:00:41  
+MAKE_SYMLINK                    : 15:00:41 .... 15:00:41  
+MAKE_SYMLINK                    : 15:00:41 .... 15:00:41  
+COPY_FILE                       : 15:00:41 .... 15:00:41  
+RMS                             : 15:00:41 .... 15:00:53  
+MAKE_SYMLINK                    : 15:00:53 .... 15:00:54  
+XSECT_WELLS                     : 15:00:54 .... 15:00:56  
+ECLIPSE100                      : 15:00:56 .... 15:01:20   EXIT: 1/Process exited with status code 1

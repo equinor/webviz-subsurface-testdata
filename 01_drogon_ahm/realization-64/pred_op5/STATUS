@@ -1,0 +1,25 @@
+Current host                    : st-rsv16-16-04.st.statoil.no/x86_64
+MAKE_SYMLINK                    : 15:00:25 .... 15:00:25  
+MAKE_DIRECTORY                  : 15:00:25 .... 15:00:26  
+COPY_DIRECTORY                  : 15:00:26 .... 15:00:26  
+MAKE_DIRECTORY                  : 15:00:26 .... 15:00:26  
+MAKE_DIRECTORY                  : 15:00:26 .... 15:00:26  
+MAKE_DIRECTORY                  : 15:00:26 .... 15:00:26  
+MAKE_DIRECTORY                  : 15:00:26 .... 15:00:26  
+MAKE_DIRECTORY                  : 15:00:26 .... 15:00:27  
+MAKE_SYMLINK                    : 15:00:27 .... 15:00:27  
+MAKE_SYMLINK                    : 15:00:27 .... 15:00:27  
+MAKE_SYMLINK                    : 15:00:27 .... 15:00:27  
+MAKE_SYMLINK                    : 15:00:27 .... 15:00:27  
+MAKE_SYMLINK                    : 15:00:27 .... 15:00:27  
+MAKE_SYMLINK                    : 15:00:27 .... 15:00:28  
+MAKE_SYMLINK                    : 15:00:28 .... 15:00:28  
+COPY_FILE                       : 15:00:28 .... 15:00:28  
+RMS                             : 15:00:28 .... 15:00:40  
+MAKE_SYMLINK                    : 15:00:40 .... 15:00:40  
+XSECT_WELLS                     : 15:00:40 .... 15:00:43  
+ECLIPSE100                      : 15:00:43 .... 15:04:12  
+GRID3D_HC_THICKNESS             : 15:04:12 .... 15:04:16  
+MAKE_SYMLINK                    : 15:04:16 .... 15:04:17  
+MAKE_SYMLINK                    : 15:04:17 .... 15:04:17  
+STEA                            : 15:04:17 .... 15:04:19  

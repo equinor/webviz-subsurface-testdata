@@ -1,11 +1,13 @@
 WWCTCALC:OP_1:
   expression: x/(x+y)
+  description: Water-cut, well OP_1
   variableVectorMap:
     x: WWPR:OP_1
     y: WOPR:OP_1
 
 WGLRCALC:OP_1:
   expression: x/(y+z)
+  description: Gas-liquid ratio, well OP_1
   variableVectorMap:
     x: WGPR:OP_1
     y: WOPR:OP_1
@@ -13,17 +15,20 @@ WGLRCALC:OP_1:
 
 FPRLOG10:
   expression: log10(x)
+  description: log10(Field average pressure)
   variableVectorMap:
     x: FPR
 
 FOILEQVR:
   expression: x + y/1000
+  description: Field oil equivalent rate
   variableVectorMap:
     x: FOPR
     y: FGPR
 
 FOILEQVT:
   expression: x + y/1000
+  description: Field oil equivalent total
   variableVectorMap:
     x: FOPT
     y: FGPT

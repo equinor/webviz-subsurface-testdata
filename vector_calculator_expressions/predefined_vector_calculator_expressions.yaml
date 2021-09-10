@@ -35,6 +35,7 @@ FOILEQVT:
 
 WOILPI9:OP_1:
   expression: x / (y-z)
+  description: Prod index (oil), ref WBP9 - WBHP, well OP_1
   variableVectorMap:
     x: WOPR:OP_1
     y: WBP9:OP_1

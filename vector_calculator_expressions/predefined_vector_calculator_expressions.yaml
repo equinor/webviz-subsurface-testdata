@@ -1,17 +1,17 @@
-WWCTCALC:OP_1:
+WWCTCALC:A1:
   expression: x/(x+y)
-  description: Water-cut, well OP_1
+  description: Water-cut, well A1
   variableVectorMap:
-    x: WWPR:OP_1
-    y: WOPR:OP_1
+    x: WWPR:A1
+    y: WOPR:A1
 
-WGLRCALC:OP_1:
+WGLRCALC:A1:
   expression: x/(y+z)
-  description: Gas-liquid ratio, well OP_1
+  description: Gas-liquid ratio, well A1
   variableVectorMap:
-    x: WGPR:OP_1
-    y: WOPR:OP_1
-    z: WWPR:OP_1
+    x: WGPR:A1
+    y: WOPR:A1
+    z: WWPR:A1
 
 FPRLOG10:
   expression: log10(x)
@@ -33,10 +33,10 @@ FOILEQVT:
     x: FOPT
     y: FGPT
 
-WOILPI9:OP_1:
+WOILPI9:A1:
   expression: x / (y-z)
-  description: Prod index (oil), ref WBP9 - WBHP, well OP_1
+  description: Prod index (oil), ref WBP9 - WBHP, well A1
   variableVectorMap:
-    x: WOPR:OP_1
-    y: WBP9:OP_1
-    z: WBHP:OP_1
+    x: WOPR:A1
+    y: WBP9:A1
+    z: WBHP:A1

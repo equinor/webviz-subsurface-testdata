@@ -1,0 +1,113 @@
+{
+    "version": "0.1",
+    "wells": [
+        {
+            "alias": {
+                "eclipse": "A1"
+            },
+            "attributes": {
+                "welltype": "oil producer"
+            },
+            "name": "A1"
+        },
+        {
+            "alias": {
+                "eclipse": "A2"
+            },
+            "attributes": {
+                "welltype": "oil producer"
+            },
+            "name": "A2"
+        },
+        {
+            "alias": {
+                "eclipse": "A3"
+            },
+            "attributes": {
+                "welltype": "oil producer"
+            },
+            "name": "A3"
+        },
+        {
+            "alias": {
+                "eclipse": "A4"
+            },
+            "attributes": {
+                "welltype": "oil producer"
+            },
+            "name": "A4"
+        },
+        {
+            "alias": {
+                "eclipse": "A5"
+            },
+            "attributes": {
+                "welltype": "water injector"
+            },
+            "name": "A5"
+        },
+        {
+            "alias": {
+                "eclipse": "A6"
+            },
+            "attributes": {
+                "welltype": "water injector"
+            },
+            "name": "A6"
+        },
+        {
+            "alias": {
+                "eclipse": "R_A1"
+            },
+            "attributes": {
+                "welltype": "observation well"
+            },
+            "name": "R_A1"
+        },
+        {
+            "alias": {
+                "eclipse": "R_A2"
+            },
+            "attributes": {
+                "welltype": "observation well"
+            },
+            "name": "R_A2"
+        },
+        {
+            "alias": {
+                "eclipse": "R_A3"
+            },
+            "attributes": {
+                "welltype": "observation well"
+            },
+            "name": "R_A3"
+        },
+        {
+            "alias": {
+                "eclipse": "R_A4"
+            },
+            "attributes": {
+                "welltype": "observation well"
+            },
+            "name": "R_A4"
+        },
+        {
+            "alias": {
+                "eclipse": "R_A5"
+            },
+            "attributes": {
+                "welltype": "observation well"
+            },
+            "name": "R_A5"
+        },
+        {
+            "alias": {
+                "eclipse": "R_A6"
+            },
+            "attributes": {
+                "welltype": "observation well"
+            },
+            "name": "R_A6"
+        }
+    ]
+}

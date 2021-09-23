@@ -25,6 +25,8 @@
 01_drogon_ahm/*/*/share/results/wells/*
 01_drogon_ahm/*/*/share/observations/*
 01_drogon_ahm/*/*/rms/*
+!01_drogon_ahm/*/*/rms/output/wells/*
+!01_drogon_ahm/*/*/rms/output/zone/*
 01_drogon_ahm/*/*/sim2seis
 01_drogon_ahm/*/*/share/results/tables/*
 01_drogon_ahm/*/*/share/results/volumes/*

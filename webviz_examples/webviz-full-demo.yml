@@ -371,3 +371,21 @@ pages:
             - iter-0-surfaces
           wellfolder: *wellfolder
           wellsuffix: ".rmswell"
+
+  - title: Well Completions
+    content:
+      - WellCompletions:
+          ensembles:
+            - iter-0
+          compdat_file: "share/results/tables/compdat.csv"
+          zone_layer_mapping_file: "rms/output/zone/simgrid_zone_layer_mapping.lyr"
+          stratigraphy_file: "rms/output/zone/stratigraphy.json"
+          well_attributes_file: "rms/output/wells/well_attributes.json"
+
+  - title: Group Tree
+    content:
+      - GroupTree:
+          ensembles:
+            - iter-0
+          gruptree_file: "share/results/tables/gruptree.csv"
+          time_index: "monthly"

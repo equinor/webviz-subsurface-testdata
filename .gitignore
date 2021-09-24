@@ -90,6 +90,7 @@
 !01_drogon_ahm/share/observations/maps/*amplitude*
 !01_drogon_ahm/*/iter-0/sim2seis/output/4d_attribute_maps/*
 !01_drogon_ahm/*/iter-3/sim2seis/output/4d_attribute_maps/*
+!01_drogon_ahm/share/observations/seismic/*
 
 
 *stea*

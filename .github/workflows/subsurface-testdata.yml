@@ -73,8 +73,6 @@ jobs:
         run: |
           webviz certificate
           pushd webviz-subsurface
-          sed -i "s&\./webviz-subsurface-testdata/&\.\./&g" tests/integration_tests/test_raw_data_example.py
-          sed -i "s&\./webviz-subsurface-testdata/&\.\./&g" tests/integration_tests/test_aggregated_data_example.py
           pytest tests --headless --testdata-folder ..
           popd
           webviz build ./webviz_examples/webviz-full-demo.yml --portable ./webviz_examples/example_subsurface_app

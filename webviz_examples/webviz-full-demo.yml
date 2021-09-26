@@ -12,8 +12,6 @@ shared_settings:
   scratch_ensembles:
     sens_run: ../01_drogon_design/realization-*/iter-0
     iter-0: ../01_drogon_ahm/realization-*/iter-0
-    iter-1: ../01_drogon_ahm/realization-*/iter-1
-    iter-2: ../01_drogon_ahm/realization-*/iter-2
     iter-3: ../01_drogon_ahm/realization-*/iter-3
     iter-0-surfaces: ../01_drogon_ahm/realization-[0-1]/iter-0
 # Ensembles used for sensitivity analysis
@@ -23,8 +21,6 @@ dm_ensembles: &dm_ensembles
 # Ensembes used for history matching analysis
 hm_ensembles: &hm_ensembles
   - iter-0
-  - iter-1
-  - iter-2
   - iter-3
 
 # Shared settings
@@ -153,13 +149,10 @@ pages:
             colors:
               topvolon:
                 iter-0: '#2C82C9'
-                iter-1: '#2CC990'
               topvolantis:
                 iter-0: '#512E34'
-                iter-1: '#7D93C1'
               basevolantis:
                 iter-0: '#EEE657'
-                iter-1: '#FC6042'
             intersection_layout:
               yaxis:
                 range: [1850, 1550]

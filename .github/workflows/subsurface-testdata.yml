@@ -73,6 +73,7 @@ jobs:
         run: |
           webviz certificate
           pushd webviz-subsurface
+          mkdir ./tests/assets && cp ./webviz_subsurface/_assets/js/* ./tests/assets
           pytest ./tests --headless --forked --testdata-folder ..
           popd
           webviz build ./webviz_examples/webviz-full-demo.yml --portable ./webviz_examples/example_subsurface_app

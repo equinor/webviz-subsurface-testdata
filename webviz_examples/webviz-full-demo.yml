@@ -140,13 +140,12 @@ layout:
         icon: table_chart
         content:
 
-          - page: Volumetrics Analysis
+          - page: Volumetric Analysis
             content:
               - VolumetricAnalysis:
                   ensembles: *dm_ensembles
                   volfiles:
                     geogrid: geogrid--vol.csv
-                    simgrid: simgrid--vol.csv
 
           - page: Time Series Analysis
             content:
@@ -328,6 +327,16 @@ layout:
               - PropertyStatistics:
                   ensembles: *hm_ensembles
                   statistics_file: share/results/tables/grid_property_statistics_geogrid.csv
+
+          - page: Static vs dynamic volumes
+            content:
+              - VolumetricAnalysis:
+                  ensembles:
+                    - iter-3
+                  fipfile: *fipfile
+                  volfiles:
+                    simgrid: simgrid--vol.csv
+                    eclipse: eclipse--vol.csv
 
           - page: Well log viewer
             content:

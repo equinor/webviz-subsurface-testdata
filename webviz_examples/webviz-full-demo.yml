@@ -114,8 +114,8 @@ layout:
         icon: home
         content:
           - BannerImage:
-            image: ./content/reek_image.jpg
-            title: Drogon FMU Webviz demo
+              image: ./content/reek_image.jpg
+              title: Drogon FMU Webviz demo
           - This live demo is based on multi-realization data sets (ensembles) generated from the synthetic Drogon model.
           - Webviz created from configuration file, including advanced menu example (grouping)
           - Open Information in menu to see how this was made (yaml configuration).
@@ -125,10 +125,10 @@ layout:
         icon: info_circle
         content:
 
-      - page: How was this made
-        content:
-          - SyntaxHighlighter:
-              filename: ./webviz-full-demo.yml
+          - page: How was this made
+            content:
+              - SyntaxHighlighter:
+                  filename: ./webviz-full-demo.yml
 
       # - page: Markdown example
       #   content:

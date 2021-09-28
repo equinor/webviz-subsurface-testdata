@@ -1,3 +1,4 @@
+---
 title: Drogon Webviz Demonstration
 
 shared_settings:
@@ -94,308 +95,304 @@ segy_colors: &segy_colors
   - '#820000'
   - '#4c0000'
   - '#040100'
-  
 
-#-------------------------------
+
+# ------------------------------
 options:
   menu:
-    show_logo: True
+    show_logo: true
     bar_position: left
     drawer_position: left
-    initially_pinned: True
+    initially_pinned: true
 
-#-------------------------------
+# ------------------------------
 layout:
- - section: Webviz Menu
-   content:
+  - section: Webviz Menu
+    content:
+      # ------------------------------
+      - page: Front page
+        icon: home
+        content:
+          - BannerImage:
+            image: ./content/reek_image.jpg
+            title: Drogon FMU Webviz demo
+          - This live demo is based on multi-realization data sets (ensembles) generated from the synthetic Drogon model.
+          - Webviz created from configuration file, including advanced menu example (grouping)
+          - Open Information in menu to see how this was made (yaml configuration).
 
-    #-------------------------------
-    - page: Front page
-      icon: home
-      content:
-       - BannerImage:
-           image: ./content/reek_image.jpg
-           title: Drogon FMU Webviz demo
-       - This live demo is based on multi-realization data sets (ensembles) generated from the synthetic Drogon model. 
-       - Webviz created from configuration file, including advanced menu example (grouping)
-       - Open Information in menu to see how this was made (yaml configuration).
+      # ------------------------------
+      - group: Information
+        icon: info_circle
+        content:
 
-    #-------------------------------
-    - group: Information
-      icon: info_circle
-      content:
-
-      #- page: Markdown example
-      #  content:
-      #   - Markdown:
-      #       markdown_file: ./content/how_was_this_made.md
-           
       - page: How was this made
         content:
-         - SyntaxHighlighter:
-             filename: ./webviz-full-demo.yml
+          - SyntaxHighlighter:
+              filename: ./webviz-full-demo.yml
 
-    #-------------------------------
-    - group: OnebyOne analysis
-      icon: table_chart
-      content:
+      # - page: Markdown example
+      #   content:
+      #    - Markdown:
+      #        markdown_file: ./content/how_was_this_made.md
 
-        - page: Volumetrics Analysis
-          content:
-            - VolumetricAnalysis:
-                ensembles: *dm_ensembles
-                volfiles:
-                  geogrid: geogrid--vol.csv
-                  simgrid: simgrid--vol.csv
-                  
-        - page: Time Series Analysis
-          content:
-            - ReservoirSimulationTimeSeriesOneByOne:
-                ensembles: *dm_ensembles
-                initial_vector: FOPT
-      
-        - page: Tornado Plotter
-          content:
-            - TornadoPlotterFMU:
-                ensemble: sens_run
-                csvfile: share/results/volumes/geogrid--vol.csv
-                multi_value_selectors:
-                  - REGION
-                  - ZONE
+      # -------------------------------
+      - group: OnebyOne analysis
+        icon: table_chart
+        content:
 
-    #-------------------------------
-    - group: Model analysis general
-      icon: timeline
-      content:
+          - page: Volumetrics Analysis
+            content:
+              - VolumetricAnalysis:
+                  ensembles: *dm_ensembles
+                  volfiles:
+                    geogrid: geogrid--vol.csv
+                    simgrid: simgrid--vol.csv
 
-        - page: Volumetrics
-          content:
-            - VolumetricAnalysis:
-                ensembles: *hm_ensembles
-                volfiles:
-                  geogrid: geogrid--vol.csv
-                  simgrid: simgrid--vol.csv
+          - page: Time Series Analysis
+            content:
+              - ReservoirSimulationTimeSeriesOneByOne:
+                  ensembles: *dm_ensembles
+                  initial_vector: FOPT
 
-        - page: Structural Uncertainty
-          content:
-            - StructuralUncertainty:
-                ensembles:
-                  - iter-0-surfaces
-                surface_attributes:
-                - ds_extract_postprocess
-                surface_name_filter:
-                  - topvolantis
-                  - toptherys
-                  - topvolon
-                  - basevolantis
-                # Everything below is optional
-                wellfolder: *wellfolder
-                wellsuffix: .rmswell
-                zonelog: Zone
-                well_downsample_interval: 4
-                initial_settings:
-                  intersection_data:
-                    surface_names:
-                    - topvolantis
-                    - topvolon
-                    surface_attribute: ds_extract_postprocess
-                    ensembles:
-                      - iter-0-surfaces
-                    calculation:
-                      - Mean
-                      - Min
-                      - Max
-                    well: 55_33-A-4
-                  colors:
-                    topvolon:
-                      iter-0: '#2C82C9'
-                      iter-3: '#2CC990'
-                    topvolantis:
-                      iter-0: '#512E34'
-                      iter-3: '#7D93C1'
-                    basevolantis:
-                      iter-0: '#EEE657'
-                      iter-3: '#FC6042'
-                  intersection_layout:
-                    yaxis:
-                      range: [1850, 1550]
-                      title: True vertical depth [m]
-                    xaxis:
-                      title: Lateral distance [m]
+          - page: Tornado Plotter
+            content:
+              - TornadoPlotterFMU:
+                  ensemble: sens_run
+                  csvfile: share/results/volumes/geogrid--vol.csv
+                  multi_value_selectors:
+                    - REGION
+                    - ZONE
 
-        - page: Simulation time series
-          content:
-            - ReservoirSimulationTimeSeries:
-                ensembles: *hm_ensembles
-                obsfile: *obsfile
-                options:
-                  vector1: WWCT:A1
-                  vector2: WGOR:A1
-                  vector3: WBHP:A1
-                  visualization: statistics
-                predefined_expressions: timeseries_expressions
+      # -------------------------------
+      - group: Model analysis general
+        icon: timeline
+        content:
 
-        - page: Regional simulation time series
-          content:
-            - ReservoirSimulationTimeSeriesRegional:
-                ensembles: *hm_ensembles
-                fipfile: *fipfile
+          - page: Volumetrics
+            content:
+              - VolumetricAnalysis:
+                  ensembles: *hm_ensembles
+                  volfiles:
+                    geogrid: geogrid--vol.csv
+                    simgrid: simgrid--vol.csv
 
-
-
-
-    #-------------------------------
-    - group: Correlation analysis
-      icon: bar_chart
-      content:
-
-        - page: Correlation between input parameters and inplace volumes
-          content:
-            - ParameterResponseCorrelation:
-                ensembles: *hm_ensembles
-                response_file: share/results/volumes/geogrid--vol.csv
-                response_filters:
-                  ZONE: multi
-                  REGION: multi
-      
-        - page: Pairwise correlation between input parameters
-          content:
-            - ParameterCorrelation:
-                ensembles: *hm_ensembles
-                drop_constants: true
-
-
-    #-------------------------------
-    - group: HM and parameter analysis
-      icon: repeat
-      content:
-    
-        - page: Parameter distributions
-          content:
-            - ParameterDistribution:
-                ensembles: *hm_ensembles
-      
-        - page: Parameter parallel coordinates
-          content:
-            - ParameterParallelCoordinates:
-                ensembles: *hm_ensembles
-      
-        - page: Parameter analysis
-          content:
-            - ParameterAnalysis:
-                ensembles: *hm_ensembles
-                time_index: "monthly"
-                column_keys: ["WWCT:*"]
-                drop_constants: true
-      
-        - page: Line Plotter
-          content:
-            - LinePlotterFMU:
-                aggregated_csvfile: ../reek_test_data/aggregated_data/smry_hm.csv
-                aggregated_parameterfile: ../reek_test_data/aggregated_data/parameters_hm.csv
-                observation_file: ../reek_test_data/observations.yml
-                observation_group: smry
-                remap_observation_values:
-                  DATE: date
-                initial_data:
-                  x: DATE
-                  y: FOPR
+          - page: Structural Uncertainty
+            content:
+              - StructuralUncertainty:
                   ensembles:
-                    - iter-0
-                    - iter-3
-                colors:
-                  iter-0: red
-                  iter-3: blue
-      
-        - page: RFT plotter
-          content:
-            - RftPlotter:
-                ensembles: *hm_ensembles
-                formations: *formationfile
-                faultlines: *faultlinefile
-      
-        - page: History match
-          content:
-            - HistoryMatch:
-                observation_file: *obsfile
-                ensembles: *hm_ensembles
+                    - iter-0-surfaces
+                  surface_attributes:
+                    - ds_extract_postprocess
+                  surface_name_filter:
+                    - topvolantis
+                    - toptherys
+                    - topvolon
+                    - basevolantis
+                  # Everything below is optional
+                  wellfolder: *wellfolder
+                  wellsuffix: .rmswell
+                  zonelog: Zone
+                  well_downsample_interval: 4
+                  initial_settings:
+                    intersection_data:
+                      surface_names:
+                        - topvolantis
+                        - topvolon
+                      surface_attribute: ds_extract_postprocess
+                      ensembles:
+                        - iter-0-surfaces
+                      calculation:
+                        - Mean
+                        - Min
+                        - Max
+                      well: 55_33-A-4
+                    colors:
+                      topvolon:
+                        iter-0: '#2C82C9'
+                        iter-3: '#2CC990'
+                      topvolantis:
+                        iter-0: '#512E34'
+                        iter-3: '#7D93C1'
+                      basevolantis:
+                        iter-0: '#EEE657'
+                        iter-3: '#FC6042'
+                    intersection_layout:
+                      yaxis:
+                        range: [1850, 1550]
+                        title: True vertical depth [m]
+                      xaxis:
+                        title: Lateral distance [m]
+
+          - page: Simulation time series
+            content:
+              - ReservoirSimulationTimeSeries:
+                  ensembles: *hm_ensembles
+                  obsfile: *obsfile
+                  options:
+                    vector1: WWCT:A1
+                    vector2: WGOR:A1
+                    vector3: WBHP:A1
+                    visualization: statistics
+                  predefined_expressions: timeseries_expressions
+
+          - page: Regional simulation time series
+            content:
+              - ReservoirSimulationTimeSeriesRegional:
+                  ensembles: *hm_ensembles
+                  fipfile: *fipfile
+
+      # -------------------------------
+      - group: Correlation analysis
+        icon: bar_chart
+        content:
+
+          - page: Correlation between input parameters and inplace volumes
+            content:
+              - ParameterResponseCorrelation:
+                  ensembles: *hm_ensembles
+                  response_file: share/results/volumes/geogrid--vol.csv
+                  response_filters:
+                    ZONE: multi
+                    REGION: multi
+
+          - page: Pairwise correlation between input parameters
+            content:
+              - ParameterCorrelation:
+                  ensembles: *hm_ensembles
+                  drop_constants: true
 
 
-    #-------------------------------
-    - group: Model QC
-      icon: done_all
-      content:
-      
-        - page: Grid property statistics
-          content:
-            - PropertyStatistics:
-                ensembles: *hm_ensembles
-                statistics_file: share/results/tables/grid_property_statistics_geogrid.csv
+      # -------------------------------
+      - group: HM and parameter analysis
+        icon: repeat
+        content:
 
-        - page: Well log viewer
-          content:
-            - WellLogViewer:
-                wellfolder: ../observed_data/wells
-                wellsuffix: .rmswell
-                well_tvdmin: 1500
-                mdlog: MDepth
-                logtemplates:
-                  - all_logs_template.yml
-       
-        - page: Relative permeability
-          content:
-            - RelativePermeability:
-                ensembles: *hm_ensembles
-                relpermfile: share/results/tables/relperm.csv
-                # scalfile: *scalfile
-      
-        - page: PVT
-          content:
-            - PvtPlot:
-                ensembles: *hm_ensembles
-                pvt_relative_file_path: share/results/tables/pvt.csv
-      
-        - page: BHP QC
-          content:
-            - BhpQc:
-                ensembles: *hm_ensembles
-      
-        - page: Run time analysis (FMU)
-          content:
-            - RunningTimeAnalysisFMU:
-                ensembles: *hm_ensembles
+          - page: Parameter distributions
+            content:
+              - ParameterDistribution:
+                  ensembles: *hm_ensembles
 
-    #-------------------------------
-    - group: Surface and cross-section
-      icon: layers
-      content:
+          - page: Parameter parallel coordinates
+            content:
+              - ParameterParallelCoordinates:
+                  ensembles: *hm_ensembles
 
-        - page: SEG-Y viewer
-          content:
-            - SegyViewer:
-                segyfiles: *segyfiles
-                colors: *segy_colors
-      
-        - page: Surface with seismic cross-section
-          content:
-            - SurfaceWithSeismicCrossSection:
-                segyfiles: *segyfiles
-                colors: *segy_colors
-                surfacefiles: *surfacefiles
-                surfacenames: *surfacenames
-      
-        - page: Surface with grid cross-section
-          content:
-            - SurfaceWithGridCrossSection:
-                gridfile: *gridfile
-                gridparameterfiles: *gridparameterfiles
-                surfacefiles: *surfacefiles
-                surfacenames: *surfacenames
-      
-        - page: Surface viewer (FMU)
-          content:
-            - SurfaceViewerFMU:
-                ensembles:
-                  - iter-0-surfaces
-                wellfolder: *wellfolder
-                wellsuffix: ".rmswell"
+          - page: Parameter analysis
+            content:
+              - ParameterAnalysis:
+                  ensembles: *hm_ensembles
+                  time_index: "monthly"
+                  column_keys: ["WWCT:*"]
+                  drop_constants: true
+
+          - page: Line Plotter
+            content:
+              - LinePlotterFMU:
+                  aggregated_csvfile: ../reek_test_data/aggregated_data/smry_hm.csv
+                  aggregated_parameterfile: ../reek_test_data/aggregated_data/parameters_hm.csv
+                  observation_file: ../reek_test_data/observations.yml
+                  observation_group: smry
+                  remap_observation_values:
+                    DATE: date
+                  initial_data:
+                    x: DATE
+                    y: FOPR
+                    ensembles:
+                      - iter-0
+                      - iter-3
+                  colors:
+                    iter-0: red
+                    iter-3: blue
+
+          - page: RFT plotter
+            content:
+              - RftPlotter:
+                  ensembles: *hm_ensembles
+                  formations: *formationfile
+                  faultlines: *faultlinefile
+
+          - page: History match
+            content:
+              - HistoryMatch:
+                  observation_file: *obsfile
+                  ensembles: *hm_ensembles
+
+
+      # -------------------------------
+      - group: Model QC
+        icon: done_all
+        content:
+
+          - page: Grid property statistics
+            content:
+              - PropertyStatistics:
+                  ensembles: *hm_ensembles
+                  statistics_file: share/results/tables/grid_property_statistics_geogrid.csv
+
+          - page: Well log viewer
+            content:
+              - WellLogViewer:
+                  wellfolder: ../observed_data/wells
+                  wellsuffix: .rmswell
+                  well_tvdmin: 1500
+                  mdlog: MDepth
+                  logtemplates:
+                    - all_logs_template.yml
+
+          - page: Relative permeability
+            content:
+              - RelativePermeability:
+                  ensembles: *hm_ensembles
+                  relpermfile: share/results/tables/relperm.csv
+                  # scalfile: *scalfile
+
+          - page: PVT
+            content:
+              - PvtPlot:
+                  ensembles: *hm_ensembles
+                  pvt_relative_file_path: share/results/tables/pvt.csv
+
+          - page: BHP QC
+            content:
+              - BhpQc:
+                  ensembles: *hm_ensembles
+
+          - page: Run time analysis (FMU)
+            content:
+              - RunningTimeAnalysisFMU:
+                  ensembles: *hm_ensembles
+
+      # -------------------------------
+      - group: Surface and cross-section
+        icon: layers
+        content:
+
+          - page: SEG-Y viewer
+            content:
+              - SegyViewer:
+                  segyfiles: *segyfiles
+                  colors: *segy_colors
+
+          - page: Surface with seismic cross-section
+            content:
+              - SurfaceWithSeismicCrossSection:
+                  segyfiles: *segyfiles
+                  colors: *segy_colors
+                  surfacefiles: *surfacefiles
+                  surfacenames: *surfacenames
+
+          - page: Surface with grid cross-section
+            content:
+              - SurfaceWithGridCrossSection:
+                  gridfile: *gridfile
+                  gridparameterfiles: *gridparameterfiles
+                  surfacefiles: *surfacefiles
+                  surfacenames: *surfacenames
+
+          - page: Surface viewer (FMU)
+            content:
+              - SurfaceViewerFMU:
+                  ensembles:
+                    - iter-0-surfaces
+                  wellfolder: *wellfolder
+                  wellsuffix: ".rmswell"

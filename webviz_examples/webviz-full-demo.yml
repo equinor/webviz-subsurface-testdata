@@ -254,6 +254,22 @@ layout:
                     ZONE: multi
                     REGION: multi
 
+          - page: Correlation between input parameters and RFTs
+            content:
+              - ParameterResponseCorrelation:
+                  ensembles: *hm_ensembles
+                  response_file: share/results/tables/gendata_rft.csv
+                  response_filters:
+                    well: multi
+                    zone: multi
+                    time: multi
+                  response_include:
+                  - pressure
+                  - swat
+                  - sgas
+                  - soil
+                  aggregation: mean
+
           - page: Pairwise correlation between input parameters
             content:
               - ParameterCorrelation:

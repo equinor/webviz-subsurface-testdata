@@ -1,6 +1,0 @@
-INFO 2021-08-30 12:21:48,359 st-rsv12-12-14.st.statoil.no Version 2021.2
-INFO 2021-08-30 12:21:48,379 st-rsv12-12-14.st.statoil.no Workflow starting task: DROGON-0
-INFO 2021-08-30 12:21:48,494 st-rsv12-12-14.st.statoil.no Submission Command: /prog/res/ecl/grid/2020.2/bin/linux_x86_64/eclipse.exe DROGON-0
-INFO 2021-08-30 12:23:58,202 st-rsv12-12-14.st.statoil.no E100 has finished
-INFO 2021-08-30 12:23:58,213 st-rsv12-12-14.st.statoil.no Workflow has finished
-INFO 2021-08-30 12:23:58,214 st-rsv12-12-14.st.statoil.no Session in progress.

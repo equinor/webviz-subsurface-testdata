@@ -140,20 +140,20 @@ layout:
         icon: table_chart
         content:
 
-          - page: Volumetric Analysis
+          - page: Volumetric analysis
             content:
               - VolumetricAnalysis:
                   ensembles: *dm_ensembles
                   volfiles:
                     geogrid: geogrid--vol.csv
 
-          - page: Time Series Analysis
+          - page: Time series analysis
             content:
               - ReservoirSimulationTimeSeriesOneByOne:
                   ensembles: *dm_ensembles
                   initial_vector: FOPT
 
-          - page: Tornado Plotter
+          - page: Tornado plotter
             content:
               - TornadoPlotterFMU:
                   ensemble: sens_run
@@ -175,7 +175,7 @@ layout:
                     geogrid: geogrid--vol.csv
                     simgrid: simgrid--vol.csv
 
-          - page: Structural Uncertainty
+          - page: Structural uncertainty
             content:
               - StructuralUncertainty:
                   ensembles:
@@ -240,6 +240,24 @@ layout:
                   ensembles: *hm_ensembles
                   fipfile: *fipfile
 
+          - page: Well completions
+            content:
+              - WellCompletions:
+                  ensembles:
+                    - iter-0
+                  compdat_file: "share/results/tables/compdat.csv"
+                  zone_layer_mapping_file: "rms/output/zone/simgrid_zone_layer_mapping.lyr"
+                  stratigraphy_file: "rms/output/zone/stratigraphy.json"
+                  well_attributes_file: "rms/output/wells/well_attributes.json"
+
+          - page: Production network
+            content:
+              - GroupTree:
+                  ensembles:
+                    - iter-0
+                  gruptree_file: "share/results/tables/gruptree.csv"
+                  time_index: "monthly"
+
       # -------------------------------
       - group: Correlation analysis
         icon: bar_chart
@@ -284,7 +302,7 @@ layout:
                   column_keys: ["WWCT:*"]
                   drop_constants: true
 
-          - page: Line Plotter
+          - page: Line plotter (FMU)
             content:
               - LinePlotterFMU:
                   aggregated_csvfile: ../reek_test_data/aggregated_data/smry_hm.csv

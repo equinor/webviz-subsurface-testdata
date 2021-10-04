@@ -282,10 +282,10 @@ layout:
                     zone: multi
                     time: multi
                   response_include:
-                  - pressure
-                  - swat
-                  - sgas
-                  - soil
+                    - pressure
+                    - swat
+                    - sgas
+                    - soil
                   aggregation: mean
 
           - page: Pairwise correlation between input parameters

@@ -1,0 +1,21 @@
+Sensitivity ,Parameters ,Description ,Included where
+Kv/Kh ,KVKH_CHANNEL,Kv/Kh value in Channel facies,RMS 
+Kv/Kh ,KVKH_CREVASSE,Kv/Kh value in Crevasse facies,RMS 
+Kv/Kh ,KVKH_LS,Kv/Kh value in Lower shoreface facies,RMS 
+Kv/Kh ,KVKH_US ,Kv/Kh value in Upper shoreface facies ,RMS 
+Fault seal ,FAULT_SEAL_SCALING ,Curve scaling factor for fault zone permeability vs SGR in fault seal calculation ,RMS
+Free Water Level ,FWL_CENTRAL,"FWL in regions Central South, Central North, Central Ramp and Central Horst",RMS
+Free Water Level ,FWL_NORTH_HORST ,FWL in region North Horst ,RMS
+Gas Oil Contact ,GOC_NORTH_HORST ,GOC in region North Horst ,RMS
+Relative permeability,RELPERM_INT_WO,Interpolation constant for water-oil curves between SCAL recommendation data ,RMS
+Relative permeability,RELPERM_INT_GO,Interpolation constant for gas-oil curves between SCAL recommendation data,RMS
+Transmissibility multipliers,MULT_VALYSAR_THERYS ,Transmissibility multiplier between zones Valysar and Therys ,OPM Flow / Eclipse
+Transmissibility multipliers,MULT_VALYSAR_VOLON,Transmissibility multiplier between zones Valysar and Volon,OPM Flow / Eclipse
+Transmissibility multipliers,MULT_THERYS_VOLON,Transmissibility multiplier between zones Therys and Volon,OPM Flow / Eclipse
+Surface,TopVolantis.irap,Surfaces for structural model with hum simulation mode ,RMS
+Surface,TopTherys.irap,"(ERT keyword ""SURFACE"")",RMS
+Surface,TopVolon.irap,…,RMS
+Surface,BaseVolantis.irap,…,RMS
+Facies,"aps_Valysar_GRF1.roff, aps_Valysar_GRF2.roff, aps_Valysar_GRF3.roff ",Gaussian Random Fields (3d paramters) used with APS facies model ,RMS
+Facies,"aps_Therys_GRF1, aps_Therys_GRF2, aps_Therys_GRF3 ","(ERT keyword ""FIELD"")",RMS
+Facies,"aps_Volon_GRF1, aps_Volon_GRF2, aps_Volon_GRF3",…,RMS

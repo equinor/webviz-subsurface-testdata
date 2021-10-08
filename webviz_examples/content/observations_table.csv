@@ -1,0 +1,9 @@
+Observations,Type,Wells,Time interval 
+WWCT,Summary observation,"A1, A2, A3, A4",
+WGOR,Summary observation,"A1, A2, A3, A4",
+WBHP,Summary observation,"A1, A2, A3, A4, A5, A6",
+RFT,General observation,"A1, A2, A3, A4, A5, A6",
+"Tracer breakthrough time for water tracer 1 injected in A5","General observation","A1, A2, A3, A4",
+"Tracer breakthrough time for water tracer 2 injected in A6","General observation","A1, A2, A3, A4",
+"Seismic amplitude at Top reservoir","General observation",-,2020_2018 
+"Seismic amplitude at Base reservoir","General observation",-,2020_2018 

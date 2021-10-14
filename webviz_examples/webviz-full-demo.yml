@@ -130,6 +130,12 @@ layout:
               - SyntaxHighlighter:
                   filename: ./webviz-full-demo.yml
 
+          - page: Disk usage
+            content:
+              - DiskUsage:
+                  scratch_dir: ../.
+                  date: "2021-07-09"  # date only needed if requesting a specific report, otherwise using latest available.
+
       # - page: Markdown example
       #   content:
       #    - Markdown:

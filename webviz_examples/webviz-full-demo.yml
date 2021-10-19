@@ -400,16 +400,15 @@ layout:
           # Some of the optional arguments are included as comments for illustration
           # They must be activated/assigned if using non-default values,
           # otherwise they can be removed for a cleaner appearance
-          - page: Seismic misfit topvolantis amplitude mean 20200701_20180101
+          - page: Seismic misfit
             content:
               - SeismicMisfit:
                   ensembles: *hm_ensembles
-                  attribute_name_sim: topvolantis_amplitude_mean_20200701_20180101_1.txt
-                  # attribute_name_obs: topvolantis_amplitude_mean_20200701_20180101_1.txt
-                  # metadata_name: metadata.csv
+                  attributes:
+                    - topvolantis_amplitude_mean_20200701_20180101_1.txt
+                    - basevolantis_amplitude_mean_20200701_20180101_1.txt
                   # attribute_sim_path: sim2seis/output/4d_attribute_maps/  # relative to <runpath>
                   # attribute_obs_path: ../../share/observations/seismic/  # relative to <runpath>
-                  # metadata_path: ../../share/observations/seismic/  # relative to <runpath>
                   # obs_mult: 1.0
                   # sim_mult: 1.0
                   polygon: share/results/polygons/toptherys--gl_faultlines_extract_postprocess.csv  # relative to <runpath>

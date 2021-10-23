@@ -411,7 +411,7 @@ layout:
                   # attribute_obs_path: ../../share/observations/seismic/  # relative to <runpath>
                   # obs_mult: 1.0
                   # sim_mult: 1.0
-                  polygon: share/results/polygons/toptherys--gl_faultlines_extract_postprocess.csv  # relative to <runpath>
+                  polygon: share/results/polygons/  # relative to <runpath>
                   # realrange:  # exclude realizations outside range
                   #   - [0,99]
                   #   - [0,99]

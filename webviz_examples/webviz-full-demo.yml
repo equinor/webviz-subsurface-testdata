@@ -105,7 +105,7 @@ options:
     bar_position: left
     drawer_position: left
     initially_pinned: true
-    # initially_collapsed: true
+    initially_collapsed: true
 
 # ------------------------------
 layout:

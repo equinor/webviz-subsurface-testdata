@@ -1,0 +1,3 @@
+## Uncertainty parameters table.
+
+This table reflects which parameters are used for the "01_drogon_ahm" case. Note that on Drogon there are more parameters than those listed in this table. That is because we have implemented alternative facies and property models on Drogon. Which ones are used is governed by "switches". The parameters that are not used is practical to set to CONST in the ERT dist file.

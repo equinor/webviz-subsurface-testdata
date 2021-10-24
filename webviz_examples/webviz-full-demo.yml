@@ -9,11 +9,12 @@ shared_settings:
     iter-0: ../01_drogon_ahm/realization-*/iter-0
     iter-3: ../01_drogon_ahm/realization-*/iter-3
     iter-0-surfaces: ../01_drogon_ahm/realization-[0-1]/iter-0
+
 # Ensembles used for sensitivity analysis
 dm_ensembles: &dm_ensembles
   - sens_run
 
-# Ensembes used for history matching analysis
+# Ensembles used for history matching analysis
 hm_ensembles: &hm_ensembles
   - iter-0
   - iter-3
@@ -104,31 +105,51 @@ options:
     bar_position: left
     drawer_position: left
     initially_pinned: true
+    # initially_collapsed: true
 
 # ------------------------------
 layout:
-  - section: Webviz Menu
+  - section: Webviz Intro
     content:
       # ------------------------------
+
       - page: Front page
         icon: home
         content:
           - BannerImage:
-              image: ./content/reek_image.jpg
-              title: Drogon FMU Webviz demo
-          - This live demo is based on multi-realization data sets (ensembles) generated from the synthetic Drogon model.
-          - Webviz created from configuration file, including advanced menu example (grouping)
-          - Open Information in menu to see how this was made (yaml configuration).
+              image: ./content/drogon_banner_image.png
+              # title: Drogon FMU Webviz demo
+              # color: "brown"
+              # shadow: true
+              height: 350
+          - This is a live demo showcasing Webviz in a FMU reservoir modelling setting.
+          - Markdown:
+              markdown_file: ./content/front_page.md
 
       # ------------------------------
       - group: Information
         icon: info_circle
         content:
 
-          - page: How was this made
+          - page: How was this made (yaml config file)
             content:
+              - This is the yaml configuration file that was used to build this webviz demo app
+              - The first part includes shared_settings (which ensembles to use), but also other (optional) shared data.
+              - The shared data is useful when several plugins uses the same data, or simply to get a better overview of input data.
+              - The second part (from "layout") contains the plugins to be loaded
+              - To get quickly started on your own webviz set-up you can copy/paste from the config file below this line
               - SyntaxHighlighter:
                   filename: ./webviz-full-demo.yml
+
+          - page: FMU|Drogon|Webviz
+            content:
+              - Markdown:
+                  markdown_file: ./content/fmu_drogon_webviz.md
+
+          - page: Plugins documentation
+            content:
+              - Markdown:
+                  markdown_file: ./content/links_to_doc.md
 
           - page: Disk usage
             content:
@@ -136,13 +157,33 @@ layout:
                   scratch_dir: ../.
                   date: "2021-07-09"  # date only needed if requesting a specific report, otherwise using latest available.
 
-      # - page: Markdown example
-      #   content:
-      #    - Markdown:
-      #        markdown_file: ./content/how_was_this_made.md
+      # ------------------------------
+      - group: Drogon description
+        icon: platform
+        content:
+
+          - page: Drogon conceptual description
+            content:
+              - EmbedPdf:
+                  pdf_file: ./content/dteam_2020--drogon_concept.pdf
+
+          - page: Drogon parameters and observation data
+            content:
+              - Markdown:
+                  markdown_file: ./content/parameters_table.md
+              - DataTable:
+                  csv_file: ./content/parameters_table.csv
+              - Markdown:
+                  markdown_file: ./content/observations_table.md
+              - DataTable:
+                  csv_file: ./content/observations_table.csv
+
+  # ------------------------------
+  - section: Webviz Analysis
+    content:
 
       # -------------------------------
-      - group: OnebyOne analysis
+      - group: OnebyOne
         icon: table_chart
         content:
 
@@ -169,7 +210,7 @@ layout:
                     - ZONE
 
       # -------------------------------
-      - group: Model analysis general
+      - group: Model general
         icon: timeline
         content:
 
@@ -265,7 +306,7 @@ layout:
                   time_index: "monthly"
 
       # -------------------------------
-      - group: Correlation analysis
+      - group: Correlations
         icon: bar_chart
         content:
 
@@ -302,7 +343,7 @@ layout:
 
 
       # -------------------------------
-      - group: HM and parameter analysis
+      - group: HM and parameters
         icon: repeat
         content:
 
@@ -359,19 +400,18 @@ layout:
           # Some of the optional arguments are included as comments for illustration
           # They must be activated/assigned if using non-default values,
           # otherwise they can be removed for a cleaner appearance
-          - page: Seismic misfit topvolantis amplitude mean 20200701_20180101
+          - page: Seismic misfit
             content:
               - SeismicMisfit:
                   ensembles: *hm_ensembles
-                  attribute_name_sim: topvolantis_amplitude_mean_20200701_20180101_1.txt
-                  # attribute_name_obs: topvolantis_amplitude_mean_20200701_20180101_1.txt
-                  # metadata_name: metadata.csv
+                  attributes:
+                    - topvolantis_amplitude_mean_20200701_20180101_1.txt
+                    - basevolantis_amplitude_mean_20200701_20180101_1.txt
                   # attribute_sim_path: sim2seis/output/4d_attribute_maps/  # relative to <runpath>
                   # attribute_obs_path: ../../share/observations/seismic/  # relative to <runpath>
-                  # metadata_path: ../../share/observations/seismic/  # relative to <runpath>
                   # obs_mult: 1.0
                   # sim_mult: 1.0
-                  polygon: share/results/polygons/toptherys--gl_faultlines_extract_postprocess.csv  # relative to <runpath>
+                  polygon: share/results/polygons/  # relative to <runpath>
                   # realrange:  # exclude realizations outside range
                   #   - [0,99]
                   #   - [0,99]

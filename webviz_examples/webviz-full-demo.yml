@@ -133,11 +133,17 @@ layout:
 
           - page: How was this made (yaml config file)
             content:
-              - This is the yaml configuration file that was used to build this webviz demo app
-              - The first part includes shared_settings (which ensembles to use), but also other (optional) shared data.
-              - The shared data is useful when several plugins uses the same data, or simply to get a better overview of input data.
-              - The second part (from "layout") contains the plugins to be loaded
-              - To get quickly started on your own webviz set-up you can copy/paste from the config file below this line
+              - |
+                  ##### The yaml configuration file
+
+                  * This page shows the yaml configuration file that was used to build this webviz demo app.
+
+                  * The first part includes **shared_settings** (which ensembles to use), but also other optional shared data.
+                  The optional shared data comes in handy when several plugins uses the same data, or simply for a better overview of input data.
+
+                  * The second part (from "options/layout") contains the plugins to be loaded.
+                  To get quickly started on your own webviz set-up you can copy/paste from the config file below this line.
+                  ---
               - SyntaxHighlighter:
                   filename: ./webviz-full-demo.yml
 
@@ -310,7 +316,7 @@ layout:
         icon: bar_chart
         content:
 
-          - page: Correlation between input parameters and inplace volumes
+          - page: Parameters vs inplace volumes
             content:
               - ParameterResponseCorrelation:
                   ensembles: *hm_ensembles
@@ -319,7 +325,7 @@ layout:
                     ZONE: multi
                     REGION: multi
 
-          - page: Correlation between input parameters and RFTs
+          - page: Parameters vs RFT
             content:
               - ParameterResponseCorrelation:
                   ensembles: *hm_ensembles
@@ -335,7 +341,7 @@ layout:
                     - soil
                   aggregation: mean
 
-          - page: Pairwise correlation between input parameters
+          - page: Parameters vs parameters
             content:
               - ParameterCorrelation:
                   ensembles: *hm_ensembles

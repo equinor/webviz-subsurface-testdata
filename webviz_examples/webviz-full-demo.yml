@@ -403,9 +403,6 @@ layout:
                   observation_file: *obsfile
                   ensembles: *hm_ensembles
 
-          # Some of the optional arguments are included as comments for illustration
-          # They must be activated/assigned if using non-default values,
-          # otherwise they can be removed for a cleaner appearance
           - page: Seismic misfit
             content:
               - SeismicMisfit:
@@ -413,8 +410,8 @@ layout:
                   attributes:
                     - topvolantis_amplitude_mean_20200701_20180101_1.txt
                     - basevolantis_amplitude_mean_20200701_20180101_1.txt
-                  # attribute_sim_path: sim2seis/output/4d_attribute_maps/  # relative to <runpath>
-                  # attribute_obs_path: ../../share/observations/seismic/  # relative to <runpath>
+                  attribute_sim_path: sim2seis/output/4d_attribute_maps/  # relative to <runpath>
+                  attribute_obs_path: ../../share/observations/seismic/  # relative to <runpath>
                   # obs_mult: 1.0
                   # sim_mult: 1.0
                   polygon: share/results/polygons/  # relative to <runpath>

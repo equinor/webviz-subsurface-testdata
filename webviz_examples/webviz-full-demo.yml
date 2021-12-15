@@ -79,24 +79,23 @@ rmsmap_colors: &rmsmap_colors
   - "#7f0000"
 
 segy_colors: &segy_colors
-  - '#000000'
-  - '#001f4d'
-  - '#003786'
-  - '#0e58a8'
-  - '#217eb8'
-  - '#30a4ca'
-  - '#54c8df'
-  - '#9be4ef'
-  - '#e1e9d1'
-  - '#f3d573'
-  - '#e7b000'
-  - '#da8200'
-  - '#c65400'
-  - '#ac2301'
-  - '#820000'
-  - '#4c0000'
-  - '#040100'
-
+  - "#000000"
+  - "#001f4d"
+  - "#003786"
+  - "#0e58a8"
+  - "#217eb8"
+  - "#30a4ca"
+  - "#54c8df"
+  - "#9be4ef"
+  - "#e1e9d1"
+  - "#f3d573"
+  - "#e7b000"
+  - "#da8200"
+  - "#c65400"
+  - "#ac2301"
+  - "#820000"
+  - "#4c0000"
+  - "#040100"
 
 # ------------------------------
 options:
@@ -130,20 +129,19 @@ layout:
       - group: Information
         icon: info_circle
         content:
-
           - page: How was this made (yaml config file)
             content:
               - |
-                  ##### The yaml configuration file
+                ##### The yaml configuration file
 
-                  * This page shows the yaml configuration file that was used to build this webviz demo app.
+                * This page shows the yaml configuration file that was used to build this webviz demo app.
 
-                  * The first part includes **shared_settings** (which ensembles to use), but also other optional shared data.
-                  The optional shared data comes in handy when several plugins uses the same data, or simply for a better overview of input data.
+                * The first part includes **shared_settings** (which ensembles to use), but also other optional shared data.
+                The optional shared data comes in handy when several plugins uses the same data, or simply for a better overview of input data.
 
-                  * The second part (from "options/layout") contains the plugins to be loaded.
-                  To get quickly started on your own webviz set-up you can copy/paste from the config file below this line.
-                  ---
+                * The second part (from "options/layout") contains the plugins to be loaded.
+                To get quickly started on your own webviz set-up you can copy/paste from the config file below this line.
+                ---
               - SyntaxHighlighter:
                   filename: ./webviz-full-demo.yml
 
@@ -161,13 +159,12 @@ layout:
             content:
               - DiskUsage:
                   scratch_dir: ../.
-                  date: "2021-07-09"  # date only needed if requesting a specific report, otherwise using latest available.
+                  date: "2021-07-09" # date only needed if requesting a specific report, otherwise using latest available.
 
       # ------------------------------
       - group: Drogon description
         icon: platform
         content:
-
           - page: Drogon conceptual description
             content:
               - EmbedPdf:
@@ -187,12 +184,10 @@ layout:
   # ------------------------------
   - section: Webviz Analysis
     content:
-
       # -------------------------------
       - group: OnebyOne
         icon: table_chart
         content:
-
           - page: Volumetric analysis
             content:
               - VolumetricAnalysis:
@@ -219,7 +214,6 @@ layout:
       - group: Model general
         icon: timeline
         content:
-
           - page: Volumetrics
             content:
               - VolumetricAnalysis:
@@ -260,20 +254,32 @@ layout:
                       well: 55_33-A-4
                     colors:
                       topvolon:
-                        iter-0: '#2C82C9'
-                        iter-3: '#2CC990'
+                        iter-0: "#2C82C9"
+                        iter-3: "#2CC990"
                       topvolantis:
-                        iter-0: '#512E34'
-                        iter-3: '#7D93C1'
+                        iter-0: "#512E34"
+                        iter-3: "#7D93C1"
                       basevolantis:
-                        iter-0: '#EEE657'
-                        iter-3: '#FC6042'
+                        iter-0: "#EEE657"
+                        iter-3: "#FC6042"
                     intersection_layout:
                       yaxis:
                         range: [1850, 1550]
                         title: True vertical depth [m]
                       xaxis:
                         title: Lateral distance [m]
+
+          - page: New Simulation time series
+            content:
+              - SimulationTimeSeries:
+                  ensembles: *hm_ensembles
+                  obsfile: *obsfile
+                  options:
+                    vector1: WWCT:A1
+                    vector2: WGOR:A1
+                    vector3: WBHP:A1
+                    visualization: statistics
+                  predefined_expressions: timeseries_expressions
 
           - page: Simulation time series
             content:
@@ -315,7 +321,6 @@ layout:
       - group: Correlations
         icon: bar_chart
         content:
-
           - page: Parameters vs inplace volumes
             content:
               - ParameterResponseCorrelation:
@@ -347,12 +352,10 @@ layout:
                   ensembles: *hm_ensembles
                   drop_constants: true
 
-
       # -------------------------------
       - group: HM and parameters
         icon: repeat
         content:
-
           - page: Parameter distributions
             content:
               - ParameterDistribution:
@@ -410,21 +413,19 @@ layout:
                   attributes:
                     - topvolantis_amplitude_mean_20200701_20180101_1.txt
                     - basevolantis_amplitude_mean_20200701_20180101_1.txt
-                  attribute_sim_path: sim2seis/output/4d_attribute_maps/  # relative to <runpath>
-                  attribute_obs_path: ../../share/observations/seismic/  # relative to <runpath>
+                  attribute_sim_path: sim2seis/output/4d_attribute_maps/ # relative to <runpath>
+                  attribute_obs_path: ../../share/observations/seismic/ # relative to <runpath>
                   # obs_mult: 1.0
                   # sim_mult: 1.0
-                  polygon: share/results/polygons/  # relative to <runpath>
+                  polygon: share/results/polygons/ # relative to <runpath>
                   # realrange:  # exclude realizations outside range
                   #   - [0,99]
                   #   - [0,99]
-
 
       # -------------------------------
       - group: Model QC
         icon: done_all
         content:
-
           - page: Grid property statistics
             content:
               - PropertyStatistics:
@@ -478,7 +479,6 @@ layout:
       - group: Surface and cross-section
         icon: layers
         content:
-
           - page: SEG-Y viewer
             content:
               - SegyViewer:

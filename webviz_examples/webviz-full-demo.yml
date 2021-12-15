@@ -274,8 +274,8 @@ layout:
                         title: True vertical depth [m]
                       xaxis:
                         title: Lateral distance [m]
-						
-		  - page: New Simulation time series
+
+          - page: New Simulation time series
             content:
               - SimulationTimeSeries:
                   ensembles: *hm_ensembles

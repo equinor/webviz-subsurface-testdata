@@ -275,6 +275,18 @@ layout:
                       xaxis:
                         title: Lateral distance [m]
 
+          - page: New Simulation time series
+            content:
+              - SimulationTimeSeries:
+                  ensembles: *hm_ensembles
+                  obsfile: *obsfile
+                  options:
+                    vector1: WWCT:A1
+                    vector2: WGOR:A1
+                    vector3: WBHP:A1
+                    visualization: statistics
+                  predefined_expressions: timeseries_expressions
+
           - page: Simulation time series
             content:
               - ReservoirSimulationTimeSeries:

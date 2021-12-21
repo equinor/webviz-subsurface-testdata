@@ -250,13 +250,12 @@ layout:
                       surface_names:
                         - topvolantis
                         - topvolon
+                        - basevolantis
                       surface_attribute: ds_extract_postprocess
                       ensembles:
                         - iter-0-surfaces
                       calculation:
-                        - Mean
-                        - Min
-                        - Max
+                        - Uncertainty envelope
                       well: 55_33-A-4
                     colors:
                       topvolon:

@@ -1,0 +1,11 @@
+version: 1
+
+incremental: True
+
+
+
+loggers:
+
+  webviz_subsurface:
+
+    level: DEBUG

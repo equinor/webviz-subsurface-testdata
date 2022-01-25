@@ -118,7 +118,7 @@ layout:
             content:
               - MapViewerFMU:
                   ensembles:
-                    - iter-0-surfaces
+                    - iter-0
                   wellfolder: *wellfolder
                   wellsuffix: ".rmswell"
                   well_downsample_interval: 10

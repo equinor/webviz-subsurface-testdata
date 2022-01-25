@@ -1,6 +1,32 @@
 version: 1
 
-incremental: True
+incremental: False
+
+
+
+formatters:
+
+  my_formatter:
+
+    format: "TST %(levelname)s:%(name)s:[%(process)d]:%(message)s"
+
+
+
+handlers:
+
+  my_handler:
+
+    class: logging.StreamHandler
+
+    formatter: my_formatter
+
+
+
+root:
+
+  level: INFO
+
+  handlers: [my_handler]
 
 
 

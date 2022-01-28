@@ -1,0 +1,17 @@
+WWCT:
+  description: TEST DESCRIPTION FOR A VECTOR
+  type: well
+
+WGOR:
+  description: TEST DESCRIPTION FOR A SECOND VECTOR
+  type: well
+
+WOPT:
+  description: TEST DESCRIPTION OIL PROD TOTAL
+  type: well
+
+WOPR:
+  description: TEST DESCRIPTION OIL PROD RATE
+  type: well
+
+

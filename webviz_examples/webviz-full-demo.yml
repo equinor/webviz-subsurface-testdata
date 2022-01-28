@@ -2,6 +2,8 @@
 title: Drogon Webviz Demonstration
 
 shared_settings:
+  user_defined_vector_definitions:
+    timeseries_user_defined_vector_definitions: ../user_defined_vector_definitions/timeseries_user_defined_vector_definitions.yaml
   predefined_expressions:
     timeseries_expressions: ../vector_calculator_expressions/predefined_vector_calculator_expressions.yaml
   scratch_ensembles:
@@ -285,6 +287,7 @@ layout:
                     vector3: WBHP:A1
                     visualization: statistics
                   predefined_expressions: timeseries_expressions
+                  user_defined_vector_definitions: timeseries_user_defined_vector_definitions
 
           - page: Simulation time series
             content:

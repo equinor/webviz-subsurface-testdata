@@ -280,7 +280,10 @@ layout:
                   ensembles: *hm_ensembles
                   obsfile: *obsfile
                   options:
-                    vectors: [WWCT:A1, WGOR:A1, WBHP:A1]
+                    vectors:
+                      - WWCT:A1
+                      - WGOR:A1
+                      - WBHP:A1
                     visualization: statistics
                   predefined_expressions: timeseries_expressions
 

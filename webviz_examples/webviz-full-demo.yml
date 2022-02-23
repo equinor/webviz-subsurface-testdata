@@ -284,7 +284,6 @@ layout:
                       - WWCT:A1
                       - WGOR:A1
                       - WBHP:A1
-                    visualization: statistics
                   predefined_expressions: timeseries_expressions
 
           - page: Regional simulation time series

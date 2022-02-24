@@ -220,6 +220,23 @@ layout:
         icon: timeline
         content:
 
+          - page: Map Viewer
+            content:
+              - MapViewerFMU:
+                  ensembles:
+                    - iter-0
+                  map_surface_names_to_fault_polygons:
+                    all: toptherys
+                    therys: toptherys
+                    valysar: topvolantis
+                    volon: topvolon
+                  well_pick_file: ../observed_data/drogon_well_picks/wellpicks.csv
+                  map_surface_names_to_well_pick_names:
+                    toptherys: TopTherys
+                    topvolantis: TopVolantis
+                    topvolon: TopVolon
+                    basevolantis: BaseVolantis
+
           - page: Volumetrics
             content:
               - VolumetricAnalysis:

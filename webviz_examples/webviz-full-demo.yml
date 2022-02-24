@@ -516,11 +516,3 @@ layout:
                   gridparameterfiles: *gridparameterfiles
                   surfacefiles: *surfacefiles
                   surfacenames: *surfacenames
-
-          - page: Surface viewer (FMU)
-            content:
-              - SurfaceViewerFMU:
-                  ensembles:
-                    - iter-0-surfaces
-                  wellfolder: *wellfolder
-                  wellsuffix: ".rmswell"

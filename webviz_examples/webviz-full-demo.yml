@@ -327,6 +327,15 @@ layout:
                   gruptree_file: "share/results/tables/gruptree.csv"
                   time_index: "monthly"
 
+          - page: Well Analysis
+            content:
+              - WellAnalysis:
+                  ensembles:
+                    - iter-3
+                  gruptree_file: "share/results/tables/gruptree.csv"
+                  time_index: "monthly"
+                  filter_out_startswith: "R_"
+
       # -------------------------------
       - group: Correlations
         icon: bar_chart

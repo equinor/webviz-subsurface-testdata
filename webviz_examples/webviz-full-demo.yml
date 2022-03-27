@@ -393,7 +393,6 @@ layout:
               - ParameterAnalysis:
                   ensembles: *hm_ensembles
                   time_index: "monthly"
-                  column_keys: ["WWCT:*"]
                   drop_constants: true
 
           - page: Line plotter (FMU)

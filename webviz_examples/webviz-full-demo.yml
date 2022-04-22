@@ -136,13 +136,17 @@ layout:
               - |
                   ##### The yaml configuration file
 
-                  * This page shows the yaml configuration file that was used to build this webviz demo app.
+                  * This page shows the yaml configuration file that was used to build
+                    this webviz demo app.
 
-                  * The first part includes **shared_settings** (which ensembles to use), but also other optional shared data.
-                  The optional shared data comes in handy when several plugins uses the same data, or simply for a better overview of input data.
+                  * The first part includes **shared_settings** (which ensembles to
+                  use), but also other optional shared data.  The optional shared data
+                  comes in handy when several plugins uses the same data, or simply for
+                  a better overview of input data.
 
-                  * The second part (from "options/layout") contains the plugins to be loaded.
-                  To get quickly started on your own webviz set-up you can copy/paste from the config file below this line.
+                  * The second part (from "options/layout") contains the plugins to be
+                  loaded.  To get quickly started on your own webviz set-up you can
+                  copy/paste from the config file below this line.
                   ---
               - SyntaxHighlighter:
                   filename: ./webviz-full-demo.yml
@@ -442,6 +446,18 @@ layout:
                   # realrange:  # exclude realizations outside range
                   #   - [0,99]
                   #   - [0,99]
+
+          - page: Prod misfit
+            content:
+              - ProdMisfit:
+                  ensembles: *hm_ensembles
+                  sampling: yearly  # daily, weekly, monthly, yearly
+                  well_attributes_file: rms/output/wells/well_attributes.json
+                  excl_name_startswith: [R_]  # input as list
+                  phase_weights:
+                    "Oil": 1.0
+                    "Water": 1.0
+                    "Gas": 300.0
 
 
       # -------------------------------

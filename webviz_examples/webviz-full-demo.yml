@@ -443,6 +443,18 @@ layout:
                   #   - [0,99]
                   #   - [0,99]
 
+          - page: Prod misfit
+            content:
+              - ProdMisfit:
+                  ensembles: *hm_ensembles
+                  sampling: yearly  # daily, weekly, monthly, yearly
+                  well_attributes_file: rms/output/wells/well_attributes.json
+                  excl_name_startswith: [R_]  # input as list
+                  phase_weights:
+                    "Oil": 1.0
+                    "Water": 1.0
+                    "Gas": 300.0
+
 
       # -------------------------------
       - group: Model QC

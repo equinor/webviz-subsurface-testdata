@@ -514,6 +514,14 @@ layout:
               - RunningTimeAnalysisFMU:
                   ensembles: *hm_ensembles
 
+          - page: SwatinitQC
+            content:
+              - SwatinitQC:
+                  ensemble: iter-0
+                  realization: 0
+                  csvfile: share/results/tables/check_swatinit.csv
+                  faultlines: *faultlinefile
+
       # -------------------------------
       - group: Surface and cross-section
         icon: layers

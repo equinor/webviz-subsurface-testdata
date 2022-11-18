@@ -191,14 +191,6 @@ layout:
   # ------------------------------
   - section: Webviz Analysis
     content:
-      - group: New plugins
-        icon: high_priority
-        content:
-          - page: Experimental 3D grid viewer
-            content:
-              - EXPERIMENTALGridViewerFMU:
-                  ensemble: iter-0
-                  roff_grid_name: eclgrid
       # -------------------------------
       - group: OnebyOne
         icon: table_chart
@@ -555,3 +547,12 @@ layout:
                   gridparameterfiles: *gridparameterfiles
                   surfacefiles: *surfacefiles
                   surfacenames: *surfacenames
+
+      - group: Experimental plugins
+        icon: high_priority
+        content:
+          - page: Experimental 3D grid viewer
+            content:
+              - EXPERIMENTALGridViewerFMU:
+                  ensemble: iter-0
+                  roff_grid_name: eclgrid

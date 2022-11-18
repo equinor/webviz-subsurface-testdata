@@ -191,7 +191,6 @@ layout:
   # ------------------------------
   - section: Webviz Analysis
     content:
-      # -------------------------------
       - group: OnebyOne
         icon: table_chart
         content:
@@ -548,6 +547,7 @@ layout:
                   surfacefiles: *surfacefiles
                   surfacenames: *surfacenames
 
+      # -------------------------------
       - group: Experimental plugins
         icon: high_priority
         content:

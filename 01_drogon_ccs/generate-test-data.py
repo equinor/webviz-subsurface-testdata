@@ -200,7 +200,12 @@ def simulate_containment(
     mass = poro * volumes * density * saturation
     within = mass[poly_map].sum()
     outside = mass[~poly_map].sum()
-    return within, outside
+    # Simulate fractions
+    aqu_within = within * gen.uniform(high=0.1)
+    gas_within = within - aqu_within
+    aqu_outside = outside * gen.uniform(high=0.1)
+    gas_outside = outside - aqu_outside
+    return aqu_within, gas_within, aqu_outside, gas_outside
 
 
 def setup_ensemble_folders(ens_root, input_folder, polygons_folder):
@@ -216,8 +221,7 @@ def setup_ensemble_folders(ens_root, input_folder, polygons_folder):
         shutil.copy(f, res_root / "polygons")
     shutil.copy(input_folder / "leakage_boundary.csv", res_root / "polygons")
     # Write dummy OK and STATUS files
-    t = datetime.datetime.now()
-    t = datetime.datetime.strftime(t, "%H:%M:%S")
+    t = "13:42:37"
     with open(ens_root / "iter-0" / "OK", "w") as f:
         f.write(f"All jobs complete {t}\n")
     with open(ens_root / "iter-0" / "STATUS", "w") as f:
@@ -226,7 +230,27 @@ def setup_ensemble_folders(ens_root, input_folder, polygons_folder):
     return res_root
 
 
-def main(ens_root, input_folder, polygons_folder):
+def generate_date_table_entry(
+    surface_template: xtgeo.RegularSurface,
+    saturation: xtgeo.RegularSurface,
+    boundary: sg.Polygon,
+    seed: int,
+):
+    ia, ig, oa, og = simulate_containment(surface_template, saturation, boundary, seed)
+    return {
+        "total": ia + ig + oa + og,
+        "total_inside": ia + ig,
+        "total_outside": oa + og,
+        "total_gas": ig + og,
+        "total_aqueous": ia + oa,
+        "total_gas_inside": ig,
+        "total_aqueous_inside": ia,
+        "total_gas_outside": og,
+        "total_aqueous_outside": oa,
+    }
+
+
+def main(ens_root, input_folder, polygons_folder, base_seed):
     res_root = setup_ensemble_folders(ens_root, input_folder, polygons_folder)
     polys = read_polylines(
         res_root / "polygons" / "topvolantis--gl_faultlines_extract_postprocess.csv"
@@ -245,7 +269,6 @@ def main(ens_root, input_folder, polygons_folder):
         "toptherys": 70,
     }
     containments = []
-    base_seed = hash(ens_root) % 2**32
     for sn, imd in mig_dists.items():
         sgas, amfg = generate_maps(
             res_root / "maps",
@@ -262,13 +285,13 @@ def main(ens_root, input_folder, polygons_folder):
             seed=base_seed,
         )
         containments += [
-            [sn, t, *simulate_containment(tmpl, s, boundary, base_seed - 1)]
+            dict(
+                **generate_date_table_entry(tmpl, s, boundary, (base_seed + 1) % 2**32),
+                date=f"{t[:4]}-{t[4:6]}-{t[6:8]}",
+            )
             for t, s in sgas.items()
         ]
-    df = pd.DataFrame.from_records(
-        containments,
-        columns=['surface', 'date', 'co2_inside', 'co2_outside'],
-    )
+    df = pd.DataFrame.from_records(containments)
     df.groupby('date').sum().to_csv(res_root / "tables/co2_volumes.csv")
 
 
@@ -278,6 +301,7 @@ if __name__ == '__main__':
         main(
             current / f"realization-{i}",
             current / "input",
-            current / "../01_drogon_ahm/realization-0/iter-0/share/results/polygons"
+            current / "../01_drogon_ahm/realization-0/iter-0/share/results/polygons",
+            i + 42,
         )
     print(f"Cache efficiency: {_map_polygons.cache_info()}")

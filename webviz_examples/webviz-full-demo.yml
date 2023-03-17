@@ -311,15 +311,14 @@ layout:
                   ensembles: *hm_ensembles
                   fipfile: *fipfile
 
-          - page: Well completions
+          - page: Well completion
             content:
-              - WellCompletions:
+              - WellCompletion:
                   ensembles:
                     - iter-0
-                  compdat_file: "share/results/tables/compdat.csv"
-                  zone_layer_mapping_file: "rms/output/zone/simgrid_zone_layer_mapping.lyr"
-                  stratigraphy_file: "rms/output/zone/stratigraphy.json"
-                  well_attributes_file: "rms/output/wells/well_attributes.json"
+                  wellcompletiondata_file: share/results/tables/wellcompletiondata.arrow
+                  stratigraphy_file: rms/output/zone/stratigraphy.json
+                  well_attributes_file: rms/output/wells/well_attributes.json
 
           - page: Production network
             content:

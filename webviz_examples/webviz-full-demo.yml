@@ -337,6 +337,12 @@ layout:
                   time_index: "monthly"
                   filter_out_startswith: "R_"
 
+          - page: VFP Analysis
+            content:
+              - VfpAnalysis:
+                  ensemble: iter-0
+                  realization: 0
+
       # -------------------------------
       - group: Correlations
         icon: bar_chart

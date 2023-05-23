@@ -203,8 +203,9 @@ layout:
                     geogrid: geogrid--vol.csv
 
           - page: Time series analysis
+            icon: new_label
             content:
-              - ReservoirSimulationTimeSeriesOneByOne:
+              - SimulationTimeSeriesOneByOne:
                   ensembles: *dm_ensembles
                   initial_vector: FOPT
 

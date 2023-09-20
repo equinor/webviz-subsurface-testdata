@@ -3,8 +3,9 @@ This script generates data for the webviz subsurface plugin "CO2 Leakage". The d
 generation is done in an ad-hoc and pragmatic manner. The primary purpose is to adhere to
 the folder structure, file formats and naming conventions expected by the plugin.
 
-The script only depends on `input/leakage_boundary.csv` and fault polygon data from
-01_drogon_ahm, all of which are copied to the underlying realization folders.
+The script only depends on `input/leakage_boundary.csv`, `input/hazardous_boundary.csv`
+and fault polygon data from 01_drogon_ahm, all of which are copied to the underlying
+realization folders.
 """
 import datetime
 import pathlib
@@ -45,7 +46,7 @@ class MapPolygonsInput:
         # NBNB! Ignores x_lin and y_lin. Should not matter as long as the script is set
         # up to always use the same x_lin and y_lin for everything. Pragmatic, but not
         # elegant...
-        return hash(''.join(p.wkt for p in self.polys))
+        return hash("".join(p.wkt for p in self.polys))
 
     def __eq__(self, other) -> bool:
         return hash(self) == hash(other)
@@ -55,11 +56,11 @@ class MapPolygonsInput:
 def _map_polygons(mp):
     # Determine poly-containment
     res = resolution(mp.x_lin, mp.y_lin)
-    xx, yy = np.meshgrid(mp.x_lin, mp.y_lin, indexing='ij')
+    xx, yy = np.meshgrid(mp.x_lin, mp.y_lin, indexing="ij")
     pts = pygeos.points(xx.flatten(), yy.flatten())
     tree = pygeos.STRtree(pts)
     polys = pygeos.multipolygons([pygeos.from_shapely(p) for p in mp.polys])
-    close = tree.query(polys, 'dwithin', res)
+    close = tree.query(polys, "dwithin", res)
     ij = np.unravel_index(close, shape=xx.shape)
     contained = np.zeros_like(xx, dtype=bool)
     contained[ij] = 1
@@ -71,12 +72,7 @@ def map_polygons(x_lin, y_lin, polys: List[sg.Polygon]):
 
 
 def cost_map(
-    polygon_map: np.ndarray,
-    res: float,
-    distortion_range,
-    min_cost,
-    poly_penalty,
-    seed
+    polygon_map: np.ndarray, res: float, distortion_range, min_cost, poly_penalty, seed
 ):
     gen = np.random.RandomState(seed)
     field = gen.normal(size=polygon_map.shape)
@@ -85,8 +81,7 @@ def cost_map(
     dist_field = np.exp(dist_field)
     dist_field = dist_field / np.std(dist_field) + min_cost
     poly_field = scipy.ndimage.gaussian_filter(
-        1 + polygon_map * float(poly_penalty),
-        sigma=distortion_range / 10
+        1 + polygon_map * float(poly_penalty), sigma=distortion_range / 10
     )
     mult = dist_field * poly_field
     return mult * res
@@ -142,7 +137,8 @@ def simulate_migration_over_time(
     **emulate_kwargs,
 ):
     results = {
-        t: scaling * emulate_migration(
+        t: scaling
+        * emulate_migration(
             **emulate_kwargs,
             migration_dist=init_mig_dist + i * init_mig_dist / 15,
         )
@@ -164,9 +160,9 @@ def generate_maps(output_dir, surface_name, time_steps, init_mig_dist, **kwargs)
     if not output_dir.is_dir():
         output_dir.mkdir(parents=True)
     sgas = simulate_migration_over_time(time_steps, 0.6, init_mig_dist, **kwargs)
-    kwargs['seed'] += 999
+    kwargs["seed"] += 999
     amfg = simulate_migration_over_time(time_steps, 1e-4, init_mig_dist, **kwargs)
-    template = kwargs['template']
+    template = kwargs["template"]
     # SGAS
     for t, s in sgas.items():
         surf = array_to_xtgeo(template, s, 1e-4)
@@ -176,10 +172,7 @@ def generate_maps(output_dir, surface_name, time_steps, init_mig_dist, **kwargs)
         surf = array_to_xtgeo(template, s, 1e-8)
         surf.to_file(output_dir / f"{surface_name}--max_AMFG--{t}.gri")
     # Migration Time
-    mtime_all = [
-        np.where(s > 1e-2, float(t[:4]), np.inf)
-        for t, s in sgas.items()
-    ]
+    mtime_all = [np.where(s > 1e-2, float(t[:4]), np.inf) for t, s in sgas.items()]
     mtime = np.min(mtime_all, axis=0)
     mtime -= np.min(mtime)
     surf = array_to_xtgeo(template, mtime, -np.inf, 999999999)
@@ -188,24 +181,52 @@ def generate_maps(output_dir, surface_name, time_steps, init_mig_dist, **kwargs)
 
 
 def simulate_containment(
-    tmpl: xtgeo.RegularSurface, saturation, polygon: sg.Polygon, seed
+    tmpl: xtgeo.RegularSurface,
+    saturation,
+    containment_boundary: sg.Polygon,
+    hazardous_boundary: sg.Polygon,
+    seed,
+    calc_volume: bool = False,
 ):
     x_lin = tmpl.xmin + np.arange(tmpl.ncol) * tmpl.xinc
     y_lin = tmpl.ymin + np.arange(tmpl.nrow) * tmpl.yinc
-    poly_map = map_polygons(x_lin, y_lin, [polygon])
+    poly_map_con = map_polygons(x_lin, y_lin, [containment_boundary])
+    poly_map_haz = map_polygons(x_lin, y_lin, [hazardous_boundary])
     gen = np.random.RandomState(seed)
-    volumes = gen.uniform(7, 13, size=poly_map.shape) * resolution(x_lin, y_lin) ** 2
-    poro = 0.3
-    density = 700
-    mass = poro * volumes * density * saturation
-    within = mass[poly_map].sum()
-    outside = mass[~poly_map].sum()
+    volumes = (
+        gen.uniform(7, 13, size=poly_map_con.shape) * resolution(x_lin, y_lin) ** 2
+    )
+    if calc_volume:
+        prop = volumes * saturation
+    else:  # Calculate CO2 mass
+        poro = 0.3
+        density = 700
+        prop = poro * volumes * density * saturation
+    is_contained, is_outside = [], []
+    for a, b in zip(poly_map_con, poly_map_haz):
+        is_contained.append([x if not y else False for x, y in zip(a, b)])
+        is_outside.append([not x and not y for x, y in zip(a, b)])
+    is_contained = np.array(is_contained)
+    is_outside = np.array(is_outside)
+    contained = prop[is_contained].sum()
+    outside = prop[is_outside].sum()
+    hazardous = prop[poly_map_haz].sum()
+
     # Simulate fractions
-    aqu_within = within * gen.uniform(high=0.1)
-    gas_within = within - aqu_within
+    aqu_contained = contained * gen.uniform(high=0.1)
+    gas_contained = contained - aqu_contained
     aqu_outside = outside * gen.uniform(high=0.1)
     gas_outside = outside - aqu_outside
-    return aqu_within, gas_within, aqu_outside, gas_outside
+    aqu_hazardous = hazardous * gen.uniform(high=0.1)
+    gas_hazardous = hazardous - aqu_hazardous
+    return (
+        aqu_contained,
+        gas_contained,
+        aqu_outside,
+        gas_outside,
+        aqu_hazardous,
+        gas_hazardous,
+    )
 
 
 def setup_ensemble_folders(ens_root, input_folder, polygons_folder):
@@ -220,6 +241,7 @@ def setup_ensemble_folders(ens_root, input_folder, polygons_folder):
     for f in polygons_folder.glob("*gl_faultlines_extract_postprocess.pol"):
         shutil.copy(f, res_root / "polygons")
     shutil.copy(input_folder / "leakage_boundary.csv", res_root / "polygons")
+    shutil.copy(input_folder / "hazardous_boundary.csv", res_root / "polygons")
     # Write dummy OK and STATUS files
     t = "13:42:37"
     with open(ens_root / "iter-0" / "OK", "w") as f:
@@ -233,20 +255,32 @@ def setup_ensemble_folders(ens_root, input_folder, polygons_folder):
 def generate_date_table_entry(
     surface_template: xtgeo.RegularSurface,
     saturation: xtgeo.RegularSurface,
-    boundary: sg.Polygon,
+    containment_boundary: sg.Polygon,
+    hazardous_boundary: sg.Polygon,
     seed: int,
+    calc_volume: bool = False,
 ):
-    ia, ig, oa, og = simulate_containment(surface_template, saturation, boundary, seed)
+    ca, cg, oa, og, ha, hg = simulate_containment(
+        surface_template,
+        saturation,
+        containment_boundary,
+        hazardous_boundary,
+        seed,
+        calc_volume,
+    )
     return {
-        "total": ia + ig + oa + og,
-        "total_inside": ia + ig,
+        "total": ca + cg + oa + og + ha + hg,
+        "total_contained": ca + cg,
         "total_outside": oa + og,
-        "total_gas": ig + og,
-        "total_aqueous": ia + oa,
-        "total_gas_inside": ig,
-        "total_aqueous_inside": ia,
-        "total_gas_outside": og,
-        "total_aqueous_outside": oa,
+        "total_hazardous": ha + hg,
+        "total_gas": cg + og + hg,
+        "total_aqueous": ca + oa + ha,
+        "gas_contained": cg,
+        "aqueous_contained": ca,
+        "gas_outside": og,
+        "aqueous_outside": oa,
+        "gas_hazardous": hg,
+        "aqueous_hazardous": ha,
     }
 
 
@@ -255,9 +289,16 @@ def main(ens_root, input_folder, polygons_folder, base_seed):
     polys = read_polylines(
         res_root / "polygons" / "topvolantis--gl_faultlines_extract_postprocess.csv"
     )
-    boundary = sg.Polygon(np.genfromtxt(
-        input_folder / "leakage_boundary.csv", skip_header=1, delimiter=','
-    ))
+    containment_boundary = sg.Polygon(
+        np.genfromtxt(
+            input_folder / "leakage_boundary.csv", skip_header=1, delimiter=","
+        )
+    )
+    hazardous_boundary = sg.Polygon(
+        np.genfromtxt(
+            input_folder / "hazardous_boundary.csv", skip_header=1, delimiter=","
+        )
+    )
     tmpl = xtgeo.RegularSurface(
         ncol=279, nrow=341, xinc=25.0, yinc=25.0, xori=460063.6875, yori=5929551.0
     )
@@ -268,7 +309,8 @@ def main(ens_root, input_folder, polygons_folder, base_seed):
         "topvolon": 70,
         "toptherys": 70,
     }
-    containments = []
+    mass_containments = []
+    volume_containments = []
     for sn, imd in mig_dists.items():
         sgas, amfg = generate_maps(
             res_root / "maps",
@@ -284,18 +326,47 @@ def main(ens_root, input_folder, polygons_folder, base_seed):
             cutoff=8,
             seed=base_seed,
         )
-        containments += [
+        mass_containments += [
             dict(
-                **generate_date_table_entry(tmpl, s, boundary, (base_seed + 1) % 2**32),
+                **generate_date_table_entry(
+                    tmpl,
+                    s,
+                    containment_boundary,
+                    hazardous_boundary,
+                    (base_seed + 1) % 2**32,
+                ),
                 date=f"{t[:4]}-{t[4:6]}-{t[6:8]}",
             )
             for t, s in sgas.items()
         ]
-    df = pd.DataFrame.from_records(containments)
-    df.groupby('date').sum().to_csv(res_root / "tables/co2_volumes.csv")
+        volume_containments += [
+            dict(
+                **generate_date_table_entry(
+                    tmpl,
+                    s,
+                    containment_boundary,
+                    hazardous_boundary,
+                    (base_seed + 1) % 2**32,
+                    True,
+                ),
+                date=f"{t[:4]}-{t[4:6]}-{t[6:8]}",
+            )
+            for t, s in sgas.items()
+        ]
+    df_mass = pd.DataFrame.from_records(mass_containments)
+    df_plume_volume_actual = pd.DataFrame.from_records(volume_containments)
+    df_mass = df_mass.groupby("date").sum()
+    df_plume_volume_actual = df_plume_volume_actual.groupby("date").sum()
+    df_plume_volume_actual_simple = df_plume_volume_actual * 0.8
+
+    df_mass.to_csv(res_root / "tables/co2_volumes.csv")
+    df_plume_volume_actual.to_csv(res_root / "tables/plume_volume_actual.csv")
+    df_plume_volume_actual_simple.to_csv(
+        res_root / "tables/plume_volume_actual_simple.csv"
+    )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     for i in tqdm(range(5)):
         current = pathlib.Path(__file__).parent
         main(

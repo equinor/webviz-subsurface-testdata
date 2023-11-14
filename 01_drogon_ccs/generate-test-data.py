@@ -362,13 +362,10 @@ def main(ens_root, input_folder, polygons_folder, base_seed):
     df_plume_volume_actual = pd.DataFrame.from_records(volume_containments)
     df_mass = df_mass.groupby("date").sum()
     df_plume_volume_actual = df_plume_volume_actual.groupby("date").sum()
-    df_plume_volume_actual_simple = df_plume_volume_actual * 0.8
 
     df_mass.to_csv(res_root / "tables/co2_volumes.csv")
     df_plume_volume_actual.to_csv(res_root / "tables/plume_volume_actual.csv")
-    df_plume_volume_actual_simple.to_csv(
-        res_root / "tables/plume_volume_actual_simple.csv"
-    )
+
     write_well_picks_file(res_root / "wells" / "well_picks.csv")
 
 

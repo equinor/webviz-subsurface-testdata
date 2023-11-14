@@ -174,7 +174,7 @@ def generate_maps(output_dir, surface_name, time_steps, init_mig_dist, **kwargs)
     # Mass maps NBNB-AS: WIP
     for t, s in amfg.items():
         surf = array_to_xtgeo(template, s, 1e-8)
-        surf.to_file(output_dir / f"{surface_name}--mass_total--{t}.gri")
+        surf.to_file(output_dir / f"{surface_name}--mass--{t}.gri")
     # Migration Time
     mtime_all = [np.where(s > 1e-2, float(t[:4]), np.inf) for t, s in sgas.items()]
     mtime = np.min(mtime_all, axis=0)

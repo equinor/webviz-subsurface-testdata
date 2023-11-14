@@ -240,6 +240,7 @@ def setup_ensemble_folders(ens_root, input_folder, polygons_folder):
     res_root.mkdir(parents=True)
     (res_root / "polygons").mkdir()
     (res_root / "tables").mkdir()
+    (res_root / "wells").mkdir()
     for f in polygons_folder.glob("*gl_faultlines_extract_postprocess.csv"):
         shutil.copy(f, res_root / "polygons")
     for f in polygons_folder.glob("*gl_faultlines_extract_postprocess.pol"):
@@ -368,6 +369,28 @@ def main(ens_root, input_folder, polygons_folder, base_seed):
     df_plume_volume_actual_simple.to_csv(
         res_root / "tables/plume_volume_actual_simple.csv"
     )
+    write_well_picks_file(res_root / "wells" / "well_picks.csv")
+
+
+def write_well_picks_file(filename: str):
+    x = {
+        "toptherys": [462500.0, 462500.0, 463500.0],
+        "topvolantis": [462600.0, 462600.0, 463600.0],
+        "topvolon": [462700.0, 462700.0, 463700.0],
+    }
+    y = {
+        "toptherys": [5933066.0, 5934000.0, 5933500.0],
+        "topvolantis": [5933066.0, 5934000.0, 5933500.0],
+        "topvolon": [5933066.0, 5934000.0, 5933500.0],
+    }
+    with open(filename, "w") as f:
+        print(filename)
+        f.write("HORIZON,MD,WELL,X_UTME,Y_UTMN,Z_TVDSS\n")
+        for surface in ["toptherys", "topvolantis", "topvolon"]:
+            for i in range(3):
+                f.write(
+                    f"{surface},1000.0,well_{i+1},{x[surface][i]},{y[surface][i]},1000.0\n"
+                )
 
 
 if __name__ == "__main__":

@@ -150,7 +150,6 @@ def simulate_migration_over_time(
 def array_to_xtgeo(template: xtgeo.RegularSurface, array, lower, upper=np.inf):
     reg = template.copy()
     reg.values = array
-    reg.values.mask = array < lower
     reg.values.mask |= upper < array
     return reg
 
@@ -171,10 +170,15 @@ def generate_maps(output_dir, surface_name, time_steps, init_mig_dist, **kwargs)
     for t, s in amfg.items():
         surf = array_to_xtgeo(template, s, 1e-8)
         surf.to_file(output_dir / f"{surface_name}--max_AMFG--{t}.gri")
-    # Mass maps NBNB-AS: WIP
-    for t, s in amfg.items():
-        surf = array_to_xtgeo(template, s, 1e-8)
-        surf.to_file(output_dir / f"{surface_name}--mass--{t}.gri")
+    # Mass maps: WIP
+    for t in amfg:
+        total_co2_surf = array_to_xtgeo(template,amfg[t],1e-8)
+        total_co2_surf.to_file(output_dir / f"{surface_name}--total--co2--mass--{t}.gri")
+        free_co2_surf = array_to_xtgeo(template, amfg[t]*sgas[t], 1e-8)
+        free_co2_surf.to_file(output_dir / f"{surface_name}--free--co2--mass--{t}.gri")
+        dissolved_co2_surf = array_to_xtgeo(template, amfg[t]*(1-sgas[t]), 1e-8)
+        dissolved_co2_surf.to_file(output_dir / f"{surface_name}--dissolved--co2--mass--{t}.gri")
+
     # Migration Time
     mtime_all = [np.where(s > 1e-2, float(t[:4]), np.inf) for t, s in sgas.items()]
     mtime = np.min(mtime_all, axis=0)
@@ -363,8 +367,8 @@ def main(ens_root, input_folder, polygons_folder, base_seed):
     df_mass = df_mass.groupby("date").sum()
     df_plume_volume_actual = df_plume_volume_actual.groupby("date").sum()
 
-    df_mass.to_csv(res_root / "tables/co2_volumes.csv")
-    df_plume_volume_actual.to_csv(res_root / "tables/plume_volume_actual.csv")
+    df_mass.to_csv(res_root / "tables/plume_mass.csv")
+    df_plume_volume_actual.to_csv(res_root / "tables/plume_actual_volume.csv")
 
     write_well_picks_file(res_root / "wells" / "well_picks.csv")
 

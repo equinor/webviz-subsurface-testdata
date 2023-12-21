@@ -173,11 +173,11 @@ def generate_maps(output_dir, surface_name, time_steps, init_mig_dist, **kwargs)
     # Mass maps: WIP
     for t in amfg:
         total_co2_surf = array_to_xtgeo(template,amfg[t],1e-8)
-        total_co2_surf.to_file(output_dir / f"{surface_name}--total--co2--mass--{t}.gri")
+        total_co2_surf.to_file(output_dir / f"{surface_name}--co2-mass-total--{t}.gri")
         free_co2_surf = array_to_xtgeo(template, amfg[t]*sgas[t], 1e-8)
-        free_co2_surf.to_file(output_dir / f"{surface_name}--free--co2--mass--{t}.gri")
+        free_co2_surf.to_file(output_dir / f"{surface_name}--co2-mass-gas-phase--{t}.gri")
         dissolved_co2_surf = array_to_xtgeo(template, amfg[t]*(1-sgas[t]), 1e-8)
-        dissolved_co2_surf.to_file(output_dir / f"{surface_name}--dissolved--co2--mass--{t}.gri")
+        dissolved_co2_surf.to_file(output_dir / f"{surface_name}--co2-mass-aqu-phase--{t}.gri")
 
     # Migration Time
     mtime_all = [np.where(s > 1e-2, float(t[:4]), np.inf) for t, s in sgas.items()]

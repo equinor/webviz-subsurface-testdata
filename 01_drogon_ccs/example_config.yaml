@@ -15,7 +15,7 @@ layout:
      - CO2Leakage:
          ensembles:
            - ens
-         plume_actual_volume_relpath: "share/results/tables/volume_actual_simple.csv"
+         plume_actual_volume_relpath: "share/results/tables/plume_actual_volume.csv"
          fault_polygon_attribute: "gl_faultlines_extract_postprocess"
          well_pick_file: *wellfile
          file_containment_boundary: "/home/sek/dev/webviz-subsurface-testdata-as/01_drogon_ccs/realization-0/iter-0/share/results/polygons/leakage_boundary.csv"

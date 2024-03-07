@@ -9,7 +9,7 @@ shared_settings:
     iter-0: ../01_drogon_ahm/realization-*/iter-0
     iter-3: ../01_drogon_ahm/realization-*/iter-3
     iter-0-surfaces: ../01_drogon_ahm/realization-[0-1]/iter-0
-
+    co2: "../01_drogon_ccs/realization-[0-4]/iter-0"
 # Ensembles used for sensitivity analysis
 dm_ensembles: &dm_ensembles
   - sens_run
@@ -79,24 +79,23 @@ rmsmap_colors: &rmsmap_colors
   - "#7f0000"
 
 segy_colors: &segy_colors
-  - '#000000'
-  - '#001f4d'
-  - '#003786'
-  - '#0e58a8'
-  - '#217eb8'
-  - '#30a4ca'
-  - '#54c8df'
-  - '#9be4ef'
-  - '#e1e9d1'
-  - '#f3d573'
-  - '#e7b000'
-  - '#da8200'
-  - '#c65400'
-  - '#ac2301'
-  - '#820000'
-  - '#4c0000'
-  - '#040100'
-
+  - "#000000"
+  - "#001f4d"
+  - "#003786"
+  - "#0e58a8"
+  - "#217eb8"
+  - "#30a4ca"
+  - "#54c8df"
+  - "#9be4ef"
+  - "#e1e9d1"
+  - "#f3d573"
+  - "#e7b000"
+  - "#da8200"
+  - "#c65400"
+  - "#ac2301"
+  - "#820000"
+  - "#4c0000"
+  - "#040100"
 
 # ------------------------------
 options:
@@ -130,24 +129,23 @@ layout:
       - group: Information
         icon: info_circle
         content:
-
           - page: How was this made (yaml config file)
             content:
               - |
-                  ##### The yaml configuration file
+                ##### The yaml configuration file
 
-                  * This page shows the yaml configuration file that was used to build
-                    this webviz demo app.
+                * This page shows the yaml configuration file that was used to build
+                  this webviz demo app.
 
-                  * The first part includes **shared_settings** (which ensembles to
-                  use), but also other optional shared data.  The optional shared data
-                  comes in handy when several plugins uses the same data, or simply for
-                  a better overview of input data.
+                * The first part includes **shared_settings** (which ensembles to
+                use), but also other optional shared data.  The optional shared data
+                comes in handy when several plugins uses the same data, or simply for
+                a better overview of input data.
 
-                  * The second part (from "options/layout") contains the plugins to be
-                  loaded.  To get quickly started on your own webviz set-up you can
-                  copy/paste from the config file below this line.
-                  ---
+                * The second part (from "options/layout") contains the plugins to be
+                loaded.  To get quickly started on your own webviz set-up you can
+                copy/paste from the config file below this line.
+                ---
               - SyntaxHighlighter:
                   filename: ./webviz-full-demo.yml
 
@@ -165,13 +163,12 @@ layout:
             content:
               - DiskUsage:
                   scratch_dir: ../.
-                  date: "2021-07-09"  # date only needed if requesting a specific report, otherwise using latest available.
+                  date: "2021-07-09" # date only needed if requesting a specific report, otherwise using latest available.
 
       # ------------------------------
       - group: Drogon description
         icon: platform
         content:
-
           - page: Drogon conceptual description
             content:
               - EmbedPdf:
@@ -194,7 +191,6 @@ layout:
       - group: OnebyOne
         icon: table_chart
         content:
-
           - page: Volumetric analysis
             content:
               - VolumetricAnalysis:
@@ -222,7 +218,6 @@ layout:
       - group: Model general
         icon: timeline
         content:
-
           - page: Map Viewer
             content:
               - MapViewerFMU:
@@ -279,14 +274,14 @@ layout:
                       well: 55_33-A-4
                     colors:
                       topvolon:
-                        iter-0: '#2C82C9'
-                        iter-3: '#2CC990'
+                        iter-0: "#2C82C9"
+                        iter-3: "#2CC990"
                       topvolantis:
-                        iter-0: '#512E34'
-                        iter-3: '#7D93C1'
+                        iter-0: "#512E34"
+                        iter-3: "#7D93C1"
                       basevolantis:
-                        iter-0: '#EEE657'
-                        iter-3: '#FC6042'
+                        iter-0: "#EEE657"
+                        iter-3: "#FC6042"
                     intersection_layout:
                       yaxis:
                         range: [1850, 1550]
@@ -348,7 +343,6 @@ layout:
       - group: Correlations
         icon: bar_chart
         content:
-
           - page: Parameters vs inplace volumes
             content:
               - ParameterResponseCorrelation:
@@ -380,12 +374,10 @@ layout:
                   ensembles: *hm_ensembles
                   drop_constants: true
 
-
       # -------------------------------
       - group: HM and parameters
         icon: repeat
         content:
-
           - page: Parameter distributions
             content:
               - ParameterDistribution:
@@ -442,11 +434,11 @@ layout:
                   attributes:
                     - topvolantis_amplitude_mean_20200701_20180101_1.txt
                     - basevolantis_amplitude_mean_20200701_20180101_1.txt
-                  attribute_sim_path: sim2seis/output/4d_attribute_maps/  # relative to <runpath>
-                  attribute_obs_path: ../../share/observations/seismic/  # relative to <runpath>
+                  attribute_sim_path: sim2seis/output/4d_attribute_maps/ # relative to <runpath>
+                  attribute_obs_path: ../../share/observations/seismic/ # relative to <runpath>
                   # obs_mult: 1.0
                   # sim_mult: 1.0
-                  polygon: share/results/polygons/  # relative to <runpath>
+                  polygon: share/results/polygons/ # relative to <runpath>
                   # realrange:  # exclude realizations outside range
                   #   - [0,99]
                   #   - [0,99]
@@ -455,20 +447,40 @@ layout:
             content:
               - ProdMisfit:
                   ensembles: *hm_ensembles
-                  sampling: yearly  # daily, weekly, monthly, yearly
+                  sampling: yearly # daily, weekly, monthly, yearly
                   well_attributes_file: rms/output/wells/well_attributes.json
-                  excl_name_startswith: [R_]  # input as list
+                  excl_name_startswith: [R_] # input as list
                   phase_weights:
                     "Oil": 1.0
                     "Water": 1.0
                     "Gas": 300.0
-
+      # -------------------------------
+      - group: CO2 Leakage
+        icon: repeat
+        content:
+          - page: CO2 Leakage
+            content:
+              - CO2Leakage:
+                  ensembles:
+                    - co2
+                  plume_actual_volume_relpath: "share/results/tables/plume_actual_volume.csv"
+                  fault_polygon_attribute: "gl_faultlines_extract_postprocess"
+                  well_pick_file: ../01_drogon_ccs/realization-0/iter-0/share/results/wells/well_picks.csv
+                  file_containment_boundary: "../01_drogon_ccs/realization-0/iter-0/share/results/polygons/leakage_boundary.csv"
+                  file_hazardous_boundary: "../01_drogon_ccs/realization-0/iter-0/share/results/polygons/hazardous_boundary.csv"
+                  initial_surface: "topvolantis"
+                  map_attribute_names:
+                    MAX_SGAS: "max_SGAS"
+                    MAX_AMFG: "max_AMFG"
+                    MIGRATION_TIME: "MigrationTime"
+                    MASS: "co2-mass-total"
+                    DISSOLVED: "co2-mass-aqu-phase"
+                    FREE: "co2-mass-gas-phase"
 
       # -------------------------------
       - group: Model QC
         icon: done_all
         content:
-
           - page: Grid property statistics
             content:
               - PropertyStatistics:
@@ -530,7 +542,6 @@ layout:
       - group: Surface and cross-section
         icon: layers
         content:
-
           - page: SEG-Y viewer
             content:
               - SegyViewer:

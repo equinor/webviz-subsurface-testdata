@@ -150,7 +150,6 @@ def simulate_migration_over_time(
 def array_to_xtgeo(template: xtgeo.RegularSurface, array, lower, upper=np.inf):
     reg = template.copy()
     reg.values = array
-    reg.values.mask = array < lower
     reg.values.mask |= upper < array
     return reg
 
@@ -171,6 +170,15 @@ def generate_maps(output_dir, surface_name, time_steps, init_mig_dist, **kwargs)
     for t, s in amfg.items():
         surf = array_to_xtgeo(template, s, 1e-8)
         surf.to_file(output_dir / f"{surface_name}--max_AMFG--{t}.gri")
+    # Mass maps: WIP
+    for t in amfg:
+        total_co2_surf = array_to_xtgeo(template,amfg[t],1e-8)
+        total_co2_surf.to_file(output_dir / f"{surface_name}--co2-mass-total--{t}.gri")
+        free_co2_surf = array_to_xtgeo(template, amfg[t]*sgas[t], 1e-8)
+        free_co2_surf.to_file(output_dir / f"{surface_name}--co2-mass-gas-phase--{t}.gri")
+        dissolved_co2_surf = array_to_xtgeo(template, amfg[t]*(1-sgas[t]), 1e-8)
+        dissolved_co2_surf.to_file(output_dir / f"{surface_name}--co2-mass-aqu-phase--{t}.gri")
+
     # Migration Time
     mtime_all = [np.where(s > 1e-2, float(t[:4]), np.inf) for t, s in sgas.items()]
     mtime = np.min(mtime_all, axis=0)
@@ -236,6 +244,7 @@ def setup_ensemble_folders(ens_root, input_folder, polygons_folder):
     res_root.mkdir(parents=True)
     (res_root / "polygons").mkdir()
     (res_root / "tables").mkdir()
+    (res_root / "wells").mkdir()
     for f in polygons_folder.glob("*gl_faultlines_extract_postprocess.csv"):
         shutil.copy(f, res_root / "polygons")
     for f in polygons_folder.glob("*gl_faultlines_extract_postprocess.pol"):
@@ -357,13 +366,32 @@ def main(ens_root, input_folder, polygons_folder, base_seed):
     df_plume_volume_actual = pd.DataFrame.from_records(volume_containments)
     df_mass = df_mass.groupby("date").sum()
     df_plume_volume_actual = df_plume_volume_actual.groupby("date").sum()
-    df_plume_volume_actual_simple = df_plume_volume_actual * 0.8
 
-    df_mass.to_csv(res_root / "tables/co2_volumes.csv")
-    df_plume_volume_actual.to_csv(res_root / "tables/plume_volume_actual.csv")
-    df_plume_volume_actual_simple.to_csv(
-        res_root / "tables/plume_volume_actual_simple.csv"
-    )
+    df_mass.to_csv(res_root / "tables/plume_mass.csv")
+    df_plume_volume_actual.to_csv(res_root / "tables/plume_actual_volume.csv")
+
+    write_well_picks_file(res_root / "wells" / "well_picks.csv")
+
+
+def write_well_picks_file(filename: str):
+    x = {
+        "toptherys": [462500.0, 462500.0, 463500.0],
+        "topvolantis": [462600.0, 462600.0, 463600.0],
+        "topvolon": [462700.0, 462700.0, 463700.0],
+    }
+    y = {
+        "toptherys": [5933066.0, 5934000.0, 5933500.0],
+        "topvolantis": [5933066.0, 5934000.0, 5933500.0],
+        "topvolon": [5933066.0, 5934000.0, 5933500.0],
+    }
+    with open(filename, "w") as f:
+        print(filename)
+        f.write("HORIZON,MD,WELL,X_UTME,Y_UTMN,Z_TVDSS\n")
+        for surface in ["toptherys", "topvolantis", "topvolon"]:
+            for i in range(3):
+                f.write(
+                    f"{surface},1000.0,well_{i+1},{x[surface][i]},{y[surface][i]},1000.0\n"
+                )
 
 
 if __name__ == "__main__":

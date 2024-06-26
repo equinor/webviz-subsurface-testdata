@@ -470,9 +470,10 @@ layout:
                   file_hazardous_boundary: "../01_drogon_ccs/realization-0/iter-0/share/results/polygons/hazardous_boundary.csv"
                   initial_surface: "topvolantis"
                   map_attribute_names:
-                    MAX_SGAS: "max_SGAS"
-                    MAX_AMFG: "max_AMFG"
-                    MIGRATION_TIME: "MigrationTime"
+                    MAX_SGAS: "max_sgas"
+                    MAX_AMFG: "max_amfg"
+                    MIGRATION_TIME_SGAS: "migrationtime_sgas"
+                    MIGRATION_TIME_AMFG: "migrationtime_amfg"
                     MASS: "co2-mass-total"
                     DISSOLVED: "co2-mass-aqu-phase"
                     FREE: "co2-mass-gas-phase"

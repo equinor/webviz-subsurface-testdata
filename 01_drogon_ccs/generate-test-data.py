@@ -7,7 +7,6 @@ The script only depends on `input/leakage_boundary.csv`, `input/hazardous_bounda
 and fault polygon data from 01_drogon_ahm, all of which are copied to the underlying
 realization folders.
 """
-import datetime
 import pathlib
 from dataclasses import dataclass
 from functools import lru_cache
@@ -165,26 +164,36 @@ def generate_maps(output_dir, surface_name, time_steps, init_mig_dist, **kwargs)
     # SGAS
     for t, s in sgas.items():
         surf = array_to_xtgeo(template, s, 1e-4)
-        surf.to_file(output_dir / f"{surface_name}--max_SGAS--{t}.gri")
+        surf.to_file(output_dir / f"{surface_name}--max_sgas--{t}.gri")
     # AMFG
     for t, s in amfg.items():
         surf = array_to_xtgeo(template, s, 1e-8)
-        surf.to_file(output_dir / f"{surface_name}--max_AMFG--{t}.gri")
+        surf.to_file(output_dir / f"{surface_name}--max_amfg--{t}.gri")
     # Mass maps: WIP
     for t in amfg:
-        total_co2_surf = array_to_xtgeo(template,amfg[t],1e-8)
+        total_co2_surf = array_to_xtgeo(template, amfg[t], 1e-8)
         total_co2_surf.to_file(output_dir / f"{surface_name}--co2-mass-total--{t}.gri")
-        free_co2_surf = array_to_xtgeo(template, amfg[t]*sgas[t], 1e-8)
-        free_co2_surf.to_file(output_dir / f"{surface_name}--co2-mass-gas-phase--{t}.gri")
-        dissolved_co2_surf = array_to_xtgeo(template, amfg[t]*(1-sgas[t]), 1e-8)
-        dissolved_co2_surf.to_file(output_dir / f"{surface_name}--co2-mass-aqu-phase--{t}.gri")
+        free_co2_surf = array_to_xtgeo(template, amfg[t] * sgas[t], 1e-8)
+        free_co2_surf.to_file(
+            output_dir / f"{surface_name}--co2-mass-gas-phase--{t}.gri"
+        )
+        dissolved_co2_surf = array_to_xtgeo(template, amfg[t] * (1 - sgas[t]), 1e-8)
+        dissolved_co2_surf.to_file(
+            output_dir / f"{surface_name}--co2-mass-aqu-phase--{t}.gri"
+        )
 
     # Migration Time
     mtime_all = [np.where(s > 1e-2, float(t[:4]), np.inf) for t, s in sgas.items()]
     mtime = np.min(mtime_all, axis=0)
     mtime -= np.min(mtime)
     surf = array_to_xtgeo(template, mtime, -np.inf, 999999999)
-    surf.to_file(output_dir / f"{surface_name}--MigrationTime.gri")
+    surf.to_file(output_dir / f"{surface_name}--migrationtime_sgas.gri")
+
+    mtime_all = [np.where(s > 1e-5, float(t[:4]), np.inf) for t, s in amfg.items()]
+    mtime = np.min(mtime_all, axis=0)
+    mtime -= np.min(mtime)
+    surf = array_to_xtgeo(template, mtime, -np.inf, 999999999)
+    surf.to_file(output_dir / f"{surface_name}--migrationtime_amfg.gri")
     return sgas, amfg
 
 
@@ -261,11 +270,12 @@ def setup_ensemble_folders(ens_root, input_folder, polygons_folder):
     return res_root
 
 
-def generate_date_table_entry(
+def generate_date_table_entries(
     surface_template: xtgeo.RegularSurface,
     saturation: xtgeo.RegularSurface,
     containment_boundary: sg.Polygon,
     hazardous_boundary: sg.Polygon,
+    date: str,
     seed: int,
     calc_volume: bool = False,
 ):
@@ -277,20 +287,28 @@ def generate_date_table_entry(
         seed,
         calc_volume,
     )
-    return {
-        "total": ca + cg + oa + og + ha + hg,
-        "total_contained": ca + cg,
-        "total_outside": oa + og,
-        "total_hazardous": ha + hg,
-        "total_gas": cg + og + hg,
-        "total_aqueous": ca + oa + ha,
-        "gas_contained": cg,
-        "aqueous_contained": ca,
-        "gas_outside": og,
-        "aqueous_outside": oa,
-        "gas_hazardous": hg,
-        "aqueous_hazardous": ha,
+    phases = ["total", "gas", "aqueous"]
+    locations = ["total", "contained", "outside", "hazardous"]
+    table_entries = {
+        "date": [date] * len(phases) * len(locations),
+        "amount": [
+            ca + cg + oa + og + ha + hg,
+            ca + cg,
+            oa + og,
+            ha + hg,
+            cg + og + hg,
+            cg,
+            og,
+            hg,
+            ca + oa + ha,
+            ca,
+            oa,
+            ha,
+        ],
+        "phase": [p for p in phases for _ in locations],
+        "containment": [l for _ in phases for l in locations],
     }
+    return pd.DataFrame(table_entries)
 
 
 def main(ens_root, input_folder, polygons_folder, base_seed):
@@ -318,8 +336,12 @@ def main(ens_root, input_folder, polygons_folder, base_seed):
         "topvolon": 70,
         "toptherys": 70,
     }
-    mass_containments = []
-    volume_containments = []
+    df_mass = pd.DataFrame(
+        {"date": [], "amount": [], "phase": [], "containment": [], "zone": []}
+    )
+    df_volume = pd.DataFrame(
+        {"date": [], "amount": [], "phase": [], "containment": [], "zone": []}
+    )
     for sn, imd in mig_dists.items():
         sgas, amfg = generate_maps(
             res_root / "maps",
@@ -335,42 +357,47 @@ def main(ens_root, input_folder, polygons_folder, base_seed):
             cutoff=8,
             seed=base_seed,
         )
-        mass_containments += [
-            dict(
-                **generate_date_table_entry(
-                    tmpl,
-                    s,
-                    containment_boundary,
-                    hazardous_boundary,
-                    (base_seed + 1) % 2**32,
-                ),
-                date=f"{t[:4]}-{t[4:6]}-{t[6:8]}",
+        for t, s in sgas.items():
+            date = f"{t[:4]}-{t[4:6]}-{t[6:8]}"
+            mass_add_on = generate_date_table_entries(
+                tmpl,
+                s,
+                containment_boundary,
+                hazardous_boundary,
+                date,
+                (base_seed + 1) % 2**32,
             )
-            for t, s in sgas.items()
-        ]
-        volume_containments += [
-            dict(
-                **generate_date_table_entry(
-                    tmpl,
-                    s,
-                    containment_boundary,
-                    hazardous_boundary,
-                    (base_seed + 1) % 2**32,
-                    True,
-                ),
-                date=f"{t[:4]}-{t[4:6]}-{t[6:8]}",
+            mass_add_on["zone"] = [sn] * mass_add_on.shape[0]
+            df_mass = pd.concat((df_mass, mass_add_on))
+            volume_add_on = generate_date_table_entries(
+                tmpl,
+                s,
+                containment_boundary,
+                hazardous_boundary,
+                date,
+                (base_seed + 1) % 2**32,
+                True,
             )
-            for t, s in sgas.items()
-        ]
-    df_mass = pd.DataFrame.from_records(mass_containments)
-    df_plume_volume_actual = pd.DataFrame.from_records(volume_containments)
-    df_mass = df_mass.groupby("date").sum()
-    df_plume_volume_actual = df_plume_volume_actual.groupby("date").sum()
+            volume_add_on["zone"] = [sn] * volume_add_on.shape[0]
+            df_volume = pd.concat((df_volume, volume_add_on))
 
-    df_mass.to_csv(res_root / "tables/plume_mass.csv")
-    df_plume_volume_actual.to_csv(res_root / "tables/plume_actual_volume.csv")
+    format_and_save_csv(df_mass, res_root / "tables/plume_mass.csv")
+    format_and_save_csv(df_volume, res_root / "tables/plume_actual_volume.csv")
 
     write_well_picks_file(res_root / "wells" / "well_picks.csv")
+
+
+def format_and_save_csv(df: pd.DataFrame, file: str):
+    df_sum = df.groupby(["date", "phase", "containment"], as_index=False)["amount"].sum()
+    df_sum = df_sum.reindex(columns=["date", "amount", "phase", "containment"])
+    df_sum["zone"] = ["all"] * df_sum.shape[0]
+    df = pd.concat((df_sum, df))
+    df.replace(to_replace=["total"], value="A_total", inplace=True)
+    df.sort_values(by=list(df.columns[-1:1:-1]), inplace=True)
+    df.replace(to_replace=["A_total"], value="total", inplace=True)
+    #df["zone"] = ["all"] * df.shape[0]
+    df["region"] = ["all"] * df.shape[0]
+    df.to_csv(file, index=False)
 
 
 def write_well_picks_file(filename: str):

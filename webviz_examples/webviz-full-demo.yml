@@ -392,8 +392,8 @@ layout:
             content:
               - ParameterAnalysis:
                   ensembles: *hm_ensembles
-                  time_index: "monthly"
                   drop_constants: true
+                  obsfile: *obsfile
 
           - page: Line plotter (FMU)
             content:

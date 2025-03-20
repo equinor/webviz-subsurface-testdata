@@ -465,9 +465,12 @@ layout:
                     - co2
                   plume_actual_volume_relpath: "share/results/tables/plume_actual_volume.csv"
                   fault_polygon_attribute: "gl_faultlines_extract_postprocess"
+                  boundary_settings:
+                     polygon_file_pattern: "share/results/polygons/*.csv"
+                     attribute: "boundary"
+                     hazardous_name: "hazardous"
+                     containment_name: "containment"
                   well_pick_file: ../01_drogon_ccs/realization-0/iter-0/share/results/wells/well_picks.csv
-                  file_containment_boundary: "../01_drogon_ccs/realization-0/iter-0/share/results/polygons/leakage_boundary.csv"
-                  file_hazardous_boundary: "../01_drogon_ccs/realization-0/iter-0/share/results/polygons/hazardous_boundary.csv"
                   initial_surface: "topvolantis"
                   map_attribute_names:
                     MAX_SGAS: "max_sgas"

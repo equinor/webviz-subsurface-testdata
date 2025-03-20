@@ -3,7 +3,7 @@ This script generates data for the webviz subsurface plugin "CO2 Leakage". The d
 generation is done in an ad-hoc and pragmatic manner. The primary purpose is to adhere to
 the folder structure, file formats and naming conventions expected by the plugin.
 
-The script only depends on `input/leakage_boundary.csv`, `input/hazardous_boundary.csv`
+The script only depends on `input/containment--boundary.csv`, `input/hazardous--boundary.csv`
 and fault polygon data from 01_drogon_ahm, all of which are copied to the underlying
 realization folders.
 """
@@ -258,8 +258,8 @@ def setup_ensemble_folders(ens_root, input_folder, polygons_folder):
         shutil.copy(f, res_root / "polygons")
     for f in polygons_folder.glob("*gl_faultlines_extract_postprocess.pol"):
         shutil.copy(f, res_root / "polygons")
-    shutil.copy(input_folder / "leakage_boundary.csv", res_root / "polygons")
-    shutil.copy(input_folder / "hazardous_boundary.csv", res_root / "polygons")
+    shutil.copy(input_folder / "containment--boundary.csv", res_root / "polygons")
+    shutil.copy(input_folder / "hazardous--boundary.csv", res_root / "polygons")
     # Write dummy OK and STATUS files
     t = "13:42:37"
     with open(ens_root / "iter-0" / "OK", "w") as f:
@@ -318,12 +318,12 @@ def main(ens_root, input_folder, polygons_folder, base_seed):
     )
     containment_boundary = sg.Polygon(
         np.genfromtxt(
-            input_folder / "leakage_boundary.csv", skip_header=1, delimiter=","
+            input_folder / "containment--boundary.csv", skip_header=1, delimiter=","
         )
     )
     hazardous_boundary = sg.Polygon(
         np.genfromtxt(
-            input_folder / "hazardous_boundary.csv", skip_header=1, delimiter=","
+            input_folder / "hazardous--boundary.csv", skip_header=1, delimiter=","
         )
     )
     tmpl = xtgeo.RegularSurface(

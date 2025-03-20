@@ -463,8 +463,8 @@ layout:
               - CO2Leakage:
                   ensembles:
                     - co2
-                  plume_mass_relpath: "share/results/tables/temp_wrong_name.csv"
-                  plume_actual_volume_relpath: "share/results/tables/temp_wrong_name2.csv"
+                  plume_mass_relpath: "share/results/tables/plume_mass.csv"
+                  plume_actual_volume_relpath: "share/results/tables/plume_actual_volume.csv"
                   boundary_settings:
                      polygon_file_pattern: "share/results/polygons/*.csv"
                      attribute: "boundary"

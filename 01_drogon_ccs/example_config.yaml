@@ -7,7 +7,7 @@ shared_settings:
   scratch_ensembles:
     ens: "/home/sek/dev/webviz-subsurface-testdata-as/01_drogon_ccs/realization-[0-4]/iter-0"
 
-wellfile: &wellfile /home/sek/dev/webviz-subsurface-testdata-as/01_drogon_ccs/realization-0/iter-0/share/results/wells/well_picks.csv
+# wellfile: &wellfile /home/sek/dev/webviz-subsurface-testdata-as/01_drogon_ccs/realization-0/iter-0/share/results/wells/well_picks.csv
 
 layout:
  - page: "CO2Leakage"
@@ -23,7 +23,7 @@ layout:
             hazardous_name: "hazardous"
             containment_name: "containment"
          fault_polygon_attribute: "gl_faultlines_extract_postprocess"
-         well_pick_file: *wellfile
+         well_pick_file: share/results/wells/well_picks.csv
          initial_surface: "topvolantis"
          map_attribute_names:
            MAX_SGAS: "max_sgas"
